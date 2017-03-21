@@ -1,13 +1,13 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "kinow-io/kaemo-php-sdk",
     "description": "",
     "keywords": [
-        "swagger",
+        "kaemo",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://www.kaemo.com",
     "license": "proprietary",
     "authors": [
         {
