@@ -1,6 +1,6 @@
 <?php
 /**
- * Cart
+ * Videos
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Cart Class Doc Comment
+ * Videos Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Cart implements ArrayAccess
+class Videos implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,20 +48,15 @@ class Cart implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Cart';
+    protected static $swaggerModelName = 'Videos';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'id_currency' => 'int',
-        'id_customer' => 'int',
-        'id_lang' => 'int',
-        'date_add' => 'string',
-        'date_upd' => 'string',
-        'products' => '\Kaemo\Client\Model\Product[]'
+        'pagination' => '\Kaemo\Client\Model\Pagination',
+        'data' => '\Kaemo\Client\Model\Video[]'
     ];
 
     public static function swaggerTypes()
@@ -74,13 +69,8 @@ class Cart implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'id_currency' => 'id_currency',
-        'id_customer' => 'id_customer',
-        'id_lang' => 'id_lang',
-        'date_add' => 'date_add',
-        'date_upd' => 'date_upd',
-        'products' => 'products'
+        'pagination' => 'pagination',
+        'data' => 'data'
     ];
 
 
@@ -89,13 +79,8 @@ class Cart implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'id_currency' => 'setIdCurrency',
-        'id_customer' => 'setIdCustomer',
-        'id_lang' => 'setIdLang',
-        'date_add' => 'setDateAdd',
-        'date_upd' => 'setDateUpd',
-        'products' => 'setProducts'
+        'pagination' => 'setPagination',
+        'data' => 'setData'
     ];
 
 
@@ -104,13 +89,8 @@ class Cart implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'id_currency' => 'getIdCurrency',
-        'id_customer' => 'getIdCustomer',
-        'id_lang' => 'getIdLang',
-        'date_add' => 'getDateAdd',
-        'date_upd' => 'getDateUpd',
-        'products' => 'getProducts'
+        'pagination' => 'getPagination',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -144,13 +124,8 @@ class Cart implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['id_currency'] = isset($data['id_currency']) ? $data['id_currency'] : null;
-        $this->container['id_customer'] = isset($data['id_customer']) ? $data['id_customer'] : null;
-        $this->container['id_lang'] = isset($data['id_lang']) ? $data['id_lang'] : null;
-        $this->container['date_add'] = isset($data['date_add']) ? $data['date_add'] : null;
-        $this->container['date_upd'] = isset($data['date_upd']) ? $data['date_upd'] : null;
-        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
+        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -177,148 +152,43 @@ class Cart implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets pagination
+     * @return \Kaemo\Client\Model\Pagination
      */
-    public function getId()
+    public function getPagination()
     {
-        return $this->container['id'];
+        return $this->container['pagination'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets pagination
+     * @param \Kaemo\Client\Model\Pagination $pagination
      * @return $this
      */
-    public function setId($id)
+    public function setPagination($pagination)
     {
-        $this->container['id'] = $id;
+        $this->container['pagination'] = $pagination;
 
         return $this;
     }
 
     /**
-     * Gets id_currency
-     * @return int
+     * Gets data
+     * @return \Kaemo\Client\Model\Video[]
      */
-    public function getIdCurrency()
+    public function getData()
     {
-        return $this->container['id_currency'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets id_currency
-     * @param int $id_currency
+     * Sets data
+     * @param \Kaemo\Client\Model\Video[] $data
      * @return $this
      */
-    public function setIdCurrency($id_currency)
+    public function setData($data)
     {
-        $this->container['id_currency'] = $id_currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets id_customer
-     * @return int
-     */
-    public function getIdCustomer()
-    {
-        return $this->container['id_customer'];
-    }
-
-    /**
-     * Sets id_customer
-     * @param int $id_customer
-     * @return $this
-     */
-    public function setIdCustomer($id_customer)
-    {
-        $this->container['id_customer'] = $id_customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets id_lang
-     * @return int
-     */
-    public function getIdLang()
-    {
-        return $this->container['id_lang'];
-    }
-
-    /**
-     * Sets id_lang
-     * @param int $id_lang
-     * @return $this
-     */
-    public function setIdLang($id_lang)
-    {
-        $this->container['id_lang'] = $id_lang;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_add
-     * @return string
-     */
-    public function getDateAdd()
-    {
-        return $this->container['date_add'];
-    }
-
-    /**
-     * Sets date_add
-     * @param string $date_add
-     * @return $this
-     */
-    public function setDateAdd($date_add)
-    {
-        $this->container['date_add'] = $date_add;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_upd
-     * @return string
-     */
-    public function getDateUpd()
-    {
-        return $this->container['date_upd'];
-    }
-
-    /**
-     * Sets date_upd
-     * @param string $date_upd
-     * @return $this
-     */
-    public function setDateUpd($date_upd)
-    {
-        $this->container['date_upd'] = $date_upd;
-
-        return $this;
-    }
-
-    /**
-     * Gets products
-     * @return \Kaemo\Client\Model\Product[]
-     */
-    public function getProducts()
-    {
-        return $this->container['products'];
-    }
-
-    /**
-     * Sets products
-     * @param \Kaemo\Client\Model\Product[] $products
-     * @return $this
-     */
-    public function setProducts($products)
-    {
-        $this->container['products'] = $products;
+        $this->container['data'] = $data;
 
         return $this;
     }

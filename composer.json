@@ -1,8 +1,8 @@
 {
-    "name": "kinow-io/kaemo-php-sdk",
+    "name": "kinow-io/kameo-php-sdk",
     "description": "",
     "keywords": [
-        "kaemo",
+        "swagger",
         "php",
         "sdk",
         "api"
@@ -11,8 +11,8 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "Kaemo",
+            "homepage": "https://github.com/kinow-io"
         }
     ],
     "require": {

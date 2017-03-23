@@ -1,6 +1,6 @@
 <?php
 /**
- * GeolocTest
+ * SubscriptionsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * GeolocTest Class Doc Comment
+ * SubscriptionsTest Class Doc Comment
  *
  * @category    Class */
-// * @description Geoloc
+// * @description Subscriptions
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class GeolocTest extends \PHPUnit_Framework_TestCase
+class SubscriptionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,33 +75,25 @@ class GeolocTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Geoloc"
+     * Test "Subscriptions"
      */
-    public function testGeoloc()
+    public function testSubscriptions()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "pagination"
      */
-    public function testPropertyId()
+    public function testPropertyPagination()
     {
 
     }
 
     /**
-     * Test attribute "iso_code"
+     * Test attribute "data"
      */
-    public function testPropertyIsoCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
+    public function testPropertyData()
     {
 
     }
