@@ -110,6 +110,17 @@ class ProductsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getCategoryProducts
+     *
+     * .
+     *
+     */
+    public function testGetCategoryProducts()
+    {
+
+    }
+
+    /**
      * Test case for getProduct
      *
      * .
@@ -127,6 +138,17 @@ class ProductsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetProductAttributes()
+    {
+
+    }
+
+    /**
+     * Test case for getProductCoverImage
+     *
+     * .
+     *
+     */
+    public function testGetProductCoverImage()
     {
 
     }
@@ -160,6 +182,17 @@ class ProductsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetProductGeolocationsByIp()
+    {
+
+    }
+
+    /**
+     * Test case for getProductImages
+     *
+     * .
+     *
+     */
+    public function testGetProductImages()
     {
 
     }

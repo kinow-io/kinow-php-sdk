@@ -271,6 +271,91 @@ class SubscriptionsApi
     }
 
     /**
+     * Operation getSubscriptionCoverImage
+     *
+     * 
+     *
+     * @param int $subscription_id ID of the subscription to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\Image
+     */
+    public function getSubscriptionCoverImage($subscription_id)
+    {
+        list($response) = $this->getSubscriptionCoverImageWithHttpInfo($subscription_id);
+        return $response;
+    }
+
+    /**
+     * Operation getSubscriptionCoverImageWithHttpInfo
+     *
+     * 
+     *
+     * @param int $subscription_id ID of the subscription to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getSubscriptionCoverImageWithHttpInfo($subscription_id)
+    {
+        // verify the required parameter 'subscription_id' is set
+        if ($subscription_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $subscription_id when calling getSubscriptionCoverImage');
+        }
+        // parse inputs
+        $resourcePath = "/subscriptions/{subscription_id}/cover";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($subscription_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "subscription_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($subscription_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\Image',
+                '/subscriptions/{subscription_id}/cover'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Image', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getSubscriptions
      *
      * 

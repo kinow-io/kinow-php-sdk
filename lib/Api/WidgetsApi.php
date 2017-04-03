@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaFilesApi
+ * WidgetsApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\Configuration;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaFilesApi Class Doc Comment
+ * WidgetsApi Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaFilesApi
+class WidgetsApi
 {
     /**
      * API Client
@@ -80,7 +80,7 @@ class MediaFilesApi
      *
      * @param \Kaemo\Client\ApiClient $apiClient set the API client
      *
-     * @return MediaFilesApi
+     * @return WidgetsApi
      */
     public function setApiClient(\Kaemo\Client\ApiClient $apiClient)
     {
@@ -89,41 +89,31 @@ class MediaFilesApi
     }
 
     /**
-     * Operation getMediaSourceFiles
+     * Operation getIntroImage
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFiles
+     * @return \Kaemo\Client\Model\Image
      */
-    public function getMediaSourceFiles($source_id, $page = null, $per_page = null)
+    public function getIntroImage()
     {
-        list($response) = $this->getMediaSourceFilesWithHttpInfo($source_id, $page, $per_page);
+        list($response) = $this->getIntroImageWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation getMediaSourceFilesWithHttpInfo
+     * Operation getIntroImageWithHttpInfo
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFiles, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Kaemo\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaSourceFilesWithHttpInfo($source_id, $page = null, $per_page = null)
+    public function getIntroImageWithHttpInfo()
     {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling getMediaSourceFiles');
-        }
         // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
+        $resourcePath = "/widgets/intro/images";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -134,22 +124,6 @@ class MediaFilesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        // query params
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }
-        // query params
-        if ($per_page !== null) {
-            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
-        }
-        // path params
-        if ($source_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
-                $resourcePath
-            );
-        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -168,15 +142,15 @@ class MediaFilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Kaemo\Client\Model\MediaFiles',
-                '/media-sources/{source_id}/files'
+                '\Kaemo\Client\Model\Image',
+                '/widgets/intro/images'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFiles', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Image', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFiles', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,43 +160,31 @@ class MediaFilesApi
     }
 
     /**
-     * Operation postMediaSourceFiles
+     * Operation getSliderImages
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFile
+     * @return \Kaemo\Client\Model\Image
      */
-    public function postMediaSourceFiles($source_id, $body)
+    public function getSliderImages()
     {
-        list($response) = $this->postMediaSourceFilesWithHttpInfo($source_id, $body);
+        list($response) = $this->getSliderImagesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation postMediaSourceFilesWithHttpInfo
+     * Operation getSliderImagesWithHttpInfo
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Kaemo\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postMediaSourceFilesWithHttpInfo($source_id, $body)
+    public function getSliderImagesWithHttpInfo()
     {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling postMediaSourceFiles');
-        }
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling postMediaSourceFiles');
-        }
         // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
+        $resourcePath = "/widgets/slider/images";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -233,23 +195,10 @@ class MediaFilesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        // path params
-        if ($source_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
-                $resourcePath
-            );
-        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
+        
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
@@ -260,19 +209,19 @@ class MediaFilesApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Kaemo\Client\Model\MediaFile',
-                '/media-sources/{source_id}/files'
+                '\Kaemo\Client\Model\Image',
+                '/widgets/slider/images'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFile', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Image', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaSourcesApiTest
+ * FacebookApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\ApiException;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaSourcesApiTest Class Doc Comment
+ * FacebookApiTest Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
+class FacebookApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,45 +77,23 @@ class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getMediaSource
+     * Test case for createFacebookToken
      *
      * .
      *
      */
-    public function testGetMediaSource()
+    public function testCreateFacebookToken()
     {
 
     }
 
     /**
-     * Test case for getMediaSourceFiles
+     * Test case for getFacebookCustomer
      *
      * .
      *
      */
-    public function testGetMediaSourceFiles()
-    {
-
-    }
-
-    /**
-     * Test case for getMediaSources
-     *
-     * .
-     *
-     */
-    public function testGetMediaSources()
-    {
-
-    }
-
-    /**
-     * Test case for postMediaSourceFiles
-     *
-     * .
-     *
-     */
-    public function testPostMediaSourceFiles()
+    public function testGetFacebookCustomer()
     {
 
     }

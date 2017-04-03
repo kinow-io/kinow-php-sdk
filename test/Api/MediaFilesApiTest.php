@@ -87,4 +87,15 @@ class MediaFilesApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for postMediaSourceFiles
+     *
+     * .
+     *
+     */
+    public function testPostMediaSourceFiles()
+    {
+
+    }
+
 }

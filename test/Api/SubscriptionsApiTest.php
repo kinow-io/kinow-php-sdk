@@ -99,6 +99,17 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getSubscriptionCoverImage
+     *
+     * .
+     *
+     */
+    public function testGetSubscriptionCoverImage()
+    {
+
+    }
+
+    /**
      * Test case for getSubscriptions
      *
      * .

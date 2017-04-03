@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaSourcesApi
+ * CategoriesApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\Configuration;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaSourcesApi Class Doc Comment
+ * CategoriesApi Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaSourcesApi
+class CategoriesApi
 {
     /**
      * API Client
@@ -80,7 +80,7 @@ class MediaSourcesApi
      *
      * @param \Kaemo\Client\ApiClient $apiClient set the API client
      *
-     * @return MediaSourcesApi
+     * @return CategoriesApi
      */
     public function setApiClient(\Kaemo\Client\ApiClient $apiClient)
     {
@@ -89,217 +89,35 @@ class MediaSourcesApi
     }
 
     /**
-     * Operation getMediaSource
+     * Operation getCategories
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaSource
+     * @return \Kaemo\Client\Model\Categories
      */
-    public function getMediaSource($source_id)
+    public function getCategories($page = null, $per_page = null)
     {
-        list($response) = $this->getMediaSourceWithHttpInfo($source_id);
+        list($response) = $this->getCategoriesWithHttpInfo($page, $per_page);
         return $response;
     }
 
     /**
-     * Operation getMediaSourceWithHttpInfo
-     *
-     * 
-     *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaSource, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getMediaSourceWithHttpInfo($source_id)
-    {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling getMediaSource');
-        }
-        // parse inputs
-        $resourcePath = "/media-sources/{source_id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept([]);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        // path params
-        if ($source_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Kaemo\Client\Model\MediaSource',
-                '/media-sources/{source_id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaSource', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaSource', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getMediaSourceFiles
-     *
-     * 
-     *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFiles
-     */
-    public function getMediaSourceFiles($source_id, $page = null, $per_page = null)
-    {
-        list($response) = $this->getMediaSourceFilesWithHttpInfo($source_id, $page, $per_page);
-        return $response;
-    }
-
-    /**
-     * Operation getMediaSourceFilesWithHttpInfo
-     *
-     * 
-     *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFiles, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getMediaSourceFilesWithHttpInfo($source_id, $page = null, $per_page = null)
-    {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling getMediaSourceFiles');
-        }
-        // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept([]);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        // query params
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
-        }
-        // query params
-        if ($per_page !== null) {
-            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
-        }
-        // path params
-        if ($source_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Kaemo\Client\Model\MediaFiles',
-                '/media-sources/{source_id}/files'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFiles', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFiles', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getMediaSources
+     * Operation getCategoriesWithHttpInfo
      *
      * 
      *
      * @param int $page  (optional)
      * @param int $per_page  (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaSources
+     * @return array of \Kaemo\Client\Model\Categories, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaSources($page = null, $per_page = null)
-    {
-        list($response) = $this->getMediaSourcesWithHttpInfo($page, $per_page);
-        return $response;
-    }
-
-    /**
-     * Operation getMediaSourcesWithHttpInfo
-     *
-     * 
-     *
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaSources, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getMediaSourcesWithHttpInfo($page = null, $per_page = null)
+    public function getCategoriesWithHttpInfo($page = null, $per_page = null)
     {
         // parse inputs
-        $resourcePath = "/media-sources";
+        $resourcePath = "/categories";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -336,15 +154,15 @@ class MediaSourcesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Kaemo\Client\Model\MediaSources',
-                '/media-sources'
+                '\Kaemo\Client\Model\Categories',
+                '/categories'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaSources', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Categories', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaSources', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Categories', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -354,43 +172,37 @@ class MediaSourcesApi
     }
 
     /**
-     * Operation postMediaSourceFiles
+     * Operation getCategory
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
+     * @param int $category_id ID of the category to fetch (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFile
+     * @return \Kaemo\Client\Model\Category
      */
-    public function postMediaSourceFiles($source_id, $body)
+    public function getCategory($category_id)
     {
-        list($response) = $this->postMediaSourceFilesWithHttpInfo($source_id, $body);
+        list($response) = $this->getCategoryWithHttpInfo($category_id);
         return $response;
     }
 
     /**
-     * Operation postMediaSourceFilesWithHttpInfo
+     * Operation getCategoryWithHttpInfo
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
+     * @param int $category_id ID of the category to fetch (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Kaemo\Client\Model\Category, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postMediaSourceFilesWithHttpInfo($source_id, $body)
+    public function getCategoryWithHttpInfo($category_id)
     {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling postMediaSourceFiles');
-        }
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling postMediaSourceFiles');
+        // verify the required parameter 'category_id' is set
+        if ($category_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $category_id when calling getCategory');
         }
         // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
+        $resourcePath = "/categories/{category_id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -402,22 +214,17 @@ class MediaSourcesApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
         // path params
-        if ($source_id !== null) {
+        if ($category_id !== null) {
             $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
+                "{" . "category_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($category_id),
                 $resourcePath
             );
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
+        
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
@@ -428,19 +235,201 @@ class MediaSourcesApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Kaemo\Client\Model\MediaFile',
-                '/media-sources/{source_id}/files'
+                '\Kaemo\Client\Model\Category',
+                '/categories/{category_id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFile', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Category', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Category', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCategoryBanner
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\Image
+     */
+    public function getCategoryBanner($category_id)
+    {
+        list($response) = $this->getCategoryBannerWithHttpInfo($category_id);
+        return $response;
+    }
+
+    /**
+     * Operation getCategoryBannerWithHttpInfo
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCategoryBannerWithHttpInfo($category_id)
+    {
+        // verify the required parameter 'category_id' is set
+        if ($category_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $category_id when calling getCategoryBanner');
+        }
+        // parse inputs
+        $resourcePath = "/categories/{categoryId}/banner";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($category_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "category_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($category_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\Image',
+                '/categories/{categoryId}/banner'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Image', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Image', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCategoryProducts
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\Products
+     */
+    public function getCategoryProducts($category_id, $page = null, $per_page = null)
+    {
+        list($response) = $this->getCategoryProductsWithHttpInfo($category_id, $page, $per_page);
+        return $response;
+    }
+
+    /**
+     * Operation getCategoryProductsWithHttpInfo
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\Products, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCategoryProductsWithHttpInfo($category_id, $page = null, $per_page = null)
+    {
+        // verify the required parameter 'category_id' is set
+        if ($category_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $category_id when calling getCategoryProducts');
+        }
+        // parse inputs
+        $resourcePath = "/categories/{category_id}/products";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+        // path params
+        if ($category_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "category_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($category_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\Products',
+                '/categories/{category_id}/products'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Products', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Products', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

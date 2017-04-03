@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaSourcesApiTest
+ * ImagesApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\ApiException;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaSourcesApiTest Class Doc Comment
+ * ImagesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
+class ImagesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,45 +77,89 @@ class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getMediaSource
+     * Test case for getCategoryBanner
      *
      * .
      *
      */
-    public function testGetMediaSource()
+    public function testGetCategoryBanner()
     {
 
     }
 
     /**
-     * Test case for getMediaSourceFiles
+     * Test case for getIntroImage
      *
      * .
      *
      */
-    public function testGetMediaSourceFiles()
+    public function testGetIntroImage()
     {
 
     }
 
     /**
-     * Test case for getMediaSources
+     * Test case for getManufacturerCoverImage
      *
      * .
      *
      */
-    public function testGetMediaSources()
+    public function testGetManufacturerCoverImage()
     {
 
     }
 
     /**
-     * Test case for postMediaSourceFiles
+     * Test case for getProductCoverImage
      *
      * .
      *
      */
-    public function testPostMediaSourceFiles()
+    public function testGetProductCoverImage()
+    {
+
+    }
+
+    /**
+     * Test case for getProductImages
+     *
+     * .
+     *
+     */
+    public function testGetProductImages()
+    {
+
+    }
+
+    /**
+     * Test case for getSliderImages
+     *
+     * .
+     *
+     */
+    public function testGetSliderImages()
+    {
+
+    }
+
+    /**
+     * Test case for getSubscriptionCoverImage
+     *
+     * .
+     *
+     */
+    public function testGetSubscriptionCoverImage()
+    {
+
+    }
+
+    /**
+     * Test case for getSupplierCoverImage
+     *
+     * .
+     *
+     */
+    public function testGetSupplierCoverImage()
     {
 
     }

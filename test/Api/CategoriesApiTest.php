@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaSourcesApiTest
+ * CategoriesApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\ApiException;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaSourcesApiTest Class Doc Comment
+ * CategoriesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
+class CategoriesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -77,45 +77,45 @@ class MediaSourcesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getMediaSource
+     * Test case for getCategories
      *
      * .
      *
      */
-    public function testGetMediaSource()
+    public function testGetCategories()
     {
 
     }
 
     /**
-     * Test case for getMediaSourceFiles
+     * Test case for getCategory
      *
      * .
      *
      */
-    public function testGetMediaSourceFiles()
+    public function testGetCategory()
     {
 
     }
 
     /**
-     * Test case for getMediaSources
+     * Test case for getCategoryBanner
      *
      * .
      *
      */
-    public function testGetMediaSources()
+    public function testGetCategoryBanner()
     {
 
     }
 
     /**
-     * Test case for postMediaSourceFiles
+     * Test case for getCategoryProducts
      *
      * .
      *
      */
-    public function testPostMediaSourceFiles()
+    public function testGetCategoryProducts()
     {
 
     }

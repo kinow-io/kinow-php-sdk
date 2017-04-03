@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaFilesApi
+ * FacebookApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Kaemo\Client\Configuration;
 use \Kaemo\Client\ObjectSerializer;
 
 /**
- * MediaFilesApi Class Doc Comment
+ * FacebookApi Class Doc Comment
  *
  * @category Class
  * @package  Kaemo\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MediaFilesApi
+class FacebookApi
 {
     /**
      * API Client
@@ -80,7 +80,7 @@ class MediaFilesApi
      *
      * @param \Kaemo\Client\ApiClient $apiClient set the API client
      *
-     * @return MediaFilesApi
+     * @return FacebookApi
      */
     public function setApiClient(\Kaemo\Client\ApiClient $apiClient)
     {
@@ -89,41 +89,43 @@ class MediaFilesApi
     }
 
     /**
-     * Operation getMediaSourceFiles
+     * Operation createFacebookToken
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $customer_id Customer Id (required)
+     * @param string $facebook_token Facebook token (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFiles
+     * @return void
      */
-    public function getMediaSourceFiles($source_id, $page = null, $per_page = null)
+    public function createFacebookToken($customer_id, $facebook_token)
     {
-        list($response) = $this->getMediaSourceFilesWithHttpInfo($source_id, $page, $per_page);
+        list($response) = $this->createFacebookTokenWithHttpInfo($customer_id, $facebook_token);
         return $response;
     }
 
     /**
-     * Operation getMediaSourceFilesWithHttpInfo
+     * Operation createFacebookTokenWithHttpInfo
      *
      * 
      *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param int $page  (optional)
-     * @param int $per_page  (optional)
+     * @param int $customer_id Customer Id (required)
+     * @param string $facebook_token Facebook token (required)
      * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFiles, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaSourceFilesWithHttpInfo($source_id, $page = null, $per_page = null)
+    public function createFacebookTokenWithHttpInfo($customer_id, $facebook_token)
     {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling getMediaSourceFiles');
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $customer_id when calling createFacebookToken');
+        }
+        // verify the required parameter 'facebook_token' is set
+        if ($facebook_token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $facebook_token when calling createFacebookToken');
         }
         // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
+        $resourcePath = "/facebook/customers";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -134,19 +136,92 @@ class MediaFilesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
-        // query params
-        if ($page !== null) {
-            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($customer_id !== null) {
+            $formParams['customer_id'] = $this->apiClient->getSerializer()->toFormValue($customer_id);
         }
-        // query params
-        if ($per_page !== null) {
-            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        // form params
+        if ($facebook_token !== null) {
+            $formParams['facebook_token'] = $this->apiClient->getSerializer()->toFormValue($facebook_token);
         }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/facebook/customers'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getFacebookCustomer
+     *
+     * 
+     *
+     * @param int $facebook_token facebook token to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\CustomerId
+     */
+    public function getFacebookCustomer($facebook_token)
+    {
+        list($response) = $this->getFacebookCustomerWithHttpInfo($facebook_token);
+        return $response;
+    }
+
+    /**
+     * Operation getFacebookCustomerWithHttpInfo
+     *
+     * 
+     *
+     * @param int $facebook_token facebook token to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\CustomerId, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getFacebookCustomerWithHttpInfo($facebook_token)
+    {
+        // verify the required parameter 'facebook_token' is set
+        if ($facebook_token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $facebook_token when calling getFacebookCustomer');
+        }
+        // parse inputs
+        $resourcePath = "/facebook/customers/{facebook_token}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
         // path params
-        if ($source_id !== null) {
+        if ($facebook_token !== null) {
             $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
+                "{" . "facebook_token" . "}",
+                $this->apiClient->getSerializer()->toPathValue($facebook_token),
                 $resourcePath
             );
         }
@@ -168,111 +243,15 @@ class MediaFilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Kaemo\Client\Model\MediaFiles',
-                '/media-sources/{source_id}/files'
+                '\Kaemo\Client\Model\CustomerId',
+                '/facebook/customers/{facebook_token}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFiles', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\CustomerId', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFiles', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation postMediaSourceFiles
-     *
-     * 
-     *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return \Kaemo\Client\Model\MediaFile
-     */
-    public function postMediaSourceFiles($source_id, $body)
-    {
-        list($response) = $this->postMediaSourceFilesWithHttpInfo($source_id, $body);
-        return $response;
-    }
-
-    /**
-     * Operation postMediaSourceFilesWithHttpInfo
-     *
-     * 
-     *
-     * @param int $source_id ID of the media source to fetch (required)
-     * @param \Kaemo\Client\Model\MediaFile $body Create MediaFile object (required)
-     * @throws \Kaemo\Client\ApiException on non-2xx response
-     * @return array of \Kaemo\Client\Model\MediaFile, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function postMediaSourceFilesWithHttpInfo($source_id, $body)
-    {
-        // verify the required parameter 'source_id' is set
-        if ($source_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $source_id when calling postMediaSourceFiles');
-        }
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling postMediaSourceFiles');
-        }
-        // parse inputs
-        $resourcePath = "/media-sources/{source_id}/files";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept([]);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
-
-        // path params
-        if ($source_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "source_id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($source_id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Kaemo\Client\Model\MediaFile',
-                '/media-sources/{source_id}/files'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\MediaFile', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\MediaFile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\CustomerId', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

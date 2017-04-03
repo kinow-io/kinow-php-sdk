@@ -357,6 +357,93 @@ class CustomersApi
     }
 
     /**
+     * Operation createFacebookToken
+     *
+     * 
+     *
+     * @param int $customer_id Customer Id (required)
+     * @param string $facebook_token Facebook token (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return void
+     */
+    public function createFacebookToken($customer_id, $facebook_token)
+    {
+        list($response) = $this->createFacebookTokenWithHttpInfo($customer_id, $facebook_token);
+        return $response;
+    }
+
+    /**
+     * Operation createFacebookTokenWithHttpInfo
+     *
+     * 
+     *
+     * @param int $customer_id Customer Id (required)
+     * @param string $facebook_token Facebook token (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createFacebookTokenWithHttpInfo($customer_id, $facebook_token)
+    {
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $customer_id when calling createFacebookToken');
+        }
+        // verify the required parameter 'facebook_token' is set
+        if ($facebook_token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $facebook_token when calling createFacebookToken');
+        }
+        // parse inputs
+        $resourcePath = "/facebook/customers";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($customer_id !== null) {
+            $formParams['customer_id'] = $this->apiClient->getSerializer()->toFormValue($customer_id);
+        }
+        // form params
+        if ($facebook_token !== null) {
+            $formParams['facebook_token'] = $this->apiClient->getSerializer()->toFormValue($facebook_token);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/facebook/customers'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteCustomer
      *
      * 

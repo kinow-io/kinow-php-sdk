@@ -343,6 +343,103 @@ class ProductsApi
     }
 
     /**
+     * Operation getCategoryProducts
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\Products
+     */
+    public function getCategoryProducts($category_id, $page = null, $per_page = null)
+    {
+        list($response) = $this->getCategoryProductsWithHttpInfo($category_id, $page, $per_page);
+        return $response;
+    }
+
+    /**
+     * Operation getCategoryProductsWithHttpInfo
+     *
+     * 
+     *
+     * @param int $category_id ID of the category to fetch (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\Products, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCategoryProductsWithHttpInfo($category_id, $page = null, $per_page = null)
+    {
+        // verify the required parameter 'category_id' is set
+        if ($category_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $category_id when calling getCategoryProducts');
+        }
+        // parse inputs
+        $resourcePath = "/categories/{category_id}/products";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+        // path params
+        if ($category_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "category_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($category_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\Products',
+                '/categories/{category_id}/products'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Products', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Products', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation getProduct
      *
      * 
@@ -516,6 +613,91 @@ class ProductsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\ProductAttributesResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductCoverImage
+     *
+     * 
+     *
+     * @param int $product_id ID of the product to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\Image
+     */
+    public function getProductCoverImage($product_id)
+    {
+        list($response) = $this->getProductCoverImageWithHttpInfo($product_id);
+        return $response;
+    }
+
+    /**
+     * Operation getProductCoverImageWithHttpInfo
+     *
+     * 
+     *
+     * @param int $product_id ID of the product to fetch (required)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductCoverImageWithHttpInfo($product_id)
+    {
+        // verify the required parameter 'product_id' is set
+        if ($product_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $product_id when calling getProductCoverImage');
+        }
+        // parse inputs
+        $resourcePath = "/products/{product_id}/cover";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($product_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "product_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($product_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\Image',
+                '/products/{product_id}/cover'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\Image', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -819,6 +1001,117 @@ class ProductsApi
             return [null, $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductImages
+     *
+     * 
+     *
+     * @param int $product_id ID of the product to fetch (required)
+     * @param string $type type as screen_small or screen_large (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return \Kaemo\Client\Model\ProductImagesResponse
+     */
+    public function getProductImages($product_id, $type, $page = null, $per_page = null)
+    {
+        list($response) = $this->getProductImagesWithHttpInfo($product_id, $type, $page, $per_page);
+        return $response;
+    }
+
+    /**
+     * Operation getProductImagesWithHttpInfo
+     *
+     * 
+     *
+     * @param int $product_id ID of the product to fetch (required)
+     * @param string $type type as screen_small or screen_large (required)
+     * @param int $page  (optional)
+     * @param int $per_page  (optional)
+     * @throws \Kaemo\Client\ApiException on non-2xx response
+     * @return array of \Kaemo\Client\Model\ProductImagesResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductImagesWithHttpInfo($product_id, $type, $page = null, $per_page = null)
+    {
+        // verify the required parameter 'product_id' is set
+        if ($product_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $product_id when calling getProductImages');
+        }
+        // verify the required parameter 'type' is set
+        if ($type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $type when calling getProductImages');
+        }
+        // parse inputs
+        $resourcePath = "/products/{product_id}/images";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept([]);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($per_page !== null) {
+            $queryParams['per_page'] = $this->apiClient->getSerializer()->toQueryValue($per_page);
+        }
+        // path params
+        if ($product_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "product_id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($product_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($type !== null) {
+            $resourcePath = str_replace(
+                "{" . "type" . "}",
+                $this->apiClient->getSerializer()->toPathValue($type),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Kaemo\Client\Model\ProductImagesResponse',
+                '/products/{product_id}/images'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Kaemo\Client\Model\ProductImagesResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Kaemo\Client\Model\ProductImagesResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
             }
 
             throw $e;
