@@ -119,7 +119,7 @@ class WidgetsApi
         $headerParams = [];
         $formParams = [];
         $apiVersion = $this->apiClient->getConfig()->getApiVersion();
-        $_header_accept = $this->apiClient->selectHeaderAccept(["application/vnd.kaemoapi.v$api+json"]);
+        $_header_accept = $this->apiClient->selectHeaderAccept(["application/vnd.kaemoapi.v$apiVersion+json"]);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
@@ -191,7 +191,7 @@ class WidgetsApi
         $headerParams = [];
         $formParams = [];
         $apiVersion = $this->apiClient->getConfig()->getApiVersion();
-        $_header_accept = $this->apiClient->selectHeaderAccept(["application/vnd.kaemoapi.v$api+json"]);
+        $_header_accept = $this->apiClient->selectHeaderAccept(["application/vnd.kaemoapi.v$apiVersion+json"]);
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
