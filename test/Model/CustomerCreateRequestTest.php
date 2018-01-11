@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductAccessTest
+ * CustomerCreateRequestTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * ProductAccessTest Class Doc Comment
+ * CustomerCreateRequestTest Class Doc Comment
  *
  * @category    Class */
-// * @description ProductAccess
+// * @description CustomerCreateRequest
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductAccessTest extends \PHPUnit_Framework_TestCase
+class CustomerCreateRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,81 +75,73 @@ class ProductAccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ProductAccess"
+     * Test "CustomerCreateRequest"
      */
-    public function testProductAccess()
+    public function testCustomerCreateRequest()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "firstname"
      */
-    public function testPropertyId()
+    public function testPropertyFirstname()
     {
 
     }
 
     /**
-     * Test attribute "id_customer"
+     * Test attribute "lastname"
      */
-    public function testPropertyIdCustomer()
+    public function testPropertyLastname()
     {
 
     }
 
     /**
-     * Test attribute "id_product"
+     * Test attribute "email"
      */
-    public function testPropertyIdProduct()
+    public function testPropertyEmail()
     {
 
     }
 
     /**
-     * Test attribute "id_product_attribute"
+     * Test attribute "password"
      */
-    public function testPropertyIdProductAttribute()
+    public function testPropertyPassword()
     {
 
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "id_gender"
      */
-    public function testPropertyType()
+    public function testPropertyIdGender()
     {
 
     }
 
     /**
-     * Test attribute "date_add"
+     * Test attribute "birthday"
      */
-    public function testPropertyDateAdd()
+    public function testPropertyBirthday()
     {
 
     }
 
     /**
-     * Test attribute "date_exp"
+     * Test attribute "newsletter"
      */
-    public function testPropertyDateExp()
+    public function testPropertyNewsletter()
     {
 
     }
 
     /**
-     * Test attribute "cancel"
+     * Test attribute "optin"
      */
-    public function testPropertyCancel()
-    {
-
-    }
-
-    /**
-     * Test attribute "recurring"
-     */
-    public function testPropertyRecurring()
+    public function testPropertyOptin()
     {
 
     }
@@ -163,17 +155,49 @@ class ProductAccessTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "id_lang"
      */
-    public function testPropertyMessage()
+    public function testPropertyIdLang()
     {
 
     }
 
     /**
-     * Test attribute "id_order"
+     * Test attribute "id_country"
      */
-    public function testPropertyIdOrder()
+    public function testPropertyIdCountry()
+    {
+
+    }
+
+    /**
+     * Test attribute "city"
+     */
+    public function testPropertyCity()
+    {
+
+    }
+
+    /**
+     * Test attribute "postcode"
+     */
+    public function testPropertyPostcode()
+    {
+
+    }
+
+    /**
+     * Test attribute "address1"
+     */
+    public function testPropertyAddress1()
+    {
+
+    }
+
+    /**
+     * Test attribute "company"
+     */
+    public function testPropertyCompany()
     {
 
     }

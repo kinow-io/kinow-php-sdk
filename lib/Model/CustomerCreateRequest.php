@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * CustomerCreateRequest
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * CustomerCreateRequest Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class CustomerCreateRequest implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,27 +48,28 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'CustomerCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'lastname' => 'string',
         'firstname' => 'string',
+        'lastname' => 'string',
         'email' => 'string',
+        'password' => 'string',
         'id_gender' => 'int',
         'birthday' => 'string',
         'newsletter' => 'bool',
         'optin' => 'bool',
         'active' => 'bool',
         'id_lang' => 'int',
-        'date_add' => 'string',
-        'date_upd' => 'string',
-        'password' => 'string',
-        'id_country' => 'int'
+        'id_country' => 'int',
+        'city' => 'string',
+        'postcode' => 'string',
+        'address1' => 'string',
+        'company' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,20 +82,21 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'lastname' => 'lastname',
         'firstname' => 'firstname',
+        'lastname' => 'lastname',
         'email' => 'email',
+        'password' => 'password',
         'id_gender' => 'id_gender',
         'birthday' => 'birthday',
         'newsletter' => 'newsletter',
         'optin' => 'optin',
         'active' => 'active',
         'id_lang' => 'id_lang',
-        'date_add' => 'date_add',
-        'date_upd' => 'date_upd',
-        'password' => 'password',
-        'id_country' => 'id_country'
+        'id_country' => 'id_country',
+        'city' => 'city',
+        'postcode' => 'postcode',
+        'address1' => 'address1',
+        'company' => 'company'
     ];
 
 
@@ -103,20 +105,21 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'lastname' => 'setLastname',
         'firstname' => 'setFirstname',
+        'lastname' => 'setLastname',
         'email' => 'setEmail',
+        'password' => 'setPassword',
         'id_gender' => 'setIdGender',
         'birthday' => 'setBirthday',
         'newsletter' => 'setNewsletter',
         'optin' => 'setOptin',
         'active' => 'setActive',
         'id_lang' => 'setIdLang',
-        'date_add' => 'setDateAdd',
-        'date_upd' => 'setDateUpd',
-        'password' => 'setPassword',
-        'id_country' => 'setIdCountry'
+        'id_country' => 'setIdCountry',
+        'city' => 'setCity',
+        'postcode' => 'setPostcode',
+        'address1' => 'setAddress1',
+        'company' => 'setCompany'
     ];
 
 
@@ -125,20 +128,21 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'lastname' => 'getLastname',
         'firstname' => 'getFirstname',
+        'lastname' => 'getLastname',
         'email' => 'getEmail',
+        'password' => 'getPassword',
         'id_gender' => 'getIdGender',
         'birthday' => 'getBirthday',
         'newsletter' => 'getNewsletter',
         'optin' => 'getOptin',
         'active' => 'getActive',
         'id_lang' => 'getIdLang',
-        'date_add' => 'getDateAdd',
-        'date_upd' => 'getDateUpd',
-        'password' => 'getPassword',
-        'id_country' => 'getIdCountry'
+        'id_country' => 'getIdCountry',
+        'city' => 'getCity',
+        'postcode' => 'getPostcode',
+        'address1' => 'getAddress1',
+        'company' => 'getCompany'
     ];
 
     public static function attributeMap()
@@ -172,20 +176,21 @@ class Customer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['lastname'] = isset($data['lastname']) ? $data['lastname'] : null;
         $this->container['firstname'] = isset($data['firstname']) ? $data['firstname'] : null;
+        $this->container['lastname'] = isset($data['lastname']) ? $data['lastname'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['id_gender'] = isset($data['id_gender']) ? $data['id_gender'] : null;
         $this->container['birthday'] = isset($data['birthday']) ? $data['birthday'] : null;
         $this->container['newsletter'] = isset($data['newsletter']) ? $data['newsletter'] : null;
         $this->container['optin'] = isset($data['optin']) ? $data['optin'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['id_lang'] = isset($data['id_lang']) ? $data['id_lang'] : null;
-        $this->container['date_add'] = isset($data['date_add']) ? $data['date_add'] : null;
-        $this->container['date_upd'] = isset($data['date_upd']) ? $data['date_upd'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['id_country'] = isset($data['id_country']) ? $data['id_country'] : null;
+        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
+        $this->container['postcode'] = isset($data['postcode']) ? $data['postcode'] : null;
+        $this->container['address1'] = isset($data['address1']) ? $data['address1'] : null;
+        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
     }
 
     /**
@@ -212,22 +217,22 @@ class Customer implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets firstname
+     * @return string
      */
-    public function getId()
+    public function getFirstname()
     {
-        return $this->container['id'];
+        return $this->container['firstname'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets firstname
+     * @param string $firstname
      * @return $this
      */
-    public function setId($id)
+    public function setFirstname($firstname)
     {
-        $this->container['id'] = $id;
+        $this->container['firstname'] = $firstname;
 
         return $this;
     }
@@ -254,27 +259,6 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets firstname
-     * @return string
-     */
-    public function getFirstname()
-    {
-        return $this->container['firstname'];
-    }
-
-    /**
-     * Sets firstname
-     * @param string $firstname
-     * @return $this
-     */
-    public function setFirstname($firstname)
-    {
-        $this->container['firstname'] = $firstname;
-
-        return $this;
-    }
-
-    /**
      * Gets email
      * @return string
      */
@@ -291,6 +275,27 @@ class Customer implements ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     * @param string $password
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->container['password'] = $password;
 
         return $this;
     }
@@ -422,69 +427,6 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets date_add
-     * @return string
-     */
-    public function getDateAdd()
-    {
-        return $this->container['date_add'];
-    }
-
-    /**
-     * Sets date_add
-     * @param string $date_add
-     * @return $this
-     */
-    public function setDateAdd($date_add)
-    {
-        $this->container['date_add'] = $date_add;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_upd
-     * @return string
-     */
-    public function getDateUpd()
-    {
-        return $this->container['date_upd'];
-    }
-
-    /**
-     * Sets date_upd
-     * @param string $date_upd
-     * @return $this
-     */
-    public function setDateUpd($date_upd)
-    {
-        $this->container['date_upd'] = $date_upd;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     * @param string $password Only available in body
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
      * Gets id_country
      * @return int
      */
@@ -495,12 +437,96 @@ class Customer implements ArrayAccess
 
     /**
      * Sets id_country
-     * @param int $id_country Only available in body
+     * @param int $id_country
      * @return $this
      */
     public function setIdCountry($id_country)
     {
         $this->container['id_country'] = $id_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     * @param string $city
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets postcode
+     * @return string
+     */
+    public function getPostcode()
+    {
+        return $this->container['postcode'];
+    }
+
+    /**
+     * Sets postcode
+     * @param string $postcode
+     * @return $this
+     */
+    public function setPostcode($postcode)
+    {
+        $this->container['postcode'] = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets address1
+     * @return string
+     */
+    public function getAddress1()
+    {
+        return $this->container['address1'];
+    }
+
+    /**
+     * Sets address1
+     * @param string $address1
+     * @return $this
+     */
+    public function setAddress1($address1)
+    {
+        $this->container['address1'] = $address1;
+
+        return $this;
+    }
+
+    /**
+     * Gets company
+     * @return string
+     */
+    public function getCompany()
+    {
+        return $this->container['company'];
+    }
+
+    /**
+     * Sets company
+     * @param string $company
+     * @return $this
+     */
+    public function setCompany($company)
+    {
+        $this->container['company'] = $company;
 
         return $this;
     }

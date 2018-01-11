@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderHistoryTest
+ * CartsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * OrderHistoryTest Class Doc Comment
+ * CartsTest Class Doc Comment
  *
  * @category    Class */
-// * @description OrderHistory
+// * @description Carts
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderHistoryTest extends \PHPUnit_Framework_TestCase
+class CartsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,41 +75,25 @@ class OrderHistoryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "OrderHistory"
+     * Test "Carts"
      */
-    public function testOrderHistory()
+    public function testCarts()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "pagination"
      */
-    public function testPropertyId()
+    public function testPropertyPagination()
     {
 
     }
 
     /**
-     * Test attribute "id_order"
+     * Test attribute "data"
      */
-    public function testPropertyIdOrder()
-    {
-
-    }
-
-    /**
-     * Test attribute "id_order_state"
-     */
-    public function testPropertyIdOrderState()
-    {
-
-    }
-
-    /**
-     * Test attribute "date_add"
-     */
-    public function testPropertyDateAdd()
+    public function testPropertyData()
     {
 
     }

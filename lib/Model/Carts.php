@@ -1,6 +1,6 @@
 <?php
 /**
- * Actors
+ * Carts
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Actors Class Doc Comment
+ * Carts Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Actors implements ArrayAccess
+class Carts implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Actors implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Actors';
+    protected static $swaggerModelName = 'Carts';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,7 @@ class Actors implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\Actor[]'
+        'data' => '\Kaemo\Client\Model\Cart[]'
     ];
 
     public static function swaggerTypes()
@@ -174,7 +174,7 @@ class Actors implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Kaemo\Client\Model\Actor[]
+     * @return \Kaemo\Client\Model\Cart[]
      */
     public function getData()
     {
@@ -183,7 +183,7 @@ class Actors implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Kaemo\Client\Model\Actor[] $data
+     * @param \Kaemo\Client\Model\Cart[] $data
      * @return $this
      */
     public function setData($data)

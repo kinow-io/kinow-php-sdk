@@ -106,6 +106,8 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**deleteCart**](#deletecart) | **DELETE** /carts/{cart_id} | 
 *CartsApi* | [**deleteProductFromCart**](#deleteproductfromcart) | **DELETE** /carts/{cart_id}/products | 
 *CartsApi* | [**getCart**](#getcart) | **GET** /carts/{cart_id} | 
+*CartsApi* | [**getCustomerCarts**](#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
+*CartsApi* | [**getLastCart**](#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
 *CartsApi* | [**getPaymentUrl**](#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *CartsApi* | [**updateCart**](#updatecart) | **PUT** /carts/{cart_id} | 
 *CartsApi* | [**validateCart**](#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
@@ -175,6 +177,7 @@ Class | Method | HTTP request | Description
 *GeolocationsApi* | [**setProductGeolocation**](#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**setVideoGeolocation**](#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *GroupsApi* | [**attachCustomerToGroup**](#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
+*GroupsApi* | [**detachCustomerFromGroup**](#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
 *GroupsApi* | [**getGroups**](#getgroups) | **GET** /groups | 
 *ImagesApi* | [**getCategoryBanner**](#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *ImagesApi* | [**getIntroImage**](#getintroimage) | **GET** /widgets/intro/images | 
@@ -286,6 +289,7 @@ Class | Method | HTTP request | Description
  - [CartBody](#CartBody)
  - [CartRule](#CartRule)
  - [CartRules](#CartRules)
+ - [Carts](#Carts)
  - [Categories](#Categories)
  - [Category](#Category)
  - [Countries](#Countries)
@@ -293,6 +297,7 @@ Class | Method | HTTP request | Description
  - [Currencies](#Currencies)
  - [Currency](#Currency)
  - [Customer](#Customer)
+ - [CustomerCreateRequest](#CustomerCreateRequest)
  - [CustomerCurrentViews](#CustomerCurrentViews)
  - [CustomerId](#CustomerId)
  - [CustomerThread](#CustomerThread)
