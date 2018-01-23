@@ -1,6 +1,6 @@
 <?php
 /**
- * Languages
+ * ProductAttributeCreateRequest
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Languages Class Doc Comment
+ * ProductAttributeCreateRequest Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Languages implements ArrayAccess
+class ProductAttributeCreateRequest implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,17 @@ class Languages implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Languages';
+    protected static $swaggerModelName = 'ProductAttributeCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\Language[]'
+        'product_id' => 'int',
+        'type' => 'int',
+        'price' => 'float',
+        'active' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +71,10 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pagination' => 'pagination',
-        'data' => 'data'
+        'product_id' => 'product_id',
+        'type' => 'type',
+        'price' => 'price',
+        'active' => 'active'
     ];
 
 
@@ -79,8 +83,10 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pagination' => 'setPagination',
-        'data' => 'setData'
+        'product_id' => 'setProductId',
+        'type' => 'setType',
+        'price' => 'setPrice',
+        'active' => 'setActive'
     ];
 
 
@@ -89,8 +95,10 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pagination' => 'getPagination',
-        'data' => 'getData'
+        'product_id' => 'getProductId',
+        'type' => 'getType',
+        'price' => 'getPrice',
+        'active' => 'getActive'
     ];
 
     public static function attributeMap()
@@ -124,8 +132,10 @@ class Languages implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -152,43 +162,85 @@ class Languages implements ArrayAccess
 
 
     /**
-     * Gets pagination
-     * @return \Kaemo\Client\Model\Pagination
+     * Gets product_id
+     * @return int
      */
-    public function getPagination()
+    public function getProductId()
     {
-        return $this->container['pagination'];
+        return $this->container['product_id'];
     }
 
     /**
-     * Sets pagination
-     * @param \Kaemo\Client\Model\Pagination $pagination
+     * Sets product_id
+     * @param int $product_id Id of the product to attach this attribute
      * @return $this
      */
-    public function setPagination($pagination)
+    public function setProductId($product_id)
     {
-        $this->container['pagination'] = $pagination;
+        $this->container['product_id'] = $product_id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Kaemo\Client\Model\Language[]
+     * Gets type
+     * @return int
      */
-    public function getData()
+    public function getType()
     {
-        return $this->container['data'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets data
-     * @param \Kaemo\Client\Model\Language[] $data
+     * Sets type
+     * @param int $type 1: Streaming & Download, 2: Download only, 3: Streaming only
      * @return $this
      */
-    public function setData($data)
+    public function setType($type)
     {
-        $this->container['data'] = $data;
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets price
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->container['price'];
+    }
+
+    /**
+     * Sets price
+     * @param float $price Final price of the product
+     * @return $this
+     */
+    public function setPrice($price)
+    {
+        $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active Status of the attribute
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

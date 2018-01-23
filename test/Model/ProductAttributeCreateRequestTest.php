@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderHistoriesTest
+ * ProductAttributeCreateRequestTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * OrderHistoriesTest Class Doc Comment
+ * ProductAttributeCreateRequestTest Class Doc Comment
  *
  * @category    Class */
-// * @description OrderHistories
+// * @description ProductAttributeCreateRequest
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderHistoriesTest extends \PHPUnit_Framework_TestCase
+class ProductAttributeCreateRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,41 @@ class OrderHistoriesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "OrderHistories"
+     * Test "ProductAttributeCreateRequest"
      */
-    public function testOrderHistories()
+    public function testProductAttributeCreateRequest()
     {
 
     }
 
     /**
-     * Test attribute "pagination"
+     * Test attribute "product_id"
      */
-    public function testPropertyPagination()
+    public function testPropertyProductId()
     {
 
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "type"
      */
-    public function testPropertyData()
+    public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "price"
+     */
+    public function testPropertyPrice()
+    {
+
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
     {
 
     }

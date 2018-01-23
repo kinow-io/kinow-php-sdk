@@ -86,7 +86,9 @@ Class | Method | HTTP request | Description
 *ActorsApi* | [**getProductActors**](#getproductactors) | **GET** /products/{product_id}/actors | 
 *AddressApi* | [**getCustomerAddress**](#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *AddressApi* | [**updateAddress**](#updateaddress) | **PUT** /addresses/{address_id} | 
+*AttributesApi* | [**createProductAttribute**](#createproductattribute) | **POST** /attributes | 
 *AttributesApi* | [**getProductAttributes**](#getproductattributes) | **GET** /products/{product_id}/attributes | 
+*AttributesApi* | [**updateProductAttribute**](#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
 *BookmarksApi* | [**attachBookmarkToCustomer**](#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
 *BookmarksApi* | [**detachBookmarkFromCustomer**](#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
 *BookmarksApi* | [**getCustomerBookmarks**](#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
@@ -341,6 +343,8 @@ Class | Method | HTTP request | Description
  - [Product](#Product)
  - [ProductAccess](#ProductAccess)
  - [ProductAttribute](#ProductAttribute)
+ - [ProductAttributeCreateRequest](#ProductAttributeCreateRequest)
+ - [ProductAttributeUpdateRequest](#ProductAttributeUpdateRequest)
  - [ProductAttributesResponse](#ProductAttributesResponse)
  - [ProductExtractsResponse](#ProductExtractsResponse)
  - [ProductImagesResponse](#ProductImagesResponse)

@@ -1,6 +1,6 @@
 <?php
 /**
- * Languages
+ * ProductAttributeUpdateRequest
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Languages Class Doc Comment
+ * ProductAttributeUpdateRequest Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Languages implements ArrayAccess
+class ProductAttributeUpdateRequest implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,15 @@ class Languages implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Languages';
+    protected static $swaggerModelName = 'ProductAttributeUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\Language[]'
+        'price' => 'float',
+        'active' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +69,8 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pagination' => 'pagination',
-        'data' => 'data'
+        'price' => 'price',
+        'active' => 'active'
     ];
 
 
@@ -79,8 +79,8 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pagination' => 'setPagination',
-        'data' => 'setData'
+        'price' => 'setPrice',
+        'active' => 'setActive'
     ];
 
 
@@ -89,8 +89,8 @@ class Languages implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pagination' => 'getPagination',
-        'data' => 'getData'
+        'price' => 'getPrice',
+        'active' => 'getActive'
     ];
 
     public static function attributeMap()
@@ -124,8 +124,8 @@ class Languages implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -152,43 +152,43 @@ class Languages implements ArrayAccess
 
 
     /**
-     * Gets pagination
-     * @return \Kaemo\Client\Model\Pagination
+     * Gets price
+     * @return float
      */
-    public function getPagination()
+    public function getPrice()
     {
-        return $this->container['pagination'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets pagination
-     * @param \Kaemo\Client\Model\Pagination $pagination
+     * Sets price
+     * @param float $price Final price of the product
      * @return $this
      */
-    public function setPagination($pagination)
+    public function setPrice($price)
     {
-        $this->container['pagination'] = $pagination;
+        $this->container['price'] = $price;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Kaemo\Client\Model\Language[]
+     * Gets active
+     * @return bool
      */
-    public function getData()
+    public function getActive()
     {
-        return $this->container['data'];
+        return $this->container['active'];
     }
 
     /**
-     * Sets data
-     * @param \Kaemo\Client\Model\Language[] $data
+     * Sets active
+     * @param bool $active Status of the attribute
      * @return $this
      */
-    public function setData($data)
+    public function setActive($active)
     {
-        $this->container['data'] = $data;
+        $this->container['active'] = $active;
 
         return $this;
     }
