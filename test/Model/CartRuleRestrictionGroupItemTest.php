@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductAttributeTest
+ * CartRuleRestrictionGroupItemTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * ProductAttributeTest Class Doc Comment
+ * CartRuleRestrictionGroupItemTest Class Doc Comment
  *
  * @category    Class */
-// * @description ProductAttribute
+// * @description CartRuleRestrictionGroupItem
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductAttributeTest extends \PHPUnit_Framework_TestCase
+class CartRuleRestrictionGroupItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,49 +75,9 @@ class ProductAttributeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ProductAttribute"
+     * Test "CartRuleRestrictionGroupItem"
      */
-    public function testProductAttribute()
-    {
-
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-
-    }
-
-    /**
-     * Test attribute "price_noreduc"
-     */
-    public function testPropertyPriceNoreduc()
-    {
-
-    }
-
-    /**
-     * Test attribute "active"
-     */
-    public function testPropertyActive()
+    public function testCartRuleRestrictionGroupItem()
     {
 
     }
@@ -126,6 +86,14 @@ class ProductAttributeTest extends \PHPUnit_Framework_TestCase
      * Test attribute "type"
      */
     public function testPropertyType()
+    {
+
+    }
+
+    /**
+     * Test attribute "id_item"
+     */
+    public function testPropertyIdItem()
     {
 
     }

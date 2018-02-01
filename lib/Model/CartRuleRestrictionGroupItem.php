@@ -1,6 +1,6 @@
 <?php
 /**
- * Tag
+ * CartRuleRestrictionGroupItem
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Tag Class Doc Comment
+ * CartRuleRestrictionGroupItem Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Tag implements ArrayAccess
+class CartRuleRestrictionGroupItem implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,16 +48,15 @@ class Tag implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Tag';
+    protected static $swaggerModelName = 'CartRuleRestrictionGroupItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'id_lang' => 'int',
-        'name' => 'string'
+        'type' => 'string',
+        'id_item' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -70,9 +69,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'id_lang' => 'id_lang',
-        'name' => 'name'
+        'type' => 'type',
+        'id_item' => 'id_item'
     ];
 
 
@@ -81,9 +79,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'id_lang' => 'setIdLang',
-        'name' => 'setName'
+        'type' => 'setType',
+        'id_item' => 'setIdItem'
     ];
 
 
@@ -92,9 +89,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'id_lang' => 'getIdLang',
-        'name' => 'getName'
+        'type' => 'getType',
+        'id_item' => 'getIdItem'
     ];
 
     public static function attributeMap()
@@ -128,9 +124,8 @@ class Tag implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['id_lang'] = isset($data['id_lang']) ? $data['id_lang'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['id_item'] = isset($data['id_item']) ? $data['id_item'] : null;
     }
 
     /**
@@ -157,64 +152,43 @@ class Tag implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets id_lang
-     * @return int
-     */
-    public function getIdLang()
-    {
-        return $this->container['id_lang'];
-    }
-
-    /**
-     * Sets id_lang
-     * @param int $id_lang
-     * @return $this
-     */
-    public function setIdLang($id_lang)
-    {
-        $this->container['id_lang'] = $id_lang;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
+     * Gets type
      * @return string
      */
-    public function getName()
+    public function getType()
     {
-        return $this->container['name'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets name
-     * @param string $name
+     * Sets type
+     * @param string $type Can be: product, subscription, category, actor or director
      * @return $this
      */
-    public function setName($name)
+    public function setType($type)
     {
-        $this->container['name'] = $name;
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets id_item
+     * @return int
+     */
+    public function getIdItem()
+    {
+        return $this->container['id_item'];
+    }
+
+    /**
+     * Sets id_item
+     * @param int $id_item Id of the item to restrict
+     * @return $this
+     */
+    public function setIdItem($id_item)
+    {
+        $this->container['id_item'] = $id_item;
 
         return $this;
     }

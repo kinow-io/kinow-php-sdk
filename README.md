@@ -99,8 +99,11 @@ Class | Method | HTTP request | Description
 *CMSPagesApi* | [**getCMSPages**](#getcmspages) | **GET** /cms-pages | 
 *CMSPagesApi* | [**updateCMSPage**](#updatecmspage) | **PUT** /cms-pages/{cms_page_id} | 
 *CartRulesApi* | [**attachCartRuleToCart**](#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
+*CartRulesApi* | [**createCartRule**](#createcartrule) | **POST** /cart-rules | 
+*CartRulesApi* | [**deleteCartRule**](#deletecartrule) | **DELETE** /cart-rules/{cart_rule_id} | 
 *CartRulesApi* | [**getCartRule**](#getcartrule) | **GET** /cart-rules/{cart_rule_id} | 
 *CartRulesApi* | [**getCartRules**](#getcartrules) | **GET** /cart-rules | 
+*CartRulesApi* | [**updateCartRule**](#updatecartrule) | **PUT** /cart-rules/{cart_rule_id} | 
 *CartsApi* | [**addProductToCart**](#addproducttocart) | **POST** /carts/{cart_id}/products | 
 *CartsApi* | [**attachCartRuleToCart**](#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
 *CartsApi* | [**attachCartToCustomer**](#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
@@ -290,6 +293,8 @@ Class | Method | HTTP request | Description
  - [Cart](#Cart)
  - [CartBody](#CartBody)
  - [CartRule](#CartRule)
+ - [CartRuleRestrictionGroup](#CartRuleRestrictionGroup)
+ - [CartRuleRestrictionGroupItem](#CartRuleRestrictionGroupItem)
  - [CartRules](#CartRules)
  - [Carts](#Carts)
  - [Categories](#Categories)

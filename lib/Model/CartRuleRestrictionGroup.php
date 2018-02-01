@@ -1,6 +1,6 @@
 <?php
 /**
- * Tag
+ * CartRuleRestrictionGroup
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * Tag Class Doc Comment
+ * CartRuleRestrictionGroup Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Tag implements ArrayAccess
+class CartRuleRestrictionGroup implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,16 +48,15 @@ class Tag implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Tag';
+    protected static $swaggerModelName = 'CartRuleRestrictionGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'id_lang' => 'int',
-        'name' => 'string'
+        'quantity' => 'int',
+        'items' => '\Kaemo\Client\Model\CartRuleRestrictionGroupItem[]'
     ];
 
     public static function swaggerTypes()
@@ -70,9 +69,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'id_lang' => 'id_lang',
-        'name' => 'name'
+        'quantity' => 'quantity',
+        'items' => 'items'
     ];
 
 
@@ -81,9 +79,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'id_lang' => 'setIdLang',
-        'name' => 'setName'
+        'quantity' => 'setQuantity',
+        'items' => 'setItems'
     ];
 
 
@@ -92,9 +89,8 @@ class Tag implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'id_lang' => 'getIdLang',
-        'name' => 'getName'
+        'quantity' => 'getQuantity',
+        'items' => 'getItems'
     ];
 
     public static function attributeMap()
@@ -128,9 +124,8 @@ class Tag implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['id_lang'] = isset($data['id_lang']) ? $data['id_lang'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -157,64 +152,43 @@ class Tag implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets quantity
      * @return int
      */
-    public function getId()
+    public function getQuantity()
     {
-        return $this->container['id'];
+        return $this->container['quantity'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets quantity
+     * @param int $quantity Cart must contain at least product(s) \"X\" matching the following restrictions:
      * @return $this
      */
-    public function setId($id)
+    public function setQuantity($quantity)
     {
-        $this->container['id'] = $id;
+        $this->container['quantity'] = $quantity;
 
         return $this;
     }
 
     /**
-     * Gets id_lang
-     * @return int
+     * Gets items
+     * @return \Kaemo\Client\Model\CartRuleRestrictionGroupItem[]
      */
-    public function getIdLang()
+    public function getItems()
     {
-        return $this->container['id_lang'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets id_lang
-     * @param int $id_lang
+     * Sets items
+     * @param \Kaemo\Client\Model\CartRuleRestrictionGroupItem[] $items
      * @return $this
      */
-    public function setIdLang($id_lang)
+    public function setItems($items)
     {
-        $this->container['id_lang'] = $id_lang;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
+        $this->container['items'] = $items;
 
         return $this;
     }
