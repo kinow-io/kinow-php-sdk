@@ -55,6 +55,7 @@ class CMSPage implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'link_rewrite' => '\Kaemo\Client\Model\I18nField[]',
         'meta_title' => '\Kaemo\Client\Model\I18nField[]',
         'meta_description' => '\Kaemo\Client\Model\I18nField[]',
@@ -74,6 +75,7 @@ class CMSPage implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'link_rewrite' => 'link_rewrite',
         'meta_title' => 'meta_title',
         'meta_description' => 'meta_description',
@@ -89,6 +91,7 @@ class CMSPage implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'link_rewrite' => 'setLinkRewrite',
         'meta_title' => 'setMetaTitle',
         'meta_description' => 'setMetaDescription',
@@ -104,6 +107,7 @@ class CMSPage implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'link_rewrite' => 'getLinkRewrite',
         'meta_title' => 'getMetaTitle',
         'meta_description' => 'getMetaDescription',
@@ -144,6 +148,7 @@ class CMSPage implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['link_rewrite'] = isset($data['link_rewrite']) ? $data['link_rewrite'] : null;
         $this->container['meta_title'] = isset($data['meta_title']) ? $data['meta_title'] : null;
         $this->container['meta_description'] = isset($data['meta_description']) ? $data['meta_description'] : null;
@@ -175,6 +180,26 @@ class CMSPage implements ArrayAccess
         return true;
     }
 
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets link_rewrite
