@@ -92,6 +92,10 @@ Class | Method | HTTP request | Description
 *AttributesApi* | [**createProductAttribute**](#createproductattribute) | **POST** /attributes | 
 *AttributesApi* | [**getProductAttributes**](#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *AttributesApi* | [**updateProductAttribute**](#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
+*BlogCategoriesApi* | [**getBlogCategories**](#getblogcategories) | **GET** /blog-categories | 
+*BlogCategoriesApi* | [**getBlogCategory**](#getblogcategory) | **GET** /blog-pages/{blog_category_id} | 
+*BlogPagesApi* | [**getBlogPage**](#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
+*BlogPagesApi* | [**getBlogPages**](#getblogpages) | **GET** /blog-pages | 
 *BookmarksApi* | [**attachBookmarkToCustomer**](#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
 *BookmarksApi* | [**detachBookmarkFromCustomer**](#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
 *BookmarksApi* | [**getCustomerBookmarks**](#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
@@ -315,7 +319,9 @@ Class | Method | HTTP request | Description
  - [Actors](#Actors)
  - [Address](#Address)
  - [BlogCategory](#BlogCategory)
+ - [BlogCategoryLists](#BlogCategoryLists)
  - [BlogPage](#BlogPage)
+ - [BlogPageLists](#BlogPageLists)
  - [CMSCategoriesLists](#CMSCategoriesLists)
  - [CMSCategory](#CMSCategory)
  - [CMSPage](#CMSPage)
@@ -329,6 +335,7 @@ Class | Method | HTTP request | Description
  - [Carts](#Carts)
  - [Categories](#Categories)
  - [Category](#Category)
+ - [CategoryImages](#CategoryImages)
  - [Countries](#Countries)
  - [Country](#Country)
  - [Currencies](#Currencies)
