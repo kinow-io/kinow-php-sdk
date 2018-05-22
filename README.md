@@ -311,6 +311,8 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**updateVideo**](#updatevideo) | **PUT** /videos/{video_id} | 
 *WidgetsApi* | [**getIntroImage**](#getintroimage) | **GET** /widgets/intro/images | 
 *WidgetsApi* | [**getSliderImages**](#getsliderimages) | **GET** /widgets/slider/images | 
+*WidgetsApi* | [**getWidgetFooterMenu**](#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
+*WidgetsApi* | [**getWidgetTopMenu**](#getwidgettopmenu) | **GET** /widgets/top-menu | 
 
 
 ## Documentation For Models
@@ -404,4 +406,8 @@ Class | Method | HTTP request | Description
  - [VideoUrl](#VideoUrl)
  - [VideoViews](#VideoViews)
  - [Videos](#Videos)
+ - [WidgetFooterMenu](#WidgetFooterMenu)
+ - [WidgetFooterMenus](#WidgetFooterMenus)
+ - [WidgetTopMenu](#WidgetTopMenu)
+ - [WidgetTopMenus](#WidgetTopMenus)
 
