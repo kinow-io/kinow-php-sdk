@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerAddress**](#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *CustomersApi* | [**getCustomerCanSeeProduct**](#getcustomercanseeproduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
 *CustomersApi* | [**getCustomerCurrentViews**](#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
+*CustomersApi* | [**getCustomerGroups**](#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
 *CustomersApi* | [**getCustomerHasAccessToProduct**](#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 *CustomersApi* | [**getCustomerHasAccessToVideo**](#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *CustomersApi* | [**getCustomerOrders**](#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
