@@ -95,7 +95,7 @@ class CartsApi
      *
      * @param int $cart_id Id of the cart to fetch (required)
      * @param int $product_id Id of the product to attach to the cart (required)
-     * @param int $product_attribute_id Id of the product attribute, required to add product to cart it product is not a subscription (optional)
+     * @param int $product_attribute_id Id of the product attribute, required to add product to cart if product is not a subscription (optional)
      * @param int $switch_subscription_id When customer want to switch subscription, switch_subscription_id is the id of the product access that match with the subscription to cancel. (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return \Kaemo\Client\Model\Cart
@@ -113,7 +113,7 @@ class CartsApi
      *
      * @param int $cart_id Id of the cart to fetch (required)
      * @param int $product_id Id of the product to attach to the cart (required)
-     * @param int $product_attribute_id Id of the product attribute, required to add product to cart it product is not a subscription (optional)
+     * @param int $product_attribute_id Id of the product attribute, required to add product to cart if product is not a subscription (optional)
      * @param int $switch_subscription_id When customer want to switch subscription, switch_subscription_id is the id of the product access that match with the subscription to cancel. (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return array of \Kaemo\Client\Model\Cart, HTTP status code, HTTP response headers (array of strings)
@@ -556,12 +556,13 @@ class CartsApi
      *
      * @param string $cart_id Id of the cart to fetch (required)
      * @param int $product_id Id of the product to delete from cart (required)
+     * @param int $product_attribute_id Id of the product attribute, required to add product to cart if product is not a subscription (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return void
      */
-    public function deleteProductFromCart($cart_id, $product_id)
+    public function deleteProductFromCart($cart_id, $product_id, $product_attribute_id = null)
     {
-        list($response) = $this->deleteProductFromCartWithHttpInfo($cart_id, $product_id);
+        list($response) = $this->deleteProductFromCartWithHttpInfo($cart_id, $product_id, $product_attribute_id);
         return $response;
     }
 
@@ -572,10 +573,11 @@ class CartsApi
      *
      * @param string $cart_id Id of the cart to fetch (required)
      * @param int $product_id Id of the product to delete from cart (required)
+     * @param int $product_attribute_id Id of the product attribute, required to add product to cart if product is not a subscription (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteProductFromCartWithHttpInfo($cart_id, $product_id)
+    public function deleteProductFromCartWithHttpInfo($cart_id, $product_id, $product_attribute_id = null)
     {
         // verify the required parameter 'cart_id' is set
         if ($cart_id === null) {
@@ -601,6 +603,10 @@ class CartsApi
         // query params
         if ($product_id !== null) {
             $queryParams['product_id'] = $this->apiClient->getSerializer()->toQueryValue($product_id);
+        }
+        // query params
+        if ($product_attribute_id !== null) {
+            $queryParams['product_attribute_id'] = $this->apiClient->getSerializer()->toQueryValue($product_attribute_id);
         }
         // path params
         if ($cart_id !== null) {
