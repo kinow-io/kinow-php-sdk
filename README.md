@@ -72,7 +72,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.kinow.com/api*
+All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

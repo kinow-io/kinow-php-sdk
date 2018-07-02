@@ -59,7 +59,7 @@ class AccessesApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('http://api.kinow.com/api');
+            $apiClient->getConfig()->setHost('https://api.kinow.com/api');
         }
 
         $this->apiClient = $apiClient;

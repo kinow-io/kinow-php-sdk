@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://api.kinow.com/api';
+    protected $host = 'https://api.kinow.com/api';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout
