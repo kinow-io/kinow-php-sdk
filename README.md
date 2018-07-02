@@ -72,7 +72,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.kaemo.com/api*
+All URIs are relative to *http://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -196,6 +196,7 @@ Class | Method | HTTP request | Description
 *GeolocationsApi* | [**setVideoGeolocation**](#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *GroupsApi* | [**attachCustomerToGroup**](#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
 *GroupsApi* | [**detachCustomerFromGroup**](#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
+*GroupsApi* | [**getGroup**](#getgroup) | **GET** /groups/{group_id} | 
 *GroupsApi* | [**getGroups**](#getgroups) | **GET** /groups | 
 *GroupsApi* | [**getProductGroups**](#getproductgroups) | **GET** /products/{product_id}/groups | 
 *ImagesApi* | [**getActorCoverImage**](#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
