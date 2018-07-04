@@ -93,7 +93,7 @@ Class | Method | HTTP request | Description
 *AttributesApi* | [**getProductAttributes**](#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *AttributesApi* | [**updateProductAttribute**](#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
 *BlogCategoriesApi* | [**getBlogCategories**](#getblogcategories) | **GET** /blog-categories | 
-*BlogCategoriesApi* | [**getBlogCategory**](#getblogcategory) | **GET** /blog-pages/{blog_category_id} | 
+*BlogCategoriesApi* | [**getBlogCategory**](#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
 *BlogPagesApi* | [**getBlogPage**](#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
 *BlogPagesApi* | [**getBlogPages**](#getblogpages) | **GET** /blog-pages | 
 *BookmarksApi* | [**attachBookmarkToCustomer**](#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
