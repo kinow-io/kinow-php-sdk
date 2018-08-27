@@ -299,9 +299,11 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getDisabledSubscriptions**](#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *VideosApi* | [**getDownloadUrl**](#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
 *VideosApi* | [**getMarlinToken**](#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
+*VideosApi* | [**getPlayerIframe**](#getplayeriframe) | **GET** /videos/{video_id}/player-iframe | 
 *VideosApi* | [**getPlayerUrl**](#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
 *VideosApi* | [**getVideo**](#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
+*VideosApi* | [**getVideoDownloadUrl**](#getvideodownloadurl) | **GET** /videos/{video_id}/download-url | 
 *VideosApi* | [**getVideoFeatures**](#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *VideosApi* | [**getVideoGeolocation**](#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
 *VideosApi* | [**getVideoGeolocation_0**](#getvideogeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
