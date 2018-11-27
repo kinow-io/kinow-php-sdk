@@ -290,6 +290,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](#getsubscriptions) | **GET** /subscriptions | 
 *SuppliersApi* | [**getSupplierCoverImage**](#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
+*TasksApi* | [**createTask**](#createtask) | **POST** /tasks | 
 *VideosApi* | [**attachCoverToVideo**](#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *VideosApi* | [**attachVideoToProduct**](#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
@@ -407,6 +408,9 @@ Class | Method | HTTP request | Description
  - [SubscriptionAccesses](#SubscriptionAccesses)
  - [Subscriptions](#Subscriptions)
  - [Tag](#Tag)
+ - [Task](#Task)
+ - [TaskCreateRequest](#TaskCreateRequest)
+ - [TaskFactory](#TaskFactory)
  - [Video](#Video)
  - [VideoStat](#VideoStat)
  - [VideoStats](#VideoStats)
