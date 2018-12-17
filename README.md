@@ -235,6 +235,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrder**](#getorder) | **GET** /orders/{order_id} | 
 *OrdersApi* | [**getOrderHistories**](#getorderhistories) | **GET** /orders/{order_id}/histories | 
 *OrdersApi* | [**getOrderInvoice**](#getorderinvoice) | **GET** /orders/{order_id}/invoice | 
+*OrdersApi* | [**getOrders**](#getorders) | **GET** /orders | 
 *PaymentModulesApi* | [**getPaymentModules**](#getpaymentmodules) | **GET** /payment-modules | 
 *PaymentModulesApi* | [**getPaymentUrl**](#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *PaymentModulesApi* | [**validateCart**](#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
