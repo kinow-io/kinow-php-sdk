@@ -20,10 +20,10 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 {
     "repositories": [{
         "type": "git",
-        "url": "https://github.com/kinow-io/kameo-php-sdk.git"
+        "url": "https://github.com/kinow-io/kinow-php-sdk.git"
     }],
     "require": {
-        "kinow-io/kameo-php-sdk": "^1.0"
+        "kinow-io/kinow-php-sdk": "^1.0"
     }
 }
 ```
