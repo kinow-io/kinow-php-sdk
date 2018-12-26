@@ -1,6 +1,6 @@
 <?php
 /**
- * CMSCategoriesLists
+ * VideoFreeAccess
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * CMSCategoriesLists Class Doc Comment
+ * VideoFreeAccess Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CMSCategoriesLists implements ArrayAccess
+class VideoFreeAccess implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,15 @@ class CMSCategoriesLists implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CMSCategoriesLists';
+    protected static $swaggerModelName = 'VideoFreeAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\CMSCategory[]'
+        'has_streaming' => 'bool',
+        'has_download' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +69,8 @@ class CMSCategoriesLists implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pagination' => 'pagination',
-        'data' => 'data'
+        'has_streaming' => 'hasStreaming',
+        'has_download' => 'hasDownload'
     ];
 
 
@@ -79,8 +79,8 @@ class CMSCategoriesLists implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pagination' => 'setPagination',
-        'data' => 'setData'
+        'has_streaming' => 'setHasStreaming',
+        'has_download' => 'setHasDownload'
     ];
 
 
@@ -89,8 +89,8 @@ class CMSCategoriesLists implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pagination' => 'getPagination',
-        'data' => 'getData'
+        'has_streaming' => 'getHasStreaming',
+        'has_download' => 'getHasDownload'
     ];
 
     public static function attributeMap()
@@ -124,8 +124,8 @@ class CMSCategoriesLists implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['has_streaming'] = isset($data['has_streaming']) ? $data['has_streaming'] : null;
+        $this->container['has_download'] = isset($data['has_download']) ? $data['has_download'] : null;
     }
 
     /**
@@ -152,43 +152,43 @@ class CMSCategoriesLists implements ArrayAccess
 
 
     /**
-     * Gets pagination
-     * @return \Kaemo\Client\Model\Pagination
+     * Gets has_streaming
+     * @return bool
      */
-    public function getPagination()
+    public function getHasStreaming()
     {
-        return $this->container['pagination'];
+        return $this->container['has_streaming'];
     }
 
     /**
-     * Sets pagination
-     * @param \Kaemo\Client\Model\Pagination $pagination
+     * Sets has_streaming
+     * @param bool $has_streaming
      * @return $this
      */
-    public function setPagination($pagination)
+    public function setHasStreaming($has_streaming)
     {
-        $this->container['pagination'] = $pagination;
+        $this->container['has_streaming'] = $has_streaming;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Kaemo\Client\Model\CMSCategory[]
+     * Gets has_download
+     * @return bool
      */
-    public function getData()
+    public function getHasDownload()
     {
-        return $this->container['data'];
+        return $this->container['has_download'];
     }
 
     /**
-     * Sets data
-     * @param \Kaemo\Client\Model\CMSCategory[] $data
+     * Sets has_download
+     * @param bool $has_download
      * @return $this
      */
-    public function setData($data)
+    public function setHasDownload($has_download)
     {
-        $this->container['data'] = $data;
+        $this->container['has_download'] = $has_download;
 
         return $this;
     }

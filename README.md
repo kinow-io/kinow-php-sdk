@@ -413,6 +413,7 @@ Class | Method | HTTP request | Description
  - [TaskCreateRequest](#TaskCreateRequest)
  - [TaskFactory](#TaskFactory)
  - [Video](#Video)
+ - [VideoFreeAccess](#VideoFreeAccess)
  - [VideoStat](#VideoStat)
  - [VideoStats](#VideoStats)
  - [VideoUrl](#VideoUrl)
