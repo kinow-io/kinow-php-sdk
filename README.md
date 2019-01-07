@@ -318,6 +318,7 @@ Class | Method | HTTP request | Description
 *WidgetsApi* | [**getIntroImage**](#getintroimage) | **GET** /widgets/intro/images | 
 *WidgetsApi* | [**getSliderImages**](#getsliderimages) | **GET** /widgets/slider/images | 
 *WidgetsApi* | [**getWidgetFooterMenu**](#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
+*WidgetsApi* | [**getWidgetSlider**](#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetTopMenu**](#getwidgettopmenu) | **GET** /widgets/top-menu | 
 
 
@@ -421,6 +422,8 @@ Class | Method | HTTP request | Description
  - [Videos](#Videos)
  - [WidgetFooterMenu](#WidgetFooterMenu)
  - [WidgetFooterMenus](#WidgetFooterMenus)
+ - [WidgetSlider](#WidgetSlider)
+ - [WidgetSliders](#WidgetSliders)
  - [WidgetTopMenu](#WidgetTopMenu)
  - [WidgetTopMenus](#WidgetTopMenus)
 
