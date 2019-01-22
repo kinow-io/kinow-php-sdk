@@ -290,6 +290,9 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCategories**](#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](#getsubscriptions) | **GET** /subscriptions | 
+*SubtitlesApi* | [**getSubtitle**](#getsubtitle) | **GET** /subtitles/{subtitle_id} | 
+*SubtitlesApi* | [**getSubtitles**](#getsubtitles) | **GET** /subtitles | 
+*SubtitlesApi* | [**getVideoSubtitles**](#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *SuppliersApi* | [**getSupplierCoverImage**](#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
 *TasksApi* | [**createTask**](#createtask) | **POST** /tasks | 
 *VideosApi* | [**attachCoverToVideo**](#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
@@ -310,6 +313,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getVideoGeolocation**](#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
 *VideosApi* | [**getVideoGeolocation_0**](#getvideogeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
 *VideosApi* | [**getVideoPlayerUrl**](#getvideoplayerurl) | **GET** /videos/{video_id}/player | 
+*VideosApi* | [**getVideoSubtitles**](#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *VideosApi* | [**getVideoViews**](#getvideoviews) | **GET** /videos/{video_id}/views | 
 *VideosApi* | [**getVideos**](#getvideos) | **GET** /videos | 
 *VideosApi* | [**getVideosFromProduct**](#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
@@ -409,6 +413,8 @@ Class | Method | HTTP request | Description
  - [Subscription](#Subscription)
  - [SubscriptionAccesses](#SubscriptionAccesses)
  - [Subscriptions](#Subscriptions)
+ - [Subtitle](#Subtitle)
+ - [Subtitles](#Subtitles)
  - [Tag](#Tag)
  - [Task](#Task)
  - [TaskCreateRequest](#TaskCreateRequest)
