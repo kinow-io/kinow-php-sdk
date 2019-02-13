@@ -323,6 +323,7 @@ Class | Method | HTTP request | Description
 *WidgetsApi* | [**getSliderImages**](#getsliderimages) | **GET** /widgets/slider/images | 
 *WidgetsApi* | [**getWidgetFooterMenu**](#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
 *WidgetsApi* | [**getWidgetSlider**](#getwidgetslider) | **GET** /widgets/slider | 
+*WidgetsApi* | [**getWidgetSliderItem**](#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
 *WidgetsApi* | [**getWidgetTopMenu**](#getwidgettopmenu) | **GET** /widgets/top-menu | 
 
 
