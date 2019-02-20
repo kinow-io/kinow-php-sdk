@@ -76,360 +76,361 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessesApi* | [**getAvailableCategories**](#getavailablecategories) | **GET** /categories-accesses | 
-*AccessesApi* | [**getAvailableCategory**](#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
-*AccessesApi* | [**getCustomerHasAccessToProduct**](#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
-*AccessesApi* | [**getCustomerHasAccessToVideo**](#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
-*AccessesApi* | [**getProductAvailability**](#getproductavailability) | **GET** /products/{product_id}/access | 
-*ActorsApi* | [**createActor**](#createactor) | **POST** /actors | 
-*ActorsApi* | [**deleteActor**](#deleteactor) | **DELETE** /actors/{actor_id} | 
-*ActorsApi* | [**getActor**](#getactor) | **GET** /actors/{actor_id} | 
-*ActorsApi* | [**getActors**](#getactors) | **GET** /actors | 
-*ActorsApi* | [**getProductActors**](#getproductactors) | **GET** /products/{product_id}/actors | 
-*ActorsApi* | [**updateActor**](#updateactor) | **PUT** /actors/{actor_id} | 
-*AddressApi* | [**getCustomerAddress**](#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
-*AddressApi* | [**updateAddress**](#updateaddress) | **PUT** /addresses/{address_id} | 
-*AttributesApi* | [**createProductAttribute**](#createproductattribute) | **POST** /attributes | 
-*AttributesApi* | [**getProductAttributes**](#getproductattributes) | **GET** /products/{product_id}/attributes | 
-*AttributesApi* | [**updateProductAttribute**](#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
-*BlogCategoriesApi* | [**getBlogCategories**](#getblogcategories) | **GET** /blog-categories | 
-*BlogCategoriesApi* | [**getBlogCategory**](#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
-*BlogPagesApi* | [**getBlogPage**](#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
-*BlogPagesApi* | [**getBlogPages**](#getblogpages) | **GET** /blog-pages | 
-*BookmarksApi* | [**attachBookmarkToCustomer**](#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
-*BookmarksApi* | [**detachBookmarkFromCustomer**](#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
-*BookmarksApi* | [**getCustomerBookmarks**](#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
-*CMSCategoriesApi* | [**createCMSCategory**](#createcmscategory) | **POST** /cms-categories | 
-*CMSCategoriesApi* | [**getCMSCategories**](#getcmscategories) | **GET** /cms-categories | 
-*CMSCategoriesApi* | [**updateCMSCategory**](#updatecmscategory) | **PUT** /cms-categories/{cms_category_id} | 
-*CMSPagesApi* | [**createCMSPage**](#createcmspage) | **POST** /cms-pages | 
-*CMSPagesApi* | [**getCMSPages**](#getcmspages) | **GET** /cms-pages | 
-*CMSPagesApi* | [**updateCMSPage**](#updatecmspage) | **PUT** /cms-pages/{cms_page_id} | 
-*CartRulesApi* | [**attachCartRuleToCart**](#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
-*CartRulesApi* | [**createCartRule**](#createcartrule) | **POST** /cart-rules | 
-*CartRulesApi* | [**deleteCartRule**](#deletecartrule) | **DELETE** /cart-rules/{cart_rule_id} | 
-*CartRulesApi* | [**getCartRule**](#getcartrule) | **GET** /cart-rules/{cart_rule_id} | 
-*CartRulesApi* | [**getCartRules**](#getcartrules) | **GET** /cart-rules | 
-*CartRulesApi* | [**updateCartRule**](#updatecartrule) | **PUT** /cart-rules/{cart_rule_id} | 
-*CartsApi* | [**addProductToCart**](#addproducttocart) | **POST** /carts/{cart_id}/products | 
-*CartsApi* | [**attachCartRuleToCart**](#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
-*CartsApi* | [**attachCartToCustomer**](#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
-*CartsApi* | [**createCart**](#createcart) | **POST** /carts | 
-*CartsApi* | [**deleteCart**](#deletecart) | **DELETE** /carts/{cart_id} | 
-*CartsApi* | [**deleteProductFromCart**](#deleteproductfromcart) | **DELETE** /carts/{cart_id}/products | 
-*CartsApi* | [**getCart**](#getcart) | **GET** /carts/{cart_id} | 
-*CartsApi* | [**getCustomerCarts**](#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
-*CartsApi* | [**getLastCart**](#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
-*CartsApi* | [**getPaymentUrl**](#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
-*CartsApi* | [**updateCart**](#updatecart) | **PUT** /carts/{cart_id} | 
-*CartsApi* | [**validateCart**](#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
-*CartsApi* | [**validateFreeOrder**](#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
-*CategoriesApi* | [**createCategory**](#createcategory) | **POST** /categories | 
-*CategoriesApi* | [**getAvailableCategories**](#getavailablecategories) | **GET** /categories-accesses | 
-*CategoriesApi* | [**getAvailableCategory**](#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
-*CategoriesApi* | [**getCategories**](#getcategories) | **GET** /categories | 
-*CategoriesApi* | [**getCategoriesFromCategory**](#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
-*CategoriesApi* | [**getCategory**](#getcategory) | **GET** /categories/{category_id} | 
-*CategoriesApi* | [**getCategoryBanner**](#getcategorybanner) | **GET** /categories/{category_id}/banner | 
-*CategoriesApi* | [**getCategoryFeatures**](#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
-*CategoriesApi* | [**getCategoryProducts**](#getcategoryproducts) | **GET** /categories/{category_id}/products | 
-*CategoriesApi* | [**getProductCategories**](#getproductcategories) | **GET** /products/{product_id}/categories | 
-*CategoriesApi* | [**getSubscriptionCategories**](#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
-*CountriesApi* | [**getCountries**](#getcountries) | **GET** /countries | 
-*CurrenciesApi* | [**getCurrencies**](#getcurrencies) | **GET** /currencies | 
-*CustomerThreadsApi* | [**getCustomerThread**](#getcustomerthread) | **GET** /customer-threads/{customer_thread_id} | 
-*CustomerThreadsApi* | [**getCustomerThreads**](#getcustomerthreads) | **GET** /customer-threads | 
-*CustomersApi* | [**attachCartToCustomer**](#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
-*CustomersApi* | [**checkCustomerCredentials**](#checkcustomercredentials) | **POST** /customers/check-credentials | 
-*CustomersApi* | [**createCustomer**](#createcustomer) | **POST** /customers | 
-*CustomersApi* | [**createFacebookId**](#createfacebookid) | **POST** /facebook/customers | 
-*CustomersApi* | [**deleteCustomer**](#deletecustomer) | **DELETE** /customers/{customer_id} | 
-*CustomersApi* | [**generateAuthenticationToken**](#generateauthenticationtoken) | **GET** /customers/{customer_id}/authentication-token | 
-*CustomersApi* | [**getCustomer**](#getcustomer) | **GET** /customers/{customer_id} | 
-*CustomersApi* | [**getCustomerAccessesSubscriptions**](#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
-*CustomersApi* | [**getCustomerAccessesVideos**](#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
-*CustomersApi* | [**getCustomerAddress**](#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
-*CustomersApi* | [**getCustomerCanSeeProduct**](#getcustomercanseeproduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
-*CustomersApi* | [**getCustomerCurrentViews**](#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
-*CustomersApi* | [**getCustomerGroups**](#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
-*CustomersApi* | [**getCustomerHasAccessToProduct**](#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
-*CustomersApi* | [**getCustomerHasAccessToVideo**](#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
-*CustomersApi* | [**getCustomerOrders**](#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
-*CustomersApi* | [**getCustomers**](#getcustomers) | **GET** /customers | 
-*CustomersApi* | [**getDownloadUrl**](#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-*CustomersApi* | [**getMarlinToken**](#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
-*CustomersApi* | [**getPaymentCustomerId**](#getpaymentcustomerid) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
-*CustomersApi* | [**getPlayerUrl**](#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
-*CustomersApi* | [**updateCustomer**](#updatecustomer) | **PUT** /customers/{customer_id} | 
-*DirectorsApi* | [**createDirector**](#createdirector) | **POST** /directors | 
-*DirectorsApi* | [**deleteDirector**](#deletedirector) | **DELETE** /directors/{director_id} | 
-*DirectorsApi* | [**getDirector**](#getdirector) | **GET** /directors/{director_id} | 
-*DirectorsApi* | [**getDirectors**](#getdirectors) | **GET** /directors | 
-*DirectorsApi* | [**getProductDirectors**](#getproductdirectors) | **GET** /products/{product_id}/directors | 
-*DirectorsApi* | [**updateDirector**](#updatedirector) | **PUT** /directors/{director_id} | 
-*ExtractsApi* | [**attachCoverToExtract**](#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
-*ExtractsApi* | [**createExtract**](#createextract) | **POST** /extracts | 
-*ExtractsApi* | [**deleteExtract**](#deleteextract) | **DELETE** /extracts/{extract_id} | 
-*ExtractsApi* | [**getExtractPlayer**](#getextractplayer) | **GET** /extracts/{extract_id}/player | 
-*ExtractsApi* | [**getProductExtracts**](#getproductextracts) | **GET** /products/{product_id}/extracts | 
-*ExtractsApi* | [**updateExtract**](#updateextract) | **PUT** /extracts/{extract_id} | 
-*FacebookApi* | [**createFacebookId**](#createfacebookid) | **POST** /facebook/customers | 
-*FacebookApi* | [**getFacebookCustomer**](#getfacebookcustomer) | **GET** /facebook/customers/{facebook_id} | 
-*FeatureValuesApi* | [**attachFeaturesToProduct**](#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
-*FeatureValuesApi* | [**attachFeaturesToVideo**](#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
-*FeatureValuesApi* | [**detachFeatureToProduct**](#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
-*FeatureValuesApi* | [**getFeatureValues**](#getfeaturevalues) | **GET** /feature-values | 
-*FeaturesApi* | [**attachFeaturesToProduct**](#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
-*FeaturesApi* | [**attachFeaturesToVideo**](#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
-*FeaturesApi* | [**detachFeatureToProduct**](#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
-*FeaturesApi* | [**getCategoryFeatures**](#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
-*FeaturesApi* | [**getFeatureValues**](#getfeaturevalues) | **GET** /feature-values | 
-*FeaturesApi* | [**getFeatures**](#getfeatures) | **GET** /features | 
-*FeaturesApi* | [**getProductFeatures**](#getproductfeatures) | **GET** /products/{product_id}/features | 
-*FeaturesApi* | [**getVideoFeatures**](#getvideofeatures) | **GET** /videos/{video_id}/features | 
-*GendersApi* | [**getGenders**](#getgenders) | **GET** /genders | 
-*GeolocationsApi* | [**geolocations**](#geolocations) | **POST** /geolocations | 
-*GeolocationsApi* | [**getProductGeolocations**](#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
-*GeolocationsApi* | [**getProductGeolocationsByIp**](#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
-*GeolocationsApi* | [**getVideoGeolocation**](#getvideogeolocation) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
-*GeolocationsApi* | [**setProductGeolocation**](#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
-*GeolocationsApi* | [**setVideoGeolocation**](#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
-*GroupsApi* | [**attachCustomerToGroup**](#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
-*GroupsApi* | [**detachCustomerFromGroup**](#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
-*GroupsApi* | [**getGroup**](#getgroup) | **GET** /groups/{group_id} | 
-*GroupsApi* | [**getGroups**](#getgroups) | **GET** /groups | 
-*GroupsApi* | [**getProductGroups**](#getproductgroups) | **GET** /products/{product_id}/groups | 
-*ImagesApi* | [**getActorCoverImage**](#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
-*ImagesApi* | [**getCategoryBanner**](#getcategorybanner) | **GET** /categories/{category_id}/banner | 
-*ImagesApi* | [**getDirectorCoverImage**](#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
-*ImagesApi* | [**getIntroImage**](#getintroimage) | **GET** /widgets/intro/images | 
-*ImagesApi* | [**getManufacturerCoverImage**](#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
-*ImagesApi* | [**getProductCoverImage**](#getproductcoverimage) | **GET** /products/{product_id}/cover | 
-*ImagesApi* | [**getProductImages**](#getproductimages) | **GET** /products/{product_id}/images | 
-*ImagesApi* | [**getProductScreenshots**](#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
-*ImagesApi* | [**getSliderImages**](#getsliderimages) | **GET** /widgets/slider/images | 
-*ImagesApi* | [**getSubscriptionCoverImage**](#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
-*ImagesApi* | [**getSupplierCoverImage**](#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
-*ImagesApi* | [**getVideoCover**](#getvideocover) | **GET** /videos/{video_id}/cover | 
-*ImagesApi* | [**uploadActorCover**](#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
-*ImagesApi* | [**uploadCategoryBanner**](#uploadcategorybanner) | **POST** /category/{category_id}/banner | 
-*ImagesApi* | [**uploadDirectorCover**](#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
-*ImagesApi* | [**uploadProductCover**](#uploadproductcover) | **POST** /products/{product_id}/cover | 
-*ImagesApi* | [**uploadProductScreenshot**](#uploadproductscreenshot) | **PUT** /products/{product_id}/screenshots/{image_id} | 
-*ImagesApi* | [**uploadProductScreenshot_0**](#uploadproductscreenshot_0) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
-*ImagesApi* | [**uploadProductScreenshots**](#uploadproductscreenshots) | **POST** /products/{product_id}/screenshots | 
-*ImagesApi* | [**uploadSubscriptionCover**](#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
-*LanguagesApi* | [**getLanguages**](#getlanguages) | **GET** /languages | 
-*ManufacturersApi* | [**getManufacturerCoverImage**](#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
-*MediaFilesApi* | [**getMediaSourceFiles**](#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
-*MediaFilesApi* | [**postMediaSourceFiles**](#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
-*MediaSourcesApi* | [**getMediaSource**](#getmediasource) | **GET** /media-sources/{source_id} | 
-*MediaSourcesApi* | [**getMediaSourceFiles**](#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
-*MediaSourcesApi* | [**getMediaSources**](#getmediasources) | **GET** /media-sources | 
-*MediaSourcesApi* | [**postMediaSourceFiles**](#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
-*OAuthApi* | [**getToken**](#gettoken) | **POST** /get-token | 
-*OrderHistoriesApi* | [**getOrderHistories**](#getorderhistories) | **GET** /orders/{order_id}/histories | 
-*OrderStatesApi* | [**getOrderState**](#getorderstate) | **GET** /order-states/{order_state_id} | 
-*OrderStatesApi* | [**getOrderStates**](#getorderstates) | **GET** /order-states | 
-*OrdersApi* | [**getCustomerOrders**](#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
-*OrdersApi* | [**getOrder**](#getorder) | **GET** /orders/{order_id} | 
-*OrdersApi* | [**getOrderHistories**](#getorderhistories) | **GET** /orders/{order_id}/histories | 
-*OrdersApi* | [**getOrderInvoice**](#getorderinvoice) | **GET** /orders/{order_id}/invoice | 
-*OrdersApi* | [**getOrders**](#getorders) | **GET** /orders | 
-*PaymentModulesApi* | [**getPaymentModules**](#getpaymentmodules) | **GET** /payment-modules | 
-*PaymentModulesApi* | [**getPaymentUrl**](#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
-*PaymentModulesApi* | [**validateCart**](#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
-*PaymentModulesApi* | [**validateFreeOrder**](#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
-*PlayerApi* | [**getExtractPlayer**](#getextractplayer) | **GET** /extracts/{extract_id}/player | 
-*ProductAccessesApi* | [**createProductAccess**](#createproductaccess) | **POST** /product-accesses | 
-*ProductAccessesApi* | [**deleteProductAccess**](#deleteproductaccess) | **DELETE** /product-accesses/{product_access_id} | 
-*ProductAccessesApi* | [**getCustomerAccessesSubscriptions**](#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
-*ProductAccessesApi* | [**getCustomerAccessesVideos**](#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
-*ProductAccessesApi* | [**getProductAccess**](#getproductaccess) | **GET** /product-accesses/{product_access_id} | 
-*ProductAccessesApi* | [**getProductAccesses**](#getproductaccesses) | **GET** /product-accesses | 
-*ProductAccessesApi* | [**stopSubscription**](#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
-*ProductAccessesApi* | [**updateProductAccess**](#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
-*ProductsApi* | [**attachFeaturesToProduct**](#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
-*ProductsApi* | [**attachProductToActor**](#attachproducttoactor) | **POST** /products/{product_id}/actors | 
-*ProductsApi* | [**attachProductToCategory**](#attachproducttocategory) | **POST** /products/{product_id}/categories | 
-*ProductsApi* | [**attachProductToDirector**](#attachproducttodirector) | **POST** /products/{product_id}/directors | 
-*ProductsApi* | [**attachProductToDirector_0**](#attachproducttodirector_0) | **POST** /products/{product_id}/groups | 
-*ProductsApi* | [**attachVideoToProduct**](#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
-*ProductsApi* | [**createProduct**](#createproduct) | **POST** /products | 
-*ProductsApi* | [**deleteProduct**](#deleteproduct) | **DELETE** /products/{product_id} | 
-*ProductsApi* | [**detachFeatureToProduct**](#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
-*ProductsApi* | [**detachProductFromActor**](#detachproductfromactor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
-*ProductsApi* | [**detachProductFromCategory**](#detachproductfromcategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
-*ProductsApi* | [**detachProductFromDirector**](#detachproductfromdirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
-*ProductsApi* | [**detachProductFromGroup**](#detachproductfromgroup) | **POST** /products/{product_id}/groups/{group_id} | 
-*ProductsApi* | [**getCategoryProducts**](#getcategoryproducts) | **GET** /categories/{category_id}/products | 
-*ProductsApi* | [**getCustomerHasAccessToProduct**](#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
-*ProductsApi* | [**getProduct**](#getproduct) | **GET** /products/{product_id} | 
-*ProductsApi* | [**getProductActors**](#getproductactors) | **GET** /products/{product_id}/actors | 
-*ProductsApi* | [**getProductAttributes**](#getproductattributes) | **GET** /products/{product_id}/attributes | 
-*ProductsApi* | [**getProductAvailability**](#getproductavailability) | **GET** /products/{product_id}/access | 
-*ProductsApi* | [**getProductCategories**](#getproductcategories) | **GET** /products/{product_id}/categories | 
-*ProductsApi* | [**getProductCoverImage**](#getproductcoverimage) | **GET** /products/{product_id}/cover | 
-*ProductsApi* | [**getProductDirectors**](#getproductdirectors) | **GET** /products/{product_id}/directors | 
-*ProductsApi* | [**getProductExtracts**](#getproductextracts) | **GET** /products/{product_id}/extracts | 
-*ProductsApi* | [**getProductFeatures**](#getproductfeatures) | **GET** /products/{product_id}/features | 
-*ProductsApi* | [**getProductGeolocations**](#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
-*ProductsApi* | [**getProductGeolocationsByIp**](#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
-*ProductsApi* | [**getProductImages**](#getproductimages) | **GET** /products/{product_id}/images | 
-*ProductsApi* | [**getProducts**](#getproducts) | **GET** /products | 
-*ProductsApi* | [**getProductsFromProduct**](#getproductsfromproduct) | **GET** /products/{product_id}/products | 
-*ProductsApi* | [**getVideosFromProduct**](#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
-*ProductsApi* | [**searchProducts**](#searchproducts) | **GET** /products/search/{search_query} | 
-*ProductsApi* | [**setProductGeolocation**](#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
-*ProductsApi* | [**updateProduct**](#updateproduct) | **PUT** /products/{product_id} | 
-*StatsApi* | [**getVideoStatsByCustomers**](#getvideostatsbycustomers) | **GET** /video-stats/customers | 
-*StatsApi* | [**getVideoStatsByVideo**](#getvideostatsbyvideo) | **GET** /video-stats/videos | 
-*StatsApi* | [**getVideoStatsSessions**](#getvideostatssessions) | **GET** /video-stats/sessions | 
-*SubscriptionsApi* | [**getDisabledSubscriptions**](#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
-*SubscriptionsApi* | [**getSubscription**](#getsubscription) | **GET** /subscriptions/{subscription_id} | 
-*SubscriptionsApi* | [**getSubscriptionCategories**](#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
-*SubscriptionsApi* | [**getSubscriptionCoverImage**](#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
-*SubscriptionsApi* | [**getSubscriptions**](#getsubscriptions) | **GET** /subscriptions | 
-*SubtitlesApi* | [**getSubtitle**](#getsubtitle) | **GET** /subtitles/{subtitle_id} | 
-*SubtitlesApi* | [**getSubtitles**](#getsubtitles) | **GET** /subtitles | 
-*SubtitlesApi* | [**getVideoSubtitles**](#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
-*SuppliersApi* | [**getSupplierCoverImage**](#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
-*TasksApi* | [**createTask**](#createtask) | **POST** /tasks | 
-*VideosApi* | [**attachCoverToVideo**](#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
-*VideosApi* | [**attachFeaturesToVideo**](#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
-*VideosApi* | [**attachVideoToProduct**](#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
-*VideosApi* | [**createVideo**](#createvideo) | **POST** /videos | 
-*VideosApi* | [**deleteVideo**](#deletevideo) | **DELETE** /videos/{video_id} | 
-*VideosApi* | [**getCustomerHasAccessToVideo**](#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
-*VideosApi* | [**getDisabledSubscriptions**](#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
-*VideosApi* | [**getDownloadUrl**](#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-*VideosApi* | [**getMarlinToken**](#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
-*VideosApi* | [**getPlayerIframe**](#getplayeriframe) | **GET** /videos/{video_id}/player-iframe | 
-*VideosApi* | [**getPlayerUrl**](#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
-*VideosApi* | [**getVideo**](#getvideo) | **GET** /videos/{video_id} | 
-*VideosApi* | [**getVideoAccess**](#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
-*VideosApi* | [**getVideoDownloadUrl**](#getvideodownloadurl) | **GET** /videos/{video_id}/download-url | 
-*VideosApi* | [**getVideoFeatures**](#getvideofeatures) | **GET** /videos/{video_id}/features | 
-*VideosApi* | [**getVideoGeolocation**](#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
-*VideosApi* | [**getVideoGeolocation_0**](#getvideogeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
-*VideosApi* | [**getVideoPlayerUrl**](#getvideoplayerurl) | **GET** /videos/{video_id}/player | 
-*VideosApi* | [**getVideoSubtitles**](#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
-*VideosApi* | [**getVideoViews**](#getvideoviews) | **GET** /videos/{video_id}/views | 
-*VideosApi* | [**getVideos**](#getvideos) | **GET** /videos | 
-*VideosApi* | [**getVideosFromProduct**](#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
-*VideosApi* | [**setVideoGeolocation**](#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
-*VideosApi* | [**updateVideo**](#updatevideo) | **PUT** /videos/{video_id} | 
-*WidgetsApi* | [**getIntroImage**](#getintroimage) | **GET** /widgets/intro/images | 
-*WidgetsApi* | [**getSliderImages**](#getsliderimages) | **GET** /widgets/slider/images | 
-*WidgetsApi* | [**getWidgetFooterMenu**](#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
-*WidgetsApi* | [**getWidgetSlider**](#getwidgetslider) | **GET** /widgets/slider | 
-*WidgetsApi* | [**getWidgetTopMenu**](#getwidgettopmenu) | **GET** /widgets/top-menu | 
+*AccessesApi* | [**getAvailableCategories**](docs/Api/AccessesApi.md#getavailablecategories) | **GET** /categories-accesses | 
+*AccessesApi* | [**getAvailableCategory**](docs/Api/AccessesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
+*AccessesApi* | [**getCustomerHasAccessToProduct**](docs/Api/AccessesApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+*AccessesApi* | [**getCustomerHasAccessToVideo**](docs/Api/AccessesApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+*AccessesApi* | [**getProductAvailability**](docs/Api/AccessesApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
+*ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
+*ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
+*ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
+*ActorsApi* | [**getActors**](docs/Api/ActorsApi.md#getactors) | **GET** /actors | 
+*ActorsApi* | [**getProductActors**](docs/Api/ActorsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
+*ActorsApi* | [**updateActor**](docs/Api/ActorsApi.md#updateactor) | **PUT** /actors/{actor_id} | 
+*AddressApi* | [**getCustomerAddress**](docs/Api/AddressApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
+*AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /addresses/{address_id} | 
+*AttributesApi* | [**createProductAttribute**](docs/Api/AttributesApi.md#createproductattribute) | **POST** /attributes | 
+*AttributesApi* | [**getProductAttributes**](docs/Api/AttributesApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
+*AttributesApi* | [**updateProductAttribute**](docs/Api/AttributesApi.md#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
+*BlogCategoriesApi* | [**getBlogCategories**](docs/Api/BlogCategoriesApi.md#getblogcategories) | **GET** /blog-categories | 
+*BlogCategoriesApi* | [**getBlogCategory**](docs/Api/BlogCategoriesApi.md#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
+*BlogPagesApi* | [**getBlogPage**](docs/Api/BlogPagesApi.md#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
+*BlogPagesApi* | [**getBlogPages**](docs/Api/BlogPagesApi.md#getblogpages) | **GET** /blog-pages | 
+*BookmarksApi* | [**attachBookmarkToCustomer**](docs/Api/BookmarksApi.md#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
+*BookmarksApi* | [**detachBookmarkFromCustomer**](docs/Api/BookmarksApi.md#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
+*BookmarksApi* | [**getCustomerBookmarks**](docs/Api/BookmarksApi.md#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
+*CMSCategoriesApi* | [**createCMSCategory**](docs/Api/CMSCategoriesApi.md#createcmscategory) | **POST** /cms-categories | 
+*CMSCategoriesApi* | [**getCMSCategories**](docs/Api/CMSCategoriesApi.md#getcmscategories) | **GET** /cms-categories | 
+*CMSCategoriesApi* | [**updateCMSCategory**](docs/Api/CMSCategoriesApi.md#updatecmscategory) | **PUT** /cms-categories/{cms_category_id} | 
+*CMSPagesApi* | [**createCMSPage**](docs/Api/CMSPagesApi.md#createcmspage) | **POST** /cms-pages | 
+*CMSPagesApi* | [**getCMSPages**](docs/Api/CMSPagesApi.md#getcmspages) | **GET** /cms-pages | 
+*CMSPagesApi* | [**updateCMSPage**](docs/Api/CMSPagesApi.md#updatecmspage) | **PUT** /cms-pages/{cms_page_id} | 
+*CartRulesApi* | [**attachCartRuleToCart**](docs/Api/CartRulesApi.md#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
+*CartRulesApi* | [**createCartRule**](docs/Api/CartRulesApi.md#createcartrule) | **POST** /cart-rules | 
+*CartRulesApi* | [**deleteCartRule**](docs/Api/CartRulesApi.md#deletecartrule) | **DELETE** /cart-rules/{cart_rule_id} | 
+*CartRulesApi* | [**getCartRule**](docs/Api/CartRulesApi.md#getcartrule) | **GET** /cart-rules/{cart_rule_id} | 
+*CartRulesApi* | [**getCartRules**](docs/Api/CartRulesApi.md#getcartrules) | **GET** /cart-rules | 
+*CartRulesApi* | [**updateCartRule**](docs/Api/CartRulesApi.md#updatecartrule) | **PUT** /cart-rules/{cart_rule_id} | 
+*CartsApi* | [**addProductToCart**](docs/Api/CartsApi.md#addproducttocart) | **POST** /carts/{cart_id}/products | 
+*CartsApi* | [**attachCartRuleToCart**](docs/Api/CartsApi.md#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
+*CartsApi* | [**attachCartToCustomer**](docs/Api/CartsApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
+*CartsApi* | [**createCart**](docs/Api/CartsApi.md#createcart) | **POST** /carts | 
+*CartsApi* | [**deleteCart**](docs/Api/CartsApi.md#deletecart) | **DELETE** /carts/{cart_id} | 
+*CartsApi* | [**deleteProductFromCart**](docs/Api/CartsApi.md#deleteproductfromcart) | **DELETE** /carts/{cart_id}/products | 
+*CartsApi* | [**getCart**](docs/Api/CartsApi.md#getcart) | **GET** /carts/{cart_id} | 
+*CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
+*CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
+*CartsApi* | [**getPaymentUrl**](docs/Api/CartsApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+*CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
+*CartsApi* | [**validateCart**](docs/Api/CartsApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
+*CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
+*CategoriesApi* | [**getAvailableCategories**](docs/Api/CategoriesApi.md#getavailablecategories) | **GET** /categories-accesses | 
+*CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
+*CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
+*CategoriesApi* | [**getCategoriesFromCategory**](docs/Api/CategoriesApi.md#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
+*CategoriesApi* | [**getCategory**](docs/Api/CategoriesApi.md#getcategory) | **GET** /categories/{category_id} | 
+*CategoriesApi* | [**getCategoryBanner**](docs/Api/CategoriesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
+*CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
+*CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
+*CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
+*CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
+*CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
+*CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
+*CustomerThreadsApi* | [**getCustomerThread**](docs/Api/CustomerThreadsApi.md#getcustomerthread) | **GET** /customer-threads/{customer_thread_id} | 
+*CustomerThreadsApi* | [**getCustomerThreads**](docs/Api/CustomerThreadsApi.md#getcustomerthreads) | **GET** /customer-threads | 
+*CustomersApi* | [**attachCartToCustomer**](docs/Api/CustomersApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
+*CustomersApi* | [**checkCustomerCredentials**](docs/Api/CustomersApi.md#checkcustomercredentials) | **POST** /customers/check-credentials | 
+*CustomersApi* | [**createCustomer**](docs/Api/CustomersApi.md#createcustomer) | **POST** /customers | 
+*CustomersApi* | [**createFacebookId**](docs/Api/CustomersApi.md#createfacebookid) | **POST** /facebook/customers | 
+*CustomersApi* | [**deleteCustomer**](docs/Api/CustomersApi.md#deletecustomer) | **DELETE** /customers/{customer_id} | 
+*CustomersApi* | [**generateAuthenticationToken**](docs/Api/CustomersApi.md#generateauthenticationtoken) | **GET** /customers/{customer_id}/authentication-token | 
+*CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | 
+*CustomersApi* | [**getCustomerAccessesSubscriptions**](docs/Api/CustomersApi.md#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
+*CustomersApi* | [**getCustomerAccessesVideos**](docs/Api/CustomersApi.md#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
+*CustomersApi* | [**getCustomerAddress**](docs/Api/CustomersApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
+*CustomersApi* | [**getCustomerCanSeeProduct**](docs/Api/CustomersApi.md#getcustomercanseeproduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
+*CustomersApi* | [**getCustomerCurrentViews**](docs/Api/CustomersApi.md#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
+*CustomersApi* | [**getCustomerGroups**](docs/Api/CustomersApi.md#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
+*CustomersApi* | [**getCustomerHasAccessToProduct**](docs/Api/CustomersApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+*CustomersApi* | [**getCustomerHasAccessToVideo**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+*CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
+*CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
+*CustomersApi* | [**getDownloadUrl**](docs/Api/CustomersApi.md#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
+*CustomersApi* | [**getMarlinToken**](docs/Api/CustomersApi.md#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
+*CustomersApi* | [**getPaymentCustomerId**](docs/Api/CustomersApi.md#getpaymentcustomerid) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
+*CustomersApi* | [**getPlayerUrl**](docs/Api/CustomersApi.md#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
+*CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
+*DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
+*DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
+*DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
+*DirectorsApi* | [**getDirectors**](docs/Api/DirectorsApi.md#getdirectors) | **GET** /directors | 
+*DirectorsApi* | [**getProductDirectors**](docs/Api/DirectorsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
+*DirectorsApi* | [**updateDirector**](docs/Api/DirectorsApi.md#updatedirector) | **PUT** /directors/{director_id} | 
+*ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
+*ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
+*ExtractsApi* | [**deleteExtract**](docs/Api/ExtractsApi.md#deleteextract) | **DELETE** /extracts/{extract_id} | 
+*ExtractsApi* | [**getExtractPlayer**](docs/Api/ExtractsApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
+*ExtractsApi* | [**getProductExtracts**](docs/Api/ExtractsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
+*ExtractsApi* | [**updateExtract**](docs/Api/ExtractsApi.md#updateextract) | **PUT** /extracts/{extract_id} | 
+*FacebookApi* | [**createFacebookId**](docs/Api/FacebookApi.md#createfacebookid) | **POST** /facebook/customers | 
+*FacebookApi* | [**getFacebookCustomer**](docs/Api/FacebookApi.md#getfacebookcustomer) | **GET** /facebook/customers/{facebook_id} | 
+*FeatureValuesApi* | [**attachFeaturesToProduct**](docs/Api/FeatureValuesApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
+*FeatureValuesApi* | [**attachFeaturesToVideo**](docs/Api/FeatureValuesApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
+*FeatureValuesApi* | [**detachFeatureToProduct**](docs/Api/FeatureValuesApi.md#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
+*FeatureValuesApi* | [**getFeatureValues**](docs/Api/FeatureValuesApi.md#getfeaturevalues) | **GET** /feature-values | 
+*FeaturesApi* | [**attachFeaturesToProduct**](docs/Api/FeaturesApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
+*FeaturesApi* | [**attachFeaturesToVideo**](docs/Api/FeaturesApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
+*FeaturesApi* | [**detachFeatureToProduct**](docs/Api/FeaturesApi.md#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
+*FeaturesApi* | [**getCategoryFeatures**](docs/Api/FeaturesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
+*FeaturesApi* | [**getFeatureValues**](docs/Api/FeaturesApi.md#getfeaturevalues) | **GET** /feature-values | 
+*FeaturesApi* | [**getFeatures**](docs/Api/FeaturesApi.md#getfeatures) | **GET** /features | 
+*FeaturesApi* | [**getProductFeatures**](docs/Api/FeaturesApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
+*FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
+*GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
+*GeolocationsApi* | [**geolocations**](docs/Api/GeolocationsApi.md#geolocations) | **POST** /geolocations | 
+*GeolocationsApi* | [**getProductGeolocations**](docs/Api/GeolocationsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
+*GeolocationsApi* | [**getProductGeolocationsByIp**](docs/Api/GeolocationsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
+*GeolocationsApi* | [**getVideoGeolocation**](docs/Api/GeolocationsApi.md#getvideogeolocation) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
+*GeolocationsApi* | [**setProductGeolocation**](docs/Api/GeolocationsApi.md#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
+*GeolocationsApi* | [**setVideoGeolocation**](docs/Api/GeolocationsApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
+*GroupsApi* | [**attachCustomerToGroup**](docs/Api/GroupsApi.md#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
+*GroupsApi* | [**detachCustomerFromGroup**](docs/Api/GroupsApi.md#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
+*GroupsApi* | [**getGroup**](docs/Api/GroupsApi.md#getgroup) | **GET** /groups/{group_id} | 
+*GroupsApi* | [**getGroups**](docs/Api/GroupsApi.md#getgroups) | **GET** /groups | 
+*GroupsApi* | [**getProductGroups**](docs/Api/GroupsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
+*ImagesApi* | [**getActorCoverImage**](docs/Api/ImagesApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
+*ImagesApi* | [**getCategoryBanner**](docs/Api/ImagesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
+*ImagesApi* | [**getDirectorCoverImage**](docs/Api/ImagesApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
+*ImagesApi* | [**getIntroImage**](docs/Api/ImagesApi.md#getintroimage) | **GET** /widgets/intro/images | 
+*ImagesApi* | [**getManufacturerCoverImage**](docs/Api/ImagesApi.md#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
+*ImagesApi* | [**getProductCoverImage**](docs/Api/ImagesApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
+*ImagesApi* | [**getProductImages**](docs/Api/ImagesApi.md#getproductimages) | **GET** /products/{product_id}/images | 
+*ImagesApi* | [**getProductScreenshots**](docs/Api/ImagesApi.md#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
+*ImagesApi* | [**getSliderImages**](docs/Api/ImagesApi.md#getsliderimages) | **GET** /widgets/slider/images | 
+*ImagesApi* | [**getSubscriptionCoverImage**](docs/Api/ImagesApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
+*ImagesApi* | [**getSupplierCoverImage**](docs/Api/ImagesApi.md#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
+*ImagesApi* | [**getVideoCover**](docs/Api/ImagesApi.md#getvideocover) | **GET** /videos/{video_id}/cover | 
+*ImagesApi* | [**uploadActorCover**](docs/Api/ImagesApi.md#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
+*ImagesApi* | [**uploadCategoryBanner**](docs/Api/ImagesApi.md#uploadcategorybanner) | **POST** /category/{category_id}/banner | 
+*ImagesApi* | [**uploadDirectorCover**](docs/Api/ImagesApi.md#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
+*ImagesApi* | [**uploadProductCover**](docs/Api/ImagesApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
+*ImagesApi* | [**uploadProductScreenshot**](docs/Api/ImagesApi.md#uploadproductscreenshot) | **PUT** /products/{product_id}/screenshots/{image_id} | 
+*ImagesApi* | [**uploadProductScreenshot_0**](docs/Api/ImagesApi.md#uploadproductscreenshot_0) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
+*ImagesApi* | [**uploadProductScreenshots**](docs/Api/ImagesApi.md#uploadproductscreenshots) | **POST** /products/{product_id}/screenshots | 
+*ImagesApi* | [**uploadSubscriptionCover**](docs/Api/ImagesApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
+*LanguagesApi* | [**getLanguages**](docs/Api/LanguagesApi.md#getlanguages) | **GET** /languages | 
+*ManufacturersApi* | [**getManufacturerCoverImage**](docs/Api/ManufacturersApi.md#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
+*MediaFilesApi* | [**getMediaSourceFiles**](docs/Api/MediaFilesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
+*MediaFilesApi* | [**postMediaSourceFiles**](docs/Api/MediaFilesApi.md#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
+*MediaSourcesApi* | [**getMediaSource**](docs/Api/MediaSourcesApi.md#getmediasource) | **GET** /media-sources/{source_id} | 
+*MediaSourcesApi* | [**getMediaSourceFiles**](docs/Api/MediaSourcesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
+*MediaSourcesApi* | [**getMediaSources**](docs/Api/MediaSourcesApi.md#getmediasources) | **GET** /media-sources | 
+*MediaSourcesApi* | [**postMediaSourceFiles**](docs/Api/MediaSourcesApi.md#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
+*OAuthApi* | [**getToken**](docs/Api/OAuthApi.md#gettoken) | **POST** /get-token | 
+*OrderHistoriesApi* | [**getOrderHistories**](docs/Api/OrderHistoriesApi.md#getorderhistories) | **GET** /orders/{order_id}/histories | 
+*OrderStatesApi* | [**getOrderState**](docs/Api/OrderStatesApi.md#getorderstate) | **GET** /order-states/{order_state_id} | 
+*OrderStatesApi* | [**getOrderStates**](docs/Api/OrderStatesApi.md#getorderstates) | **GET** /order-states | 
+*OrdersApi* | [**getCustomerOrders**](docs/Api/OrdersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
+*OrdersApi* | [**getOrder**](docs/Api/OrdersApi.md#getorder) | **GET** /orders/{order_id} | 
+*OrdersApi* | [**getOrderHistories**](docs/Api/OrdersApi.md#getorderhistories) | **GET** /orders/{order_id}/histories | 
+*OrdersApi* | [**getOrderInvoice**](docs/Api/OrdersApi.md#getorderinvoice) | **GET** /orders/{order_id}/invoice | 
+*OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /orders | 
+*PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 
+*PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+*PaymentModulesApi* | [**validateCart**](docs/Api/PaymentModulesApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
+*PlayerApi* | [**getExtractPlayer**](docs/Api/PlayerApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
+*ProductAccessesApi* | [**createProductAccess**](docs/Api/ProductAccessesApi.md#createproductaccess) | **POST** /product-accesses | 
+*ProductAccessesApi* | [**deleteProductAccess**](docs/Api/ProductAccessesApi.md#deleteproductaccess) | **DELETE** /product-accesses/{product_access_id} | 
+*ProductAccessesApi* | [**getCustomerAccessesSubscriptions**](docs/Api/ProductAccessesApi.md#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
+*ProductAccessesApi* | [**getCustomerAccessesVideos**](docs/Api/ProductAccessesApi.md#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
+*ProductAccessesApi* | [**getProductAccess**](docs/Api/ProductAccessesApi.md#getproductaccess) | **GET** /product-accesses/{product_access_id} | 
+*ProductAccessesApi* | [**getProductAccesses**](docs/Api/ProductAccessesApi.md#getproductaccesses) | **GET** /product-accesses | 
+*ProductAccessesApi* | [**stopSubscription**](docs/Api/ProductAccessesApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
+*ProductAccessesApi* | [**updateProductAccess**](docs/Api/ProductAccessesApi.md#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
+*ProductsApi* | [**attachFeaturesToProduct**](docs/Api/ProductsApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
+*ProductsApi* | [**attachProductToActor**](docs/Api/ProductsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
+*ProductsApi* | [**attachProductToCategory**](docs/Api/ProductsApi.md#attachproducttocategory) | **POST** /products/{product_id}/categories | 
+*ProductsApi* | [**attachProductToDirector**](docs/Api/ProductsApi.md#attachproducttodirector) | **POST** /products/{product_id}/directors | 
+*ProductsApi* | [**attachProductToDirector_0**](docs/Api/ProductsApi.md#attachproducttodirector_0) | **POST** /products/{product_id}/groups | 
+*ProductsApi* | [**attachVideoToProduct**](docs/Api/ProductsApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
+*ProductsApi* | [**createProduct**](docs/Api/ProductsApi.md#createproduct) | **POST** /products | 
+*ProductsApi* | [**deleteProduct**](docs/Api/ProductsApi.md#deleteproduct) | **DELETE** /products/{product_id} | 
+*ProductsApi* | [**detachFeatureToProduct**](docs/Api/ProductsApi.md#detachfeaturetoproduct) | **DELETE** products/{product_id}/features/{feature_id} | 
+*ProductsApi* | [**detachProductFromActor**](docs/Api/ProductsApi.md#detachproductfromactor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
+*ProductsApi* | [**detachProductFromCategory**](docs/Api/ProductsApi.md#detachproductfromcategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
+*ProductsApi* | [**detachProductFromDirector**](docs/Api/ProductsApi.md#detachproductfromdirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
+*ProductsApi* | [**detachProductFromGroup**](docs/Api/ProductsApi.md#detachproductfromgroup) | **POST** /products/{product_id}/groups/{group_id} | 
+*ProductsApi* | [**getCategoryProducts**](docs/Api/ProductsApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
+*ProductsApi* | [**getCustomerHasAccessToProduct**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+*ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{product_id} | 
+*ProductsApi* | [**getProductActors**](docs/Api/ProductsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
+*ProductsApi* | [**getProductAttributes**](docs/Api/ProductsApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
+*ProductsApi* | [**getProductAvailability**](docs/Api/ProductsApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
+*ProductsApi* | [**getProductCategories**](docs/Api/ProductsApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
+*ProductsApi* | [**getProductCoverImage**](docs/Api/ProductsApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
+*ProductsApi* | [**getProductDirectors**](docs/Api/ProductsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
+*ProductsApi* | [**getProductExtracts**](docs/Api/ProductsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
+*ProductsApi* | [**getProductFeatures**](docs/Api/ProductsApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
+*ProductsApi* | [**getProductGeolocations**](docs/Api/ProductsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
+*ProductsApi* | [**getProductGeolocationsByIp**](docs/Api/ProductsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
+*ProductsApi* | [**getProductImages**](docs/Api/ProductsApi.md#getproductimages) | **GET** /products/{product_id}/images | 
+*ProductsApi* | [**getProducts**](docs/Api/ProductsApi.md#getproducts) | **GET** /products | 
+*ProductsApi* | [**getProductsFromProduct**](docs/Api/ProductsApi.md#getproductsfromproduct) | **GET** /products/{product_id}/products | 
+*ProductsApi* | [**getVideosFromProduct**](docs/Api/ProductsApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
+*ProductsApi* | [**searchProducts**](docs/Api/ProductsApi.md#searchproducts) | **GET** /products/search/{search_query} | 
+*ProductsApi* | [**setProductGeolocation**](docs/Api/ProductsApi.md#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
+*ProductsApi* | [**updateProduct**](docs/Api/ProductsApi.md#updateproduct) | **PUT** /products/{product_id} | 
+*StatsApi* | [**getVideoStatsByCustomers**](docs/Api/StatsApi.md#getvideostatsbycustomers) | **GET** /video-stats/customers | 
+*StatsApi* | [**getVideoStatsByVideo**](docs/Api/StatsApi.md#getvideostatsbyvideo) | **GET** /video-stats/videos | 
+*StatsApi* | [**getVideoStatsSessions**](docs/Api/StatsApi.md#getvideostatssessions) | **GET** /video-stats/sessions | 
+*SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
+*SubscriptionsApi* | [**getSubscription**](docs/Api/SubscriptionsApi.md#getsubscription) | **GET** /subscriptions/{subscription_id} | 
+*SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
+*SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
+*SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
+*SubtitlesApi* | [**getSubtitle**](docs/Api/SubtitlesApi.md#getsubtitle) | **GET** /subtitles/{subtitle_id} | 
+*SubtitlesApi* | [**getSubtitles**](docs/Api/SubtitlesApi.md#getsubtitles) | **GET** /subtitles | 
+*SubtitlesApi* | [**getVideoSubtitles**](docs/Api/SubtitlesApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
+*SuppliersApi* | [**getSupplierCoverImage**](docs/Api/SuppliersApi.md#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
+*TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
+*VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
+*VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
+*VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
+*VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
+*VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
+*VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+*VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
+*VideosApi* | [**getDownloadUrl**](docs/Api/VideosApi.md#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
+*VideosApi* | [**getMarlinToken**](docs/Api/VideosApi.md#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
+*VideosApi* | [**getPlayerIframe**](docs/Api/VideosApi.md#getplayeriframe) | **GET** /videos/{video_id}/player-iframe | 
+*VideosApi* | [**getPlayerUrl**](docs/Api/VideosApi.md#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
+*VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
+*VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
+*VideosApi* | [**getVideoDownloadUrl**](docs/Api/VideosApi.md#getvideodownloadurl) | **GET** /videos/{video_id}/download-url | 
+*VideosApi* | [**getVideoFeatures**](docs/Api/VideosApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
+*VideosApi* | [**getVideoGeolocation**](docs/Api/VideosApi.md#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
+*VideosApi* | [**getVideoGeolocation_0**](docs/Api/VideosApi.md#getvideogeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
+*VideosApi* | [**getVideoPlayerUrl**](docs/Api/VideosApi.md#getvideoplayerurl) | **GET** /videos/{video_id}/player | 
+*VideosApi* | [**getVideoSubtitles**](docs/Api/VideosApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
+*VideosApi* | [**getVideoViews**](docs/Api/VideosApi.md#getvideoviews) | **GET** /videos/{video_id}/views | 
+*VideosApi* | [**getVideos**](docs/Api/VideosApi.md#getvideos) | **GET** /videos | 
+*VideosApi* | [**getVideosFromProduct**](docs/Api/VideosApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
+*VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
+*VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
+*WidgetsApi* | [**getIntroImage**](docs/Api/WidgetsApi.md#getintroimage) | **GET** /widgets/intro/images | 
+*WidgetsApi* | [**getSliderImages**](docs/Api/WidgetsApi.md#getsliderimages) | **GET** /widgets/slider/images | 
+*WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
+*WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
+*WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
+*WidgetsApi* | [**getWidgetTopMenu**](docs/Api/WidgetsApi.md#getwidgettopmenu) | **GET** /widgets/top-menu | 
 
 
 ## Documentation For Models
 
- - [Actor](#Actor)
- - [Actors](#Actors)
- - [Address](#Address)
- - [BlogCategory](#BlogCategory)
- - [BlogCategoryLists](#BlogCategoryLists)
- - [BlogPage](#BlogPage)
- - [BlogPageLists](#BlogPageLists)
- - [CMSCategoriesLists](#CMSCategoriesLists)
- - [CMSCategory](#CMSCategory)
- - [CMSPage](#CMSPage)
- - [CMSPageLists](#CMSPageLists)
- - [Cart](#Cart)
- - [CartBody](#CartBody)
- - [CartRule](#CartRule)
- - [CartRuleRestrictionGroup](#CartRuleRestrictionGroup)
- - [CartRuleRestrictionGroupItem](#CartRuleRestrictionGroupItem)
- - [CartRules](#CartRules)
- - [Carts](#Carts)
- - [Categories](#Categories)
- - [Category](#Category)
- - [CategoryImages](#CategoryImages)
- - [Countries](#Countries)
- - [Country](#Country)
- - [Currencies](#Currencies)
- - [Currency](#Currency)
- - [Customer](#Customer)
- - [CustomerCreateRequest](#CustomerCreateRequest)
- - [CustomerCurrentViews](#CustomerCurrentViews)
- - [CustomerId](#CustomerId)
- - [CustomerThread](#CustomerThread)
- - [CustomerThread1](#CustomerThread1)
- - [CustomerVideoStat](#CustomerVideoStat)
- - [CustomerVideoStats](#CustomerVideoStats)
- - [Customers](#Customers)
- - [Director](#Director)
- - [Director1](#Director1)
- - [DownloadUrl](#DownloadUrl)
- - [Extract](#Extract)
- - [Feature](#Feature)
- - [FeatureValue](#FeatureValue)
- - [Features](#Features)
- - [Gender](#Gender)
- - [Genders](#Genders)
- - [Geoloc](#Geoloc)
- - [Geolocs](#Geolocs)
- - [Group](#Group)
- - [Groups](#Groups)
- - [I18nField](#I18nField)
- - [Image](#Image)
- - [Language](#Language)
- - [Languages](#Languages)
- - [MarlinToken](#MarlinToken)
- - [MediaFile](#MediaFile)
- - [MediaFiles](#MediaFiles)
- - [MediaSource](#MediaSource)
- - [MediaSources](#MediaSources)
- - [OAuthToken](#OAuthToken)
- - [Order](#Order)
- - [OrderHistories](#OrderHistories)
- - [OrderHistory](#OrderHistory)
- - [OrderState](#OrderState)
- - [OrderStates](#OrderStates)
- - [Orders](#Orders)
- - [Pagination](#Pagination)
- - [PaymentArguments](#PaymentArguments)
- - [PaymentModule](#PaymentModule)
- - [PaymentModules](#PaymentModules)
- - [PaymentUrl](#PaymentUrl)
- - [PlayerConfiguration](#PlayerConfiguration)
- - [Product](#Product)
- - [ProductAccess](#ProductAccess)
- - [ProductAttribute](#ProductAttribute)
- - [ProductAttributeCreateRequest](#ProductAttributeCreateRequest)
- - [ProductAttributeUpdateRequest](#ProductAttributeUpdateRequest)
- - [ProductAttributesResponse](#ProductAttributesResponse)
- - [ProductExtractsResponse](#ProductExtractsResponse)
- - [ProductImagesResponse](#ProductImagesResponse)
- - [Products](#Products)
- - [Products1](#Products1)
- - [Screenshot](#Screenshot)
- - [SessionVideoStat](#SessionVideoStat)
- - [SessionVideoStats](#SessionVideoStats)
- - [Subscription](#Subscription)
- - [SubscriptionAccesses](#SubscriptionAccesses)
- - [Subscriptions](#Subscriptions)
- - [Subtitle](#Subtitle)
- - [Subtitles](#Subtitles)
- - [Tag](#Tag)
- - [Task](#Task)
- - [TaskCreateRequest](#TaskCreateRequest)
- - [TaskFactory](#TaskFactory)
- - [Video](#Video)
- - [VideoFreeAccess](#VideoFreeAccess)
- - [VideoStat](#VideoStat)
- - [VideoStats](#VideoStats)
- - [VideoUrl](#VideoUrl)
- - [VideoViews](#VideoViews)
- - [Videos](#Videos)
- - [WidgetFooterMenu](#WidgetFooterMenu)
- - [WidgetFooterMenus](#WidgetFooterMenus)
- - [WidgetSlider](#WidgetSlider)
- - [WidgetSliders](#WidgetSliders)
- - [WidgetTopMenu](#WidgetTopMenu)
- - [WidgetTopMenus](#WidgetTopMenus)
+ - [Actor](docs/Model/Actor.md)
+ - [Actors](docs/Model/Actors.md)
+ - [Address](docs/Model/Address.md)
+ - [BlogCategory](docs/Model/BlogCategory.md)
+ - [BlogCategoryLists](docs/Model/BlogCategoryLists.md)
+ - [BlogPage](docs/Model/BlogPage.md)
+ - [BlogPageLists](docs/Model/BlogPageLists.md)
+ - [CMSCategoriesLists](docs/Model/CMSCategoriesLists.md)
+ - [CMSCategory](docs/Model/CMSCategory.md)
+ - [CMSPage](docs/Model/CMSPage.md)
+ - [CMSPageLists](docs/Model/CMSPageLists.md)
+ - [Cart](docs/Model/Cart.md)
+ - [CartBody](docs/Model/CartBody.md)
+ - [CartRule](docs/Model/CartRule.md)
+ - [CartRuleRestrictionGroup](docs/Model/CartRuleRestrictionGroup.md)
+ - [CartRuleRestrictionGroupItem](docs/Model/CartRuleRestrictionGroupItem.md)
+ - [CartRules](docs/Model/CartRules.md)
+ - [Carts](docs/Model/Carts.md)
+ - [Categories](docs/Model/Categories.md)
+ - [Category](docs/Model/Category.md)
+ - [CategoryImages](docs/Model/CategoryImages.md)
+ - [Countries](docs/Model/Countries.md)
+ - [Country](docs/Model/Country.md)
+ - [Currencies](docs/Model/Currencies.md)
+ - [Currency](docs/Model/Currency.md)
+ - [Customer](docs/Model/Customer.md)
+ - [CustomerCreateRequest](docs/Model/CustomerCreateRequest.md)
+ - [CustomerCurrentViews](docs/Model/CustomerCurrentViews.md)
+ - [CustomerId](docs/Model/CustomerId.md)
+ - [CustomerThread](docs/Model/CustomerThread.md)
+ - [CustomerThread1](docs/Model/CustomerThread1.md)
+ - [CustomerVideoStat](docs/Model/CustomerVideoStat.md)
+ - [CustomerVideoStats](docs/Model/CustomerVideoStats.md)
+ - [Customers](docs/Model/Customers.md)
+ - [Director](docs/Model/Director.md)
+ - [Director1](docs/Model/Director1.md)
+ - [DownloadUrl](docs/Model/DownloadUrl.md)
+ - [Extract](docs/Model/Extract.md)
+ - [Feature](docs/Model/Feature.md)
+ - [FeatureValue](docs/Model/FeatureValue.md)
+ - [Features](docs/Model/Features.md)
+ - [Gender](docs/Model/Gender.md)
+ - [Genders](docs/Model/Genders.md)
+ - [Geoloc](docs/Model/Geoloc.md)
+ - [Geolocs](docs/Model/Geolocs.md)
+ - [Group](docs/Model/Group.md)
+ - [Groups](docs/Model/Groups.md)
+ - [I18nField](docs/Model/I18nField.md)
+ - [Image](docs/Model/Image.md)
+ - [Language](docs/Model/Language.md)
+ - [Languages](docs/Model/Languages.md)
+ - [MarlinToken](docs/Model/MarlinToken.md)
+ - [MediaFile](docs/Model/MediaFile.md)
+ - [MediaFiles](docs/Model/MediaFiles.md)
+ - [MediaSource](docs/Model/MediaSource.md)
+ - [MediaSources](docs/Model/MediaSources.md)
+ - [OAuthToken](docs/Model/OAuthToken.md)
+ - [Order](docs/Model/Order.md)
+ - [OrderHistories](docs/Model/OrderHistories.md)
+ - [OrderHistory](docs/Model/OrderHistory.md)
+ - [OrderState](docs/Model/OrderState.md)
+ - [OrderStates](docs/Model/OrderStates.md)
+ - [Orders](docs/Model/Orders.md)
+ - [Pagination](docs/Model/Pagination.md)
+ - [PaymentArguments](docs/Model/PaymentArguments.md)
+ - [PaymentModule](docs/Model/PaymentModule.md)
+ - [PaymentModules](docs/Model/PaymentModules.md)
+ - [PaymentUrl](docs/Model/PaymentUrl.md)
+ - [PlayerConfiguration](docs/Model/PlayerConfiguration.md)
+ - [Product](docs/Model/Product.md)
+ - [ProductAccess](docs/Model/ProductAccess.md)
+ - [ProductAttribute](docs/Model/ProductAttribute.md)
+ - [ProductAttributeCreateRequest](docs/Model/ProductAttributeCreateRequest.md)
+ - [ProductAttributeUpdateRequest](docs/Model/ProductAttributeUpdateRequest.md)
+ - [ProductAttributesResponse](docs/Model/ProductAttributesResponse.md)
+ - [ProductExtractsResponse](docs/Model/ProductExtractsResponse.md)
+ - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
+ - [Products](docs/Model/Products.md)
+ - [Products1](docs/Model/Products1.md)
+ - [Screenshot](docs/Model/Screenshot.md)
+ - [SessionVideoStat](docs/Model/SessionVideoStat.md)
+ - [SessionVideoStats](docs/Model/SessionVideoStats.md)
+ - [Subscription](docs/Model/Subscription.md)
+ - [SubscriptionAccesses](docs/Model/SubscriptionAccesses.md)
+ - [Subscriptions](docs/Model/Subscriptions.md)
+ - [Subtitle](docs/Model/Subtitle.md)
+ - [Subtitles](docs/Model/Subtitles.md)
+ - [Tag](docs/Model/Tag.md)
+ - [Task](docs/Model/Task.md)
+ - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
+ - [TaskFactory](docs/Model/TaskFactory.md)
+ - [Video](docs/Model/Video.md)
+ - [VideoFreeAccess](docs/Model/VideoFreeAccess.md)
+ - [VideoStat](docs/Model/VideoStat.md)
+ - [VideoStats](docs/Model/VideoStats.md)
+ - [VideoUrl](docs/Model/VideoUrl.md)
+ - [VideoViews](docs/Model/VideoViews.md)
+ - [Videos](docs/Model/Videos.md)
+ - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
+ - [WidgetFooterMenus](docs/Model/WidgetFooterMenus.md)
+ - [WidgetSlider](docs/Model/WidgetSlider.md)
+ - [WidgetSliders](docs/Model/WidgetSliders.md)
+ - [WidgetTopMenu](docs/Model/WidgetTopMenu.md)
+ - [WidgetTopMenus](docs/Model/WidgetTopMenus.md)
 
