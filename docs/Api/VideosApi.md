@@ -838,7 +838,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoSubtitles**
-> \Kaemo\Client\Model\Subtitles getVideoSubtitles($video_id, $page, $per_page)
+> \Kaemo\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -873,7 +873,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subtitles**](#Subtitles)
+[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
 
 ### Authorization
 

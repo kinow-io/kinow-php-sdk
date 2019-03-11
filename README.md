@@ -290,8 +290,6 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
-*SubtitlesApi* | [**getSubtitle**](docs/Api/SubtitlesApi.md#getsubtitle) | **GET** /subtitles/{subtitle_id} | 
-*SubtitlesApi* | [**getSubtitles**](docs/Api/SubtitlesApi.md#getsubtitles) | **GET** /subtitles | 
 *SubtitlesApi* | [**getVideoSubtitles**](docs/Api/SubtitlesApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *SuppliersApi* | [**getSupplierCoverImage**](docs/Api/SuppliersApi.md#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
@@ -415,7 +413,6 @@ Class | Method | HTTP request | Description
  - [SubscriptionAccesses](docs/Model/SubscriptionAccesses.md)
  - [Subscriptions](docs/Model/Subscriptions.md)
  - [Subtitle](docs/Model/Subtitle.md)
- - [Subtitles](docs/Model/Subtitles.md)
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
@@ -424,6 +421,7 @@ Class | Method | HTTP request | Description
  - [VideoFreeAccess](docs/Model/VideoFreeAccess.md)
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStats](docs/Model/VideoStats.md)
+ - [VideoSubtitlesResponse](docs/Model/VideoSubtitlesResponse.md)
  - [VideoUrl](docs/Model/VideoUrl.md)
  - [VideoViews](docs/Model/VideoViews.md)
  - [Videos](docs/Model/Videos.md)

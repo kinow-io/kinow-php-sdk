@@ -1,6 +1,6 @@
 <?php
 /**
- * PlayerConfigurationTest
+ * VideoSubtitlesResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * PlayerConfigurationTest Class Doc Comment
+ * VideoSubtitlesResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description PlayerConfiguration
+// * @description VideoSubtitlesResponse
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PlayerConfigurationTest extends \PHPUnit_Framework_TestCase
+class VideoSubtitlesResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,33 +75,17 @@ class PlayerConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PlayerConfiguration"
+     * Test "VideoSubtitlesResponse"
      */
-    public function testPlayerConfiguration()
+    public function testVideoSubtitlesResponse()
     {
 
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "data"
      */
-    public function testPropertyUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "html"
-     */
-    public function testPropertyHtml()
-    {
-
-    }
-
-    /**
-     * Test attribute "conf"
-     */
-    public function testPropertyConf()
+    public function testPropertyData()
     {
 
     }

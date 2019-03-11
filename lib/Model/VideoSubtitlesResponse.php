@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductImagesResponse
+ * VideoSubtitlesResponse
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * ProductImagesResponse Class Doc Comment
+ * VideoSubtitlesResponse Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductImagesResponse implements ArrayAccess
+class VideoSubtitlesResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,14 @@ class ProductImagesResponse implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ProductImagesResponse';
+    protected static $swaggerModelName = 'VideoSubtitlesResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\Image[]'
+        'data' => '\Kaemo\Client\Model\Subtitle[]'
     ];
 
     public static function swaggerTypes()
@@ -69,7 +68,6 @@ class ProductImagesResponse implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pagination' => 'pagination',
         'data' => 'data'
     ];
 
@@ -79,7 +77,6 @@ class ProductImagesResponse implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pagination' => 'setPagination',
         'data' => 'setData'
     ];
 
@@ -89,7 +86,6 @@ class ProductImagesResponse implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pagination' => 'getPagination',
         'data' => 'getData'
     ];
 
@@ -124,7 +120,6 @@ class ProductImagesResponse implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -152,29 +147,8 @@ class ProductImagesResponse implements ArrayAccess
 
 
     /**
-     * Gets pagination
-     * @return \Kaemo\Client\Model\Pagination
-     */
-    public function getPagination()
-    {
-        return $this->container['pagination'];
-    }
-
-    /**
-     * Sets pagination
-     * @param \Kaemo\Client\Model\Pagination $pagination
-     * @return $this
-     */
-    public function setPagination($pagination)
-    {
-        $this->container['pagination'] = $pagination;
-
-        return $this;
-    }
-
-    /**
      * Gets data
-     * @return \Kaemo\Client\Model\Image[]
+     * @return \Kaemo\Client\Model\Subtitle[]
      */
     public function getData()
     {
@@ -183,7 +157,7 @@ class ProductImagesResponse implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Kaemo\Client\Model\Image[] $data
+     * @param \Kaemo\Client\Model\Subtitle[] $data
      * @return $this
      */
     public function setData($data)
