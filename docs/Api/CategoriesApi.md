@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCategory**](#createCategory) | **POST** /categories | 
+[**getAvailableCategories**](#getAvailableCategories) | **GET** /categories-accesses | 
 [**getCategories**](#getCategories) | **GET** /categories | 
 [**getCategoriesFromCategory**](#getCategoriesFromCategory) | **GET** /categories/{category_id}/categories | 
 [**getCategory**](#getCategory) | **GET** /categories/{category_id} | 
@@ -48,6 +49,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Category**](#Category)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getAvailableCategories**
+> \Kaemo\Client\Model\Categories getAvailableCategories($customer_id, $page, $per_page)
+
+
+
+Get available categories
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$customer_id = 789; // int | ID of the customer to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getAvailableCategories($customer_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getAvailableCategories: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| ID of the customer to fetch | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
