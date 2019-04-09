@@ -56,15 +56,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$page = 789; // int | 
-$per_page = 789; // int | 
+$category_id = 789; // int | ID of the category to fetch
+$customer_id = 789; // int | 
 
 try {
-    $result = $api_instance->getAvailableCategories($customer_id, $page, $per_page);
+    $result = $api_instance->getAvailableCategory($category_id, $customer_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AccessesApi->getAvailableCategories: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AccessesApi->getAvailableCategory: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -76,7 +75,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessesApi* | [**getAvailableCategories**](docs/Api/AccessesApi.md#getavailablecategories) | **GET** /categories-accesses | 
+*AccessesApi* | [**getAvailableCategory**](docs/Api/AccessesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *AccessesApi* | [**getCustomerHasAccessToProduct**](docs/Api/AccessesApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 *AccessesApi* | [**getCustomerHasAccessToVideo**](docs/Api/AccessesApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *AccessesApi* | [**getProductAvailability**](docs/Api/AccessesApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
@@ -124,7 +123,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**validateCart**](docs/Api/CartsApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
-*CategoriesApi* | [**getAvailableCategories**](docs/Api/CategoriesApi.md#getavailablecategories) | **GET** /categories-accesses | 
+*CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
 *CategoriesApi* | [**getCategoriesFromCategory**](docs/Api/CategoriesApi.md#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
 *CategoriesApi* | [**getCategory**](docs/Api/CategoriesApi.md#getcategory) | **GET** /categories/{category_id} | 
