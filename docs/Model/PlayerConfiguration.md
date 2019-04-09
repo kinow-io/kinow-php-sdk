@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **string** |  | [optional] 
-**html** | **object** |  | [optional] 
-**conf** | **object** |  | [optional] 
+**manifest** | **object** |  | [optional] 
 
 

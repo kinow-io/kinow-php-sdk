@@ -11,17 +11,13 @@ Method | HTTP request | Description
 [**deleteVideo**](#deleteVideo) | **DELETE** /videos/{video_id} | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
-[**getDownloadUrl**](#getDownloadUrl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-[**getMarlinToken**](#getMarlinToken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
-[**getPlayerIframe**](#getPlayerIframe) | **GET** /videos/{video_id}/player-iframe | 
-[**getPlayerUrl**](#getPlayerUrl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
 [**getVideo**](#getVideo) | **GET** /videos/{video_id} | 
 [**getVideoAccess**](#getVideoAccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
 [**getVideoDownloadUrl**](#getVideoDownloadUrl) | **GET** /videos/{video_id}/download-url | 
 [**getVideoFeatures**](#getVideoFeatures) | **GET** /videos/{video_id}/features | 
 [**getVideoGeolocation**](#getVideoGeolocation) | **GET** /videos/{video_id}/geolocation | 
 [**getVideoGeolocation_0**](#getVideoGeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
-[**getVideoPlayerUrl**](#getVideoPlayerUrl) | **GET** /videos/{video_id}/player | 
+[**getVideoPlayer**](#getVideoPlayer) | **GET** /videos/{video_id}/player | 
 [**getVideoSubtitles**](#getVideoSubtitles) | **GET** /videos/{video_id}/subtitles | 
 [**getVideoViews**](#getVideoViews) | **GET** /videos/{video_id}/views | 
 [**getVideos**](#getVideos) | **GET** /videos | 
@@ -43,8 +39,8 @@ Attach cover to video (the image need to be attached to the product)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
-$id_image = 789; // int | ID of the image to attach
+$video_id = 789; // int | Video ID to fetch
+$id_image = 789; // int | Image ID to attach
 
 try {
     $api_instance->attachCoverToVideo($video_id, $id_image);
@@ -58,8 +54,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
- **id_image** | **int**| ID of the image to attach |
+ **video_id** | **int**| Video ID to fetch |
+ **id_image** | **int**| Image ID to attach |
 
 ### Return type
 
@@ -218,7 +214,7 @@ Delete video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to delete
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $api_instance->deleteVideo($video_id);
@@ -232,7 +228,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to delete |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -304,7 +300,7 @@ Get disabled subscriptions list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -321,193 +317,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
 ### Return type
 
 [**\Kaemo\Client\Model\Subscriptions**](#Subscriptions)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getDownloadUrl**
-> \Kaemo\Client\Model\DownloadUrl getDownloadUrl($customer_id, $video_id)
-
-
-
-Get video download url
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\VideosApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getDownloadUrl($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling VideosApi->getDownloadUrl: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\DownloadUrl**](#DownloadUrl)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getMarlinToken**
-> \Kaemo\Client\Model\MarlinToken getMarlinToken($customer_id, $video_id)
-
-
-
-Get Marlin access token for a video
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\VideosApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getMarlinToken($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling VideosApi->getMarlinToken: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\MarlinToken**](#MarlinToken)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPlayerIframe**
-> \Kaemo\Client\Model\VideoUrl getPlayerIframe($video_id, $customer_id)
-
-
-
-Get video player url
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | Id of the video to fetch
-$customer_id = 789; // int | Id of the customer to fetch
-
-try {
-    $result = $api_instance->getPlayerIframe($video_id, $customer_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling VideosApi->getPlayerIframe: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Id of the video to fetch |
- **customer_id** | **int**| Id of the customer to fetch | [optional]
-
-### Return type
-
-[**\Kaemo\Client\Model\VideoUrl**](#VideoUrl)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPlayerUrl**
-> \Kaemo\Client\Model\VideoUrl getPlayerUrl($customer_id, $video_id)
-
-
-
-Get video player url
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\VideosApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getPlayerUrl($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling VideosApi->getPlayerUrl: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\VideoUrl**](#VideoUrl)
 
 ### Authorization
 
@@ -531,7 +347,7 @@ Get video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $result = $api_instance->getVideo($video_id);
@@ -546,7 +362,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -574,8 +390,8 @@ Get video access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
-$customer_id = 789; // int | ID of the customer to fetch
+$video_id = 789; // int | Video ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $api_instance->getVideoAccess($video_id, $customer_id);
@@ -589,8 +405,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
- **customer_id** | **int**| ID of the customer to fetch |
+ **video_id** | **int**| Video ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -618,8 +434,8 @@ Get video download url
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | Id of the video to fetch
-$customer_id = 789; // int | Id of the customer to fetch
+$video_id = 789; // int | Video ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getVideoDownloadUrl($video_id, $customer_id);
@@ -634,8 +450,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Id of the video to fetch |
- **customer_id** | **int**| Id of the customer to fetch | [optional]
+ **video_id** | **int**| Video ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
 
 ### Return type
 
@@ -663,7 +479,7 @@ Get video features
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -680,7 +496,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -710,7 +526,7 @@ Get geoloc list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -727,7 +543,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -757,7 +573,7 @@ Check access to a product by geolocation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -774,7 +590,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **ip_address** | **string**| address ip |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -792,12 +608,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getVideoPlayerUrl**
-> \Kaemo\Client\Model\PlayerConfiguration getVideoPlayerUrl($video_id, $customer_id)
+## **getVideoPlayer**
+> \Kaemo\Client\Model\PlayerConfiguration getVideoPlayer($video_id, $customer_id, $country_id)
 
 
 
-Get video player url
+Get video player
 
 ### Example
 ```php
@@ -805,14 +621,15 @@ Get video player url
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | Id of the video to fetch
-$customer_id = 789; // int | 
+$video_id = 789; // int | Video ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$country_id = 789; // int | Country ID to use in video analytics
 
 try {
-    $result = $api_instance->getVideoPlayerUrl($video_id, $customer_id);
+    $result = $api_instance->getVideoPlayer($video_id, $customer_id, $country_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling VideosApi->getVideoPlayerUrl: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling VideosApi->getVideoPlayer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -821,8 +638,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Id of the video to fetch |
- **customer_id** | **int**|  | [optional]
+ **video_id** | **int**| Video ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
+ **country_id** | **int**| Country ID to use in video analytics | [optional]
 
 ### Return type
 
@@ -850,7 +668,7 @@ Get subtitles of a video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -867,7 +685,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -897,7 +715,7 @@ Get video views
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $result = $api_instance->getVideoViews($video_id);
@@ -912,7 +730,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -1046,7 +864,7 @@ Handle geolocation for videos by countries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
 $behavior_non_detected_countries = "behavior_non_detected_countries_example"; // string | Behavior for non-detected countries
@@ -1064,7 +882,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **enabled** | **int**| Enabled |
  **behavior_detected_countries** | **string**| Behavior for detected countries |
  **behavior_non_detected_countries** | **string**| Behavior for non-detected countries |
@@ -1096,7 +914,7 @@ Update video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$video_id = 789; // int | ID of the video to update
+$video_id = 789; // int | Video ID to update
 $body = new \Kaemo\Client\Model\Video(); // \Kaemo\Client\Model\Video | 
 
 try {
@@ -1112,7 +930,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to update |
+ **video_id** | **int**| Video ID to update |
  **body** | [**\Kaemo\Client\Model\Video**](#\Kaemo\Client\Model\Video)|  |
 
 ### Return type

@@ -57,14 +57,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
 $customer_id = 789; // int | ID of the customer to fetch
-$page = 789; // int | 
-$per_page = 789; // int | 
+$product_id = 789; // int | ID of the product to fetch
 
 try {
-    $result = $api_instance->getAvailableCategories($customer_id, $page, $per_page);
-    print_r($result);
+    $api_instance->getCustomerHasAccessToProduct($customer_id, $product_id);
 } catch (Exception $e) {
-    echo 'Exception when calling AccessesApi->getAvailableCategories: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AccessesApi->getCustomerHasAccessToProduct: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -76,8 +74,6 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessesApi* | [**getAvailableCategories**](docs/Api/AccessesApi.md#getavailablecategories) | **GET** /categories-accesses | 
-*AccessesApi* | [**getAvailableCategory**](docs/Api/AccessesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *AccessesApi* | [**getCustomerHasAccessToProduct**](docs/Api/AccessesApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 *AccessesApi* | [**getCustomerHasAccessToVideo**](docs/Api/AccessesApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *AccessesApi* | [**getProductAvailability**](docs/Api/AccessesApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
@@ -125,8 +121,6 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**validateCart**](docs/Api/CartsApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
-*CategoriesApi* | [**getAvailableCategories**](docs/Api/CategoriesApi.md#getavailablecategories) | **GET** /categories-accesses | 
-*CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
 *CategoriesApi* | [**getCategoriesFromCategory**](docs/Api/CategoriesApi.md#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
 *CategoriesApi* | [**getCategory**](docs/Api/CategoriesApi.md#getcategory) | **GET** /categories/{category_id} | 
@@ -156,10 +150,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerHasAccessToVideo**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
-*CustomersApi* | [**getDownloadUrl**](docs/Api/CustomersApi.md#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-*CustomersApi* | [**getMarlinToken**](docs/Api/CustomersApi.md#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
 *CustomersApi* | [**getPaymentCustomerId**](docs/Api/CustomersApi.md#getpaymentcustomerid) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
-*CustomersApi* | [**getPlayerUrl**](docs/Api/CustomersApi.md#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
@@ -203,13 +194,10 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**getCategoryBanner**](docs/Api/ImagesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *ImagesApi* | [**getDirectorCoverImage**](docs/Api/ImagesApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
 *ImagesApi* | [**getIntroImage**](docs/Api/ImagesApi.md#getintroimage) | **GET** /widgets/intro/images | 
-*ImagesApi* | [**getManufacturerCoverImage**](docs/Api/ImagesApi.md#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
 *ImagesApi* | [**getProductCoverImage**](docs/Api/ImagesApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
 *ImagesApi* | [**getProductImages**](docs/Api/ImagesApi.md#getproductimages) | **GET** /products/{product_id}/images | 
 *ImagesApi* | [**getProductScreenshots**](docs/Api/ImagesApi.md#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
-*ImagesApi* | [**getSliderImages**](docs/Api/ImagesApi.md#getsliderimages) | **GET** /widgets/slider/images | 
 *ImagesApi* | [**getSubscriptionCoverImage**](docs/Api/ImagesApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
-*ImagesApi* | [**getSupplierCoverImage**](docs/Api/ImagesApi.md#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
 *ImagesApi* | [**getVideoCover**](docs/Api/ImagesApi.md#getvideocover) | **GET** /videos/{video_id}/cover | 
 *ImagesApi* | [**uploadActorCover**](docs/Api/ImagesApi.md#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
 *ImagesApi* | [**uploadCategoryBanner**](docs/Api/ImagesApi.md#uploadcategorybanner) | **POST** /category/{category_id}/banner | 
@@ -220,7 +208,6 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**uploadProductScreenshots**](docs/Api/ImagesApi.md#uploadproductscreenshots) | **POST** /products/{product_id}/screenshots | 
 *ImagesApi* | [**uploadSubscriptionCover**](docs/Api/ImagesApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
 *LanguagesApi* | [**getLanguages**](docs/Api/LanguagesApi.md#getlanguages) | **GET** /languages | 
-*ManufacturersApi* | [**getManufacturerCoverImage**](docs/Api/ManufacturersApi.md#getmanufacturercoverimage) | **GET** /manufacturers/{manufacturer_id}/cover | 
 *MediaFilesApi* | [**getMediaSourceFiles**](docs/Api/MediaFilesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
 *MediaFilesApi* | [**postMediaSourceFiles**](docs/Api/MediaFilesApi.md#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
 *MediaSourcesApi* | [**getMediaSource**](docs/Api/MediaSourcesApi.md#getmediasource) | **GET** /media-sources/{source_id} | 
@@ -240,7 +227,6 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *PaymentModulesApi* | [**validateCart**](docs/Api/PaymentModulesApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
-*PlayerApi* | [**getExtractPlayer**](docs/Api/PlayerApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
 *ProductAccessesApi* | [**createProductAccess**](docs/Api/ProductAccessesApi.md#createproductaccess) | **POST** /product-accesses | 
 *ProductAccessesApi* | [**deleteProductAccess**](docs/Api/ProductAccessesApi.md#deleteproductaccess) | **DELETE** /product-accesses/{product_access_id} | 
 *ProductAccessesApi* | [**getCustomerAccessesSubscriptions**](docs/Api/ProductAccessesApi.md#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
@@ -291,7 +277,6 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
 *SubtitlesApi* | [**getVideoSubtitles**](docs/Api/SubtitlesApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
-*SuppliersApi* | [**getSupplierCoverImage**](docs/Api/SuppliersApi.md#getsuppliercoverimage) | **GET** /suppliers/{supplier_id}/cover | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
@@ -300,17 +285,13 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
-*VideosApi* | [**getDownloadUrl**](docs/Api/VideosApi.md#getdownloadurl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-*VideosApi* | [**getMarlinToken**](docs/Api/VideosApi.md#getmarlintoken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
-*VideosApi* | [**getPlayerIframe**](docs/Api/VideosApi.md#getplayeriframe) | **GET** /videos/{video_id}/player-iframe | 
-*VideosApi* | [**getPlayerUrl**](docs/Api/VideosApi.md#getplayerurl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
 *VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
 *VideosApi* | [**getVideoDownloadUrl**](docs/Api/VideosApi.md#getvideodownloadurl) | **GET** /videos/{video_id}/download-url | 
 *VideosApi* | [**getVideoFeatures**](docs/Api/VideosApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *VideosApi* | [**getVideoGeolocation**](docs/Api/VideosApi.md#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
 *VideosApi* | [**getVideoGeolocation_0**](docs/Api/VideosApi.md#getvideogeolocation_0) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
-*VideosApi* | [**getVideoPlayerUrl**](docs/Api/VideosApi.md#getvideoplayerurl) | **GET** /videos/{video_id}/player | 
+*VideosApi* | [**getVideoPlayer**](docs/Api/VideosApi.md#getvideoplayer) | **GET** /videos/{video_id}/player | 
 *VideosApi* | [**getVideoSubtitles**](docs/Api/VideosApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *VideosApi* | [**getVideoViews**](docs/Api/VideosApi.md#getvideoviews) | **GET** /videos/{video_id}/views | 
 *VideosApi* | [**getVideos**](docs/Api/VideosApi.md#getvideos) | **GET** /videos | 
@@ -318,7 +299,6 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
 *WidgetsApi* | [**getIntroImage**](docs/Api/WidgetsApi.md#getintroimage) | **GET** /widgets/intro/images | 
-*WidgetsApi* | [**getSliderImages**](docs/Api/WidgetsApi.md#getsliderimages) | **GET** /widgets/slider/images | 
 *WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
 *WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
@@ -378,7 +358,6 @@ Class | Method | HTTP request | Description
  - [Image](docs/Model/Image.md)
  - [Language](docs/Model/Language.md)
  - [Languages](docs/Model/Languages.md)
- - [MarlinToken](docs/Model/MarlinToken.md)
  - [MediaFile](docs/Model/MediaFile.md)
  - [MediaFiles](docs/Model/MediaFiles.md)
  - [MediaSource](docs/Model/MediaSource.md)
@@ -422,7 +401,6 @@ Class | Method | HTTP request | Description
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStats](docs/Model/VideoStats.md)
  - [VideoSubtitlesResponse](docs/Model/VideoSubtitlesResponse.md)
- - [VideoUrl](docs/Model/VideoUrl.md)
  - [VideoViews](docs/Model/VideoViews.md)
  - [Videos](docs/Model/Videos.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)

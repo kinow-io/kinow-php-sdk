@@ -21,10 +21,7 @@ Method | HTTP request | Description
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
-[**getDownloadUrl**](#getDownloadUrl) | **GET** /customers/{customer_id}/videos/{video_id}/download | 
-[**getMarlinToken**](#getMarlinToken) | **GET** /customers/{customer_id}/videos/{video_id}/marlin | 
 [**getPaymentCustomerId**](#getPaymentCustomerId) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
-[**getPlayerUrl**](#getPlayerUrl) | **GET** /customers/{customer_id}/videos/{video_id}/player | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 
 
@@ -791,96 +788,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getDownloadUrl**
-> \Kaemo\Client\Model\DownloadUrl getDownloadUrl($customer_id, $video_id)
-
-
-
-Get video download url
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getDownloadUrl($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getDownloadUrl: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\DownloadUrl**](#DownloadUrl)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getMarlinToken**
-> \Kaemo\Client\Model\MarlinToken getMarlinToken($customer_id, $video_id)
-
-
-
-Get Marlin access token for a video
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getMarlinToken($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getMarlinToken: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\MarlinToken**](#MarlinToken)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **getPaymentCustomerId**
 > string getPaymentCustomerId($customer_id, $payment_name)
 
@@ -916,51 +823,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **string**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPlayerUrl**
-> \Kaemo\Client\Model\VideoUrl getPlayerUrl($customer_id, $video_id)
-
-
-
-Get video player url
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Id of the customer to fetch
-$video_id = 789; // int | Id of the video to fetch
-
-try {
-    $result = $api_instance->getPlayerUrl($customer_id, $video_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getPlayerUrl: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer to fetch |
- **video_id** | **int**| Id of the video to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\VideoUrl**](#VideoUrl)
 
 ### Authorization
 

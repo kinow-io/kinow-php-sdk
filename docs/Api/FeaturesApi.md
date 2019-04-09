@@ -343,7 +343,7 @@ Get video features
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\FeaturesApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -360,7 +360,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

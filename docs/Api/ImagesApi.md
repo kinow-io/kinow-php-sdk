@@ -8,13 +8,10 @@ Method | HTTP request | Description
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
 [**getIntroImage**](#getIntroImage) | **GET** /widgets/intro/images | 
-[**getManufacturerCoverImage**](#getManufacturerCoverImage) | **GET** /manufacturers/{manufacturer_id}/cover | 
 [**getProductCoverImage**](#getProductCoverImage) | **GET** /products/{product_id}/cover | 
 [**getProductImages**](#getProductImages) | **GET** /products/{product_id}/images | 
 [**getProductScreenshots**](#getProductScreenshots) | **GET** /products/{product_id}/screenshots | 
-[**getSliderImages**](#getSliderImages) | **GET** /widgets/slider/images | 
 [**getSubscriptionCoverImage**](#getSubscriptionCoverImage) | **GET** /subscriptions/{subscription_id}/cover | 
-[**getSupplierCoverImage**](#getSupplierCoverImage) | **GET** /suppliers/{supplier_id}/cover | 
 [**getVideoCover**](#getVideoCover) | **GET** /videos/{video_id}/cover | 
 [**uploadActorCover**](#uploadActorCover) | **POST** /actors/{actor_id}/cover | 
 [**uploadCategoryBanner**](#uploadCategoryBanner) | **POST** /category/{category_id}/banner | 
@@ -194,49 +191,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getManufacturerCoverImage**
-> \Kaemo\Client\Model\Image getManufacturerCoverImage($manufacturer_id)
-
-
-
-Please, use __/directors/{actor_id}/cover__
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$manufacturer_id = 789; // int | ID of the manufacturer to fetch
-
-try {
-    $result = $api_instance->getManufacturerCoverImage($manufacturer_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->getManufacturerCoverImage: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **manufacturer_id** | **int**| ID of the manufacturer to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\Image**](#Image)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **getProductCoverImage**
 > \Kaemo\Client\Model\Image getProductCoverImage($product_id)
 
@@ -372,45 +326,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getSliderImages**
-> \Kaemo\Client\Model\Image[] getSliderImages()
-
-
-
-Get introduction image
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-
-try {
-    $result = $api_instance->getSliderImages();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->getSliderImages: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Kaemo\Client\Model\Image[]**](#Image)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **getSubscriptionCoverImage**
 > \Kaemo\Client\Model\Image getSubscriptionCoverImage($subscription_id)
 
@@ -440,49 +355,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **int**| ID of the subscription to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\Image**](#Image)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getSupplierCoverImage**
-> \Kaemo\Client\Model\Image getSupplierCoverImage($supplier_id)
-
-
-
-Please, use __/actors/{actor_id}/cover__
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$supplier_id = 789; // int | ID of the supplier to fetch
-
-try {
-    $result = $api_instance->getSupplierCoverImage($supplier_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->getSupplierCoverImage: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **supplier_id** | **int**| ID of the supplier to fetch |
 
 ### Return type
 

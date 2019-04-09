@@ -112,7 +112,7 @@ Delete extract
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ExtractsApi();
-$extract_id = 789; // int | ID of the video to update
+$extract_id = 789; // int | Extract ID to update
 
 try {
     $api_instance->deleteExtract($extract_id);
@@ -126,7 +126,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extract_id** | **int**| ID of the video to update |
+ **extract_id** | **int**| Extract ID to update |
 
 ### Return type
 
@@ -154,7 +154,7 @@ Get extract's player
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ExtractsApi();
-$extract_id = 789; // int | ID of the extract to fetch
+$extract_id = 789; // int | Extract ID to fetch
 
 try {
     $result = $api_instance->getExtractPlayer($extract_id);
@@ -169,7 +169,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extract_id** | **int**| ID of the extract to fetch |
+ **extract_id** | **int**| Extract ID to fetch |
 
 ### Return type
 
@@ -244,7 +244,7 @@ Update extract
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ExtractsApi();
-$extract_id = 789; // int | ID of the video to update
+$extract_id = 789; // int | Extract ID to fetch
 $body = new \Kaemo\Client\Model\Extract(); // \Kaemo\Client\Model\Extract | 
 
 try {
@@ -260,7 +260,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extract_id** | **int**| ID of the video to update |
+ **extract_id** | **int**| Extract ID to fetch |
  **body** | [**\Kaemo\Client\Model\Extract**](#\Kaemo\Client\Model\Extract)|  |
 
 ### Return type

@@ -162,7 +162,7 @@ Check access to a product by geolocation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -179,7 +179,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **ip_address** | **string**| address ip |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -264,7 +264,7 @@ Handle geolocation for videos by countries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
 $behavior_non_detected_countries = "behavior_non_detected_countries_example"; // string | Behavior for non-detected countries
@@ -282,7 +282,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
  **enabled** | **int**| Enabled |
  **behavior_detected_countries** | **string**| Behavior for detected countries |
  **behavior_non_detected_countries** | **string**| Behavior for non-detected countries |
