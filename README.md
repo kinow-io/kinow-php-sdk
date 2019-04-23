@@ -279,7 +279,6 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
-*SubtitlesApi* | [**getVideoSubtitles**](docs/Api/SubtitlesApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
