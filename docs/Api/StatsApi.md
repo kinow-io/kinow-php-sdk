@@ -4,17 +4,18 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getVideoStatsByCustomers**](#getVideoStatsByCustomers) | **GET** /video-stats/customers | 
-[**getVideoStatsByVideo**](#getVideoStatsByVideo) | **GET** /video-stats/videos | 
-[**getVideoStatsSessions**](#getVideoStatsSessions) | **GET** /video-stats/sessions | 
+[**getCustomerGroupTotalWatched**](#getCustomerGroupTotalWatched) | **GET** /video-stats/customer-group | 
+[**getCustomerSessions**](#getCustomerSessions) | **GET** /video-stats/sessions | 
+[**getCustomerVideoStats**](#getCustomerVideoStats) | **GET** /video-stats/customers | 
+[**getVideoStats**](#getVideoStats) | **GET** /video-stats/videos | 
 
 
-## **getVideoStatsByCustomers**
-> \Kaemo\Client\Model\CustomerVideoStats getVideoStatsByCustomers($customer_id, $date_from, $date_to, $page, $per_page)
+## **getCustomerGroupTotalWatched**
+> \Kaemo\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page)
 
 
 
-Get video stats by customer
+Get video statistics for a given customer group
 
 ### Example
 ```php
@@ -22,17 +23,16 @@ Get video stats by customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\StatsApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$date_from = "date_from_example"; // string | Search entries from this date
-$date_to = "date_to_example"; // string | Search entries to this date
+$group_id = 789; // int | Customer group ID to fecth
+$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getVideoStatsByCustomers($customer_id, $date_from, $date_to, $page, $per_page);
+    $result = $api_instance->getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatsApi->getVideoStatsByCustomers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StatsApi->getCustomerGroupTotalWatched: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -41,15 +41,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch | [optional]
- **date_from** | **string**| Search entries from this date | [optional]
- **date_to** | **string**| Search entries to this date | [optional]
+ **group_id** | **int**| Customer group ID to fecth |
+ **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerVideoStats**](#CustomerVideoStats)
+[**\Kaemo\Client\Model\CustomerGroupVideoStats1**](#CustomerGroupVideoStats1)
 
 ### Authorization
 
@@ -60,61 +59,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getVideoStatsByVideo**
-> \Kaemo\Client\Model\VideoStats getVideoStatsByVideo($video_id, $date_from, $date_to, $page)
+## **getCustomerSessions**
+> \Kaemo\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page)
 
 
 
-Get video stats by video
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\StatsApi();
-$video_id = 789; // int | ID of the customer to fetch
-$date_from = "date_from_example"; // string | Search entries from this date
-$date_to = "date_to_example"; // string | Search entries to this date
-$page = 789; // int | 
-
-try {
-    $result = $api_instance->getVideoStatsByVideo($video_id, $date_from, $date_to, $page);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling StatsApi->getVideoStatsByVideo: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the customer to fetch | [optional]
- **date_from** | **string**| Search entries from this date | [optional]
- **date_to** | **string**| Search entries to this date | [optional]
- **page** | **int**|  | [optional]
-
-### Return type
-
-[**\Kaemo\Client\Model\VideoStats**](#VideoStats)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getVideoStatsSessions**
-> \Kaemo\Client\Model\SessionVideoStats getVideoStatsSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page)
-
-
-
-Get video stats sessions
+Get customer video sessions statistics
 
 ### Example
 ```php
@@ -122,18 +72,18 @@ Get video stats sessions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\StatsApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$video_id = 789; // int | ID of the video to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$video_id = 789; // int | Video ID to fetch
 $date_from = "date_from_example"; // string | Search entries from this date
 $date_to = "date_to_example"; // string | Search entries to this date
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getVideoStatsSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page);
+    $result = $api_instance->getCustomerSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StatsApi->getVideoStatsSessions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StatsApi->getCustomerSessions: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -142,8 +92,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch | [optional]
- **video_id** | **int**| ID of the video to fetch | [optional]
+ **customer_id** | **int**| Customer ID to fetch | [optional]
+ **video_id** | **int**| Video ID to fetch | [optional]
  **date_from** | **string**| Search entries from this date | [optional]
  **date_to** | **string**| Search entries to this date | [optional]
  **page** | **int**|  | [optional]
@@ -152,6 +102,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\SessionVideoStats**](#SessionVideoStats)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerVideoStats**
+> \Kaemo\Client\Model\CustomerVideoStats1 getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page)
+
+
+
+Get customer video statistics
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$date_from = "date_from_example"; // string | Search entries from this date
+$date_to = "date_to_example"; // string | Search entries to this date
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getCustomerVideoStats: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **date_from** | **string**| Search entries from this date | [optional]
+ **date_to** | **string**| Search entries to this date | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\CustomerVideoStats1**](#CustomerVideoStats1)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideoStats**
+> \Kaemo\Client\Model\VideoStats getVideoStats($video_id, $date_from, $date_to, $page)
+
+
+
+Get video statistics
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\StatsApi();
+$video_id = 789; // int | Video ID to fetch
+$date_from = "date_from_example"; // string | Search entries from this date
+$date_to = "date_to_example"; // string | Search entries to this date
+$page = 789; // int | 
+
+try {
+    $result = $api_instance->getVideoStats($video_id, $date_from, $date_to, $page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getVideoStats: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch | [optional]
+ **date_from** | **string**| Search entries from this date | [optional]
+ **date_to** | **string**| Search entries to this date | [optional]
+ **page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\VideoStats**](#VideoStats)
 
 ### Authorization
 

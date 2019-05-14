@@ -69,6 +69,21 @@ try {
 ?>
 ```
 
+## Enable Debug Logs
+You can enable debug logging to get information about what is sent or received by the SDK.
+The logs will be available in the 'output' file at the root of your server.
+
+When submitting a support request, it is best to provide the logs file for a faster resolution of your issue.
+
+```php
+// To be done before doing anything with the SDK
+// Activate debug logs
+Kaemo\Client\Configuration::getDefaultConfiguration()->setDebug(true);
+
+// (optionally) Change debug file location (default is 'php://output')
+Kaemo\Client\Configuration::getDefaultConfiguration()->setDebugFile('php://output');
+```
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.kinow.com/api*
@@ -271,9 +286,10 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**searchProducts**](docs/Api/ProductsApi.md#searchproducts) | **GET** /products/search/{search_query} | 
 *ProductsApi* | [**setProductGeolocation**](docs/Api/ProductsApi.md#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
 *ProductsApi* | [**updateProduct**](docs/Api/ProductsApi.md#updateproduct) | **PUT** /products/{product_id} | 
-*StatsApi* | [**getVideoStatsByCustomers**](docs/Api/StatsApi.md#getvideostatsbycustomers) | **GET** /video-stats/customers | 
-*StatsApi* | [**getVideoStatsByVideo**](docs/Api/StatsApi.md#getvideostatsbyvideo) | **GET** /video-stats/videos | 
-*StatsApi* | [**getVideoStatsSessions**](docs/Api/StatsApi.md#getvideostatssessions) | **GET** /video-stats/sessions | 
+*StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
+*StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
+*StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
+*StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
 *SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *SubscriptionsApi* | [**getSubscription**](docs/Api/SubscriptionsApi.md#getsubscription) | **GET** /subscriptions/{subscription_id} | 
 *SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
@@ -337,11 +353,13 @@ Class | Method | HTTP request | Description
  - [Customer](docs/Model/Customer.md)
  - [CustomerCreateRequest](docs/Model/CustomerCreateRequest.md)
  - [CustomerCurrentViews](docs/Model/CustomerCurrentViews.md)
+ - [CustomerGroupVideoStats](docs/Model/CustomerGroupVideoStats.md)
+ - [CustomerGroupVideoStats1](docs/Model/CustomerGroupVideoStats1.md)
  - [CustomerId](docs/Model/CustomerId.md)
  - [CustomerThread](docs/Model/CustomerThread.md)
  - [CustomerThread1](docs/Model/CustomerThread1.md)
- - [CustomerVideoStat](docs/Model/CustomerVideoStat.md)
  - [CustomerVideoStats](docs/Model/CustomerVideoStats.md)
+ - [CustomerVideoStats1](docs/Model/CustomerVideoStats1.md)
  - [Customers](docs/Model/Customers.md)
  - [Director](docs/Model/Director.md)
  - [Director1](docs/Model/Director1.md)

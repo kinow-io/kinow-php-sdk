@@ -185,7 +185,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CartBody**](#\Kaemo\Client\Model\CartBody)| Create cart object |
+ **body** | [**\Kaemo\Client\Model\CartBody**](#\Kaemo\Client\Model\CartBody)| Create cart object | [optional]
 
 ### Return type
 
