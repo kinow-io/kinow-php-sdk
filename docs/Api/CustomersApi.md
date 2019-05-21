@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**attachCartToCustomer**](#attachCartToCustomer) | **POST** /customers/{customer_id}/carts | 
 [**checkCustomerCredentials**](#checkCustomerCredentials) | **POST** /customers/check-credentials | 
 [**createCustomer**](#createCustomer) | **POST** /customers | 
-[**createFacebookId**](#createFacebookId) | **POST** /facebook/customers | 
+[**createFacebookId**](#createFacebookId) | **POST** /customers/facebook | 
 [**deleteCustomer**](#deleteCustomer) | **DELETE** /customers/{customer_id} | 
 [**generateAuthenticationToken**](#generateAuthenticationToken) | **GET** /customers/{customer_id}/authentication-token | 
 [**getCustomer**](#getCustomer) | **GET** /customers/{customer_id} | 
@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
+[**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentCustomerId**](#getPaymentCustomerId) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 
@@ -778,6 +779,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Customers**](#Customers)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getFacebookCustomer**
+> \Kaemo\Client\Model\CustomerId getFacebookCustomer($facebook_id)
+
+
+
+Get customer ID by Facebook ID
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$facebook_id = 789; // int | Facebook ID to fetch
+
+try {
+    $result = $api_instance->getFacebookCustomer($facebook_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getFacebookCustomer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **facebook_id** | **int**| Facebook ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\CustomerId**](#CustomerId)
 
 ### Authorization
 
