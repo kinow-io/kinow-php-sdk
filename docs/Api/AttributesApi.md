@@ -57,7 +57,7 @@ No authorization required
 
 
 
-Get product attributes. Important to add product to a cart. Allow to select if the customer will buy the product for download, streaming or both
+Get product attributes. Mandatory to add product in cart: allows to buy product for download, streaming or both
 
 ### Example
 ```php

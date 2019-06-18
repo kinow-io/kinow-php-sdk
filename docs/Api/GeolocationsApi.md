@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**geolocations**](#geolocations) | **POST** /geolocations | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
-[**getVideoGeolocation**](#getVideoGeolocation) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
+[**getVideoGeolocationByIp**](#getVideoGeolocationByIp) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
 [**setProductGeolocation**](#setProductGeolocation) | **PUT** /products/{product_id}/geolocations | 
 [**setVideoGeolocation**](#setVideoGeolocation) | **PUT** /videos/{video_id}/geolocations | 
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 
-Get videos attached to product
+Get product geolocation restrictions
 
 ### Example
 ```php
@@ -106,7 +106,7 @@ No authorization required
 
 
 
-check access to a product by geolocation
+Check product access using geolocation
 
 ### Example
 ```php
@@ -149,8 +149,8 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getVideoGeolocation**
-> getVideoGeolocation($video_id, $ip_address, $page, $per_page)
+## **getVideoGeolocationByIp**
+> getVideoGeolocationByIp($video_id, $ip_address, $page, $per_page)
 
 
 
@@ -163,14 +163,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
 $video_id = 789; // int | Video ID to fetch
-$ip_address = "ip_address_example"; // string | address ip
+$ip_address = "ip_address_example"; // string | IP address
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $api_instance->getVideoGeolocation($video_id, $ip_address, $page, $per_page);
+    $api_instance->getVideoGeolocationByIp($video_id, $ip_address, $page, $per_page);
 } catch (Exception $e) {
-    echo 'Exception when calling GeolocationsApi->getVideoGeolocation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GeolocationsApi->getVideoGeolocationByIp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -180,7 +180,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| Video ID to fetch |
- **ip_address** | **string**| address ip |
+ **ip_address** | **string**| IP address |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

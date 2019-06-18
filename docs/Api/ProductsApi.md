@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
 [**attachProductToCategory**](#attachProductToCategory) | **POST** /products/{product_id}/categories | 
 [**attachProductToDirector**](#attachProductToDirector) | **POST** /products/{product_id}/directors | 
-[**attachProductToDirector_0**](#attachProductToDirector_0) | **POST** /products/{product_id}/groups | 
+[**attachProductToGroup**](#attachProductToGroup) | **POST** /products/{product_id}/groups | 
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
 [**createProduct**](#createProduct) | **POST** /products | 
 [**deleteProduct**](#deleteProduct) | **DELETE** /products/{product_id} | 
-[**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** products/{product_id}/features/{feature_id} | 
+[**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 [**detachProductFromActor**](#detachProductFromActor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**detachProductFromCategory**](#detachProductFromCategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
 [**detachProductFromDirector**](#detachProductFromDirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
@@ -215,8 +215,8 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **attachProductToDirector_0**
-> attachProductToDirector_0($product_id, $group_id)
+## **attachProductToGroup**
+> attachProductToGroup($product_id, $group_id)
 
 
 
@@ -232,9 +232,9 @@ $product_id = 789; // int | ID of the product
 $group_id = 789; // int | ID of the group to attach
 
 try {
-    $api_instance->attachProductToDirector_0($product_id, $group_id);
+    $api_instance->attachProductToGroup($product_id, $group_id);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductsApi->attachProductToDirector_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductsApi->attachProductToGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -806,7 +806,7 @@ No authorization required
 
 
 
-Get product attributes. Important to add product to a cart. Allow to select if the customer will buy the product for download, streaming or both
+Get product attributes. Mandatory to add product in cart: allows to buy product for download, streaming or both
 
 ### Example
 ```php
@@ -1087,7 +1087,7 @@ No authorization required
 
 
 
-Get videos attached to product
+Get product features
 
 ### Example
 ```php
@@ -1134,7 +1134,7 @@ No authorization required
 
 
 
-Get videos attached to product
+Get product geolocation restrictions
 
 ### Example
 ```php
@@ -1181,7 +1181,7 @@ No authorization required
 
 
 
-check access to a product by geolocation
+Check product access using geolocation
 
 ### Example
 ```php
@@ -1288,7 +1288,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId.
+$features = "features_example"; // string | ```     featureId[value]=string&featureId[operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId.
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
@@ -1310,7 +1310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId. | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60;     featureId[value]&#x3D;string&amp;featureId[operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId. | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
@@ -1346,7 +1346,7 @@ $api_instance = new Kaemo\Client\Api\ProductsApi();
 $product_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId.
+$features = "features_example"; // string | ```     featureId[value]=string&featureId[operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId.
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
  **product_id** | **int**|  |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId. | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60;     featureId[value]&#x3D;string&amp;featureId[operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt.     To search on all features, you can pass * as featureId. | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]

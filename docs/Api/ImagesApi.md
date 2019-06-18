@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**deleteProductScreenshot**](#deleteProductScreenshot) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 [**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
@@ -18,13 +19,56 @@ Method | HTTP request | Description
 [**uploadDirectorCover**](#uploadDirectorCover) | **POST** /directors/{director_id}/cover | 
 [**uploadProductCover**](#uploadProductCover) | **POST** /products/{product_id}/cover | 
 [**uploadProductScreenshot**](#uploadProductScreenshot) | **PUT** /products/{product_id}/screenshots/{image_id} | 
-[**uploadProductScreenshot_0**](#uploadProductScreenshot_0) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 [**uploadProductScreenshots**](#uploadProductScreenshots) | **POST** /products/{product_id}/screenshots | 
 [**uploadSubscriptionCover**](#uploadSubscriptionCover) | **POST** /subscriptions/{subscription_id}/cover | 
 
 
+## **deleteProductScreenshot**
+> deleteProductScreenshot($product_id, $image_id)
+
+
+
+Delete product screenshot
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ImagesApi();
+$product_id = 3.4; // float | Id of the product
+$image_id = 3.4; // float | Id of the image to delete
+
+try {
+    $api_instance->deleteProductScreenshot($product_id, $image_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ImagesApi->deleteProductScreenshot: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **float**| Id of the product |
+ **image_id** | **float**| Id of the image to delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getActorCoverImage**
-> \Kaemo\Client\Model\Image getActorCoverImage($to_id)
+> \Kaemo\Client\Model\Image getActorCoverImage($actor_id)
 
 
 
@@ -36,10 +80,10 @@ Get cover image of an actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$to_id = 789; // int | ID of the actor to fetch
+$actor_id = 789; // int | ID of the actor to fetch
 
 try {
-    $result = $api_instance->getActorCoverImage($to_id);
+    $result = $api_instance->getActorCoverImage($actor_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->getActorCoverImage: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **to_id** | **int**| ID of the actor to fetch |
+ **actor_id** | **int**| ID of the actor to fetch |
 
 ### Return type
 
@@ -370,7 +414,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoCover**
-> \Kaemo\Client\Model\Image getVideoCover($video)
+> \Kaemo\Client\Model\Image getVideoCover($video_id)
 
 
 
@@ -382,10 +426,10 @@ Get video cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$video = 789; // int | ID of the video to fetch
+$video_id = 789; // int | ID of the video to fetch
 
 try {
-    $result = $api_instance->getVideoCover($video);
+    $result = $api_instance->getVideoCover($video_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->getVideoCover: ', $e->getMessage(), PHP_EOL;
@@ -397,7 +441,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video** | **int**| ID of the video to fetch |
+ **video_id** | **int**| ID of the video to fetch |
 
 ### Return type
 
@@ -645,50 +689,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Screenshot**](#Screenshot)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **uploadProductScreenshot_0**
-> uploadProductScreenshot_0($product_id, $image_id)
-
-
-
-Upload product screenshot
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Id of the product
-$image_id = 3.4; // float | Id of the image to delete
-
-try {
-    $api_instance->uploadProductScreenshot_0($product_id, $image_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->uploadProductScreenshot_0: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Id of the product |
- **image_id** | **float**| Id of the image to delete |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 

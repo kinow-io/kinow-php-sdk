@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attachFeaturesToProduct**](#attachFeaturesToProduct) | **POST** /products/{product_id}/features | 
 [**attachFeaturesToVideo**](#attachFeaturesToVideo) | **POST** /videos/{video_id}/features | 
-[**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** products/{product_id}/features/{feature_id} | 
+[**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
 [**getFeatureValues**](#getFeatureValues) | **GET** /feature-values | 
 [**getFeatures**](#getFeatures) | **GET** /features | 
@@ -288,7 +288,7 @@ No authorization required
 
 
 
-Get videos attached to product
+Get product features
 
 ### Example
 ```php
