@@ -72,7 +72,7 @@ Get available category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $customer_id = 789; // int | 
 
 try {
@@ -88,7 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
  **customer_id** | **int**|  | [optional]
 
 ### Return type
@@ -221,7 +221,7 @@ Get category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 
 try {
     $result = $api_instance->getCategory($category_id);
@@ -236,7 +236,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
 
 ### Return type
 
@@ -264,7 +264,7 @@ Get banner of a category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 
 try {
     $result = $api_instance->getCategoryBanner($category_id);
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
 
 ### Return type
 
@@ -307,7 +307,7 @@ Get category features
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -324,7 +324,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -354,7 +354,7 @@ Get category products
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
@@ -376,7 +376,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
@@ -411,7 +411,7 @@ Get product categories
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CategoriesApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be strict, contains, gt or lt.
@@ -431,7 +431,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]

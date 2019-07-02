@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **quantity_per_user** | **int** | A customer will only be able to use the cart rule \&quot;X\&quot; time(s) | [optional] 
 **minimum_amount** | **int** | You can choose a minimum amount for the cart, either with taxes or not | [optional] 
 **minimum_amount_tax** | **int** |  | [optional] 
-**minimum_amount_currency** | **int** | Id of the currency | [optional] 
+**minimum_amount_currency** | **int** | Currency ID | [optional] 
 **every_recurring_payments** | **bool** | If customer cart contains a subscription, select if cart rule will apply on recurring payments | [optional] 
 **reduction_percent** | **float** | Discount applied to cart when rule is added (in %). | [optional] 
 **reduction_amount** | **float** | Discount applied to cart when rule is added (in currency). | [optional] 

@@ -68,7 +68,7 @@ Get payment url
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\PaymentModulesApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment module name
 
 try {
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment module name |
 
 ### Return type
@@ -113,7 +113,7 @@ Validate order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\PaymentModulesApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment module name
 $payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | payment arguments, token and tokenType
 
@@ -129,7 +129,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment module name |
  **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| payment arguments, token and tokenType |
 
@@ -159,7 +159,7 @@ Validate cart without payment method (only for carts with a total of 0)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\PaymentModulesApi();
-$cart_id = 789; // int | Id of the cart to validate
+$cart_id = 789; // int | Cart ID to validate
 
 try {
     $api_instance->validateFreeOrder($cart_id);
@@ -173,7 +173,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to validate |
+ **cart_id** | **int**| Cart ID to validate |
 
 ### Return type
 

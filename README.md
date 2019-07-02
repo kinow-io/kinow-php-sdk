@@ -56,7 +56,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $customer_id = 789; // int | 
 
 try {

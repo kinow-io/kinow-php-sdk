@@ -32,10 +32,10 @@ Add product to cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
-$product_id = 789; // int | Id of the product to attach to the cart
-$product_attribute_id = 789; // int | Id of the product attribute, required to add product to cart if product is not a subscription
-$switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the id of the product access that match with the subscription to cancel.
+$cart_id = 789; // int | Cart ID to fetch
+$product_id = 789; // int | Product ID to add to cart
+$product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
+$switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
 
 try {
     $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id);
@@ -50,10 +50,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
- **product_id** | **int**| Id of the product to attach to the cart |
- **product_attribute_id** | **int**| Id of the product attribute, required to add product to cart if product is not a subscription | [optional]
- **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the id of the product access that match with the subscription to cancel. | [optional]
+ **cart_id** | **int**| Cart ID to fetch |
+ **product_id** | **int**| Product ID to add to cart |
+ **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
+ **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
 
 ### Return type
 
@@ -81,7 +81,7 @@ Attach cart rule to cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $code = "code_example"; // string | Code of the cart rule to attach
 
 try {
@@ -96,7 +96,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **code** | **string**| Code of the cart rule to attach |
 
 ### Return type
@@ -125,8 +125,8 @@ Attach cart to customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$cart_id = 789; // int | ID of the cart to attach
+$customer_id = 789; // int | Customer ID to fetch
+$cart_id = 789; // int | Cart ID to attach
 
 try {
     $result = $api_instance->attachCartToCustomer($customer_id, $cart_id);
@@ -141,8 +141,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **cart_id** | **int**| ID of the cart to attach |
+ **customer_id** | **int**| Customer ID to fetch |
+ **cart_id** | **int**| Cart ID to attach |
 
 ### Return type
 
@@ -213,7 +213,7 @@ Delete cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 
 try {
     $api_instance->deleteCart($cart_id);
@@ -227,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
 
 ### Return type
 
@@ -255,9 +255,9 @@ Remove product from cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
-$product_id = 789; // int | Id of the product to delete from cart
-$product_attribute_id = 789; // int | Id of the product attribute, required to add product to cart if product is not a subscription
+$cart_id = 789; // int | Cart ID to fetch
+$product_id = 789; // int | Product ID to delete from cart
+$product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
 
 try {
     $api_instance->deleteProductFromCart($cart_id, $product_id, $product_attribute_id);
@@ -271,9 +271,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
- **product_id** | **int**| Id of the product to delete from cart |
- **product_attribute_id** | **int**| Id of the product attribute, required to add product to cart if product is not a subscription | [optional]
+ **cart_id** | **int**| Cart ID to fetch |
+ **product_id** | **int**| Product ID to delete from cart |
+ **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
 
 ### Return type
 
@@ -301,7 +301,7 @@ Get cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 
 try {
     $result = $api_instance->getCart($cart_id);
@@ -316,7 +316,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
 
 ### Return type
 
@@ -344,7 +344,7 @@ Get customer carts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```     date_add[value]=string&date_add[operator]=lt     _______________      {     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be strict, contains, gt or lt.
@@ -364,7 +364,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
@@ -397,7 +397,7 @@ Get customer last cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getLastCart($customer_id);
@@ -412,7 +412,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -440,7 +440,7 @@ Get payment url
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment module name
 
 try {
@@ -456,7 +456,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment module name |
 
 ### Return type
@@ -530,7 +530,7 @@ Validate order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment module name
 $payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | payment arguments, token and tokenType
 
@@ -546,7 +546,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment module name |
  **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| payment arguments, token and tokenType |
 
@@ -576,7 +576,7 @@ Validate cart without payment method (only for carts with a total of 0)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Id of the cart to validate
+$cart_id = 789; // int | Cart ID to validate
 
 try {
     $api_instance->validateFreeOrder($cart_id);
@@ -590,7 +590,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to validate |
+ **cart_id** | **int**| Cart ID to validate |
 
 ### Return type
 

@@ -20,7 +20,7 @@ Get order histories
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrderHistoriesApi();
-$order_id = 789; // int | ID of the order to fetch
+$order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -37,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| ID of the order to fetch |
+ **order_id** | **int**| Order ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

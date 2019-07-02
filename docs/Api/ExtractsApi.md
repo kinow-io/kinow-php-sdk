@@ -25,8 +25,8 @@ Attach cover to extract (the image need to be attached to the product)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ExtractsApi();
-$extract_id = 789; // int | ID of the extract to fetch
-$id_image = 789; // int | ID of the image to attach
+$extract_id = 789; // int | Extract ID to fetch
+$id_image = 789; // int | Image ID to attach
 
 try {
     $api_instance->attachCoverToExtract($extract_id, $id_image);
@@ -40,8 +40,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extract_id** | **int**| ID of the extract to fetch |
- **id_image** | **int**| ID of the image to attach |
+ **extract_id** | **int**| Extract ID to fetch |
+ **id_image** | **int**| Image ID to attach |
 
 ### Return type
 
@@ -197,7 +197,7 @@ Get extracts of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ExtractsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -214,7 +214,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

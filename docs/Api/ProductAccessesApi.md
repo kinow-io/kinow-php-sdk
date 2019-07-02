@@ -70,7 +70,7 @@ Delete product access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$product_access_id = 789; // int | ID of the product access to fetch
+$product_access_id = 789; // int | Product access ID to fetch
 
 try {
     $api_instance->deleteProductAccess($product_access_id);
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_access_id** | **int**| ID of the product access to fetch |
+ **product_access_id** | **int**| Product access ID to fetch |
 
 ### Return type
 
@@ -112,7 +112,7 @@ Get customer accesses for subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be strict, contains, gt or lt.
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be strict, contains, gt or lt. | [optional]
@@ -161,7 +161,7 @@ Get customer access for videos
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -178,7 +178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -208,7 +208,7 @@ Get product access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$product_access_id = 789; // int | ID of the product access to fetch
+$product_access_id = 789; // int | Product access ID to fetch
 
 try {
     $result = $api_instance->getProductAccess($product_access_id);
@@ -223,7 +223,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_access_id** | **int**| ID of the product access to fetch |
+ **product_access_id** | **int**| Product access ID to fetch |
 
 ### Return type
 
@@ -306,8 +306,8 @@ unsubcribe a user from a access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$customer_id = 789; // int | ID of the user to unsubscribe
-$product_access_id = "product_access_id_example"; // string | ID of the product access to unsubscribe from
+$customer_id = 789; // int | Customer ID to unsubscribe
+$product_access_id = "product_access_id_example"; // string | Product access ID to unsubscribe from
 
 try {
     $api_instance->stopSubscription($customer_id, $product_access_id);
@@ -321,8 +321,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the user to unsubscribe |
- **product_access_id** | **string**| ID of the product access to unsubscribe from |
+ **customer_id** | **int**| Customer ID to unsubscribe |
+ **product_access_id** | **string**| Product access ID to unsubscribe from |
 
 ### Return type
 
@@ -350,7 +350,7 @@ Update product access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$product_access_id = 789; // int | ID of the product access to update
+$product_access_id = 789; // int | Product access ID to update
 $body = new \Kaemo\Client\Model\ProductAccess(); // \Kaemo\Client\Model\ProductAccess | 
 
 try {
@@ -366,7 +366,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_access_id** | **int**| ID of the product access to update |
+ **product_access_id** | **int**| Product access ID to update |
  **body** | [**\Kaemo\Client\Model\ProductAccess**](#\Kaemo\Client\Model\ProductAccess)|  |
 
 ### Return type

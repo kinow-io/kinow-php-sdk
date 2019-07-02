@@ -153,7 +153,7 @@ Get slider item
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\WidgetsApi();
-$slider_id = 789; // int | ID of the slider to fetch
+$slider_id = 789; // int | Slider ID to fetch
 
 try {
     $result = $api_instance->getWidgetSliderItem($slider_id);
@@ -168,7 +168,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **slider_id** | **int**| ID of the slider to fetch |
+ **slider_id** | **int**| Slider ID to fetch |
 
 ### Return type
 

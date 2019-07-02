@@ -96,8 +96,8 @@ Attach product to actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$actor_id = 789; // int | ID of the actor to attach
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to attach
 
 try {
     $api_instance->attachProductToActor($product_id, $actor_id);
@@ -111,8 +111,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **actor_id** | **int**| ID of the actor to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to attach |
 
 ### Return type
 
@@ -140,8 +140,8 @@ Attach product to category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | Id of the product
-$category_id = 789; // int | ID of the category to attach
+$product_id = 789; // int | Product ID to fetch
+$category_id = 789; // int | Category ID to attach
 
 try {
     $api_instance->attachProductToCategory($product_id, $category_id);
@@ -155,8 +155,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Id of the product |
- **category_id** | **int**| ID of the category to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **category_id** | **int**| Category ID to attach |
 
 ### Return type
 
@@ -184,8 +184,8 @@ Attach product to director
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$director_id = 789; // int | ID of the director to attach
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to attach
 
 try {
     $api_instance->attachProductToDirector($product_id, $director_id);
@@ -199,8 +199,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **director_id** | **int**| ID of the director to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to attach |
 
 ### Return type
 
@@ -228,8 +228,8 @@ Attach product to group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$group_id = 789; // int | ID of the group to attach
+$product_id = 789; // int | Product ID to fetch
+$group_id = 789; // int | Group ID to attach
 
 try {
     $api_instance->attachProductToGroup($product_id, $group_id);
@@ -243,8 +243,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **group_id** | **int**| ID of the group to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **group_id** | **int**| Group ID to attach |
 
 ### Return type
 
@@ -272,8 +272,8 @@ Attach video to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
-$video_id = 789; // int | ID of the video to attach
+$product_id = 789; // int | Product ID to fetch
+$video_id = 789; // int | Video ID to attach
 
 try {
     $api_instance->attachVideoToProduct($product_id, $video_id);
@@ -287,8 +287,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
- **video_id** | **int**| ID of the video to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **video_id** | **int**| Video ID to attach |
 
 ### Return type
 
@@ -359,7 +359,7 @@ Delete product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->deleteProduct($product_id);
@@ -373,7 +373,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -445,8 +445,8 @@ Detach product from actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$actor_id = 789; // int | ID of the actor to detach
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to detach
 
 try {
     $api_instance->detachProductFromActor($product_id, $actor_id);
@@ -460,8 +460,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **actor_id** | **int**| ID of the actor to detach |
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
 
 ### Return type
 
@@ -489,8 +489,8 @@ Detach product from category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | Id of the product
-$category_id = 789; // int | ID of the category to detach
+$product_id = 789; // int | Product ID to fetch
+$category_id = 789; // int | Category ID to detach
 
 try {
     $api_instance->detachProductFromCategory($product_id, $category_id);
@@ -504,8 +504,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Id of the product |
- **category_id** | **int**| ID of the category to detach |
+ **product_id** | **int**| Product ID to fetch |
+ **category_id** | **int**| Category ID to detach |
 
 ### Return type
 
@@ -533,8 +533,8 @@ Detach product from director
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$director_id = 789; // int | ID of the director to detach
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to detach
 
 try {
     $api_instance->detachProductFromDirector($product_id, $director_id);
@@ -548,8 +548,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **director_id** | **int**| ID of the director to detach |
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to detach |
 
 ### Return type
 
@@ -577,8 +577,8 @@ Detach product from group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product
-$group_id = 789; // int | ID of the group to detach
+$product_id = 789; // int | Product ID to fetch
+$group_id = 789; // int | Group ID to detach
 
 try {
     $api_instance->detachProductFromGroup($product_id, $group_id);
@@ -592,8 +592,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product |
- **group_id** | **int**| ID of the group to detach |
+ **product_id** | **int**| Product ID to fetch |
+ **group_id** | **int**| Group ID to detach |
 
 ### Return type
 
@@ -621,7 +621,7 @@ Get category products
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
@@ -643,7 +643,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
@@ -678,8 +678,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$product_id = 789; // int | ID of the product to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToProduct($customer_id, $product_id);
@@ -693,8 +693,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **product_id** | **int**| ID of the product to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -722,7 +722,7 @@ Get product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $result = $api_instance->getProduct($product_id);
@@ -737,7 +737,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -765,7 +765,7 @@ Get actors attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $image_type = "image_type_example"; // string | 
@@ -783,7 +783,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **image_type** | **string**|  | [optional]
@@ -814,7 +814,7 @@ Get product attributes. Mandatory to add product in cart: allows to buy product 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -831,7 +831,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -861,7 +861,7 @@ Get availability of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getProductAvailability($product_id);
@@ -875,7 +875,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -903,7 +903,7 @@ Get product categories
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be strict, contains, gt or lt.
@@ -923,7 +923,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
@@ -956,7 +956,7 @@ Get cover image of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $result = $api_instance->getProductCoverImage($product_id);
@@ -971,7 +971,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -999,7 +999,7 @@ Get directors of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $image_type = "image_type_example"; // string | 
@@ -1017,7 +1017,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **image_type** | **string**|  | [optional]
@@ -1048,7 +1048,7 @@ Get extracts of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -1065,7 +1065,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -1095,7 +1095,7 @@ Get product features
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -1112,7 +1112,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -1142,7 +1142,7 @@ Get product geolocation restrictions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -1159,7 +1159,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -1189,7 +1189,7 @@ Check product access using geolocation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1206,7 +1206,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **ip_address** | **string**| address ip |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -1237,7 +1237,7 @@ Get images attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $type = "type_example"; // string | type as screen_small or screen_large
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1255,7 +1255,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **type** | **string**| type as screen_small or screen_large | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -1400,7 +1400,7 @@ Get videos attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $per_page = 789; // int | 
@@ -1421,7 +1421,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **per_page** | **int**|  | [optional]
@@ -1512,7 +1512,7 @@ Handle geolocation for products by countries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
 $behavior_non_detected_countries = "behavior_non_detected_countries_example"; // string | Behavior for non-detected countries
@@ -1532,7 +1532,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **enabled** | **int**| Enabled |
  **behavior_detected_countries** | **string**| Behavior for detected countries |
  **behavior_non_detected_countries** | **string**| Behavior for non-detected countries |
@@ -1566,7 +1566,7 @@ Update product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $body = new \Kaemo\Client\Model\Product(); // \Kaemo\Client\Model\Product | 
 
 try {
@@ -1582,7 +1582,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **body** | [**\Kaemo\Client\Model\Product**](#\Kaemo\Client\Model\Product)|  |
 
 ### Return type

@@ -116,7 +116,7 @@ Update cms category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CMSCategoriesApi();
-$cms_category_id = 789; // int | ID of the CMS category to update
+$cms_category_id = 789; // int | CMS category ID to update
 $body = new \Kaemo\Client\Model\CMSCategory(); // \Kaemo\Client\Model\CMSCategory | 
 
 try {
@@ -132,7 +132,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cms_category_id** | **int**| ID of the CMS category to update |
+ **cms_category_id** | **int**| CMS category ID to update |
  **body** | [**\Kaemo\Client\Model\CMSCategory**](#\Kaemo\Client\Model\CMSCategory)|  |
 
 ### Return type

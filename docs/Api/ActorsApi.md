@@ -110,7 +110,7 @@ Get actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ActorsApi();
-$actor_id = 789; // int | ID of the actor to fetch
+$actor_id = 789; // int | Actor ID to fetch
 $image_type = "image_type_example"; // string | 
 
 try {
@@ -126,7 +126,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **actor_id** | **int**| ID of the actor to fetch |
+ **actor_id** | **int**| Actor ID to fetch |
  **image_type** | **string**|  | [optional]
 
 ### Return type
@@ -202,7 +202,7 @@ Get actors attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ActorsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $image_type = "image_type_example"; // string | 
@@ -220,7 +220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **image_type** | **string**|  | [optional]

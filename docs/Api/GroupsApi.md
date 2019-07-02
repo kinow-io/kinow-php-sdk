@@ -24,8 +24,8 @@ Attach customer to the group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GroupsApi();
-$group_id = 789; // int | ID of the group
-$customer_id = 789; // int | ID of the customer to attach
+$group_id = 789; // int | Group ID to fetch
+$customer_id = 789; // int | Customer ID to attach
 
 try {
     $api_instance->attachCustomerToGroup($group_id, $customer_id);
@@ -39,8 +39,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **int**| ID of the group |
- **customer_id** | **int**| ID of the customer to attach |
+ **group_id** | **int**| Group ID to fetch |
+ **customer_id** | **int**| Customer ID to attach |
 
 ### Return type
 
@@ -68,8 +68,8 @@ Detach customer from group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GroupsApi();
-$group_id = 789; // int | Id of the group
-$customer_id = 789; // int | ID of the customer to attach
+$group_id = 789; // int | Group ID to fetch
+$customer_id = 789; // int | Customer ID to attach
 
 try {
     $api_instance->detachCustomerFromGroup($group_id, $customer_id);
@@ -83,8 +83,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **int**| Id of the group |
- **customer_id** | **int**| ID of the customer to attach |
+ **group_id** | **int**| Group ID to fetch |
+ **customer_id** | **int**| Customer ID to attach |
 
 ### Return type
 
@@ -112,7 +112,7 @@ Get group
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GroupsApi();
-$group_id = 789; // int | ID of the group to fetch
+$group_id = 789; // int | Group ID to fetch
 
 try {
     $result = $api_instance->getGroup($group_id);
@@ -127,7 +127,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **int**| ID of the group to fetch |
+ **group_id** | **int**| Group ID to fetch |
 
 ### Return type
 
@@ -206,7 +206,7 @@ Get groups allowed to see this product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GroupsApi();
-$product_id = 789; // int | Id of the product
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -223,7 +223,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Id of the product |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

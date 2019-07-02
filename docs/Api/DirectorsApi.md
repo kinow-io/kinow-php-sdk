@@ -110,7 +110,7 @@ Get director
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
-$director_id = 789; // int | ID of the director to fetch
+$director_id = 789; // int | Director ID to fetch
 $image_type = "image_type_example"; // string | 
 
 try {
@@ -126,7 +126,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **director_id** | **int**| ID of the director to fetch |
+ **director_id** | **int**| Director ID to fetch |
  **image_type** | **string**|  | [optional]
 
 ### Return type
@@ -202,7 +202,7 @@ Get directors of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $image_type = "image_type_example"; // string | 
@@ -220,7 +220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **image_type** | **string**|  | [optional]

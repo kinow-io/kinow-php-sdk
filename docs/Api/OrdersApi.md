@@ -24,7 +24,7 @@ Get customer orders
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrdersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -71,7 +71,7 @@ Get order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrdersApi();
-$order_id = 789; // int | ID of the order to fetch
+$order_id = 789; // int | Order ID to fetch
 
 try {
     $result = $api_instance->getOrder($order_id);
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| ID of the order to fetch |
+ **order_id** | **int**| Order ID to fetch |
 
 ### Return type
 
@@ -114,7 +114,7 @@ Get order histories
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrdersApi();
-$order_id = 789; // int | ID of the order to fetch
+$order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| ID of the order to fetch |
+ **order_id** | **int**| Order ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -161,7 +161,7 @@ Get order invoice
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrdersApi();
-$order_id = 789; // int | ID of the order to fetch
+$order_id = 789; // int | Order ID to fetch
 
 try {
     $result = $api_instance->getOrderInvoice($order_id);
@@ -176,7 +176,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| ID of the order to fetch |
+ **order_id** | **int**| Order ID to fetch |
 
 ### Return type
 

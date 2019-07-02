@@ -127,8 +127,8 @@ Attach video to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$product_id = 789; // int | ID of the product to fetch
-$video_id = 789; // int | ID of the video to attach
+$product_id = 789; // int | Product ID to fetch
+$video_id = 789; // int | Video ID to attach
 
 try {
     $api_instance->attachVideoToProduct($product_id, $video_id);
@@ -142,8 +142,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
- **video_id** | **int**| ID of the video to attach |
+ **product_id** | **int**| Product ID to fetch |
+ **video_id** | **int**| Video ID to attach |
 
 ### Return type
 
@@ -256,8 +256,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$video_id = 789; // int | ID of the video to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToVideo($customer_id, $video_id);
@@ -271,8 +271,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **video_id** | **int**| ID of the video to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -809,7 +809,7 @@ Get videos attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\VideosApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $per_page = 789; // int | 
@@ -830,7 +830,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **per_page** | **int**|  | [optional]

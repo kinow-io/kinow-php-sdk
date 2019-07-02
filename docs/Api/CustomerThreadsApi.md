@@ -21,7 +21,7 @@ Get customer thread
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomerThreadsApi();
-$customer_thread_id = 789; // int | ID of the customer thread to fetch
+$customer_thread_id = 789; // int | Customer thread ID to fetch
 
 try {
     $result = $api_instance->getCustomerThread($customer_thread_id);
@@ -36,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_thread_id** | **int**| ID of the customer thread to fetch |
+ **customer_thread_id** | **int**| Customer thread ID to fetch |
 
 ### Return type
 

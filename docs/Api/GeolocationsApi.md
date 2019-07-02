@@ -67,7 +67,7 @@ Get product geolocation restrictions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -114,7 +114,7 @@ Check product access using geolocation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **ip_address** | **string**| address ip |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -210,7 +210,7 @@ Handle geolocation for products by countries
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
 $behavior_non_detected_countries = "behavior_non_detected_countries_example"; // string | Behavior for non-detected countries
@@ -230,7 +230,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **enabled** | **int**| Enabled |
  **behavior_detected_countries** | **string**| Behavior for detected countries |
  **behavior_non_detected_countries** | **string**| Behavior for non-detected countries |

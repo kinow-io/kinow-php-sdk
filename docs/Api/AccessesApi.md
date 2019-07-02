@@ -23,7 +23,7 @@ Get available category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 $customer_id = 789; // int | 
 
 try {
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
  **customer_id** | **int**|  | [optional]
 
 ### Return type
@@ -68,8 +68,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$product_id = 789; // int | ID of the product to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToProduct($customer_id, $product_id);
@@ -83,8 +83,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **product_id** | **int**| ID of the product to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -112,8 +112,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$video_id = 789; // int | ID of the video to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToVideo($customer_id, $video_id);
@@ -127,8 +127,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **video_id** | **int**| ID of the video to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -156,7 +156,7 @@ Get availability of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AccessesApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getProductAvailability($product_id);
@@ -170,7 +170,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 

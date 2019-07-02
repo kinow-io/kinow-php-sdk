@@ -22,7 +22,7 @@ Attach bookmark to customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\BookmarksApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
 
 try {
@@ -37,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **product_id** | **int**|  |
 
 ### Return type
@@ -66,7 +66,7 @@ Detach bookmark from customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\BookmarksApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
 
 try {
@@ -81,7 +81,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **product_id** | **int**|  |
 
 ### Return type

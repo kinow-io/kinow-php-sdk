@@ -21,7 +21,7 @@ Get customer address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AddressApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getCustomerAddress($customer_id);
@@ -36,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -64,7 +64,7 @@ Update address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AddressApi();
-$address_id = 789; // int | ID of the address to update
+$address_id = 789; // int | Address ID to update
 $body = new \Kaemo\Client\Model\Address(); // \Kaemo\Client\Model\Address | 
 
 try {
@@ -80,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address_id** | **int**| ID of the address to update |
+ **address_id** | **int**| Address ID to update |
  **body** | [**\Kaemo\Client\Model\Address**](#\Kaemo\Client\Model\Address)|  |
 
 ### Return type

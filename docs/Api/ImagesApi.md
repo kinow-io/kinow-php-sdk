@@ -36,8 +36,8 @@ Delete product screenshot
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Id of the product
-$image_id = 3.4; // float | Id of the image to delete
+$product_id = 3.4; // float | Product ID to fetch
+$image_id = 3.4; // float | Image ID to delete
 
 try {
     $api_instance->deleteProductScreenshot($product_id, $image_id);
@@ -51,8 +51,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Id of the product |
- **image_id** | **float**| Id of the image to delete |
+ **product_id** | **float**| Product ID to fetch |
+ **image_id** | **float**| Image ID to delete |
 
 ### Return type
 
@@ -80,7 +80,7 @@ Get cover image of an actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$actor_id = 789; // int | ID of the actor to fetch
+$actor_id = 789; // int | Actor ID to fetch
 
 try {
     $result = $api_instance->getActorCoverImage($actor_id);
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **actor_id** | **int**| ID of the actor to fetch |
+ **actor_id** | **int**| Actor ID to fetch |
 
 ### Return type
 
@@ -123,7 +123,7 @@ Get banner of a category
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$category_id = 789; // int | ID of the category to fetch
+$category_id = 789; // int | Category ID to fetch
 
 try {
     $result = $api_instance->getCategoryBanner($category_id);
@@ -138,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **int**| ID of the category to fetch |
+ **category_id** | **int**| Category ID to fetch |
 
 ### Return type
 
@@ -166,7 +166,7 @@ Get cover image of a director
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$director_id = 789; // int | ID of the director to fetch
+$director_id = 789; // int | Director ID to fetch
 
 try {
     $result = $api_instance->getDirectorCoverImage($director_id);
@@ -181,7 +181,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **director_id** | **int**| ID of the director to fetch |
+ **director_id** | **int**| Director ID to fetch |
 
 ### Return type
 
@@ -248,7 +248,7 @@ Get cover image of a product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $result = $api_instance->getProductCoverImage($product_id);
@@ -263,7 +263,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -291,7 +291,7 @@ Get images attached to product
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 $type = "type_example"; // string | type as screen_small or screen_large
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -309,7 +309,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
  **type** | **string**| type as screen_small or screen_large | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
@@ -340,7 +340,7 @@ Get product screenshots
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 789; // int | ID of the product to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $result = $api_instance->getProductScreenshots($product_id);
@@ -355,7 +355,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| ID of the product to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -383,7 +383,7 @@ Get cover image of a subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$subscription_id = 789; // int | ID of the subscription to fetch
+$subscription_id = 789; // int | Subscription ID to fetch
 
 try {
     $result = $api_instance->getSubscriptionCoverImage($subscription_id);
@@ -398,7 +398,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | **int**| ID of the subscription to fetch |
+ **subscription_id** | **int**| Subscription ID to fetch |
 
 ### Return type
 
@@ -426,7 +426,7 @@ Get video cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$video_id = 789; // int | ID of the video to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $result = $api_instance->getVideoCover($video_id);
@@ -441,7 +441,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| ID of the video to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -469,7 +469,7 @@ Upload actor cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$actor_id = 3.4; // float | Id of the actor
+$actor_id = 3.4; // float | Actor ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -487,7 +487,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **actor_id** | **float**| Id of the actor |
+ **actor_id** | **float**| Actor ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
@@ -518,7 +518,7 @@ Upload category banner
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$category_id = 3.4; // float | Id of the category
+$category_id = 3.4; // float | Category ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -536,7 +536,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **float**| Id of the category |
+ **category_id** | **float**| Category ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
@@ -567,7 +567,7 @@ Upload director cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$director_id = 3.4; // float | Id of the director
+$director_id = 3.4; // float | Director ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -585,7 +585,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **director_id** | **float**| Id of the director |
+ **director_id** | **float**| Director ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
@@ -616,7 +616,7 @@ Upload product cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Id of the product
+$product_id = 3.4; // float | Product ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -634,7 +634,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Id of the product |
+ **product_id** | **float**| Product ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
@@ -665,8 +665,8 @@ Upload product screenshot
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Id of the product
-$image_id = 3.4; // float | Id of the product
+$product_id = 3.4; // float | Product ID to fetch
+$image_id = 3.4; // float | Image ID to fetch
 $position = 3.4; // float | 
 
 try {
@@ -682,8 +682,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Id of the product |
- **image_id** | **float**| Id of the product |
+ **product_id** | **float**| Product ID to fetch |
+ **image_id** | **float**| Image ID to fetch |
  **position** | **float**|  | [optional]
 
 ### Return type
@@ -712,7 +712,7 @@ Upload product screenshots
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Id of the product
+$product_id = 3.4; // float | Product ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -731,7 +731,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Id of the product |
+ **product_id** | **float**| Product ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
@@ -763,7 +763,7 @@ Upload subscription cover
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
-$subscription_id = 3.4; // float | Id of the subscription
+$subscription_id = 3.4; // float | Subscription ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
@@ -781,7 +781,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | **float**| Id of the subscription |
+ **subscription_id** | **float**| Subscription ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]

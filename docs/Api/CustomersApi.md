@@ -39,8 +39,8 @@ Attach cart to customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$cart_id = 789; // int | ID of the cart to attach
+$customer_id = 789; // int | Customer ID to fetch
+$cart_id = 789; // int | Cart ID to attach
 
 try {
     $result = $api_instance->attachCartToCustomer($customer_id, $cart_id);
@@ -55,8 +55,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **cart_id** | **int**| ID of the cart to attach |
+ **customer_id** | **int**| Customer ID to fetch |
+ **cart_id** | **int**| Cart ID to attach |
 
 ### Return type
 
@@ -216,7 +216,7 @@ Delete customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to delete
+$customer_id = 789; // int | Customer ID to delete
 
 try {
     $api_instance->deleteCustomer($customer_id);
@@ -230,7 +230,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to delete |
+ **customer_id** | **int**| Customer ID to delete |
 
 ### Return type
 
@@ -258,7 +258,7 @@ Create authentication token for customer.      You can use it to auto login cust
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to authenticate
+$customer_id = 789; // int | Customer ID to authenticate
 
 try {
     $api_instance->generateAuthenticationToken($customer_id);
@@ -272,7 +272,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to authenticate |
+ **customer_id** | **int**| Customer ID to authenticate |
 
 ### Return type
 
@@ -300,7 +300,7 @@ Get customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getCustomer($customer_id);
@@ -315,7 +315,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -343,7 +343,7 @@ Get customer accesses for subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be strict, contains, gt or lt.
@@ -361,7 +361,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be strict, contains, gt or lt. | [optional]
@@ -392,7 +392,7 @@ Get customer access for videos
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -409,7 +409,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -439,7 +439,7 @@ Get customer address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getCustomerAddress($customer_id);
@@ -454,7 +454,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -482,8 +482,8 @@ Check if the customer can see this product (restriction by group)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$product_id = 789; // int | ID of the product to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getCustomerCanSeeProduct($customer_id, $product_id);
@@ -497,8 +497,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **product_id** | **int**| ID of the product to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -526,7 +526,7 @@ Get customer current number of views
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 
 try {
     $result = $api_instance->getCustomerCurrentViews($customer_id);
@@ -541,7 +541,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
 
 ### Return type
 
@@ -569,7 +569,7 @@ Get groups attached to this customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Id of the customer
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -586,7 +586,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Id of the customer |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -616,8 +616,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$product_id = 789; // int | ID of the product to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | Product ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToProduct($customer_id, $product_id);
@@ -631,8 +631,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **product_id** | **int**| ID of the product to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -660,8 +660,8 @@ Get customer access to video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
-$video_id = 789; // int | ID of the video to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$video_id = 789; // int | Video ID to fetch
 
 try {
     $api_instance->getCustomerHasAccessToVideo($customer_id, $video_id);
@@ -675,8 +675,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
- **video_id** | **int**| ID of the video to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
+ **video_id** | **int**| Video ID to fetch |
 
 ### Return type
 
@@ -704,7 +704,7 @@ Get customer orders
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -721,7 +721,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -890,7 +890,7 @@ Update customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | ID of the customer to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $body = new \Kaemo\Client\Model\Customer(); // \Kaemo\Client\Model\Customer | Body of the customer
 
 try {
@@ -906,7 +906,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| ID of the customer to fetch |
+ **customer_id** | **int**| Customer ID to fetch |
  **body** | [**\Kaemo\Client\Model\Customer**](#\Kaemo\Client\Model\Customer)| Body of the customer |
 
 ### Return type

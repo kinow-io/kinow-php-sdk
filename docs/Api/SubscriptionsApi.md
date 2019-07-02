@@ -71,7 +71,7 @@ Get Subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\SubscriptionsApi();
-$subscription_id = 789; // int | ID of the product to fetch
+$subscription_id = 789; // int | Product ID to fetch
 
 try {
     $result = $api_instance->getSubscription($subscription_id);
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | **int**| ID of the product to fetch |
+ **subscription_id** | **int**| Product ID to fetch |
 
 ### Return type
 
@@ -165,7 +165,7 @@ Get cover image of a subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\SubscriptionsApi();
-$subscription_id = 789; // int | ID of the subscription to fetch
+$subscription_id = 789; // int | Subscription ID to fetch
 
 try {
     $result = $api_instance->getSubscriptionCoverImage($subscription_id);
@@ -180,7 +180,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | **int**| ID of the subscription to fetch |
+ **subscription_id** | **int**| Subscription ID to fetch |
 
 ### Return type
 

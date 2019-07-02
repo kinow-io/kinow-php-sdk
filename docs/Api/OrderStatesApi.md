@@ -21,7 +21,7 @@ Get order state
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrderStatesApi();
-$order_state_id = 789; // int | ID of the order state to fetch
+$order_state_id = 789; // int | Order state ID to fetch
 
 try {
     $result = $api_instance->getOrderState($order_state_id);
@@ -36,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_state_id** | **int**| ID of the order state to fetch |
+ **order_state_id** | **int**| Order state ID to fetch |
 
 ### Return type
 

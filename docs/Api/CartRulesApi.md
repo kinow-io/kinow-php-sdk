@@ -25,7 +25,7 @@ Attach cart rule to cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartRulesApi();
-$cart_id = 789; // int | Id of the cart to fetch
+$cart_id = 789; // int | Cart ID to fetch
 $code = "code_example"; // string | Code of the cart rule to attach
 
 try {
@@ -40,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Id of the cart to fetch |
+ **cart_id** | **int**| Cart ID to fetch |
  **code** | **string**| Code of the cart rule to attach |
 
 ### Return type
@@ -153,7 +153,7 @@ Get cart rule by id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartRulesApi();
-$cart_rule_id = 789; // int | ID of the cart rule to fetch
+$cart_rule_id = 789; // int | Cart rule ID to fetch
 
 try {
     $result = $api_instance->getCartRule($cart_rule_id);
@@ -168,7 +168,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cart_rule_id** | **int**| ID of the cart rule to fetch |
+ **cart_rule_id** | **int**| Cart rule ID to fetch |
 
 ### Return type
 
