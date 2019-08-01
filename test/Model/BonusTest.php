@@ -1,6 +1,6 @@
 <?php
 /**
- * I18nFieldTest
+ * BonusTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * I18nFieldTest Class Doc Comment
+ * BonusTest Class Doc Comment
  *
  * @category    Class */
-// * @description I18nField
+// * @description Bonus
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class I18nFieldTest extends \PHPUnit_Framework_TestCase
+class BonusTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,57 @@ class I18nFieldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "I18nField"
+     * Test "Bonus"
      */
-    public function testI18nField()
+    public function testBonus()
     {
 
     }
 
     /**
-     * Test attribute "lang"
+     * Test attribute "id"
      */
-    public function testPropertyLang()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "file_name"
      */
-    public function testPropertyValue()
+    public function testPropertyFileName()
+    {
+
+    }
+
+    /**
+     * Test attribute "mime"
+     */
+    public function testPropertyMime()
+    {
+
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
 
     }

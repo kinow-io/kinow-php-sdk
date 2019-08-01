@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 [**getVideo**](#getVideo) | **GET** /videos/{video_id} | 
 [**getVideoAccess**](#getVideoAccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
+[**getVideoBonus**](#getVideoBonus) | **GET** /videos/{video_id}/bonus | 
 [**getVideoDownloadUrl**](#getVideoDownloadUrl) | **GET** /videos/{video_id}/download-url | 
 [**getVideoFeatures**](#getVideoFeatures) | **GET** /videos/{video_id}/features | 
 [**getVideoGeolocation**](#getVideoGeolocation) | **GET** /videos/{video_id}/geolocation | 
@@ -411,6 +412,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideoBonus**
+> \Kaemo\Client\Model\Bonus[] getVideoBonus($video_id)
+
+
+
+Get bonus list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$video_id = 789; // int | Video ID to fetch
+
+try {
+    $result = $api_instance->getVideoBonus($video_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getVideoBonus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Bonus[]**](#Bonus)
 
 ### Authorization
 

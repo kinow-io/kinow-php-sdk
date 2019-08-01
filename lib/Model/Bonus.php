@@ -1,6 +1,6 @@
 <?php
 /**
- * CartBody
+ * Bonus
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * CartBody Class Doc Comment
+ * Bonus Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CartBody implements ArrayAccess
+class Bonus implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,16 +48,19 @@ class CartBody implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CartBody';
+    protected static $swaggerModelName = 'Bonus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id_currency' => 'int',
-        'id_lang' => 'int',
-        'id_customer' => 'int'
+        'id' => 'int',
+        'file_name' => 'string',
+        'mime' => 'string',
+        'url' => 'string',
+        'name' => '\Kaemo\Client\Model\I18nField[]',
+        'description' => '\Kaemo\Client\Model\I18nField[]'
     ];
 
     public static function swaggerTypes()
@@ -70,9 +73,12 @@ class CartBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id_currency' => 'id_currency',
-        'id_lang' => 'id_lang',
-        'id_customer' => 'id_customer'
+        'id' => 'id',
+        'file_name' => 'file_name',
+        'mime' => 'mime',
+        'url' => 'url',
+        'name' => 'name',
+        'description' => 'description'
     ];
 
 
@@ -81,9 +87,12 @@ class CartBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id_currency' => 'setIdCurrency',
-        'id_lang' => 'setIdLang',
-        'id_customer' => 'setIdCustomer'
+        'id' => 'setId',
+        'file_name' => 'setFileName',
+        'mime' => 'setMime',
+        'url' => 'setUrl',
+        'name' => 'setName',
+        'description' => 'setDescription'
     ];
 
 
@@ -92,9 +101,12 @@ class CartBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id_currency' => 'getIdCurrency',
-        'id_lang' => 'getIdLang',
-        'id_customer' => 'getIdCustomer'
+        'id' => 'getId',
+        'file_name' => 'getFileName',
+        'mime' => 'getMime',
+        'url' => 'getUrl',
+        'name' => 'getName',
+        'description' => 'getDescription'
     ];
 
     public static function attributeMap()
@@ -128,9 +140,12 @@ class CartBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id_currency'] = isset($data['id_currency']) ? $data['id_currency'] : null;
-        $this->container['id_lang'] = isset($data['id_lang']) ? $data['id_lang'] : null;
-        $this->container['id_customer'] = isset($data['id_customer']) ? $data['id_customer'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['file_name'] = isset($data['file_name']) ? $data['file_name'] : null;
+        $this->container['mime'] = isset($data['mime']) ? $data['mime'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -141,12 +156,6 @@ class CartBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        if ($this->container['id_currency'] === null) {
-            $invalid_properties[] = "'id_currency' can't be null";
-        }
-        if ($this->container['id_lang'] === null) {
-            $invalid_properties[] = "'id_lang' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -158,75 +167,132 @@ class CartBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id_currency'] === null) {
-            return false;
-        }
-        if ($this->container['id_lang'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets id_currency
+     * Gets id
      * @return int
      */
-    public function getIdCurrency()
+    public function getId()
     {
-        return $this->container['id_currency'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets id_currency
-     * @param int $id_currency
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setIdCurrency($id_currency)
+    public function setId($id)
     {
-        $this->container['id_currency'] = $id_currency;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets id_lang
-     * @return int
+     * Gets file_name
+     * @return string
      */
-    public function getIdLang()
+    public function getFileName()
     {
-        return $this->container['id_lang'];
+        return $this->container['file_name'];
     }
 
     /**
-     * Sets id_lang
-     * @param int $id_lang
+     * Sets file_name
+     * @param string $file_name
      * @return $this
      */
-    public function setIdLang($id_lang)
+    public function setFileName($file_name)
     {
-        $this->container['id_lang'] = $id_lang;
+        $this->container['file_name'] = $file_name;
 
         return $this;
     }
 
     /**
-     * Gets id_customer
-     * @return int
+     * Gets mime
+     * @return string
      */
-    public function getIdCustomer()
+    public function getMime()
     {
-        return $this->container['id_customer'];
+        return $this->container['mime'];
     }
 
     /**
-     * Sets id_customer
-     * @param int $id_customer
+     * Sets mime
+     * @param string $mime
      * @return $this
      */
-    public function setIdCustomer($id_customer)
+    public function setMime($mime)
     {
-        $this->container['id_customer'] = $id_customer;
+        $this->container['mime'] = $mime;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     * @param string $url
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return \Kaemo\Client\Model\I18nField[]
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param \Kaemo\Client\Model\I18nField[] $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return \Kaemo\Client\Model\I18nField[]
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param \Kaemo\Client\Model\I18nField[] $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }

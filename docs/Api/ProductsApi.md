@@ -38,6 +38,7 @@ Method | HTTP request | Description
 [**searchProducts**](#searchProducts) | **GET** /products/search/{search_query} | 
 [**setProductGeolocation**](#setProductGeolocation) | **PUT** /products/{product_id}/geolocations | 
 [**updateProduct**](#updateProduct) | **PUT** /products/{product_id} | 
+[**updateProductGroupRestrictionBehavior**](#updateProductGroupRestrictionBehavior) | **PUT** /products/{product_id}/groups/behavior | 
 
 
 ## **attachFeaturesToProduct**
@@ -1636,6 +1637,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Product**](#Product)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **updateProductGroupRestrictionBehavior**
+> updateProductGroupRestrictionBehavior($product_id, $behavior)
+
+
+
+Update product group restriction behavior
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$behavior = 56; // int | Group restriction behavior        0 - Disable      1 - Allow Groups      2 - Forbid Groups
+
+try {
+    $api_instance->updateProductGroupRestrictionBehavior($product_id, $behavior);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->updateProductGroupRestrictionBehavior: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **behavior** | **int**| Group restriction behavior        0 - Disable      1 - Allow Groups      2 - Forbid Groups |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
