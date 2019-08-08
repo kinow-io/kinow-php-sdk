@@ -196,7 +196,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptions**
-> \Kaemo\Client\Model\Subscriptions getSubscriptions($page, $per_page, $only_active)
+> \Kaemo\Client\Model\Subscriptions getSubscriptions($page, $per_page)
 
 
 
@@ -210,10 +210,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\SubscriptionsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$only_active = true; // bool | 
 
 try {
-    $result = $api_instance->getSubscriptions($page, $per_page, $only_active);
+    $result = $api_instance->getSubscriptions($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getSubscriptions: ', $e->getMessage(), PHP_EOL;
@@ -227,7 +226,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **only_active** | **bool**|  | [optional]
 
 ### Return type
 
