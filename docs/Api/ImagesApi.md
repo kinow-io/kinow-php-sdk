@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**deleteProductScreenshot**](#deleteProductScreenshot) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 [**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
+[**getCategoryThumbnail**](#getCategoryThumbnail) | **GET** /categories/{category_id}/thumbnail | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
 [**getIntroImage**](#getIntroImage) | **GET** /widgets/intro/images | 
 [**getProductCoverImage**](#getProductCoverImage) | **GET** /products/{product_id}/cover | 
@@ -130,6 +131,49 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->getCategoryBanner: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryThumbnail**
+> \Kaemo\Client\Model\Image getCategoryThumbnail($category_id)
+
+
+
+Get thumbnail of a category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ImagesApi();
+$category_id = 789; // int | Category ID to fetch
+
+try {
+    $result = $api_instance->getCategoryThumbnail($category_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImagesApi->getCategoryThumbnail: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
