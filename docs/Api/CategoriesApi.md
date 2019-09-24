@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
-[**getCategoryThumbnail**](#getCategoryThumbnail) | **GET** /categories/{category_id}/thumbnail | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
 
@@ -389,49 +388,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Products**](#Products)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getCategoryThumbnail**
-> \Kaemo\Client\Model\Image getCategoryThumbnail($category_id)
-
-
-
-Get thumbnail of a category
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
-$category_id = 789; // int | Category ID to fetch
-
-try {
-    $result = $api_instance->getCategoryThumbnail($category_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CategoriesApi->getCategoryThumbnail: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **category_id** | **int**| Category ID to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\Image**](#Image)
 
 ### Authorization
 

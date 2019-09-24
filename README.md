@@ -145,7 +145,6 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategoryBanner**](docs/Api/CategoriesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
-*CategoriesApi* | [**getCategoryThumbnail**](docs/Api/CategoriesApi.md#getcategorythumbnail) | **GET** /categories/{category_id}/thumbnail | 
 *CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
@@ -198,6 +197,7 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
 *GeolocationsApi* | [**geolocations**](docs/Api/GeolocationsApi.md#geolocations) | **POST** /geolocations | 
+*GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
 *GeolocationsApi* | [**getProductGeolocations**](docs/Api/GeolocationsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**getProductGeolocationsByIp**](docs/Api/GeolocationsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**getVideoGeolocationByIp**](docs/Api/GeolocationsApi.md#getvideogeolocationbyip) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
@@ -221,7 +221,6 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**deleteProductScreenshot**](docs/Api/ImagesApi.md#deleteproductscreenshot) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 *ImagesApi* | [**getActorCoverImage**](docs/Api/ImagesApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ImagesApi* | [**getCategoryBanner**](docs/Api/ImagesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
-*ImagesApi* | [**getCategoryThumbnail**](docs/Api/ImagesApi.md#getcategorythumbnail) | **GET** /categories/{category_id}/thumbnail | 
 *ImagesApi* | [**getDirectorCoverImage**](docs/Api/ImagesApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
 *ImagesApi* | [**getIntroImage**](docs/Api/ImagesApi.md#getintroimage) | **GET** /widgets/intro/images | 
 *ImagesApi* | [**getProductCoverImage**](docs/Api/ImagesApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
@@ -392,6 +391,8 @@ Class | Method | HTTP request | Description
  - [Group](docs/Model/Group.md)
  - [Groups](docs/Model/Groups.md)
  - [I18nField](docs/Model/I18nField.md)
+ - [IPCoordinates](docs/Model/IPCoordinates.md)
+ - [IPLocation](docs/Model/IPLocation.md)
  - [Image](docs/Model/Image.md)
  - [Language](docs/Model/Language.md)
  - [Languages](docs/Model/Languages.md)

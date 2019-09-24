@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**geolocations**](#geolocations) | **POST** /geolocations | 
+[**getIPLocation**](#getIPLocation) | **GET** /geolocations/ip | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
 [**getVideoGeolocationByIp**](#getVideoGeolocationByIp) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
@@ -44,6 +45,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getIPLocation**
+> \Kaemo\Client\Model\IPLocation getIPLocation($ip_address)
+
+
+
+Get IP location
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$ip_address = "ip_address_example"; // string | address ip
+
+try {
+    $result = $api_instance->getIPLocation($ip_address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GeolocationsApi->getIPLocation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ip_address** | **string**| address ip |
+
+### Return type
+
+[**\Kaemo\Client\Model\IPLocation**](#IPLocation)
 
 ### Authorization
 
