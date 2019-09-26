@@ -22,8 +22,10 @@ Method | HTTP request | Description
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
-[**getPaymentCustomerId**](#getPaymentCustomerId) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
+[**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
+[**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
+[**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 
 
 ## **attachCartToCustomer**
@@ -832,12 +834,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getPaymentCustomerId**
-> string getPaymentCustomerId($customer_id, $payment_name)
+## **getPaymentMethods**
+> \Kaemo\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
 
 
-Get payment modules list
+Get payment methods saved for a Customer on a payment gateway
 
 ### Example
 ```php
@@ -849,10 +851,10 @@ $customer_id = 789; // int |
 $payment_name = "payment_name_example"; // string | 
 
 try {
-    $result = $api_instance->getPaymentCustomerId($customer_id, $payment_name);
+    $result = $api_instance->getPaymentMethods($customer_id, $payment_name);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getPaymentCustomerId: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomersApi->getPaymentMethods: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -866,7 +868,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\Kaemo\Client\Model\PaymentMethods[]**](#PaymentMethods)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPendingPayments**
+> \Kaemo\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
+
+
+
+Get pending payments for a Customer on a payment gateway
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$payment_name = "payment_name_example"; // string | 
+$customer_id = 789; // int | 
+
+try {
+    $result = $api_instance->getPendingPayments($payment_name, $customer_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getPendingPayments: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payment_name** | **string**|  |
+ **customer_id** | **int**|  |
+
+### Return type
+
+[**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 
@@ -912,6 +959,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Customer**](#Customer)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **updatePaymentMethod**
+> updatePaymentMethod($customer_id, $payment_name, $payment_arguments)
+
+
+
+Update payment method for a Customer on a payment gateway
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | 
+$payment_name = "payment_name_example"; // string | 
+$payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment arguments
+
+try {
+    $api_instance->updatePaymentMethod($customer_id, $payment_name, $payment_arguments);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->updatePaymentMethod: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**|  |
+ **payment_name** | **string**|  |
+ **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment arguments |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

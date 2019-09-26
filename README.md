@@ -134,9 +134,10 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
 *CartsApi* | [**getPaymentUrl**](docs/Api/CartsApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+*CartsApi* | [**preparePayment**](docs/Api/CartsApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
-*CartsApi* | [**validateCart**](docs/Api/CartsApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
+*CartsApi* | [**validatePayment**](docs/Api/CartsApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
 *CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
@@ -147,6 +148,8 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
+*ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
+*ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
 *CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
 *CustomerThreadsApi* | [**getCustomerThread**](docs/Api/CustomerThreadsApi.md#getcustomerthread) | **GET** /customer-threads/{customer_thread_id} | 
@@ -169,8 +172,10 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
-*CustomersApi* | [**getPaymentCustomerId**](docs/Api/CustomersApi.md#getpaymentcustomerid) | **GET** /customers/{customer_id}/payments/{payment_name}/customer | 
+*CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
+*CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
+*CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
@@ -251,10 +256,14 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrderHistories**](docs/Api/OrdersApi.md#getorderhistories) | **GET** /orders/{order_id}/histories | 
 *OrdersApi* | [**getOrderInvoice**](docs/Api/OrdersApi.md#getorderinvoice) | **GET** /orders/{order_id}/invoice | 
 *OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /orders | 
+*PaymentModulesApi* | [**getPaymentMethods**](docs/Api/PaymentModulesApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 
 *PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
-*PaymentModulesApi* | [**validateCart**](docs/Api/PaymentModulesApi.md#validatecart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*PaymentModulesApi* | [**getPendingPayments**](docs/Api/PaymentModulesApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*PaymentModulesApi* | [**preparePayment**](docs/Api/PaymentModulesApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
+*PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
+*PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *ProductAccessesApi* | [**createProductAccess**](docs/Api/ProductAccessesApi.md#createproductaccess) | **POST** /product-accesses | 
 *ProductAccessesApi* | [**deleteProductAccess**](docs/Api/ProductAccessesApi.md#deleteproductaccess) | **DELETE** /product-accesses/{product_access_id} | 
 *ProductAccessesApi* | [**getCustomerAccessesSubscriptions**](docs/Api/ProductAccessesApi.md#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
@@ -360,6 +369,8 @@ Class | Method | HTTP request | Description
  - [Categories](docs/Model/Categories.md)
  - [Category](docs/Model/Category.md)
  - [CategoryImages](docs/Model/CategoryImages.md)
+ - [Configuration](docs/Model/Configuration.md)
+ - [ConfigurationList](docs/Model/ConfigurationList.md)
  - [Countries](docs/Model/Countries.md)
  - [Country](docs/Model/Country.md)
  - [Currencies](docs/Model/Currencies.md)
@@ -409,6 +420,9 @@ Class | Method | HTTP request | Description
  - [Orders](docs/Model/Orders.md)
  - [Pagination](docs/Model/Pagination.md)
  - [PaymentArguments](docs/Model/PaymentArguments.md)
+ - [PaymentDetails](docs/Model/PaymentDetails.md)
+ - [PaymentDetails1](docs/Model/PaymentDetails1.md)
+ - [PaymentMethods](docs/Model/PaymentMethods.md)
  - [PaymentModule](docs/Model/PaymentModule.md)
  - [PaymentModules](docs/Model/PaymentModules.md)
  - [PaymentUrl](docs/Model/PaymentUrl.md)

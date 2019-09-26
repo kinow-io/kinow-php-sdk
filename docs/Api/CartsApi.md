@@ -14,9 +14,10 @@ Method | HTTP request | Description
 [**getCustomerCarts**](#getCustomerCarts) | **GET** /customers/{customer_id}/carts | 
 [**getLastCart**](#getLastCart) | **GET** /customers/{customer_id}/last-cart | 
 [**getPaymentUrl**](#getPaymentUrl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+[**preparePayment**](#preparePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 [**updateCart**](#updateCart) | **PUT** /carts/{cart_id} | 
-[**validateCart**](#validateCart) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 [**validateFreeOrder**](#validateFreeOrder) | **POST** /carts/{cart_id}/validate-free-order | 
+[**validatePayment**](#validatePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 
 
 ## **addProductToCart**
@@ -432,7 +433,7 @@ No authorization required
 
 
 
-Get payment url
+Get payment gateway URL to use in iframe
 
 ### Example
 ```php
@@ -441,7 +442,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
-$payment_name = "payment_name_example"; // string | Payment module name
+$payment_name = "payment_name_example"; // string | Payment gateway name
 
 try {
     $result = $api_instance->getPaymentUrl($cart_id, $payment_name);
@@ -457,11 +458,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
- **payment_name** | **string**| Payment module name |
+ **payment_name** | **string**| Payment gateway name |
 
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentUrl**](#PaymentUrl)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **preparePayment**
+> \Kaemo\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
+
+
+
+Prepare payment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CartsApi();
+$cart_id = 789; // int | Cart ID to fetch
+$payment_name = "payment_name_example"; // string | Payment gateway name
+
+try {
+    $result = $api_instance->preparePayment($cart_id, $payment_name);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->preparePayment: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **payment_name** | **string**| Payment gateway name |
+
+### Return type
+
+[**\Kaemo\Client\Model\PaymentDetails1**](#PaymentDetails1)
 
 ### Authorization
 
@@ -517,52 +563,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **validateCart**
-> validateCart($cart_id, $payment_name, $payment_arguments)
-
-
-
-Validate order
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CartsApi();
-$cart_id = 789; // int | Cart ID to fetch
-$payment_name = "payment_name_example"; // string | Payment module name
-$payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | payment arguments, token and tokenType
-
-try {
-    $api_instance->validateCart($cart_id, $payment_name, $payment_arguments);
-} catch (Exception $e) {
-    echo 'Exception when calling CartsApi->validateCart: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Cart ID to fetch |
- **payment_name** | **string**| Payment module name |
- **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| payment arguments, token and tokenType |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **validateFreeOrder**
 > validateFreeOrder($cart_id)
 
@@ -591,6 +591,52 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to validate |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **validatePayment**
+> validatePayment($cart_id, $payment_name, $payment_argument)
+
+
+
+Validate payment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CartsApi();
+$cart_id = 789; // int | Cart ID to fetch
+$payment_name = "payment_name_example"; // string | Payment gateway name
+$payment_argument = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment argument
+
+try {
+    $api_instance->validatePayment($cart_id, $payment_name, $payment_argument);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->validatePayment: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **payment_name** | **string**| Payment gateway name |
+ **payment_argument** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment argument |
 
 ### Return type
 
