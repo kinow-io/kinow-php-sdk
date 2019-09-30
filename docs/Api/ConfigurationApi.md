@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Get configuration
+Get configuration by name.       Available :          - LANG_DEFAULT          - CURRENCY_DEFAULT          - COUNTRY_DEFAULT          - TIMEZONE
 
 ### Example
 ```php
@@ -58,7 +58,7 @@ No authorization required
 
 
 
-Get configuration by name
+Get configuration by name.      Available :      - LANG_DEFAULT      - CURRENCY_DEFAULT      - COUNTRY_DEFAULT      - TIMEZONE
 
 ### Example
 ```php

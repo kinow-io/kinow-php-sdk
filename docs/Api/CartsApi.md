@@ -478,7 +478,7 @@ No authorization required
 
 
 
-Prepare payment
+Prepare payment on a payment gateway
 
 ### Example
 ```php
@@ -610,7 +610,7 @@ No authorization required
 
 
 
-Validate payment
+Validate payment on a payment gateway
 
 ### Example
 ```php
