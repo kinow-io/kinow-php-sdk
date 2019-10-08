@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
+[**getDirectorProducts**](#getDirectorProducts) | **GET** /directors/{director_id}/products | 
 [**getDirectors**](#getDirectors) | **GET** /directors | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
 [**updateDirector**](#updateDirector) | **PUT** /directors/{director_id} | 
@@ -132,6 +133,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Director**](#Director)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getDirectorProducts**
+> \Kaemo\Client\Model\Products getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+
+
+
+Get director products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$director_id = 789; // int | Director ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+$ip = "ip_example"; // string | filter by customer ip
+$features = "features_example"; // string | ```      features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict      _______________        {      \"*\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"1\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```      Operator can be strict, contains, gt or lt.      To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ```      name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be strict, contains, gt or lt.
+
+try {
+    $result = $api_instance->getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->getDirectorProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **director_id** | **int**| Director ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+ **ip** | **string**| filter by customer ip | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60;      features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict      _______________        {      \&quot;*\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;strict\&quot;      },      \&quot;1\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be strict, contains, gt or lt.      To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;date_add\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;lt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be strict, contains, gt or lt. | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Products**](#Products)
 
 ### Authorization
 
