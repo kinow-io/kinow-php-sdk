@@ -32,6 +32,7 @@ Method | HTTP request | Description
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
 [**getProductGroups**](#getProductGroups) | **GET** /products/{product_id}/groups | 
 [**getProductImages**](#getProductImages) | **GET** /products/{product_id}/images | 
+[**getProductSubscription**](#getProductSubscription) | **GET** /products/{product_id}/subscription | 
 [**getProducts**](#getProducts) | **GET** /products | 
 [**getProductsFromProduct**](#getProductsFromProduct) | **GET** /products/{product_id}/products | 
 [**getVideosFromProduct**](#getVideosFromProduct) | **GET** /products/{product_id}/videos | 
@@ -1312,6 +1313,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getProductSubscription**
+> \Kaemo\Client\Model\Subscription getProductSubscription($product_id)
+
+
+
+Get Subscription linked to a Product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+
+try {
+    $result = $api_instance->getProductSubscription($product_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getProductSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 

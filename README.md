@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerAccessesVideos**](docs/Api/CustomersApi.md#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
 *CustomersApi* | [**getCustomerAddress**](docs/Api/CustomersApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *CustomersApi* | [**getCustomerCanSeeProduct**](docs/Api/CustomersApi.md#getcustomercanseeproduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
+*CustomersApi* | [**getCustomerCarts**](docs/Api/CustomersApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CustomersApi* | [**getCustomerCurrentViews**](docs/Api/CustomersApi.md#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
 *CustomersApi* | [**getCustomerGroups**](docs/Api/CustomersApi.md#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
 *CustomersApi* | [**getCustomerHasAccessToProduct**](docs/Api/CustomersApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
@@ -302,6 +303,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getProductGeolocationsByIp**](docs/Api/ProductsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
 *ProductsApi* | [**getProductGroups**](docs/Api/ProductsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
 *ProductsApi* | [**getProductImages**](docs/Api/ProductsApi.md#getproductimages) | **GET** /products/{product_id}/images | 
+*ProductsApi* | [**getProductSubscription**](docs/Api/ProductsApi.md#getproductsubscription) | **GET** /products/{product_id}/subscription | 
 *ProductsApi* | [**getProducts**](docs/Api/ProductsApi.md#getproducts) | **GET** /products | 
 *ProductsApi* | [**getProductsFromProduct**](docs/Api/ProductsApi.md#getproductsfromproduct) | **GET** /products/{product_id}/products | 
 *ProductsApi* | [**getVideosFromProduct**](docs/Api/ProductsApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
@@ -314,6 +316,7 @@ Class | Method | HTTP request | Description
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
 *StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
 *SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
+*SubscriptionsApi* | [**getProductSubscription**](docs/Api/SubscriptionsApi.md#getproductsubscription) | **GET** /products/{product_id}/subscription | 
 *SubscriptionsApi* | [**getSubscription**](docs/Api/SubscriptionsApi.md#getsubscription) | **GET** /subscriptions/{subscription_id} | 
 *SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 

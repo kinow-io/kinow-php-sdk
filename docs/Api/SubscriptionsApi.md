@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
+[**getProductSubscription**](#getProductSubscription) | **GET** /products/{product_id}/subscription | 
 [**getSubscription**](#getSubscription) | **GET** /subscriptions/{subscription_id} | 
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
 [**getSubscriptionCoverImage**](#getSubscriptionCoverImage) | **GET** /subscriptions/{subscription_id}/cover | 
@@ -48,6 +49,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Subscriptions**](#Subscriptions)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getProductSubscription**
+> \Kaemo\Client\Model\Subscription getProductSubscription($product_id)
+
+
+
+Get Subscription linked to a Product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$product_id = 789; // int | Product ID to fetch
+
+try {
+    $result = $api_instance->getProductSubscription($product_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionsApi->getProductSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 
