@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **products** | [**\Kaemo\Client\Model\Product[]**](#Product) |  | [optional] 
 **cart_rules** | [**\Kaemo\Client\Model\CartRule[]**](#CartRule) |  | [optional] 
 **total_without_tax** | **float** |  | [optional] 
+**total_trial** | **float** |  | [optional] 
 
 
