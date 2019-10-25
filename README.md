@@ -1,4 +1,4 @@
-# Kaemo PHP SDK Documentation
+# Kinow PHP SDK Documentation
 
 ## Requirements
 
@@ -10,7 +10,7 @@ PHP 5.4.0 and later
 
 #### Method 1:
 
-To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kaemo-php-sdk`
+To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kinow-php-sdk`
 
 #### Method 2:
 
