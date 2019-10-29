@@ -1,6 +1,6 @@
 <?php
 /**
- * CategoriesTest
+ * DirectorsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * CategoriesTest Class Doc Comment
+ * DirectorsTest Class Doc Comment
  *
  * @category    Class */
-// * @description Categories
+// * @description Directors
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CategoriesTest extends \PHPUnit_Framework_TestCase
+class DirectorsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,9 +75,9 @@ class CategoriesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Categories"
+     * Test "Directors"
      */
-    public function testCategories()
+    public function testDirectors()
     {
 
     }

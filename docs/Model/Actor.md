@@ -12,5 +12,8 @@ Name | Type | Description | Notes
 **description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **image** | **string** |  | [optional] 
 **description_short** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_keywords** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_title** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 
 

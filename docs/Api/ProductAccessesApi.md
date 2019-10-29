@@ -11,6 +11,9 @@ Method | HTTP request | Description
 [**getProductAccess**](#getProductAccess) | **GET** /product-accesses/{product_access_id} | 
 [**getProductAccesses**](#getProductAccesses) | **GET** /product-accesses | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
+[**switchSubscription**](#switchSubscription) | **PUT** /product-accesses/{product_access_id}/switch | 
+[**switchSubscriptionDelete**](#switchSubscriptionDelete) | **DELETE** /product-accesses/{product_access_id}/switch | 
+[**switchSubscriptionPending**](#switchSubscriptionPending) | **GET** /product-accesses/{product_access_id}/switch | 
 [**updateProductAccess**](#updateProductAccess) | **PUT** /product-accesses/{product_access_id} | 
 
 
@@ -70,7 +73,7 @@ Delete product access
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$product_access_id = 789; // int | Product access ID to fetch
+$product_access_id = 789; // int | Access ID to fetch
 
 try {
     $api_instance->deleteProductAccess($product_access_id);
@@ -84,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_access_id** | **int**| Product access ID to fetch |
+ **product_access_id** | **int**| Access ID to fetch |
 
 ### Return type
 
@@ -298,7 +301,7 @@ No authorization required
 
 
 
-unsubcribe a user from a access
+Unsubcribe an Access recurring payment
 
 ### Example
 ```php
@@ -327,6 +330,135 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **switchSubscription**
+> switchSubscription($product_access_id, $subscription_id)
+
+
+
+Switch an Access to another Subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$product_access_id = "product_access_id_example"; // string | Access ID to switch
+$subscription_id = 789; // int | Subscription to switch to
+
+try {
+    $api_instance->switchSubscription($product_access_id, $subscription_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductAccessesApi->switchSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_access_id** | **string**| Access ID to switch |
+ **subscription_id** | **int**| Subscription to switch to |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **switchSubscriptionDelete**
+> switchSubscriptionDelete($product_access_id)
+
+
+
+Delete Access pending switch
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$product_access_id = 789; // int | Product access ID to fetch
+
+try {
+    $api_instance->switchSubscriptionDelete($product_access_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductAccessesApi->switchSubscriptionDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_access_id** | **int**| Product access ID to fetch |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **switchSubscriptionPending**
+> \Kaemo\Client\Model\Subscription switchSubscriptionPending($product_access_id)
+
+
+
+Return Access pending switch
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$product_access_id = "product_access_id_example"; // string | Access ID to fetch
+
+try {
+    $result = $api_instance->switchSubscriptionPending($product_access_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductAccessesApi->switchSubscriptionPending: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_access_id** | **string**| Access ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 

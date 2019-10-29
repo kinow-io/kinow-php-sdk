@@ -201,7 +201,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectors**
-> \Kaemo\Client\Model\Director1 getDirectors($page, $per_page, $image_type)
+> \Kaemo\Client\Model\Directors getDirectors($page, $per_page, $image_type)
 
 
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Director1**](#Director1)
+[**\Kaemo\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kaemo\Client\Model\Director1 getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kaemo\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Director1**](#Director1)
+[**\Kaemo\Client\Model\Directors**](#Directors)
 
 ### Authorization
 

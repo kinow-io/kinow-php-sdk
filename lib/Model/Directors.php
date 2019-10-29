@@ -1,6 +1,6 @@
 <?php
 /**
- * BlogPageLists
+ * Directors
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * BlogPageLists Class Doc Comment
+ * Directors Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BlogPageLists implements ArrayAccess
+class Directors implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class BlogPageLists implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BlogPageLists';
+    protected static $swaggerModelName = 'Directors';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,7 @@ class BlogPageLists implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\BlogPage[]'
+        'data' => '\Kaemo\Client\Model\Director[]'
     ];
 
     public static function swaggerTypes()
@@ -174,7 +174,7 @@ class BlogPageLists implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Kaemo\Client\Model\BlogPage[]
+     * @return \Kaemo\Client\Model\Director[]
      */
     public function getData()
     {
@@ -183,7 +183,7 @@ class BlogPageLists implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Kaemo\Client\Model\BlogPage[] $data
+     * @param \Kaemo\Client\Model\Director[] $data
      * @return $this
      */
     public function setData($data)

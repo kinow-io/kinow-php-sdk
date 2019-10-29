@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**deleteGift**](#deleteGift) | **DELETE** /gifts/{gift_id} | 
 [**deleteGiftsInCart**](#deleteGiftsInCart) | **DELETE** /carts/{cart_id}/gift/ | 
 [**getGift**](#getGift) | **GET** /gifts/{gift_id} | 
-[**getGiftByToken**](#getGiftByToken) | **GET** /gifts/{token} | 
 [**getGiftInCart**](#getGiftInCart) | **GET** /carts/{cart_id}/gift | 
 [**getGiftToken**](#getGiftToken) | **GET** /gifts/{gift_id}/token | 
 [**getGifts**](#getGifts) | **GET** /gifts | 
@@ -217,49 +216,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\Gift**](#Gift)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getGiftByToken**
-> \Kaemo\Client\Model\Gift getGiftByToken($token)
-
-
-
-Retrieve a Gift using its token
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\GiftsApi();
-$token = "token_example"; // string | Gift token to fetch
-
-try {
-    $result = $api_instance->getGiftByToken($token);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GiftsApi->getGiftByToken: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **token** | **string**| Gift token to fetch |
 
 ### Return type
 

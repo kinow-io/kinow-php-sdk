@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **behavior_detected_countries** | **string** |  | [optional] 
 **behavior_non_detected_countries** | **string** |  | [optional] 
 **has_free_access** | [**\Kaemo\Client\Model\VideoFreeAccess**](#VideoFreeAccess) |  | [optional] 
+**advertising_url** | **string** |  | [optional] 
 
 

@@ -1,4 +1,4 @@
-# Kinow PHP SDK Documentation
+# Kaemo PHP SDK Documentation
 
 ## Requirements
 
@@ -10,7 +10,7 @@ PHP 5.4.0 and later
 
 #### Method 1:
 
-To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kinow-php-sdk`
+To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kaemo-php-sdk`
 
 #### Method 2:
 
@@ -216,7 +216,6 @@ Class | Method | HTTP request | Description
 *GiftsApi* | [**deleteGift**](docs/Api/GiftsApi.md#deletegift) | **DELETE** /gifts/{gift_id} | 
 *GiftsApi* | [**deleteGiftsInCart**](docs/Api/GiftsApi.md#deletegiftsincart) | **DELETE** /carts/{cart_id}/gift/ | 
 *GiftsApi* | [**getGift**](docs/Api/GiftsApi.md#getgift) | **GET** /gifts/{gift_id} | 
-*GiftsApi* | [**getGiftByToken**](docs/Api/GiftsApi.md#getgiftbytoken) | **GET** /gifts/{token} | 
 *GiftsApi* | [**getGiftInCart**](docs/Api/GiftsApi.md#getgiftincart) | **GET** /carts/{cart_id}/gift | 
 *GiftsApi* | [**getGiftToken**](docs/Api/GiftsApi.md#getgifttoken) | **GET** /gifts/{gift_id}/token | 
 *GiftsApi* | [**getGifts**](docs/Api/GiftsApi.md#getgifts) | **GET** /gifts | 
@@ -275,6 +274,9 @@ Class | Method | HTTP request | Description
 *ProductAccessesApi* | [**getProductAccess**](docs/Api/ProductAccessesApi.md#getproductaccess) | **GET** /product-accesses/{product_access_id} | 
 *ProductAccessesApi* | [**getProductAccesses**](docs/Api/ProductAccessesApi.md#getproductaccesses) | **GET** /product-accesses | 
 *ProductAccessesApi* | [**stopSubscription**](docs/Api/ProductAccessesApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
+*ProductAccessesApi* | [**switchSubscription**](docs/Api/ProductAccessesApi.md#switchsubscription) | **PUT** /product-accesses/{product_access_id}/switch | 
+*ProductAccessesApi* | [**switchSubscriptionDelete**](docs/Api/ProductAccessesApi.md#switchsubscriptiondelete) | **DELETE** /product-accesses/{product_access_id}/switch | 
+*ProductAccessesApi* | [**switchSubscriptionPending**](docs/Api/ProductAccessesApi.md#switchsubscriptionpending) | **GET** /product-accesses/{product_access_id}/switch | 
 *ProductAccessesApi* | [**updateProductAccess**](docs/Api/ProductAccessesApi.md#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
 *ProductsApi* | [**attachFeaturesToProduct**](docs/Api/ProductsApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
 *ProductsApi* | [**attachProductToActor**](docs/Api/ProductsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
@@ -393,7 +395,7 @@ Class | Method | HTTP request | Description
  - [CustomerVideoStats1](docs/Model/CustomerVideoStats1.md)
  - [Customers](docs/Model/Customers.md)
  - [Director](docs/Model/Director.md)
- - [Director1](docs/Model/Director1.md)
+ - [Directors](docs/Model/Directors.md)
  - [DownloadUrl](docs/Model/DownloadUrl.md)
  - [Extract](docs/Model/Extract.md)
  - [Feature](docs/Model/Feature.md)

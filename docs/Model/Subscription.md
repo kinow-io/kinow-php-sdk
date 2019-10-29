@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **id_product** | **int** |  | [optional] 
 **duration** | **int** |  | [optional] 
+**download** | **bool** |  | [optional] 
 **trial_duration** | **int** |  | [optional] 
 **trial_percent** | **int** |  | [optional] 
 **trial_sub** | **int** |  | [optional] 
