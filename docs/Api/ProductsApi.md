@@ -1039,7 +1039,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kaemo\Client\Model\ProductExtractsResponse getProductExtracts($product_id, $page, $per_page)
+> \Kaemo\Client\Model\Videos getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -1074,7 +1074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductExtractsResponse**](#ProductExtractsResponse)
+[**\Kaemo\Client\Model\Videos**](#Videos)
 
 ### Authorization
 
@@ -1481,7 +1481,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kaemo\Client\Model\Videos1 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -1524,7 +1524,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 

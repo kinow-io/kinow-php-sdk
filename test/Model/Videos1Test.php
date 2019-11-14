@@ -1,6 +1,6 @@
 <?php
 /**
- * SubtitleTest
+ * Videos1Test
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * SubtitleTest Class Doc Comment
+ * Videos1Test Class Doc Comment
  *
  * @category    Class */
-// * @description Subtitle
+// * @description Videos1
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubtitleTest extends \PHPUnit_Framework_TestCase
+class Videos1Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,97 +75,25 @@ class SubtitleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Subtitle"
+     * Test "Videos1"
      */
-    public function testSubtitle()
+    public function testVideos1()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "pagination"
      */
-    public function testPropertyId()
+    public function testPropertyPagination()
     {
 
     }
 
     /**
-     * Test attribute "src"
+     * Test attribute "data"
      */
-    public function testPropertySrc()
-    {
-
-    }
-
-    /**
-     * Test attribute "srclang"
-     */
-    public function testPropertySrclang()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "font"
-     */
-    public function testPropertyFont()
-    {
-
-    }
-
-    /**
-     * Test attribute "size"
-     */
-    public function testPropertySize()
-    {
-
-    }
-
-    /**
-     * Test attribute "color"
-     */
-    public function testPropertyColor()
-    {
-
-    }
-
-    /**
-     * Test attribute "text_shadow"
-     */
-    public function testPropertyTextShadow()
-    {
-
-    }
-
-    /**
-     * Test attribute "background"
-     */
-    public function testPropertyBackground()
-    {
-
-    }
-
-    /**
-     * Test attribute "opacity"
-     */
-    public function testPropertyOpacity()
-    {
-
-    }
-
-    /**
-     * Test attribute "italic_color"
-     */
-    public function testPropertyItalicColor()
+    public function testPropertyData()
     {
 
     }

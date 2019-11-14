@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**attachCoverToExtract**](#attachCoverToExtract) | **POST** /extracts/{extract_id}/cover | 
 [**createExtract**](#createExtract) | **POST** /extracts | 
 [**deleteExtract**](#deleteExtract) | **DELETE** /extracts/{extract_id} | 
+[**getExtract**](#getExtract) | **GET** /extracts/{extract_id} | 
 [**getExtractPlayer**](#getExtractPlayer) | **GET** /extracts/{extract_id}/player | 
+[**getExtracts**](#getExtracts) | **GET** /extracts | 
 [**getProductExtracts**](#getProductExtracts) | **GET** /products/{product_id}/extracts | 
 [**updateExtract**](#updateExtract) | **PUT** /extracts/{extract_id} | 
 
@@ -141,6 +143,49 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getExtract**
+> \Kaemo\Client\Model\Extract getExtract($extract_id)
+
+
+
+Get extract
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$extract_id = 789; // int | Extract ID to fetch
+
+try {
+    $result = $api_instance->getExtract($extract_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ExtractsApi->getExtract: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **extract_id** | **int**| Extract ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Extract**](#Extract)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getExtractPlayer**
 > \Kaemo\Client\Model\PlayerConfiguration getExtractPlayer($extract_id)
 
@@ -184,8 +229,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getExtracts**
+> \Kaemo\Client\Model\Videos getExtracts($page, $per_page)
+
+
+
+Get extracts list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getExtracts($page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ExtractsApi->getExtracts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Videos**](#Videos)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getProductExtracts**
-> \Kaemo\Client\Model\ProductExtractsResponse getProductExtracts($product_id, $page, $per_page)
+> \Kaemo\Client\Model\Videos getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -220,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductExtractsResponse**](#ProductExtractsResponse)
+[**\Kaemo\Client\Model\Videos**](#Videos)
 
 ### Authorization
 

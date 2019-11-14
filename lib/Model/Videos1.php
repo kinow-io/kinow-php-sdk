@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderHistories
+ * Videos1
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * OrderHistories Class Doc Comment
+ * Videos1 Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderHistories implements ArrayAccess
+class Videos1 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class OrderHistories implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'OrderHistories';
+    protected static $swaggerModelName = 'Videos_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,7 @@ class OrderHistories implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\OrderHistory[]'
+        'data' => '\Kaemo\Client\Model\Video[]'
     ];
 
     public static function swaggerTypes()
@@ -174,7 +174,7 @@ class OrderHistories implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Kaemo\Client\Model\OrderHistory[]
+     * @return \Kaemo\Client\Model\Video[]
      */
     public function getData()
     {
@@ -183,7 +183,7 @@ class OrderHistories implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Kaemo\Client\Model\OrderHistory[] $data
+     * @param \Kaemo\Client\Model\Video[] $data
      * @return $this
      */
     public function setData($data)

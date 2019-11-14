@@ -790,11 +790,11 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideos**
-> \Kaemo\Client\Model\Videos getVideos($page, $per_page, $features, $filters, $ip)
+> \Kaemo\Client\Model\Videos1 getVideos($page, $per_page, $features, $filters, $ip)
 
 
 
-Get customer list
+Get video list
 
 ### Example
 ```php
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -841,7 +841,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kaemo\Client\Model\Videos1 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 

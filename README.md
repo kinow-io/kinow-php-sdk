@@ -188,7 +188,9 @@ Class | Method | HTTP request | Description
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
 *ExtractsApi* | [**deleteExtract**](docs/Api/ExtractsApi.md#deleteextract) | **DELETE** /extracts/{extract_id} | 
+*ExtractsApi* | [**getExtract**](docs/Api/ExtractsApi.md#getextract) | **GET** /extracts/{extract_id} | 
 *ExtractsApi* | [**getExtractPlayer**](docs/Api/ExtractsApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
+*ExtractsApi* | [**getExtracts**](docs/Api/ExtractsApi.md#getextracts) | **GET** /extracts | 
 *ExtractsApi* | [**getProductExtracts**](docs/Api/ExtractsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
 *ExtractsApi* | [**updateExtract**](docs/Api/ExtractsApi.md#updateextract) | **PUT** /extracts/{extract_id} | 
 *FeatureValuesApi* | [**attachFeaturesToProduct**](docs/Api/FeatureValuesApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
@@ -441,7 +443,6 @@ Class | Method | HTTP request | Description
  - [ProductAttributeCreateRequest](docs/Model/ProductAttributeCreateRequest.md)
  - [ProductAttributeUpdateRequest](docs/Model/ProductAttributeUpdateRequest.md)
  - [ProductAttributesResponse](docs/Model/ProductAttributesResponse.md)
- - [ProductExtractsResponse](docs/Model/ProductExtractsResponse.md)
  - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
  - [Products](docs/Model/Products.md)
  - [Products1](docs/Model/Products1.md)
@@ -463,6 +464,7 @@ Class | Method | HTTP request | Description
  - [VideoSubtitlesResponse](docs/Model/VideoSubtitlesResponse.md)
  - [VideoViews](docs/Model/VideoViews.md)
  - [Videos](docs/Model/Videos.md)
+ - [Videos1](docs/Model/Videos1.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenus](docs/Model/WidgetFooterMenus.md)
  - [WidgetSlider](docs/Model/WidgetSlider.md)
