@@ -139,6 +139,14 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "module"
+     */
+    public function testPropertyModule()
+    {
+
+    }
+
+    /**
      * Test attribute "total_discounts"
      */
     public function testPropertyTotalDiscounts()

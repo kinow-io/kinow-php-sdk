@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 ## **consumeGift**
-> consumeGift($gift_id, $customer_id)
+> consumeGift($gift_id, $customer_id, $token)
 
 
 
@@ -31,9 +31,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
+$token = "token_example"; // string | Gift token to check (optional)
 
 try {
-    $api_instance->consumeGift($gift_id, $customer_id);
+    $api_instance->consumeGift($gift_id, $customer_id, $token);
 } catch (Exception $e) {
     echo 'Exception when calling GiftsApi->consumeGift: ', $e->getMessage(), PHP_EOL;
 }
@@ -46,6 +47,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
  **customer_id** | **int**| Customer ID to fetch |
+ **token** | **string**| Gift token to check (optional) | [optional]
 
 ### Return type
 

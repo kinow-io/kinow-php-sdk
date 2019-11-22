@@ -62,6 +62,7 @@ class Order implements ArrayAccess
         'id_customer' => 'int',
         'current_state' => 'int',
         'payment' => 'string',
+        'module' => 'string',
         'total_discounts' => 'float',
         'total_discounts_tax_incl' => 'float',
         'total_discounts_tax_excl' => 'float',
@@ -96,6 +97,7 @@ class Order implements ArrayAccess
         'id_customer' => 'id_customer',
         'current_state' => 'current_state',
         'payment' => 'payment',
+        'module' => 'module',
         'total_discounts' => 'total_discounts',
         'total_discounts_tax_incl' => 'total_discounts_tax_incl',
         'total_discounts_tax_excl' => 'total_discounts_tax_excl',
@@ -126,6 +128,7 @@ class Order implements ArrayAccess
         'id_customer' => 'setIdCustomer',
         'current_state' => 'setCurrentState',
         'payment' => 'setPayment',
+        'module' => 'setModule',
         'total_discounts' => 'setTotalDiscounts',
         'total_discounts_tax_incl' => 'setTotalDiscountsTaxIncl',
         'total_discounts_tax_excl' => 'setTotalDiscountsTaxExcl',
@@ -156,6 +159,7 @@ class Order implements ArrayAccess
         'id_customer' => 'getIdCustomer',
         'current_state' => 'getCurrentState',
         'payment' => 'getPayment',
+        'module' => 'getModule',
         'total_discounts' => 'getTotalDiscounts',
         'total_discounts_tax_incl' => 'getTotalDiscountsTaxIncl',
         'total_discounts_tax_excl' => 'getTotalDiscountsTaxExcl',
@@ -211,6 +215,7 @@ class Order implements ArrayAccess
         $this->container['id_customer'] = isset($data['id_customer']) ? $data['id_customer'] : null;
         $this->container['current_state'] = isset($data['current_state']) ? $data['current_state'] : null;
         $this->container['payment'] = isset($data['payment']) ? $data['payment'] : null;
+        $this->container['module'] = isset($data['module']) ? $data['module'] : null;
         $this->container['total_discounts'] = isset($data['total_discounts']) ? $data['total_discounts'] : null;
         $this->container['total_discounts_tax_incl'] = isset($data['total_discounts_tax_incl']) ? $data['total_discounts_tax_incl'] : null;
         $this->container['total_discounts_tax_excl'] = isset($data['total_discounts_tax_excl']) ? $data['total_discounts_tax_excl'] : null;
@@ -394,6 +399,27 @@ class Order implements ArrayAccess
     public function setPayment($payment)
     {
         $this->container['payment'] = $payment;
+
+        return $this;
+    }
+
+    /**
+     * Gets module
+     * @return string
+     */
+    public function getModule()
+    {
+        return $this->container['module'];
+    }
+
+    /**
+     * Sets module
+     * @param string $module 
+     * @return $this
+     */
+    public function setModule($module)
+    {
+        $this->container['module'] = $module;
 
         return $this;
     }

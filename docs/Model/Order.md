@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **id_customer** | **int** |  | [optional] 
 **current_state** | **int** |  | [optional] 
 **payment** | **string** |  | [optional] 
+**module** | **string** |  | [optional] 
 **total_discounts** | **float** |  | [optional] 
 **total_discounts_tax_incl** | **float** |  | [optional] 
 **total_discounts_tax_excl** | **float** |  | [optional] 

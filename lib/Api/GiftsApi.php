@@ -95,12 +95,13 @@ class GiftsApi
      *
      * @param int $gift_id Gift ID to fetch (required)
      * @param int $customer_id Customer ID to fetch (required)
+     * @param string $token Gift token to check (optional) (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return void
      */
-    public function consumeGift($gift_id, $customer_id)
+    public function consumeGift($gift_id, $customer_id, $token = null)
     {
-        list($response) = $this->consumeGiftWithHttpInfo($gift_id, $customer_id);
+        list($response) = $this->consumeGiftWithHttpInfo($gift_id, $customer_id, $token);
         return $response;
     }
 
@@ -111,10 +112,11 @@ class GiftsApi
      *
      * @param int $gift_id Gift ID to fetch (required)
      * @param int $customer_id Customer ID to fetch (required)
+     * @param string $token Gift token to check (optional) (optional)
      * @throws \Kaemo\Client\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function consumeGiftWithHttpInfo($gift_id, $customer_id)
+    public function consumeGiftWithHttpInfo($gift_id, $customer_id, $token = null)
     {
         // verify the required parameter 'gift_id' is set
         if ($gift_id === null) {
@@ -140,6 +142,10 @@ class GiftsApi
         // query params
         if ($customer_id !== null) {
             $queryParams['customer_id'] = $this->apiClient->getSerializer()->toQueryValue($customer_id);
+        }
+        // query params
+        if ($token !== null) {
+            $queryParams['token'] = $this->apiClient->getSerializer()->toQueryValue($token);
         }
         // path params
         if ($gift_id !== null) {
