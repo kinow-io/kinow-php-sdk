@@ -10,10 +10,11 @@ Method | HTTP request | Description
 [**getCustomerAccessesVideos**](#getCustomerAccessesVideos) | **GET** /customers/{customer_id}/accesses/videos | 
 [**getProductAccess**](#getProductAccess) | **GET** /product-accesses/{product_access_id} | 
 [**getProductAccesses**](#getProductAccesses) | **GET** /product-accesses | 
-[**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
+[**subscribe**](#subscribe) | **PUT** /product-accesses/{product_access_id}/subscribe | 
 [**switchSubscription**](#switchSubscription) | **PUT** /product-accesses/{product_access_id}/switch | 
 [**switchSubscriptionDelete**](#switchSubscriptionDelete) | **DELETE** /product-accesses/{product_access_id}/switch | 
 [**switchSubscriptionPending**](#switchSubscriptionPending) | **GET** /product-accesses/{product_access_id}/switch | 
+[**unsubscribe**](#unsubscribe) | **PUT** /product-accesses/{product_access_id}/unsubscribe | 
 [**updateProductAccess**](#updateProductAccess) | **PUT** /product-accesses/{product_access_id} | 
 
 
@@ -296,12 +297,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **stopSubscription**
-> stopSubscription($customer_id, $product_access_id)
+## **subscribe**
+> subscribe($product_access_id)
 
 
 
-Unsubcribe an Access recurring payment
+Subcribe to a reccuring payment for an Access
 
 ### Example
 ```php
@@ -309,13 +310,12 @@ Unsubcribe an Access recurring payment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$customer_id = 789; // int | Customer ID to unsubscribe
-$product_access_id = "product_access_id_example"; // string | Product access ID to unsubscribe from
+$product_access_id = 789; // int | Access ID to fetch
 
 try {
-    $api_instance->stopSubscription($customer_id, $product_access_id);
+    $api_instance->subscribe($product_access_id);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductAccessesApi->stopSubscription: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductAccessesApi->subscribe: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -324,8 +324,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Customer ID to unsubscribe |
- **product_access_id** | **string**| Product access ID to unsubscribe from |
+ **product_access_id** | **int**| Access ID to fetch |
 
 ### Return type
 
@@ -459,6 +458,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Subscription**](#Subscription)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **unsubscribe**
+> unsubscribe($product_access_id)
+
+
+
+Unsubcribe an Access recurring payment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$product_access_id = 789; // int | Access ID to fetch
+
+try {
+    $api_instance->unsubscribe($product_access_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductAccessesApi->unsubscribe: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_access_id** | **int**| Access ID to fetch |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

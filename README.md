@@ -55,15 +55,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AccessesApi();
-$category_id = 789; // int | Category ID to fetch
-$customer_id = 789; // int | 
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to attach
 
 try {
-    $result = $api_instance->getAvailableCategory($category_id, $customer_id);
-    print_r($result);
+    $api_instance->attachProductToActor($product_id, $actor_id);
 } catch (Exception $e) {
-    echo 'Exception when calling AccessesApi->getAvailableCategory: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActorsApi->attachProductToActor: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,12 +89,10 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessesApi* | [**getAvailableCategory**](docs/Api/AccessesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
-*AccessesApi* | [**getCustomerHasAccessToProduct**](docs/Api/AccessesApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
-*AccessesApi* | [**getCustomerHasAccessToVideo**](docs/Api/AccessesApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
-*AccessesApi* | [**getProductAvailability**](docs/Api/AccessesApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
+*ActorsApi* | [**attachProductToActor**](docs/Api/ActorsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
 *ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
 *ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
+*ActorsApi* | [**detachProductFromActor**](docs/Api/ActorsApi.md#detachproductfromactor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 *ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
 *ActorsApi* | [**getActorProducts**](docs/Api/ActorsApi.md#getactorproducts) | **GET** /actors/{actor_id}/products | 
 *ActorsApi* | [**getActors**](docs/Api/ActorsApi.md#getactors) | **GET** /actors | 
@@ -176,10 +173,13 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
+*DirectorsApi* | [**attachProductToDirector**](docs/Api/DirectorsApi.md#attachproducttodirector) | **POST** /products/{product_id}/directors | 
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
+*DirectorsApi* | [**detachProductFromDirector**](docs/Api/DirectorsApi.md#detachproductfromdirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
 *DirectorsApi* | [**getDirectorProducts**](docs/Api/DirectorsApi.md#getdirectorproducts) | **GET** /directors/{director_id}/products | 
 *DirectorsApi* | [**getDirectors**](docs/Api/DirectorsApi.md#getdirectors) | **GET** /directors | 
@@ -275,10 +275,11 @@ Class | Method | HTTP request | Description
 *ProductAccessesApi* | [**getCustomerAccessesVideos**](docs/Api/ProductAccessesApi.md#getcustomeraccessesvideos) | **GET** /customers/{customer_id}/accesses/videos | 
 *ProductAccessesApi* | [**getProductAccess**](docs/Api/ProductAccessesApi.md#getproductaccess) | **GET** /product-accesses/{product_access_id} | 
 *ProductAccessesApi* | [**getProductAccesses**](docs/Api/ProductAccessesApi.md#getproductaccesses) | **GET** /product-accesses | 
-*ProductAccessesApi* | [**stopSubscription**](docs/Api/ProductAccessesApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
+*ProductAccessesApi* | [**subscribe**](docs/Api/ProductAccessesApi.md#subscribe) | **PUT** /product-accesses/{product_access_id}/subscribe | 
 *ProductAccessesApi* | [**switchSubscription**](docs/Api/ProductAccessesApi.md#switchsubscription) | **PUT** /product-accesses/{product_access_id}/switch | 
 *ProductAccessesApi* | [**switchSubscriptionDelete**](docs/Api/ProductAccessesApi.md#switchsubscriptiondelete) | **DELETE** /product-accesses/{product_access_id}/switch | 
 *ProductAccessesApi* | [**switchSubscriptionPending**](docs/Api/ProductAccessesApi.md#switchsubscriptionpending) | **GET** /product-accesses/{product_access_id}/switch | 
+*ProductAccessesApi* | [**unsubscribe**](docs/Api/ProductAccessesApi.md#unsubscribe) | **PUT** /product-accesses/{product_access_id}/unsubscribe | 
 *ProductAccessesApi* | [**updateProductAccess**](docs/Api/ProductAccessesApi.md#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
 *ProductsApi* | [**attachFeaturesToProduct**](docs/Api/ProductsApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
 *ProductsApi* | [**attachProductToActor**](docs/Api/ProductsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 

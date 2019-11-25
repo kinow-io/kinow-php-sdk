@@ -4,14 +4,60 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
 [**createActor**](#createActor) | **POST** /actors | 
 [**deleteActor**](#deleteActor) | **DELETE** /actors/{actor_id} | 
+[**detachProductFromActor**](#detachProductFromActor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**getActor**](#getActor) | **GET** /actors/{actor_id} | 
 [**getActorProducts**](#getActorProducts) | **GET** /actors/{actor_id}/products | 
 [**getActors**](#getActors) | **GET** /actors | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
 [**updateActor**](#updateActor) | **PUT** /actors/{actor_id} | 
 
+
+## **attachProductToActor**
+> attachProductToActor($product_id, $actor_id)
+
+
+
+Attach product to actor
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to attach
+
+try {
+    $api_instance->attachProductToActor($product_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->attachProductToActor: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **createActor**
 > \Kaemo\Client\Model\Actor createActor($body)
@@ -84,6 +130,50 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachProductFromActor**
+> detachProductFromActor($product_id, $actor_id)
+
+
+
+Detach product from actor
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to detach
+
+try {
+    $api_instance->detachProductFromActor($product_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->detachProductFromActor: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
 
 ### Return type
 

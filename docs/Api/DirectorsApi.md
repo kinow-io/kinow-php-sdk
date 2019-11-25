@@ -4,14 +4,60 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachProductToDirector**](#attachProductToDirector) | **POST** /products/{product_id}/directors | 
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
+[**detachProductFromDirector**](#detachProductFromDirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
 [**getDirectorProducts**](#getDirectorProducts) | **GET** /directors/{director_id}/products | 
 [**getDirectors**](#getDirectors) | **GET** /directors | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
 [**updateDirector**](#updateDirector) | **PUT** /directors/{director_id} | 
 
+
+## **attachProductToDirector**
+> attachProductToDirector($product_id, $director_id)
+
+
+
+Attach product to director
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to attach
+
+try {
+    $api_instance->attachProductToDirector($product_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->attachProductToDirector: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **createDirector**
 > \Kaemo\Client\Model\Director createDirector($body)
@@ -84,6 +130,50 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachProductFromDirector**
+> detachProductFromDirector($product_id, $director_id)
+
+
+
+Detach product from director
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to detach
+
+try {
+    $api_instance->detachProductFromDirector($product_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->detachProductFromDirector: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to detach |
 
 ### Return type
 

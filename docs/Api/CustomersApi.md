@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+[**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 [**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 
@@ -968,6 +969,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **stopSubscription**
+> stopSubscription($customer_id, $product_access_id)
+
+
+
+Unsubcribe an Access recurring payment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to unsubscribe
+$product_access_id = "product_access_id_example"; // string | Product access ID to unsubscribe from
+
+try {
+    $api_instance->stopSubscription($customer_id, $product_access_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->stopSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to unsubscribe |
+ **product_access_id** | **string**| Product access ID to unsubscribe from |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
