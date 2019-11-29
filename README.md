@@ -173,6 +173,8 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*CustomersApi* | [**getPrepaymentBalances**](docs/Api/CustomersApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+*CustomersApi* | [**getPrepaymentOperations**](docs/Api/CustomersApi.md#getprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
@@ -269,6 +271,13 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*PrepaymentsApi* | [**getPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+*PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus | 
+*PrepaymentsApi* | [**getPrepaymentBonus_0**](docs/Api/PrepaymentsApi.md#getprepaymentbonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+*PrepaymentsApi* | [**getPrepaymentOperation**](docs/Api/PrepaymentsApi.md#getprepaymentoperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
+*PrepaymentsApi* | [**getPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
+*PrepaymentsApi* | [**getPrepaymentRecharge**](docs/Api/PrepaymentsApi.md#getprepaymentrecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
+*PrepaymentsApi* | [**getPrepaymentRecharges**](docs/Api/PrepaymentsApi.md#getprepaymentrecharges) | **GET** /prepayment/recharges | 
 *ProductAccessesApi* | [**createProductAccess**](docs/Api/ProductAccessesApi.md#createproductaccess) | **POST** /product-accesses | 
 *ProductAccessesApi* | [**deleteProductAccess**](docs/Api/ProductAccessesApi.md#deleteproductaccess) | **DELETE** /product-accesses/{product_access_id} | 
 *ProductAccessesApi* | [**getCustomerAccessesSubscriptions**](docs/Api/ProductAccessesApi.md#getcustomeraccessessubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
@@ -438,6 +447,13 @@ Class | Method | HTTP request | Description
  - [PaymentModules](docs/Model/PaymentModules.md)
  - [PaymentUrl](docs/Model/PaymentUrl.md)
  - [PlayerConfiguration](docs/Model/PlayerConfiguration.md)
+ - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
+ - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
+ - [PrepaymentBonus1](docs/Model/PrepaymentBonus1.md)
+ - [PrepaymentOperation](docs/Model/PrepaymentOperation.md)
+ - [PrepaymentOperations](docs/Model/PrepaymentOperations.md)
+ - [PrepaymentRecharge](docs/Model/PrepaymentRecharge.md)
+ - [PrepaymentRecharges](docs/Model/PrepaymentRecharges.md)
  - [Product](docs/Model/Product.md)
  - [ProductAccess](docs/Model/ProductAccess.md)
  - [ProductAttribute](docs/Model/ProductAttribute.md)
