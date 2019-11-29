@@ -4,7 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getPrepaymentBonus**](#getPrepaymentBonus) | **GET** /prepayment/bonus | 
 [**getPrepaymentBonus_0**](#getPrepaymentBonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
 [**getPrepaymentOperation**](#getPrepaymentOperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 ## **getPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance getPrepaymentBalances($customer_id, $type)
+> \Kaemo\Client\Model\PrepaymentBalance[] getPrepaymentBalances($customer_id)
 
 
 
@@ -27,10 +27,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\PrepaymentsApi();
 $customer_id = 789; // int | Customer ID to fetch
-$type = "type_example"; // string | PrepaymentBalance type to fetch (currency or credit)
 
 try {
-    $result = $api_instance->getPrepaymentBalances($customer_id, $type);
+    $result = $api_instance->getPrepaymentBalances($customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PrepaymentsApi->getPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
@@ -43,11 +42,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **type** | **string**| PrepaymentBalance type to fetch (currency or credit) |
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBalance**](#PrepaymentBalance)
+[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 

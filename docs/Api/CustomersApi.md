@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
-[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
@@ -982,7 +982,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance getPrepaymentBalances($customer_id, $type)
+> \Kaemo\Client\Model\PrepaymentBalance[] getPrepaymentBalances($customer_id)
 
 
 
@@ -995,10 +995,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$type = "type_example"; // string | PrepaymentBalance type to fetch (currency or credit)
 
 try {
-    $result = $api_instance->getPrepaymentBalances($customer_id, $type);
+    $result = $api_instance->getPrepaymentBalances($customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
@@ -1011,11 +1010,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **type** | **string**| PrepaymentBalance type to fetch (currency or credit) |
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBalance**](#PrepaymentBalance)
+[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 

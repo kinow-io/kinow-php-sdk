@@ -173,7 +173,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
-*CustomersApi* | [**getPrepaymentBalances**](docs/Api/CustomersApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+*CustomersApi* | [**getPrepaymentBalances**](docs/Api/CustomersApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *CustomersApi* | [**getPrepaymentOperations**](docs/Api/CustomersApi.md#getprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
@@ -271,7 +271,7 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
-*PrepaymentsApi* | [**getPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance/{type} | 
+*PrepaymentsApi* | [**getPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus | 
 *PrepaymentsApi* | [**getPrepaymentBonus_0**](docs/Api/PrepaymentsApi.md#getprepaymentbonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
 *PrepaymentsApi* | [**getPrepaymentOperation**](docs/Api/PrepaymentsApi.md#getprepaymentoperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
