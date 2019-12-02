@@ -21,12 +21,12 @@ Method | HTTP request | Description
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
+[**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
+[**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
-[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
-[**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 [**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
@@ -797,6 +797,98 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCustomerPrepaymentBalances**
+> \Kaemo\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
+
+
+
+Get PrepaymentBalances list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+
+try {
+    $result = $api_instance->getCustomerPrepaymentBalances($customer_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerPrepaymentOperations**
+> \Kaemo\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+
+
+
+Get PrepaymentOperations list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+$type = "type_example"; // string | 
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerPrepaymentOperations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **type** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCustomers**
 > \Kaemo\Client\Model\Customers getCustomers($page, $per_page, $filters, $sort_by, $sort_direction)
 
@@ -971,98 +1063,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance[] getPrepaymentBalances($customer_id)
-
-
-
-Get PrepaymentBalances list
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Customer ID to fetch
-
-try {
-    $result = $api_instance->getPrepaymentBalances($customer_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Customer ID to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPrepaymentOperations**
-> \Kaemo\Client\Model\PrepaymentOperations getPrepaymentOperations($customer_id, $type, $page, $per_page)
-
-
-
-Get PrepaymentOperations list
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$customer_id = 789; // int | Customer ID to fetch
-$type = "type_example"; // string | PrepaymentOperation type to fetch (currency or credit)
-$page = 789; // int | 
-$per_page = 789; // int | 
-
-try {
-    $result = $api_instance->getPrepaymentOperations($customer_id, $type, $page, $per_page);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getPrepaymentOperations: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Customer ID to fetch |
- **type** | **string**| PrepaymentOperation type to fetch (currency or credit) |
- **page** | **int**|  | [optional]
- **per_page** | **int**|  | [optional]
-
-### Return type
-
-[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
 
 ### Authorization
 

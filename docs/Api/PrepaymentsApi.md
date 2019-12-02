@@ -4,17 +4,18 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPrepaymentBalances**](#getPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
+[**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
+[**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 [**getPrepaymentBonus**](#getPrepaymentBonus) | **GET** /prepayment/bonus | 
 [**getPrepaymentBonus_0**](#getPrepaymentBonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
 [**getPrepaymentOperation**](#getPrepaymentOperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
-[**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operation/{type} | 
+[**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /prepayment/operations | 
 [**getPrepaymentRecharge**](#getPrepaymentRecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
 [**getPrepaymentRecharges**](#getPrepaymentRecharges) | **GET** /prepayment/recharges | 
 
 
-## **getPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance[] getPrepaymentBalances($customer_id)
+## **getCustomerPrepaymentBalances**
+> \Kaemo\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
 
 
 
@@ -29,10 +30,10 @@ $api_instance = new Kaemo\Client\Api\PrepaymentsApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
-    $result = $api_instance->getPrepaymentBalances($customer_id);
+    $result = $api_instance->getCustomerPrepaymentBalances($customer_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PrepaymentsApi->getPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PrepaymentsApi->getCustomerPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -46,6 +47,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerPrepaymentOperations**
+> \Kaemo\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+
+
+
+Get PrepaymentOperations list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$type = "type_example"; // string | 
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PrepaymentsApi->getCustomerPrepaymentOperations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **type** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
 
 ### Authorization
 
@@ -188,7 +238,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentOperations**
-> \Kaemo\Client\Model\PrepaymentOperations getPrepaymentOperations($customer_id, $type, $page, $per_page)
+> \Kaemo\Client\Model\PrepaymentOperations getPrepaymentOperations($type, $page, $per_page)
 
 
 
@@ -200,13 +250,12 @@ Get PrepaymentOperations list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\PrepaymentsApi();
-$customer_id = 789; // int | Customer ID to fetch
-$type = "type_example"; // string | PrepaymentOperation type to fetch (currency or credit)
+$type = "type_example"; // string | 
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getPrepaymentOperations($customer_id, $type, $page, $per_page);
+    $result = $api_instance->getPrepaymentOperations($type, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PrepaymentsApi->getPrepaymentOperations: ', $e->getMessage(), PHP_EOL;
@@ -218,8 +267,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **int**| Customer ID to fetch |
- **type** | **string**| PrepaymentOperation type to fetch (currency or credit) |
+ **type** | **string**|  | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
