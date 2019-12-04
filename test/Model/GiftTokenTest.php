@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentDetailsTest
+ * GiftTokenTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kaemo\Client;
 
 /**
- * PaymentDetailsTest Class Doc Comment
+ * GiftTokenTest Class Doc Comment
  *
  * @category    Class */
-// * @description PaymentDetails
+// * @description GiftToken
 /**
  * @package     Kaemo\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
+class GiftTokenTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,25 +75,17 @@ class PaymentDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PaymentDetails"
+     * Test "GiftToken"
      */
-    public function testPaymentDetails()
+    public function testGiftToken()
     {
 
     }
 
     /**
-     * Test attribute "identifier"
+     * Test attribute "token"
      */
-    public function testPropertyIdentifier()
-    {
-
-    }
-
-    /**
-     * Test attribute "metadata"
-     */
-    public function testPropertyMetadata()
+    public function testPropertyToken()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CMSPageLists
+ * GiftToken
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kaemo\Client\Model;
 use \ArrayAccess;
 
 /**
- * CMSPageLists Class Doc Comment
+ * GiftToken Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CMSPageLists implements ArrayAccess
+class GiftToken implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,14 @@ class CMSPageLists implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CMSPageLists';
+    protected static $swaggerModelName = 'GiftToken';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pagination' => '\Kaemo\Client\Model\Pagination',
-        'data' => '\Kaemo\Client\Model\CMSPage[]'
+        'token' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +68,7 @@ class CMSPageLists implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'pagination' => 'pagination',
-        'data' => 'data'
+        'token' => 'token'
     ];
 
 
@@ -79,8 +77,7 @@ class CMSPageLists implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'pagination' => 'setPagination',
-        'data' => 'setData'
+        'token' => 'setToken'
     ];
 
 
@@ -89,8 +86,7 @@ class CMSPageLists implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'pagination' => 'getPagination',
-        'data' => 'getData'
+        'token' => 'getToken'
     ];
 
     public static function attributeMap()
@@ -124,8 +120,7 @@ class CMSPageLists implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['pagination'] = isset($data['pagination']) ? $data['pagination'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
     }
 
     /**
@@ -152,43 +147,22 @@ class CMSPageLists implements ArrayAccess
 
 
     /**
-     * Gets pagination
-     * @return \Kaemo\Client\Model\Pagination
+     * Gets token
+     * @return string
      */
-    public function getPagination()
+    public function getToken()
     {
-        return $this->container['pagination'];
+        return $this->container['token'];
     }
 
     /**
-     * Sets pagination
-     * @param \Kaemo\Client\Model\Pagination $pagination
+     * Sets token
+     * @param string $token 
      * @return $this
      */
-    public function setPagination($pagination)
+    public function setToken($token)
     {
-        $this->container['pagination'] = $pagination;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     * @return \Kaemo\Client\Model\CMSPage[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \Kaemo\Client\Model\CMSPage[] $data
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
+        $this->container['token'] = $token;
 
         return $this;
     }

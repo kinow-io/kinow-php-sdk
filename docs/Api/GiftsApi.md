@@ -276,7 +276,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGiftToken**
-> getGiftToken($gift_id)
+> \Kaemo\Client\Model\GiftToken getGiftToken($gift_id)
 
 
 
@@ -291,7 +291,8 @@ $api_instance = new Kaemo\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 
 try {
-    $api_instance->getGiftToken($gift_id);
+    $result = $api_instance->getGiftToken($gift_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GiftsApi->getGiftToken: ', $e->getMessage(), PHP_EOL;
 }
@@ -306,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Kaemo\Client\Model\GiftToken**](#GiftToken)
 
 ### Authorization
 

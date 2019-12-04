@@ -419,6 +419,7 @@ Class | Method | HTTP request | Description
  - [Geoloc](docs/Model/Geoloc.md)
  - [Geolocs](docs/Model/Geolocs.md)
  - [Gift](docs/Model/Gift.md)
+ - [GiftToken](docs/Model/GiftToken.md)
  - [Gifts](docs/Model/Gifts.md)
  - [Group](docs/Model/Group.md)
  - [Groups](docs/Model/Groups.md)
