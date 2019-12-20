@@ -75,7 +75,7 @@ Create gift
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GiftsApi();
-$body = new \Kaemo\Client\Model\Gift(); // \Kaemo\Client\Model\Gift | 
+$body = new \Kaemo\Client\Model\Gift1(); // \Kaemo\Client\Model\Gift1 | Gift settings
 
 try {
     $result = $api_instance->createGift($body);
@@ -90,7 +90,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Gift**](#\Kaemo\Client\Model\Gift)|  |
+ **body** | [**\Kaemo\Client\Model\Gift1**](#\Kaemo\Client\Model\Gift1)| Gift settings |
 
 ### Return type
 
@@ -417,7 +417,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
-$body = new \Kaemo\Client\Model\Gift(); // \Kaemo\Client\Model\Gift | 
+$body = new \Kaemo\Client\Model\Gift2(); // \Kaemo\Client\Model\Gift2 | Gift settings
 
 try {
     $result = $api_instance->updateGift($gift_id, $body);
@@ -433,7 +433,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
- **body** | [**\Kaemo\Client\Model\Gift**](#\Kaemo\Client\Model\Gift)|  |
+ **body** | [**\Kaemo\Client\Model\Gift2**](#\Kaemo\Client\Model\Gift2)| Gift settings |
 
 ### Return type
 

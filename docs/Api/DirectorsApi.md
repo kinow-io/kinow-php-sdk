@@ -7,11 +7,12 @@ Method | HTTP request | Description
 [**attachProductToDirector**](#attachProductToDirector) | **POST** /products/{product_id}/directors | 
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
-[**detachProductFromDirector**](#detachProductFromDirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
 [**getDirectorProducts**](#getDirectorProducts) | **GET** /directors/{director_id}/products | 
+[**getDirectorProductsRole**](#getDirectorProductsRole) | **GET** /directors/{director_id}/products-role | 
 [**getDirectors**](#getDirectors) | **GET** /directors | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
+[**getProductDirectorsRole**](#getProductDirectorsRole) | **GET** /products/{product_id}/directors-role | 
 [**updateDirector**](#updateDirector) | **PUT** /directors/{director_id} | 
 
 
@@ -72,7 +73,7 @@ Create new director
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
-$body = new \Kaemo\Client\Model\Director(); // \Kaemo\Client\Model\Director | 
+$body = new \Kaemo\Client\Model\Director1(); // \Kaemo\Client\Model\Director1 | Directory settings
 
 try {
     $result = $api_instance->createDirector($body);
@@ -87,7 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Director**](#\Kaemo\Client\Model\Director)|  |
+ **body** | [**\Kaemo\Client\Model\Director1**](#\Kaemo\Client\Model\Director1)| Directory settings |
 
 ### Return type
 
@@ -130,50 +131,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**|  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **detachProductFromDirector**
-> detachProductFromDirector($product_id, $director_id)
-
-
-
-Detach product from director
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
-$product_id = 789; // int | Product ID to fetch
-$director_id = 789; // int | Director ID to detach
-
-try {
-    $api_instance->detachProductFromDirector($product_id, $director_id);
-} catch (Exception $e) {
-    echo 'Exception when calling DirectorsApi->detachProductFromDirector: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **director_id** | **int**| Director ID to detach |
 
 ### Return type
 
@@ -290,6 +247,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getDirectorProductsRole**
+> \Kaemo\Client\Model\Products getDirectorProductsRole($director_id, $page, $per_page)
+
+
+
+Get Products linked to Product with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$director_id = 789; // int | Director ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getDirectorProductsRole($director_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->getDirectorProductsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **director_id** | **int**| Director ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Products**](#Products)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getDirectors**
 > \Kaemo\Client\Model\Directors getDirectors($page, $per_page, $image_type)
 
@@ -386,6 +390,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getProductDirectorsRole**
+> \Kaemo\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+
+
+
+Get Directors attached to Product with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$product_id = 789; // int | Product ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getProductDirectorsRole($product_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->getProductDirectorsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Directors**](#Directors)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **updateDirector**
 > updateDirector($director_id, $body)
 
@@ -400,7 +451,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
 $director_id = 56; // int | 
-$body = new \Kaemo\Client\Model\Director(); // \Kaemo\Client\Model\Director | 
+$body = new \Kaemo\Client\Model\Director2(); // \Kaemo\Client\Model\Director2 | Directory settings
 
 try {
     $api_instance->updateDirector($director_id, $body);
@@ -415,7 +466,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**|  |
- **body** | [**\Kaemo\Client\Model\Director**](#\Kaemo\Client\Model\Director)|  |
+ **body** | [**\Kaemo\Client\Model\Director2**](#\Kaemo\Client\Model\Director2)| Directory settings |
 
 ### Return type
 

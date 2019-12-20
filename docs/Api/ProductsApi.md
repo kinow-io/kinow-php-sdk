@@ -13,19 +13,20 @@ Method | HTTP request | Description
 [**createProduct**](#createProduct) | **POST** /products | 
 [**deleteProduct**](#deleteProduct) | **DELETE** /products/{product_id} | 
 [**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
-[**detachProductFromActor**](#detachProductFromActor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**detachProductFromCategory**](#detachProductFromCategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
-[**detachProductFromDirector**](#detachProductFromDirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 [**detachProductFromGroup**](#detachProductFromGroup) | **DELETE** /products/{product_id}/groups/{group_id} | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+[**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
 [**getProduct**](#getProduct) | **GET** /products/{product_id} | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
+[**getProductActorsRole**](#getProductActorsRole) | **GET** /products/{product_id}/actors-role | 
 [**getProductAttributes**](#getProductAttributes) | **GET** /products/{product_id}/attributes | 
 [**getProductAvailability**](#getProductAvailability) | **GET** /products/{product_id}/access | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
 [**getProductCoverImage**](#getProductCoverImage) | **GET** /products/{product_id}/cover | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
+[**getProductDirectorsRole**](#getProductDirectorsRole) | **GET** /products/{product_id}/directors-role | 
 [**getProductExtracts**](#getProductExtracts) | **GET** /products/{product_id}/extracts | 
 [**getProductFeatures**](#getProductFeatures) | **GET** /products/{product_id}/features | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
@@ -435,50 +436,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **detachProductFromActor**
-> detachProductFromActor($product_id, $actor_id)
-
-
-
-Detach product from actor
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
-$actor_id = 789; // int | Actor ID to detach
-
-try {
-    $api_instance->detachProductFromActor($product_id, $actor_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductsApi->detachProductFromActor: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **actor_id** | **int**| Actor ID to detach |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **detachProductFromCategory**
 > detachProductFromCategory($product_id, $category_id)
 
@@ -509,50 +466,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
  **category_id** | **int**| Category ID to detach |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **detachProductFromDirector**
-> detachProductFromDirector($product_id, $director_id)
-
-
-
-Detach product from director
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
-$director_id = 789; // int | Director ID to detach
-
-try {
-    $api_instance->detachProductFromDirector($product_id, $director_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductsApi->detachProductFromDirector: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **director_id** | **int**| Director ID to detach |
 
 ### Return type
 
@@ -712,6 +625,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCustomerHasAccessToProducts**
+> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $ip_address, $body)
+
+
+
+Get customer access to Products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$ip_address = "ip_address_example"; // string | IP address
+$body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $ip_address, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getCustomerHasAccessToProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **ip_address** | **string**| IP address |
+ **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kaemo\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getProduct**
 > \Kaemo\Client\Model\Product getProduct($product_id)
 
@@ -804,12 +764,59 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getProductActorsRole**
+> \Kaemo\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+
+
+
+Get Actors attached to Product with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getProductActorsRole($product_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getProductActorsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Actors**](#Actors)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getProductAttributes**
 > \Kaemo\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
 
 
 
-Get product attributes. Mandatory to add product in cart: allows to buy product for download, streaming or both
+Get Product attributes. Mandatory to add TVOD Product in cart.
 
 ### Example
 ```php
@@ -1038,8 +1045,55 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getProductDirectorsRole**
+> \Kaemo\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+
+
+
+Get Directors attached to Product with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getProductDirectorsRole($product_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getProductDirectorsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Directors**](#Directors)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getProductExtracts**
-> \Kaemo\Client\Model\Videos getProductExtracts($product_id, $page, $per_page)
+> \Kaemo\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -1074,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -1481,7 +1535,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos1 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kaemo\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -1524,7 +1578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kaemo\Client\Model\Videos2**](#Videos2)
 
 ### Authorization
 

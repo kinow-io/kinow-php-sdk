@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCategory**](#createCategory) | **POST** /categories | 
+[**deleteCategory**](#deleteCategory) | **DELETE** /categories/{category_id} | 
 [**getAvailableCategory**](#getAvailableCategory) | **GET** /categories-accesses/{category_id} | 
 [**getCategories**](#getCategories) | **GET** /categories | 
 [**getCategoriesFromCategory**](#getCategoriesFromCategory) | **GET** /categories/{category_id}/categories | 
@@ -14,6 +15,8 @@ Method | HTTP request | Description
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
+[**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
+[**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
 
 
 ## **createCategory**
@@ -49,6 +52,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Category**](#Category)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **deleteCategory**
+> deleteCategory($category_id)
+
+
+
+Delete Category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+
+try {
+    $api_instance->deleteCategory($category_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->deleteCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -492,6 +537,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Categories**](#Categories)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideosFromCategories**
+> \Kaemo\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get Videos attached to Categories
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getVideosFromCategories($page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getVideosFromCategories: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Videos**](#Videos)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideosFromCategory**
+> \Kaemo\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get Videos attached to Category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getVideosFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Videos**](#Videos)
 
 ### Authorization
 

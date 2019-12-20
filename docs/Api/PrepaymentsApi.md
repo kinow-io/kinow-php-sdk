@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
-[**getPrepaymentBonus**](#getPrepaymentBonus) | **GET** /prepayment/bonus | 
-[**getPrepaymentBonus_0**](#getPrepaymentBonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+[**getPrepaymentBonus**](#getPrepaymentBonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+[**getPrepaymentBonusList**](#getPrepaymentBonusList) | **GET** /prepayment/bonus | 
 [**getPrepaymentOperation**](#getPrepaymentOperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
 [**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /prepayment/operations | 
 [**getPrepaymentRecharge**](#getPrepaymentRecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
@@ -107,7 +107,50 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentBonus**
-> \Kaemo\Client\Model\PrepaymentBonus1 getPrepaymentBonus($page, $per_page)
+> \Kaemo\Client\Model\PrepaymentBonus getPrepaymentBonus($prepayment_bonus_id)
+
+
+
+Get PrepaymentBonus
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$prepayment_bonus_id = 789; // int | PrepaymentBonus ID to fetch
+
+try {
+    $result = $api_instance->getPrepaymentBonus($prepayment_bonus_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PrepaymentsApi->getPrepaymentBonus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prepayment_bonus_id** | **int**| PrepaymentBonus ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPrepaymentBonusList**
+> \Kaemo\Client\Model\PrepaymentBonus1 getPrepaymentBonusList($page, $per_page)
 
 
 
@@ -123,10 +166,10 @@ $page = 789; // int |
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getPrepaymentBonus($page, $per_page);
+    $result = $api_instance->getPrepaymentBonusList($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PrepaymentsApi->getPrepaymentBonus: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PrepaymentsApi->getPrepaymentBonusList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -141,49 +184,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PrepaymentBonus1**](#PrepaymentBonus1)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getPrepaymentBonus_0**
-> \Kaemo\Client\Model\PrepaymentBonus getPrepaymentBonus_0($prepayment_bonus_id)
-
-
-
-Get PrepaymentBonus
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
-$prepayment_bonus_id = 789; // int | PrepaymentBonus ID to fetch
-
-try {
-    $result = $api_instance->getPrepaymentBonus_0($prepayment_bonus_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PrepaymentsApi->getPrepaymentBonus_0: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **prepayment_bonus_id** | **int**| PrepaymentBonus ID to fetch |
-
-### Return type
-
-[**\Kaemo\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
 
 ### Authorization
 

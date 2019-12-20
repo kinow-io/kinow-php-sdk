@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerThreads**
-> \Kaemo\Client\Model\CustomerThread1 getCustomerThreads($page, $per_page, $date_add, $date_add_operator)
+> \Kaemo\Client\Model\CustomerThreadList getCustomerThreads($page, $per_page, $date_add, $date_add_operator)
 
 
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerThread1**](#CustomerThread1)
+[**\Kaemo\Client\Model\CustomerThreadList**](#CustomerThreadList)
 
 ### Authorization
 

@@ -7,11 +7,12 @@ Method | HTTP request | Description
 [**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
 [**createActor**](#createActor) | **POST** /actors | 
 [**deleteActor**](#deleteActor) | **DELETE** /actors/{actor_id} | 
-[**detachProductFromActor**](#detachProductFromActor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**getActor**](#getActor) | **GET** /actors/{actor_id} | 
 [**getActorProducts**](#getActorProducts) | **GET** /actors/{actor_id}/products | 
+[**getActorProductsRole**](#getActorProductsRole) | **GET** /actors/{actor_id}/products-role | 
 [**getActors**](#getActors) | **GET** /actors | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
+[**getProductActorsRole**](#getProductActorsRole) | **GET** /products/{product_id}/actors-role | 
 [**updateActor**](#updateActor) | **PUT** /actors/{actor_id} | 
 
 
@@ -72,7 +73,7 @@ Create new actor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ActorsApi();
-$body = new \Kaemo\Client\Model\Actor(); // \Kaemo\Client\Model\Actor | 
+$body = new \Kaemo\Client\Model\Actor1(); // \Kaemo\Client\Model\Actor1 | Actor settings
 
 try {
     $result = $api_instance->createActor($body);
@@ -87,7 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Actor**](#\Kaemo\Client\Model\Actor)|  |
+ **body** | [**\Kaemo\Client\Model\Actor1**](#\Kaemo\Client\Model\Actor1)| Actor settings |
 
 ### Return type
 
@@ -130,50 +131,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **detachProductFromActor**
-> detachProductFromActor($product_id, $actor_id)
-
-
-
-Detach product from actor
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ActorsApi();
-$product_id = 789; // int | Product ID to fetch
-$actor_id = 789; // int | Actor ID to detach
-
-try {
-    $api_instance->detachProductFromActor($product_id, $actor_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ActorsApi->detachProductFromActor: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **actor_id** | **int**| Actor ID to detach |
 
 ### Return type
 
@@ -290,6 +247,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getActorProductsRole**
+> \Kaemo\Client\Model\Products getActorProductsRole($actor_id, $page, $per_page)
+
+
+
+Get Products linked to Actor with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$actor_id = 789; // int | Actor ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getActorProductsRole($actor_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->getActorProductsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **actor_id** | **int**| Actor ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Products**](#Products)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getActors**
 > \Kaemo\Client\Model\Actors getActors($page, $per_page, $image_type)
 
@@ -386,6 +390,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getProductActorsRole**
+> \Kaemo\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+
+
+
+Get Actors attached to Product with their role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$product_id = 789; // int | Product ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getProductActorsRole($product_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->getProductActorsRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Actors**](#Actors)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **updateActor**
 > updateActor($actor_id, $body)
 
@@ -400,7 +451,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ActorsApi();
 $actor_id = 56; // int | 
-$body = new \Kaemo\Client\Model\Actor(); // \Kaemo\Client\Model\Actor | 
+$body = new \Kaemo\Client\Model\Actor2(); // \Kaemo\Client\Model\Actor2 | Actor settings
 
 try {
     $api_instance->updateActor($actor_id, $body);
@@ -415,7 +466,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
- **body** | [**\Kaemo\Client\Model\Actor**](#\Kaemo\Client\Model\Actor)|  |
+ **body** | [**\Kaemo\Client\Model\Actor2**](#\Kaemo\Client\Model\Actor2)| Actor settings |
 
 ### Return type
 

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**createVideo**](#createVideo) | **POST** /videos | 
 [**deleteVideo**](#deleteVideo) | **DELETE** /videos/{video_id} | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+[**getCustomerHasAccessToVideos**](#getCustomerHasAccessToVideos) | **POST** /customers/{customer_id}/videos/has-access | 
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 [**getVideo**](#getVideo) | **GET** /videos/{video_id} | 
 [**getVideoAccess**](#getVideoAccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
@@ -22,6 +23,8 @@ Method | HTTP request | Description
 [**getVideoSubtitles**](#getVideoSubtitles) | **GET** /videos/{video_id}/subtitles | 
 [**getVideoViews**](#getVideoViews) | **GET** /videos/{video_id}/views | 
 [**getVideos**](#getVideos) | **GET** /videos | 
+[**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
+[**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
 [**getVideosFromProduct**](#getVideosFromProduct) | **GET** /products/{product_id}/videos | 
 [**setVideoGeolocation**](#setVideoGeolocation) | **PUT** /videos/{video_id}/geolocations | 
 [**updateVideo**](#updateVideo) | **PUT** /videos/{video_id} | 
@@ -278,6 +281,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerHasAccessToVideos**
+> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $ip_address, $body)
+
+
+
+Get customer access to Videos
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$customer_id = 789; // int | Customer ID to fetch
+$ip_address = "ip_address_example"; // string | IP address
+$body = new \Kaemo\Client\Model\VideoIDList(); // \Kaemo\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $ip_address, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getCustomerHasAccessToVideos: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **ip_address** | **string**| IP address |
+ **body** | [**\Kaemo\Client\Model\VideoIDList**](#\Kaemo\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kaemo\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 
@@ -790,7 +840,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideos**
-> \Kaemo\Client\Model\Videos1 getVideos($page, $per_page, $features, $filters, $ip)
+> \Kaemo\Client\Model\Videos2 getVideos($page, $per_page, $features, $filters, $ip)
 
 
 
@@ -829,7 +879,107 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kaemo\Client\Model\Videos2**](#Videos2)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideosFromCategories**
+> \Kaemo\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get Videos attached to Categories
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getVideosFromCategories($page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getVideosFromCategories: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Videos**](#Videos)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideosFromCategory**
+> \Kaemo\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get Videos attached to Category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getVideosFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Videos**](#Videos)
 
 ### Authorization
 
@@ -841,7 +991,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos1 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kaemo\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -884,7 +1034,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kaemo\Client\Model\Videos2**](#Videos2)
 
 ### Authorization
 

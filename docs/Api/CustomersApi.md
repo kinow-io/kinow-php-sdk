@@ -19,7 +19,9 @@ Method | HTTP request | Description
 [**getCustomerCurrentViews**](#getCustomerCurrentViews) | **GET** /customers/{customer_id}/current-views | 
 [**getCustomerGroups**](#getCustomerGroups) | **GET** /customers/{customer_id}/groups | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+[**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+[**getCustomerHasAccessToVideos**](#getCustomerHasAccessToVideos) | **POST** /customers/{customer_id}/videos/has-access | 
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
 [**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
@@ -706,6 +708,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCustomerHasAccessToProducts**
+> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $ip_address, $body)
+
+
+
+Get customer access to Products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+$ip_address = "ip_address_example"; // string | IP address
+$body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $ip_address, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerHasAccessToProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **ip_address** | **string**| IP address |
+ **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kaemo\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCustomerHasAccessToVideo**
 > getCustomerHasAccessToVideo($customer_id, $video_id)
 
@@ -740,6 +789,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerHasAccessToVideos**
+> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $ip_address, $body)
+
+
+
+Get customer access to Videos
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+$ip_address = "ip_address_example"; // string | IP address
+$body = new \Kaemo\Client\Model\VideoIDList(); // \Kaemo\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $ip_address, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerHasAccessToVideos: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **ip_address** | **string**| IP address |
+ **body** | [**\Kaemo\Client\Model\VideoIDList**](#\Kaemo\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kaemo\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 

@@ -35,7 +35,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to add to cart
-$product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
+$product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
 $switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
 
 try {
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **product_id** | **int**| Product ID to add to cart |
- **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
+ **product_attribute_id** | **int**| ProductAttribute ID, required to add product to cart if product is not a subscription | [optional]
  **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
 
 ### Return type
@@ -171,7 +171,7 @@ Create new cart
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
-$body = new \Kaemo\Client\Model\CartBody(); // \Kaemo\Client\Model\CartBody | Create cart object
+$body = new \Kaemo\Client\Model\Cart1(); // \Kaemo\Client\Model\Cart1 | Cart settings
 
 try {
     $result = $api_instance->createCart($body);
@@ -186,7 +186,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CartBody**](#\Kaemo\Client\Model\CartBody)| Create cart object | [optional]
+ **body** | [**\Kaemo\Client\Model\Cart1**](#\Kaemo\Client\Model\Cart1)| Cart settings |
 
 ### Return type
 
@@ -532,7 +532,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart id
-$body = new \Kaemo\Client\Model\Cart(); // \Kaemo\Client\Model\Cart | Cart body
+$body = new \Kaemo\Client\Model\Cart2(); // \Kaemo\Client\Model\Cart2 | Cart settings
 
 try {
     $result = $api_instance->updateCart($cart_id, $body);
@@ -548,7 +548,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart id |
- **body** | [**\Kaemo\Client\Model\Cart**](#\Kaemo\Client\Model\Cart)| Cart body |
+ **body** | [**\Kaemo\Client\Model\Cart2**](#\Kaemo\Client\Model\Cart2)| Cart settings |
 
 ### Return type
 

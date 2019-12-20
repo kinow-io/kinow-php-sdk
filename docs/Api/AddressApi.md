@@ -65,7 +65,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\AddressApi();
 $address_id = 789; // int | Address ID to update
-$body = new \Kaemo\Client\Model\Address(); // \Kaemo\Client\Model\Address | 
+$body = new \Kaemo\Client\Model\Address1(); // \Kaemo\Client\Model\Address1 | Address settings
 
 try {
     $result = $api_instance->updateAddress($address_id, $body);
@@ -81,7 +81,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| Address ID to update |
- **body** | [**\Kaemo\Client\Model\Address**](#\Kaemo\Client\Model\Address)|  |
+ **body** | [**\Kaemo\Client\Model\Address1**](#\Kaemo\Client\Model\Address1)| Address settings |
 
 ### Return type
 

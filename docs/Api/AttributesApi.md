@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProductAttribute**](#createProductAttribute) | **POST** /attributes | 
 [**getProductAttributes**](#getProductAttributes) | **GET** /products/{product_id}/attributes | 
-[**updateProductAttribute**](#updateProductAttribute) | **PUT** /attributes/{attribute_id} | 
 
 
 ## **createProductAttribute**
@@ -57,7 +56,7 @@ No authorization required
 
 
 
-Get product attributes. Mandatory to add product in cart: allows to buy product for download, streaming or both
+Get Product attributes. Mandatory to add TVOD Product in cart.
 
 ### Example
 ```php
@@ -89,51 +88,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **updateProductAttribute**
-> \Kaemo\Client\Model\ProductAttribute updateProductAttribute($attribute_id, $body)
-
-
-
-Update product attribute
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\AttributesApi();
-$attribute_id = 789; // int | Attribute ID to update
-$body = new \Kaemo\Client\Model\ProductAttributeUpdateRequest(); // \Kaemo\Client\Model\ProductAttributeUpdateRequest | 
-
-try {
-    $result = $api_instance->updateProductAttribute($attribute_id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AttributesApi->updateProductAttribute: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **attribute_id** | **int**| Attribute ID to update |
- **body** | [**\Kaemo\Client\Model\ProductAttributeUpdateRequest**](#\Kaemo\Client\Model\ProductAttributeUpdateRequest)|  |
-
-### Return type
-
-[**\Kaemo\Client\Model\ProductAttribute**](#ProductAttribute)
 
 ### Authorization
 

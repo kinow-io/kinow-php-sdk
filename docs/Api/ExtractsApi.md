@@ -230,7 +230,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtracts**
-> \Kaemo\Client\Model\Videos getExtracts($page, $per_page)
+> \Kaemo\Client\Model\Videos1 getExtracts($page, $per_page)
 
 
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kaemo\Client\Model\Videos getProductExtracts($product_id, $page, $per_page)
+> \Kaemo\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kaemo\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 

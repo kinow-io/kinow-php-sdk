@@ -92,17 +92,17 @@ Class | Method | HTTP request | Description
 *ActorsApi* | [**attachProductToActor**](docs/Api/ActorsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
 *ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
 *ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
-*ActorsApi* | [**detachProductFromActor**](docs/Api/ActorsApi.md#detachproductfromactor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 *ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
 *ActorsApi* | [**getActorProducts**](docs/Api/ActorsApi.md#getactorproducts) | **GET** /actors/{actor_id}/products | 
+*ActorsApi* | [**getActorProductsRole**](docs/Api/ActorsApi.md#getactorproductsrole) | **GET** /actors/{actor_id}/products-role | 
 *ActorsApi* | [**getActors**](docs/Api/ActorsApi.md#getactors) | **GET** /actors | 
 *ActorsApi* | [**getProductActors**](docs/Api/ActorsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
+*ActorsApi* | [**getProductActorsRole**](docs/Api/ActorsApi.md#getproductactorsrole) | **GET** /products/{product_id}/actors-role | 
 *ActorsApi* | [**updateActor**](docs/Api/ActorsApi.md#updateactor) | **PUT** /actors/{actor_id} | 
 *AddressApi* | [**getCustomerAddress**](docs/Api/AddressApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /addresses/{address_id} | 
 *AttributesApi* | [**createProductAttribute**](docs/Api/AttributesApi.md#createproductattribute) | **POST** /attributes | 
 *AttributesApi* | [**getProductAttributes**](docs/Api/AttributesApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
-*AttributesApi* | [**updateProductAttribute**](docs/Api/AttributesApi.md#updateproductattribute) | **PUT** /attributes/{attribute_id} | 
 *BlogCategoriesApi* | [**getBlogCategories**](docs/Api/BlogCategoriesApi.md#getblogcategories) | **GET** /blog-categories | 
 *BlogCategoriesApi* | [**getBlogCategory**](docs/Api/BlogCategoriesApi.md#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
 *BlogPagesApi* | [**getBlogPage**](docs/Api/BlogPagesApi.md#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
@@ -137,6 +137,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CartsApi* | [**validatePayment**](docs/Api/CartsApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
+*CategoriesApi* | [**deleteCategory**](docs/Api/CategoriesApi.md#deletecategory) | **DELETE** /categories/{category_id} | 
 *CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
 *CategoriesApi* | [**getCategoriesFromCategory**](docs/Api/CategoriesApi.md#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
@@ -146,6 +147,8 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
+*CategoriesApi* | [**getVideosFromCategories**](docs/Api/CategoriesApi.md#getvideosfromcategories) | **GET** /categories/videos | 
+*CategoriesApi* | [**getVideosFromCategory**](docs/Api/CategoriesApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
@@ -167,7 +170,9 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerCurrentViews**](docs/Api/CustomersApi.md#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
 *CustomersApi* | [**getCustomerGroups**](docs/Api/CustomersApi.md#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
 *CustomersApi* | [**getCustomerHasAccessToProduct**](docs/Api/CustomersApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+*CustomersApi* | [**getCustomerHasAccessToProducts**](docs/Api/CustomersApi.md#getcustomerhasaccesstoproducts) | **POST** /customers/{customer_id}/products/has-access | 
 *CustomersApi* | [**getCustomerHasAccessToVideo**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+*CustomersApi* | [**getCustomerHasAccessToVideos**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
 *CustomersApi* | [**getCustomerPrepaymentBalances**](docs/Api/CustomersApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *CustomersApi* | [**getCustomerPrepaymentOperations**](docs/Api/CustomersApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
@@ -178,14 +183,18 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
+*DevicesApi* | [**createDevices**](docs/Api/DevicesApi.md#createdevices) | **POST** /devices | 
+*DevicesApi* | [**deleteDevice**](docs/Api/DevicesApi.md#deletedevice) | **DELETE** /devices/{device_id} | 
+*DevicesApi* | [**getCustomerDevices**](docs/Api/DevicesApi.md#getcustomerdevices) | **GET** /devices/{customer_id} | 
 *DirectorsApi* | [**attachProductToDirector**](docs/Api/DirectorsApi.md#attachproducttodirector) | **POST** /products/{product_id}/directors | 
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
-*DirectorsApi* | [**detachProductFromDirector**](docs/Api/DirectorsApi.md#detachproductfromdirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
 *DirectorsApi* | [**getDirectorProducts**](docs/Api/DirectorsApi.md#getdirectorproducts) | **GET** /directors/{director_id}/products | 
+*DirectorsApi* | [**getDirectorProductsRole**](docs/Api/DirectorsApi.md#getdirectorproductsrole) | **GET** /directors/{director_id}/products-role | 
 *DirectorsApi* | [**getDirectors**](docs/Api/DirectorsApi.md#getdirectors) | **GET** /directors | 
 *DirectorsApi* | [**getProductDirectors**](docs/Api/DirectorsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
+*DirectorsApi* | [**getProductDirectorsRole**](docs/Api/DirectorsApi.md#getproductdirectorsrole) | **GET** /products/{product_id}/directors-role | 
 *DirectorsApi* | [**updateDirector**](docs/Api/DirectorsApi.md#updatedirector) | **PUT** /directors/{director_id} | 
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
@@ -273,8 +282,8 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 *PrepaymentsApi* | [**getCustomerPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *PrepaymentsApi* | [**getCustomerPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
-*PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus | 
-*PrepaymentsApi* | [**getPrepaymentBonus_0**](docs/Api/PrepaymentsApi.md#getprepaymentbonus_0) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+*PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+*PrepaymentsApi* | [**getPrepaymentBonusList**](docs/Api/PrepaymentsApi.md#getprepaymentbonuslist) | **GET** /prepayment/bonus | 
 *PrepaymentsApi* | [**getPrepaymentOperation**](docs/Api/PrepaymentsApi.md#getprepaymentoperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
 *PrepaymentsApi* | [**getPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getprepaymentoperations) | **GET** /prepayment/operations | 
 *PrepaymentsApi* | [**getPrepaymentRecharge**](docs/Api/PrepaymentsApi.md#getprepaymentrecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
@@ -300,19 +309,20 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**createProduct**](docs/Api/ProductsApi.md#createproduct) | **POST** /products | 
 *ProductsApi* | [**deleteProduct**](docs/Api/ProductsApi.md#deleteproduct) | **DELETE** /products/{product_id} | 
 *ProductsApi* | [**detachFeatureToProduct**](docs/Api/ProductsApi.md#detachfeaturetoproduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
-*ProductsApi* | [**detachProductFromActor**](docs/Api/ProductsApi.md#detachproductfromactor) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 *ProductsApi* | [**detachProductFromCategory**](docs/Api/ProductsApi.md#detachproductfromcategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
-*ProductsApi* | [**detachProductFromDirector**](docs/Api/ProductsApi.md#detachproductfromdirector) | **DELETE** /products/{product_id}/directors/{director_id} | 
 *ProductsApi* | [**detachProductFromGroup**](docs/Api/ProductsApi.md#detachproductfromgroup) | **DELETE** /products/{product_id}/groups/{group_id} | 
 *ProductsApi* | [**getCategoryProducts**](docs/Api/ProductsApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *ProductsApi* | [**getCustomerHasAccessToProduct**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
+*ProductsApi* | [**getCustomerHasAccessToProducts**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproducts) | **POST** /customers/{customer_id}/products/has-access | 
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{product_id} | 
 *ProductsApi* | [**getProductActors**](docs/Api/ProductsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
+*ProductsApi* | [**getProductActorsRole**](docs/Api/ProductsApi.md#getproductactorsrole) | **GET** /products/{product_id}/actors-role | 
 *ProductsApi* | [**getProductAttributes**](docs/Api/ProductsApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *ProductsApi* | [**getProductAvailability**](docs/Api/ProductsApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
 *ProductsApi* | [**getProductCategories**](docs/Api/ProductsApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *ProductsApi* | [**getProductCoverImage**](docs/Api/ProductsApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
 *ProductsApi* | [**getProductDirectors**](docs/Api/ProductsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
+*ProductsApi* | [**getProductDirectorsRole**](docs/Api/ProductsApi.md#getproductdirectorsrole) | **GET** /products/{product_id}/directors-role | 
 *ProductsApi* | [**getProductExtracts**](docs/Api/ProductsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
 *ProductsApi* | [**getProductFeatures**](docs/Api/ProductsApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
 *ProductsApi* | [**getProductGeolocations**](docs/Api/ProductsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
@@ -344,6 +354,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
+*VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
@@ -356,6 +367,8 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getVideoSubtitles**](docs/Api/VideosApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *VideosApi* | [**getVideoViews**](docs/Api/VideosApi.md#getvideoviews) | **GET** /videos/{video_id}/views | 
 *VideosApi* | [**getVideos**](docs/Api/VideosApi.md#getvideos) | **GET** /videos | 
+*VideosApi* | [**getVideosFromCategories**](docs/Api/VideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
+*VideosApi* | [**getVideosFromCategory**](docs/Api/VideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *VideosApi* | [**getVideosFromProduct**](docs/Api/VideosApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
 *VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
@@ -369,8 +382,11 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Actor](docs/Model/Actor.md)
+ - [Actor1](docs/Model/Actor1.md)
+ - [Actor2](docs/Model/Actor2.md)
  - [Actors](docs/Model/Actors.md)
  - [Address](docs/Model/Address.md)
+ - [Address1](docs/Model/Address1.md)
  - [BlogCategory](docs/Model/BlogCategory.md)
  - [BlogCategoryLists](docs/Model/BlogCategoryLists.md)
  - [BlogPage](docs/Model/BlogPage.md)
@@ -381,7 +397,8 @@ Class | Method | HTTP request | Description
  - [CMSPage](docs/Model/CMSPage.md)
  - [CMSPageLists](docs/Model/CMSPageLists.md)
  - [Cart](docs/Model/Cart.md)
- - [CartBody](docs/Model/CartBody.md)
+ - [Cart1](docs/Model/Cart1.md)
+ - [Cart2](docs/Model/Cart2.md)
  - [CartRule](docs/Model/CartRule.md)
  - [CartRuleRestrictionGroup](docs/Model/CartRuleRestrictionGroup.md)
  - [CartRuleRestrictionGroupItem](docs/Model/CartRuleRestrictionGroupItem.md)
@@ -403,11 +420,15 @@ Class | Method | HTTP request | Description
  - [CustomerGroupVideoStats1](docs/Model/CustomerGroupVideoStats1.md)
  - [CustomerId](docs/Model/CustomerId.md)
  - [CustomerThread](docs/Model/CustomerThread.md)
- - [CustomerThread1](docs/Model/CustomerThread1.md)
+ - [CustomerThreadList](docs/Model/CustomerThreadList.md)
  - [CustomerVideoStats](docs/Model/CustomerVideoStats.md)
  - [CustomerVideoStats1](docs/Model/CustomerVideoStats1.md)
  - [Customers](docs/Model/Customers.md)
+ - [Device](docs/Model/Device.md)
+ - [DeviceList](docs/Model/DeviceList.md)
  - [Director](docs/Model/Director.md)
+ - [Director1](docs/Model/Director1.md)
+ - [Director2](docs/Model/Director2.md)
  - [Directors](docs/Model/Directors.md)
  - [DownloadUrl](docs/Model/DownloadUrl.md)
  - [Extract](docs/Model/Extract.md)
@@ -419,6 +440,8 @@ Class | Method | HTTP request | Description
  - [Geoloc](docs/Model/Geoloc.md)
  - [Geolocs](docs/Model/Geolocs.md)
  - [Gift](docs/Model/Gift.md)
+ - [Gift1](docs/Model/Gift1.md)
+ - [Gift2](docs/Model/Gift2.md)
  - [GiftToken](docs/Model/GiftToken.md)
  - [Gifts](docs/Model/Gifts.md)
  - [Group](docs/Model/Group.md)
@@ -458,10 +481,12 @@ Class | Method | HTTP request | Description
  - [PrepaymentRecharges](docs/Model/PrepaymentRecharges.md)
  - [Product](docs/Model/Product.md)
  - [ProductAccess](docs/Model/ProductAccess.md)
+ - [ProductAccessInfo](docs/Model/ProductAccessInfo.md)
  - [ProductAttribute](docs/Model/ProductAttribute.md)
  - [ProductAttributeCreateRequest](docs/Model/ProductAttributeCreateRequest.md)
- - [ProductAttributeUpdateRequest](docs/Model/ProductAttributeUpdateRequest.md)
+ - [ProductAttributeCreateRequest1](docs/Model/ProductAttributeCreateRequest1.md)
  - [ProductAttributesResponse](docs/Model/ProductAttributesResponse.md)
+ - [ProductIDList](docs/Model/ProductIDList.md)
  - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
  - [Products](docs/Model/Products.md)
  - [Products1](docs/Model/Products1.md)
@@ -477,13 +502,17 @@ Class | Method | HTTP request | Description
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
  - [TaskFactory](docs/Model/TaskFactory.md)
  - [Video](docs/Model/Video.md)
+ - [VideoAccessInfo](docs/Model/VideoAccessInfo.md)
+ - [VideoCategory](docs/Model/VideoCategory.md)
  - [VideoFreeAccess](docs/Model/VideoFreeAccess.md)
+ - [VideoIDList](docs/Model/VideoIDList.md)
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStats](docs/Model/VideoStats.md)
  - [VideoSubtitlesResponse](docs/Model/VideoSubtitlesResponse.md)
  - [VideoViews](docs/Model/VideoViews.md)
  - [Videos](docs/Model/Videos.md)
  - [Videos1](docs/Model/Videos1.md)
+ - [Videos2](docs/Model/Videos2.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenus](docs/Model/WidgetFooterMenus.md)
  - [WidgetSlider](docs/Model/WidgetSlider.md)
