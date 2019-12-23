@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **meta_description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **meta_keywords** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **link_rewrite** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**roles** | **string** |  | [optional] 
+**roles** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **active** | **bool** |  | [optional] 
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
