@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 ## **addProductToCart**
-> \Kaemo\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id)
+> \Kaemo\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift)
 
 
 
@@ -37,9 +37,10 @@ $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to add to cart
 $product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
 $switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
+$is_gift = false; // bool | Allows bypass of access check (in case the current user already bought the product and it cannot be reordered)
 
 try {
-    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id);
+    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->addProductToCart: ', $e->getMessage(), PHP_EOL;
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **product_id** | **int**| Product ID to add to cart |
  **product_attribute_id** | **int**| ProductAttribute ID, required to add product to cart if product is not a subscription | [optional]
  **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
+ **is_gift** | **bool**| Allows bypass of access check (in case the current user already bought the product and it cannot be reordered) | [optional] [default to false]
 
 ### Return type
 

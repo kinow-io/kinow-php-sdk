@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
+[**getCategoryVideoPlayer**](#getCategoryVideoPlayer) | **GET** /categories/videos/{video_id}/player | 
+[**getCategoryVideoSubtitles**](#getCategoryVideoSubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
 [**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
@@ -433,6 +435,100 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Products**](#Products)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryVideoPlayer**
+> \Kaemo\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
+
+
+
+Get video player
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$video_id = 789; // int | Video ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$country_id = 789; // int | Country ID to use in video analytics
+
+try {
+    $result = $api_instance->getCategoryVideoPlayer($video_id, $customer_id, $country_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryVideoPlayer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
+ **country_id** | **int**| Country ID to use in video analytics | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Player**](#Player)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryVideoSubtitles**
+> \Kaemo\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+
+
+
+Get subtitles of a video
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$video_id = 789; // int | Video ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryVideoSubtitles($video_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryVideoSubtitles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
 
 ### Authorization
 

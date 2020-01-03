@@ -145,6 +145,8 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategoryBanner**](docs/Api/CategoriesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
+*CategoriesApi* | [**getCategoryVideoPlayer**](docs/Api/CategoriesApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
+*CategoriesApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoriesApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *CategoriesApi* | [**getVideosFromCategories**](docs/Api/CategoriesApi.md#getvideosfromcategories) | **GET** /categories/videos | 
@@ -353,6 +355,8 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
 *VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
+*VideosApi* | [**getCategoryVideoPlayer**](docs/Api/VideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
+*VideosApi* | [**getCategoryVideoSubtitles**](docs/Api/VideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
@@ -471,7 +475,7 @@ Class | Method | HTTP request | Description
  - [PaymentModule](docs/Model/PaymentModule.md)
  - [PaymentModules](docs/Model/PaymentModules.md)
  - [PaymentUrl](docs/Model/PaymentUrl.md)
- - [PlayerConfiguration](docs/Model/PlayerConfiguration.md)
+ - [Player](docs/Model/Player.md)
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
  - [PrepaymentBonus1](docs/Model/PrepaymentBonus1.md)

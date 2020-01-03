@@ -187,7 +187,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtractPlayer**
-> \Kaemo\Client\Model\PlayerConfiguration getExtractPlayer($extract_id)
+> \Kaemo\Client\Model\Player getExtractPlayer($extract_id)
 
 
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PlayerConfiguration**](#PlayerConfiguration)
+[**\Kaemo\Client\Model\Player**](#Player)
 
 ### Authorization
 
