@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **reference** | **string** |  | [optional] 
 **date_from** | **string** |  | [optional] 
 **date_to** | **string** |  | [optional] 
+**visible_before_publication** | **bool** |  | [optional] 
+**visible_after_publication** | **bool** |  | [optional] 
 **price** | **float** |  | [optional] 
 **position** | **int** |  | [optional] 
 **active** | **bool** |  | [optional] 

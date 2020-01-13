@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **maximum_viewing** | **bool** |  | [optional] 
 **quality_hd** | **bool** |  | [optional] 
 **quality_sd** | **bool** |  | [optional] 
+**expires** | **string** |  | [optional] 
 
 
