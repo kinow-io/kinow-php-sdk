@@ -4,7 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geolocations**](#geolocations) | **POST** /geolocations | 
+[**geolocations**](#geolocations) | **GET** /geolocations/platform-access | 
 [**getIPLocation**](#getIPLocation) | **GET** /geolocations/ip | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
@@ -14,11 +14,11 @@ Method | HTTP request | Description
 
 
 ## **geolocations**
-> geolocations($ip_address)
+> \Kaemo\Client\Model\PlatformAccessInfo geolocations($ip_address)
 
 
 
-Check access to platform by ip
+Get PlatformAccessInfo by ip
 
 ### Example
 ```php
@@ -26,10 +26,11 @@ Check access to platform by ip
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$ip_address = "ip_address_example"; // string | address ip
+$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $api_instance->geolocations($ip_address);
+    $result = $api_instance->geolocations($ip_address);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GeolocationsApi->geolocations: ', $e->getMessage(), PHP_EOL;
 }
@@ -40,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ip_address** | **string**| address ip |
+ **ip_address** | **string**| IP address |
 
 ### Return type
 
-void (empty response body)
+[**\Kaemo\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
 
 ### Authorization
 

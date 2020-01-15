@@ -219,7 +219,7 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**getProductFeatures**](docs/Api/FeaturesApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
 *FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
-*GeolocationsApi* | [**geolocations**](docs/Api/GeolocationsApi.md#geolocations) | **POST** /geolocations | 
+*GeolocationsApi* | [**geolocations**](docs/Api/GeolocationsApi.md#geolocations) | **GET** /geolocations/platform-access | 
 *GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
 *GeolocationsApi* | [**getProductGeolocations**](docs/Api/GeolocationsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**getProductGeolocationsByIp**](docs/Api/GeolocationsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
@@ -475,6 +475,7 @@ Class | Method | HTTP request | Description
  - [PaymentModule](docs/Model/PaymentModule.md)
  - [PaymentModules](docs/Model/PaymentModules.md)
  - [PaymentUrl](docs/Model/PaymentUrl.md)
+ - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
