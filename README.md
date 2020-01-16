@@ -219,8 +219,8 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**getProductFeatures**](docs/Api/FeaturesApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
 *FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
-*GeolocationsApi* | [**geolocations**](docs/Api/GeolocationsApi.md#geolocations) | **GET** /geolocations/platform-access | 
 *GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
+*GeolocationsApi* | [**getPlatformAccessInfo**](docs/Api/GeolocationsApi.md#getplatformaccessinfo) | **GET** /geolocations/platform-access | 
 *GeolocationsApi* | [**getProductGeolocations**](docs/Api/GeolocationsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**getProductGeolocationsByIp**](docs/Api/GeolocationsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
 *GeolocationsApi* | [**getVideoGeolocationByIp**](docs/Api/GeolocationsApi.md#getvideogeolocationbyip) | **POST** /videos/{video_id}/geolocations/{ip_address} | 

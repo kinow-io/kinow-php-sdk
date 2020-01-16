@@ -4,57 +4,14 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geolocations**](#geolocations) | **GET** /geolocations/platform-access | 
 [**getIPLocation**](#getIPLocation) | **GET** /geolocations/ip | 
+[**getPlatformAccessInfo**](#getPlatformAccessInfo) | **GET** /geolocations/platform-access | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
 [**getVideoGeolocationByIp**](#getVideoGeolocationByIp) | **POST** /videos/{video_id}/geolocations/{ip_address} | 
 [**setProductGeolocation**](#setProductGeolocation) | **PUT** /products/{product_id}/geolocations | 
 [**setVideoGeolocation**](#setVideoGeolocation) | **PUT** /videos/{video_id}/geolocations | 
 
-
-## **geolocations**
-> \Kaemo\Client\Model\PlatformAccessInfo geolocations($ip_address)
-
-
-
-Get PlatformAccessInfo by ip
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
-$ip_address = "ip_address_example"; // string | IP address
-
-try {
-    $result = $api_instance->geolocations($ip_address);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GeolocationsApi->geolocations: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ip_address** | **string**| IP address |
-
-### Return type
-
-[**\Kaemo\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
 
 ## **getIPLocation**
 > \Kaemo\Client\Model\IPLocation getIPLocation($ip_address)
@@ -89,6 +46,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\IPLocation**](#IPLocation)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPlatformAccessInfo**
+> \Kaemo\Client\Model\PlatformAccessInfo getPlatformAccessInfo($ip_address)
+
+
+
+Get PlatformAccessInfo by ip
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$ip_address = "ip_address_example"; // string | IP address
+
+try {
+    $result = $api_instance->getPlatformAccessInfo($ip_address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GeolocationsApi->getPlatformAccessInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ip_address** | **string**| IP address |
+
+### Return type
+
+[**\Kaemo\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
 
 ### Authorization
 
