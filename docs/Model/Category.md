@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
+**level_depth** | **int** |  | [optional] 
 **position** | **int** |  | [optional] 
 **images** | [**\Kaemo\Client\Model\CategoryImages**](#CategoryImages) |  | [optional] 
 **meta_description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 

@@ -505,7 +505,6 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
- - [TaskFactory](docs/Model/TaskFactory.md)
  - [Video](docs/Model/Video.md)
  - [VideoAccessInfo](docs/Model/VideoAccessInfo.md)
  - [VideoCategory](docs/Model/VideoCategory.md)
