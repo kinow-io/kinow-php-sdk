@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **quality_hd** | **bool** |  | [optional] 
 **quality_sd** | **bool** |  | [optional] 
 **expires** | **string** |  | [optional] 
+**play_duration** | **float** |  | [optional] 
 
 
