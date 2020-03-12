@@ -4,11 +4,56 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachFeaturesToExtract**](#attachFeaturesToExtract) | **POST** /extracts/{extract_id}/features | 
 [**attachFeaturesToProduct**](#attachFeaturesToProduct) | **POST** /products/{product_id}/features | 
 [**attachFeaturesToVideo**](#attachFeaturesToVideo) | **POST** /videos/{video_id}/features | 
 [**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 [**getFeatureValues**](#getFeatureValues) | **GET** /feature-values | 
 
+
+## **attachFeaturesToExtract**
+> attachFeaturesToExtract($extract_id, $features)
+
+
+
+Attach feature to extract
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$extract_id = 789; // int | 
+$features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
+
+try {
+    $api_instance->attachFeaturesToExtract($extract_id, $features);
+} catch (Exception $e) {
+    echo 'Exception when calling FeatureValuesApi->attachFeaturesToExtract: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **extract_id** | **int**|  |
+ **features** | **string**| To attach existing FeatureValue to Product:      &#x60;&#x60;&#x60;      [{      \&quot;id_feature\&quot;:3,      \&quot;id_feature_value\&quot;:5      }]      &#x60;&#x60;&#x60;        To create a custom FeatureValue:      &#x60;&#x60;&#x60;      [{      \&quot;id_feature\&quot;:3,      \&quot;custom_value\&quot;:[{      \&quot;lang\&quot;: 1,      \&quot;value\&quot;: \&quot;string\&quot;      }]      }]      &#x60;&#x60;&#x60; |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **attachFeaturesToProduct**
 > attachFeaturesToProduct($product_id, $features)
