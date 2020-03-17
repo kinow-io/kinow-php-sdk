@@ -709,7 +709,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $ip_address, $body)
+> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body, $ip_address)
 
 
 
@@ -722,11 +722,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$ip_address = "ip_address_example"; // string | IP address
 $body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
+$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $ip_address, $body);
+    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $body, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getCustomerHasAccessToProducts: ', $e->getMessage(), PHP_EOL;
@@ -739,8 +739,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **ip_address** | **string**| IP address |
  **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **ip_address** | **string**| IP address | [optional]
 
 ### Return type
 
@@ -800,7 +800,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $ip_address, $body)
+> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body, $ip_address)
 
 
 
@@ -813,11 +813,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$ip_address = "ip_address_example"; // string | IP address
 $body = new \Kaemo\Client\Model\VideoIDList(); // \Kaemo\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
+$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $ip_address, $body);
+    $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $body, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getCustomerHasAccessToVideos: ', $e->getMessage(), PHP_EOL;
@@ -830,8 +830,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **ip_address** | **string**| IP address |
  **body** | [**\Kaemo\Client\Model\VideoIDList**](#\Kaemo\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **ip_address** | **string**| IP address | [optional]
 
 ### Return type
 
