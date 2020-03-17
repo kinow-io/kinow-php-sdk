@@ -626,7 +626,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body, $ip_address)
+> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
 
 
 
@@ -640,10 +640,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\ProductsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
-$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $body, $ip_address);
+    $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getCustomerHasAccessToProducts: ', $e->getMessage(), PHP_EOL;
@@ -657,7 +656,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
  **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
- **ip_address** | **string**| IP address | [optional]
 
 ### Return type
 
