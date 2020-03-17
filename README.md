@@ -182,6 +182,8 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*CustomersApi* | [**passwordToken**](docs/Api/CustomersApi.md#passwordtoken) | **POST** /customers/password-token | 
+*CustomersApi* | [**passwordTokenConsume**](docs/Api/CustomersApi.md#passwordtokenconsume) | **POST** /customers/password-token-consume | 
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
@@ -510,6 +512,7 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
+ - [Token](docs/Model/Token.md)
  - [Video](docs/Model/Video.md)
  - [VideoAccessInfo](docs/Model/VideoAccessInfo.md)
  - [VideoCategory](docs/Model/VideoCategory.md)

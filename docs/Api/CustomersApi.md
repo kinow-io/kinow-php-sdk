@@ -29,6 +29,8 @@ Method | HTTP request | Description
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+[**passwordToken**](#passwordToken) | **POST** /customers/password-token | 
+[**passwordTokenConsume**](#passwordTokenConsume) | **POST** /customers/password-token-consume | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 [**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
@@ -1155,6 +1157,93 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **passwordToken**
+> \Kaemo\Client\Model\Token passwordToken($email)
+
+
+
+Create temporary token to update password
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$email = "email_example"; // string | Email of the Customer
+
+try {
+    $result = $api_instance->passwordToken($email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->passwordToken: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**| Email of the Customer |
+
+### Return type
+
+[**\Kaemo\Client\Model\Token**](#Token)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **passwordTokenConsume**
+> passwordTokenConsume($token, $password)
+
+
+
+Consume password token and update password
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$token = "token_example"; // string | Temporary token to consume
+$password = "password_example"; // string | Password to set on Customer account
+
+try {
+    $api_instance->passwordTokenConsume($token, $password);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->passwordTokenConsume: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| Temporary token to consume |
+ **password** | **string**| Password to set on Customer account |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
