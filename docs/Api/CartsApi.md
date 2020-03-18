@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 ## **addProductToCart**
-> \Kaemo\Client\Model\Cart addProductToCart($cart_id, $product_id, $ip_address, $product_attribute_id, $switch_subscription_id, $is_gift)
+> \Kaemo\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address)
 
 
 
@@ -35,13 +35,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to add to cart
-$ip_address = "ip_address_example"; // string | IP address
 $product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
 $switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
 $is_gift = false; // bool | Allows bypass of access check (in case the current user already bought the product and it cannot be reordered)
+$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->addProductToCart($cart_id, $product_id, $ip_address, $product_attribute_id, $switch_subscription_id, $is_gift);
+    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->addProductToCart: ', $e->getMessage(), PHP_EOL;
@@ -55,10 +55,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **product_id** | **int**| Product ID to add to cart |
- **ip_address** | **string**| IP address |
  **product_attribute_id** | **int**| ProductAttribute ID, required to add product to cart if product is not a subscription | [optional]
  **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
  **is_gift** | **bool**| Allows bypass of access check (in case the current user already bought the product and it cannot be reordered) | [optional] [default to false]
+ **ip_address** | **string**| IP address | [optional]
 
 ### Return type
 

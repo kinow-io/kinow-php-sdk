@@ -29,6 +29,7 @@ Method | HTTP request | Description
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+[**loginWithFacebook**](#loginWithFacebook) | **POST** /customers/facebook-login | 
 [**passwordToken**](#passwordToken) | **POST** /customers/password-token | 
 [**passwordTokenConsume**](#passwordTokenConsume) | **POST** /customers/password-token-consume | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
@@ -174,7 +175,7 @@ No authorization required
 
 
 
-Create new Facebook ID for user
+Link a Facebook account ID to a Customer
 
 ### Example
 ```php
@@ -1039,7 +1040,7 @@ No authorization required
 
 
 
-Get customer ID by Facebook ID
+Get Customer ID linked to a Facebook ID
 
 ### Example
 ```php
@@ -1157,6 +1158,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **loginWithFacebook**
+> \Kaemo\Client\Model\Customer loginWithFacebook($token_type, $token, $redirect_uri)
+
+
+
+Create or retrieve existing Customer account using Facebook authorization token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$token_type = "token_type_example"; // string | Can be 'oauth2' or 'authorization'
+$token = "token_example"; // string | oAuth2 token or authorization code given by Facebook
+$redirect_uri = "redirect_uri_example"; // string | Redirect URI is required if you're using authorization code method
+
+try {
+    $result = $api_instance->loginWithFacebook($token_type, $token, $redirect_uri);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->loginWithFacebook: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token_type** | **string**| Can be &#39;oauth2&#39; or &#39;authorization&#39; |
+ **token** | **string**| oAuth2 token or authorization code given by Facebook |
+ **redirect_uri** | **string**| Redirect URI is required if you&#39;re using authorization code method | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
