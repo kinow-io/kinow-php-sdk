@@ -358,6 +358,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
+*TaxRulesApi* | [**getTaxRules**](docs/Api/TaxRulesApi.md#gettaxrules) | **GET** /tax-rules | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
@@ -513,6 +514,8 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
+ - [TaxRule](docs/Model/TaxRule.md)
+ - [TaxRules](docs/Model/TaxRules.md)
  - [Token](docs/Model/Token.md)
  - [Video](docs/Model/Video.md)
  - [VideoAccessInfo](docs/Model/VideoAccessInfo.md)
