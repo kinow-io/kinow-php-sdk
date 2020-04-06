@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
 [**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
 [**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
+[**updateCategory**](#updateCategory) | **PUT** /categories/{category_id} | 
 
 
 ## **createCategory**
@@ -733,6 +734,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Videos**](#Videos)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **updateCategory**
+> \Kaemo\Client\Model\Category updateCategory($category_id, $body)
+
+
+
+Update category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to update
+$body = new \Kaemo\Client\Model\Category(); // \Kaemo\Client\Model\Category | 
+
+try {
+    $result = $api_instance->updateCategory($category_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->updateCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to update |
+ **body** | [**\Kaemo\Client\Model\Category**](#\Kaemo\Client\Model\Category)|  |
+
+### Return type
+
+[**\Kaemo\Client\Model\Category**](#Category)
 
 ### Authorization
 

@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *CategoriesApi* | [**getVideosFromCategories**](docs/Api/CategoriesApi.md#getvideosfromcategories) | **GET** /categories/videos | 
 *CategoriesApi* | [**getVideosFromCategory**](docs/Api/CategoriesApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
+*CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{category_id} | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
@@ -282,6 +283,8 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrderHistories**](docs/Api/OrdersApi.md#getorderhistories) | **GET** /orders/{order_id}/histories | 
 *OrdersApi* | [**getOrderInvoice**](docs/Api/OrdersApi.md#getorderinvoice) | **GET** /orders/{order_id}/invoice | 
 *OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /orders | 
+*PagesApi* | [**getPage**](docs/Api/PagesApi.md#getpage) | **GET** /pages/{page_id} | 
+*PagesApi* | [**getPages**](docs/Api/PagesApi.md#getpages) | **GET** /pages | 
 *PaymentModulesApi* | [**getPaymentMethods**](docs/Api/PaymentModulesApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 
 *PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
@@ -386,7 +389,9 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
 *WidgetsApi* | [**getIntroImage**](docs/Api/WidgetsApi.md#getintroimage) | **GET** /widgets/intro/images | 
+*WidgetsApi* | [**getWidgetAnalytics**](docs/Api/WidgetsApi.md#getwidgetanalytics) | **GET** /widgets/analytics | 
 *WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
+*WidgetsApi* | [**getWidgetHookPhrase**](docs/Api/WidgetsApi.md#getwidgethookphrase) | **GET** /widgets/hook-phrase | 
 *WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
 *WidgetsApi* | [**getWidgetTopMenu**](docs/Api/WidgetsApi.md#getwidgettopmenu) | **GET** /widgets/top-menu | 
@@ -457,6 +462,7 @@ Class | Method | HTTP request | Description
  - [Gift2](docs/Model/Gift2.md)
  - [GiftToken](docs/Model/GiftToken.md)
  - [Gifts](docs/Model/Gifts.md)
+ - [GoogleAnalytics](docs/Model/GoogleAnalytics.md)
  - [Group](docs/Model/Group.md)
  - [Groups](docs/Model/Groups.md)
  - [I18nField](docs/Model/I18nField.md)
@@ -476,6 +482,8 @@ Class | Method | HTTP request | Description
  - [OrderState](docs/Model/OrderState.md)
  - [OrderStates](docs/Model/OrderStates.md)
  - [Orders](docs/Model/Orders.md)
+ - [Page](docs/Model/Page.md)
+ - [PageLists](docs/Model/PageLists.md)
  - [Pagination](docs/Model/Pagination.md)
  - [PaymentArguments](docs/Model/PaymentArguments.md)
  - [PaymentDetails](docs/Model/PaymentDetails.md)
@@ -531,6 +539,8 @@ Class | Method | HTTP request | Description
  - [Videos2](docs/Model/Videos2.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenus](docs/Model/WidgetFooterMenus.md)
+ - [WidgetHookPhrase](docs/Model/WidgetHookPhrase.md)
+ - [WidgetHookPhrases](docs/Model/WidgetHookPhrases.md)
  - [WidgetSlider](docs/Model/WidgetSlider.md)
  - [WidgetSliders](docs/Model/WidgetSliders.md)
  - [WidgetTopMenu](docs/Model/WidgetTopMenu.md)

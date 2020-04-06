@@ -5,7 +5,9 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getIntroImage**](#getIntroImage) | **GET** /widgets/intro/images | 
+[**getWidgetAnalytics**](#getWidgetAnalytics) | **GET** /widgets/analytics | 
 [**getWidgetFooterMenu**](#getWidgetFooterMenu) | **GET** /widgets/footer-menu | 
+[**getWidgetHookPhrase**](#getWidgetHookPhrase) | **GET** /widgets/hook-phrase | 
 [**getWidgetSlider**](#getWidgetSlider) | **GET** /widgets/slider | 
 [**getWidgetSliderItem**](#getWidgetSliderItem) | **GET** /widgets/slider/{slider_id} | 
 [**getWidgetTopMenu**](#getWidgetTopMenu) | **GET** /widgets/top-menu | 
@@ -40,6 +42,45 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Kaemo\Client\Model\Image[]**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getWidgetAnalytics**
+> \Kaemo\Client\Model\GoogleAnalytics getWidgetAnalytics()
+
+
+
+Get Google Analytics configuration
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\WidgetsApi();
+
+try {
+    $result = $api_instance->getWidgetAnalytics();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WidgetsApi->getWidgetAnalytics: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Kaemo\Client\Model\GoogleAnalytics**](#GoogleAnalytics)
 
 ### Authorization
 
@@ -85,6 +126,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\WidgetFooterMenus**](#WidgetFooterMenus)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getWidgetHookPhrase**
+> \Kaemo\Client\Model\WidgetHookPhrases getWidgetHookPhrase($page, $per_page)
+
+
+
+Get hook phrase list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getWidgetHookPhrase($page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WidgetsApi->getWidgetHookPhrase: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\WidgetHookPhrases**](#WidgetHookPhrases)
 
 ### Authorization
 
