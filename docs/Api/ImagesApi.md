@@ -4,68 +4,21 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductScreenshot**](#deleteProductScreenshot) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 [**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
-[**getIntroImage**](#getIntroImage) | **GET** /widgets/intro/images | 
 [**getProductCoverImage**](#getProductCoverImage) | **GET** /products/{product_id}/cover | 
 [**getProductImages**](#getProductImages) | **GET** /products/{product_id}/images | 
 [**getProductScreenshots**](#getProductScreenshots) | **GET** /products/{product_id}/screenshots | 
+[**getSliderImage**](#getSliderImage) | **GET** /widgets/slider/images | 
 [**getSubscriptionCoverImage**](#getSubscriptionCoverImage) | **GET** /subscriptions/{subscription_id}/cover | 
 [**getVideoCover**](#getVideoCover) | **GET** /videos/{video_id}/cover | 
 [**uploadActorCover**](#uploadActorCover) | **POST** /actors/{actor_id}/cover | 
-[**uploadCategoryBanner**](#uploadCategoryBanner) | **POST** /category/{category_id}/banner | 
+[**uploadCategoryCover**](#uploadCategoryCover) | **POST** /categories/{category_id}/cover | 
 [**uploadDirectorCover**](#uploadDirectorCover) | **POST** /directors/{director_id}/cover | 
 [**uploadProductCover**](#uploadProductCover) | **POST** /products/{product_id}/cover | 
-[**uploadProductScreenshot**](#uploadProductScreenshot) | **PUT** /products/{product_id}/screenshots/{image_id} | 
-[**uploadProductScreenshots**](#uploadProductScreenshots) | **POST** /products/{product_id}/screenshots | 
 [**uploadSubscriptionCover**](#uploadSubscriptionCover) | **POST** /subscriptions/{subscription_id}/cover | 
 
-
-## **deleteProductScreenshot**
-> deleteProductScreenshot($product_id, $image_id)
-
-
-
-Delete product screenshot
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Product ID to fetch
-$image_id = 3.4; // float | Image ID to delete
-
-try {
-    $api_instance->deleteProductScreenshot($product_id, $image_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->deleteProductScreenshot: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Product ID to fetch |
- **image_id** | **float**| Image ID to delete |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
 
 ## **getActorCoverImage**
 > \Kaemo\Client\Model\Image getActorCoverImage($actor_id)
@@ -115,7 +68,7 @@ No authorization required
 
 
 
-Get banner of a category
+Get Category banner
 
 ### Example
 ```php
@@ -196,45 +149,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **getIntroImage**
-> \Kaemo\Client\Model\Image[] getIntroImage()
-
-
-
-Get introduction image
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-
-try {
-    $result = $api_instance->getIntroImage();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->getIntroImage: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Kaemo\Client\Model\Image[]**](#Image)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **getProductCoverImage**
 > \Kaemo\Client\Model\Image getProductCoverImage($product_id)
 
@@ -292,7 +206,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ImagesApi();
 $product_id = 789; // int | Product ID to fetch
-$type = "type_example"; // string | type as screen_small or screen_large
+$type = "type_example"; // string | Filter on specific Image type
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -310,7 +224,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
- **type** | **string**| type as screen_small or screen_large | [optional]
+ **type** | **string**| Filter on specific Image type | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -360,6 +274,45 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Screenshot[]**](#Screenshot)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getSliderImage**
+> \Kaemo\Client\Model\Image[] getSliderImage()
+
+
+
+Get slider images
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ImagesApi();
+
+try {
+    $result = $api_instance->getSliderImage();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ImagesApi->getSliderImage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Kaemo\Client\Model\Image[]**](#Image)
 
 ### Authorization
 
@@ -505,12 +458,12 @@ No authorization required
  - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
-## **uploadCategoryBanner**
-> \Kaemo\Client\Model\Image uploadCategoryBanner($category_id, $file, $hash, $hash_algorithm)
+## **uploadCategoryCover**
+> \Kaemo\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
 
 
 
-Upload category banner
+Upload Category cover
 
 ### Example
 ```php
@@ -524,10 +477,10 @@ $hash = "hash_example"; // string |
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadCategoryBanner($category_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadCategoryCover($category_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->uploadCategoryBanner: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ImagesApi->uploadCategoryCover: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -642,104 +595,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Image**](#Image)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: Not defined
-
-## **uploadProductScreenshot**
-> \Kaemo\Client\Model\Screenshot uploadProductScreenshot($product_id, $image_id, $position)
-
-
-
-Upload product screenshot
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Product ID to fetch
-$image_id = 3.4; // float | Image ID to fetch
-$position = 3.4; // float | 
-
-try {
-    $result = $api_instance->uploadProductScreenshot($product_id, $image_id, $position);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->uploadProductScreenshot: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Product ID to fetch |
- **image_id** | **float**| Image ID to fetch |
- **position** | **float**|  | [optional]
-
-### Return type
-
-[**\Kaemo\Client\Model\Screenshot**](#Screenshot)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **uploadProductScreenshots**
-> \Kaemo\Client\Model\Screenshot[] uploadProductScreenshots($product_id, $file, $hash, $hash_algorithm, $position)
-
-
-
-Upload product screenshots
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Kaemo\Client\Api\ImagesApi();
-$product_id = 3.4; // float | Product ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
-$position = 3.4; // float | 
-
-try {
-    $result = $api_instance->uploadProductScreenshots($product_id, $file, $hash, $hash_algorithm, $position);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ImagesApi->uploadProductScreenshots: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Product ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
- **position** | **float**|  | [optional]
-
-### Return type
-
-[**\Kaemo\Client\Model\Screenshot[]**](#Screenshot)
 
 ### Authorization
 

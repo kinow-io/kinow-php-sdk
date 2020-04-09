@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**getVideo**](#getVideo) | **GET** /videos/{video_id} | 
 [**getVideoAccess**](#getVideoAccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
 [**getVideoBonus**](#getVideoBonus) | **GET** /videos/{video_id}/bonus | 
+[**getVideoCover**](#getVideoCover) | **GET** /videos/{video_id}/cover | 
 [**getVideoDownloadUrl**](#getVideoDownloadUrl) | **GET** /videos/{video_id}/download-url | 
 [**getVideoFeatures**](#getVideoFeatures) | **GET** /videos/{video_id}/features | 
 [**getVideoGeolocation**](#getVideoGeolocation) | **GET** /videos/{video_id}/geolocation | 
@@ -599,6 +600,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Bonus[]**](#Bonus)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideoCover**
+> \Kaemo\Client\Model\Image getVideoCover($video_id)
+
+
+
+Get video cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$video_id = 789; // int | Video ID to fetch
+
+try {
+    $result = $api_instance->getVideoCover($video_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getVideoCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
 
 ### Authorization
 

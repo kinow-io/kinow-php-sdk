@@ -8,12 +8,14 @@ Method | HTTP request | Description
 [**createActor**](#createActor) | **POST** /actors | 
 [**deleteActor**](#deleteActor) | **DELETE** /actors/{actor_id} | 
 [**getActor**](#getActor) | **GET** /actors/{actor_id} | 
+[**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getActorProducts**](#getActorProducts) | **GET** /actors/{actor_id}/products | 
 [**getActorProductsRole**](#getActorProductsRole) | **GET** /actors/{actor_id}/products-role | 
 [**getActors**](#getActors) | **GET** /actors | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
 [**getProductActorsRole**](#getProductActorsRole) | **GET** /products/{product_id}/actors-role | 
 [**updateActor**](#updateActor) | **PUT** /actors/{actor_id} | 
+[**uploadActorCover**](#uploadActorCover) | **POST** /actors/{actor_id}/cover | 
 
 
 ## **attachProductToActor**
@@ -146,7 +148,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActor**
-> \Kaemo\Client\Model\Actor getActor($actor_id, $image_type)
+> \Kaemo\Client\Model\Actor getActor($actor_id)
 
 
 
@@ -159,10 +161,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ActorsApi();
 $actor_id = 789; // int | Actor ID to fetch
-$image_type = "image_type_example"; // string | 
 
 try {
-    $result = $api_instance->getActor($actor_id, $image_type);
+    $result = $api_instance->getActor($actor_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActorsApi->getActor: ', $e->getMessage(), PHP_EOL;
@@ -175,11 +176,53 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**| Actor ID to fetch |
- **image_type** | **string**|  | [optional]
 
 ### Return type
 
 [**\Kaemo\Client\Model\Actor**](#Actor)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getActorCoverImage**
+> \Kaemo\Client\Model\Image getActorCoverImage($actor_id)
+
+
+
+Get cover image of an actor
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$actor_id = 789; // int | Actor ID to fetch
+
+try {
+    $result = $api_instance->getActorCoverImage($actor_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->getActorCoverImage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **actor_id** | **int**| Actor ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -295,7 +338,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActors**
-> \Kaemo\Client\Model\Actors getActors($page, $per_page, $image_type)
+> \Kaemo\Client\Model\Actors getActors($page, $per_page)
 
 
 
@@ -309,10 +352,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\ActorsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$image_type = "image_type_example"; // string | 
 
 try {
-    $result = $api_instance->getActors($page, $per_page, $image_type);
+    $result = $api_instance->getActors($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActorsApi->getActors: ', $e->getMessage(), PHP_EOL;
@@ -326,7 +368,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **image_type** | **string**|  | [optional]
 
 ### Return type
 
@@ -479,5 +520,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **uploadActorCover**
+> \Kaemo\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
+
+
+
+Upload actor cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ActorsApi();
+$actor_id = 3.4; // float | Actor ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadActorCover($actor_id, $file, $hash, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->uploadActorCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **actor_id** | **float**| Actor ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 

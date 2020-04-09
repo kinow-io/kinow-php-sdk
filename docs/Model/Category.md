@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **active** | **bool** |  | [optional] 
 **level_depth** | **int** |  | [optional] 
 **position** | **int** |  | [optional] 
-**images** | [**\Kaemo\Client\Model\CategoryImages**](#CategoryImages) |  | [optional] 
+**images** | [**\Kaemo\Client\Model\ActorImages**](#ActorImages) |  | [optional] 
 **meta_description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **meta_keywords** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **meta_title** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 

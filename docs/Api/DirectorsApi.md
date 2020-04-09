@@ -8,12 +8,14 @@ Method | HTTP request | Description
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
+[**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
 [**getDirectorProducts**](#getDirectorProducts) | **GET** /directors/{director_id}/products | 
 [**getDirectorProductsRole**](#getDirectorProductsRole) | **GET** /directors/{director_id}/products-role | 
 [**getDirectors**](#getDirectors) | **GET** /directors | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
 [**getProductDirectorsRole**](#getProductDirectorsRole) | **GET** /products/{product_id}/directors-role | 
 [**updateDirector**](#updateDirector) | **PUT** /directors/{director_id} | 
+[**uploadDirectorCover**](#uploadDirectorCover) | **POST** /directors/{director_id}/cover | 
 
 
 ## **attachProductToDirector**
@@ -146,7 +148,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirector**
-> \Kaemo\Client\Model\Director getDirector($director_id, $image_type)
+> \Kaemo\Client\Model\Director getDirector($director_id)
 
 
 
@@ -159,10 +161,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
 $director_id = 789; // int | Director ID to fetch
-$image_type = "image_type_example"; // string | 
 
 try {
-    $result = $api_instance->getDirector($director_id, $image_type);
+    $result = $api_instance->getDirector($director_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectorsApi->getDirector: ', $e->getMessage(), PHP_EOL;
@@ -175,11 +176,53 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**| Director ID to fetch |
- **image_type** | **string**|  | [optional]
 
 ### Return type
 
 [**\Kaemo\Client\Model\Director**](#Director)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getDirectorCoverImage**
+> \Kaemo\Client\Model\Image getDirectorCoverImage($director_id)
+
+
+
+Get cover image of a director
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$director_id = 789; // int | Director ID to fetch
+
+try {
+    $result = $api_instance->getDirectorCoverImage($director_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->getDirectorCoverImage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **director_id** | **int**| Director ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -295,7 +338,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectors**
-> \Kaemo\Client\Model\Directors getDirectors($page, $per_page, $image_type)
+> \Kaemo\Client\Model\Directors getDirectors($page, $per_page)
 
 
 
@@ -309,10 +352,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\DirectorsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$image_type = "image_type_example"; // string | 
 
 try {
-    $result = $api_instance->getDirectors($page, $per_page, $image_type);
+    $result = $api_instance->getDirectors($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectorsApi->getDirectors: ', $e->getMessage(), PHP_EOL;
@@ -326,7 +368,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **image_type** | **string**|  | [optional]
 
 ### Return type
 
@@ -479,5 +520,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **uploadDirectorCover**
+> \Kaemo\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
+
+
+
+Upload director cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$director_id = 3.4; // float | Director ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadDirectorCover($director_id, $file, $hash, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->uploadDirectorCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **director_id** | **float**| Director ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 

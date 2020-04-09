@@ -4,7 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getIntroImage**](#getIntroImage) | **GET** /widgets/intro/images | 
+[**getSliderImage**](#getSliderImage) | **GET** /widgets/slider/images | 
 [**getWidgetAnalytics**](#getWidgetAnalytics) | **GET** /widgets/analytics | 
 [**getWidgetFooterMenu**](#getWidgetFooterMenu) | **GET** /widgets/footer-menu | 
 [**getWidgetHookPhrase**](#getWidgetHookPhrase) | **GET** /widgets/hook-phrase | 
@@ -13,12 +13,12 @@ Method | HTTP request | Description
 [**getWidgetTopMenu**](#getWidgetTopMenu) | **GET** /widgets/top-menu | 
 
 
-## **getIntroImage**
-> \Kaemo\Client\Model\Image[] getIntroImage()
+## **getSliderImage**
+> \Kaemo\Client\Model\Image[] getSliderImage()
 
 
 
-Get introduction image
+Get slider images
 
 ### Example
 ```php
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\WidgetsApi();
 
 try {
-    $result = $api_instance->getIntroImage();
+    $result = $api_instance->getSliderImage();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WidgetsApi->getIntroImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WidgetsApi->getSliderImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
 [**getSubscriptionCoverImage**](#getSubscriptionCoverImage) | **GET** /subscriptions/{subscription_id}/cover | 
 [**getSubscriptions**](#getSubscriptions) | **GET** /subscriptions | 
+[**uploadSubscriptionCover**](#uploadSubscriptionCover) | **POST** /subscriptions/{subscription_id}/cover | 
 
 
 ## **getDisabledSubscriptions**
@@ -282,5 +283,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **uploadSubscriptionCover**
+> \Kaemo\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
+
+
+
+Upload subscription cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$subscription_id = 3.4; // float | Subscription ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionsApi->uploadSubscriptionCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **float**| Subscription ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 

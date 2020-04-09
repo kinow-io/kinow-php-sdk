@@ -93,12 +93,14 @@ Class | Method | HTTP request | Description
 *ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
 *ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
 *ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
+*ActorsApi* | [**getActorCoverImage**](docs/Api/ActorsApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ActorsApi* | [**getActorProducts**](docs/Api/ActorsApi.md#getactorproducts) | **GET** /actors/{actor_id}/products | 
 *ActorsApi* | [**getActorProductsRole**](docs/Api/ActorsApi.md#getactorproductsrole) | **GET** /actors/{actor_id}/products-role | 
 *ActorsApi* | [**getActors**](docs/Api/ActorsApi.md#getactors) | **GET** /actors | 
 *ActorsApi* | [**getProductActors**](docs/Api/ActorsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
 *ActorsApi* | [**getProductActorsRole**](docs/Api/ActorsApi.md#getproductactorsrole) | **GET** /products/{product_id}/actors-role | 
 *ActorsApi* | [**updateActor**](docs/Api/ActorsApi.md#updateactor) | **PUT** /actors/{actor_id} | 
+*ActorsApi* | [**uploadActorCover**](docs/Api/ActorsApi.md#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
 *AddressApi* | [**getCustomerAddress**](docs/Api/AddressApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /addresses/{address_id} | 
 *AttributesApi* | [**createProductAttribute**](docs/Api/AttributesApi.md#createproductattribute) | **POST** /attributes | 
@@ -152,6 +154,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getVideosFromCategories**](docs/Api/CategoriesApi.md#getvideosfromcategories) | **GET** /categories/videos | 
 *CategoriesApi* | [**getVideosFromCategory**](docs/Api/CategoriesApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{category_id} | 
+*CategoriesApi* | [**uploadCategoryCover**](docs/Api/CategoriesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
@@ -196,12 +199,14 @@ Class | Method | HTTP request | Description
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
+*DirectorsApi* | [**getDirectorCoverImage**](docs/Api/DirectorsApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
 *DirectorsApi* | [**getDirectorProducts**](docs/Api/DirectorsApi.md#getdirectorproducts) | **GET** /directors/{director_id}/products | 
 *DirectorsApi* | [**getDirectorProductsRole**](docs/Api/DirectorsApi.md#getdirectorproductsrole) | **GET** /directors/{director_id}/products-role | 
 *DirectorsApi* | [**getDirectors**](docs/Api/DirectorsApi.md#getdirectors) | **GET** /directors | 
 *DirectorsApi* | [**getProductDirectors**](docs/Api/DirectorsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
 *DirectorsApi* | [**getProductDirectorsRole**](docs/Api/DirectorsApi.md#getproductdirectorsrole) | **GET** /products/{product_id}/directors-role | 
 *DirectorsApi* | [**updateDirector**](docs/Api/DirectorsApi.md#updatedirector) | **PUT** /directors/{director_id} | 
+*DirectorsApi* | [**uploadDirectorCover**](docs/Api/DirectorsApi.md#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**attachFeaturesToExtract**](docs/Api/ExtractsApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
@@ -250,22 +255,19 @@ Class | Method | HTTP request | Description
 *GroupsApi* | [**getGroup**](docs/Api/GroupsApi.md#getgroup) | **GET** /groups/{group_id} | 
 *GroupsApi* | [**getGroups**](docs/Api/GroupsApi.md#getgroups) | **GET** /groups | 
 *GroupsApi* | [**getProductGroups**](docs/Api/GroupsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
-*ImagesApi* | [**deleteProductScreenshot**](docs/Api/ImagesApi.md#deleteproductscreenshot) | **DELETE** /products/{product_id}/screenshots/{image_id} | 
 *ImagesApi* | [**getActorCoverImage**](docs/Api/ImagesApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ImagesApi* | [**getCategoryBanner**](docs/Api/ImagesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *ImagesApi* | [**getDirectorCoverImage**](docs/Api/ImagesApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
-*ImagesApi* | [**getIntroImage**](docs/Api/ImagesApi.md#getintroimage) | **GET** /widgets/intro/images | 
 *ImagesApi* | [**getProductCoverImage**](docs/Api/ImagesApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
 *ImagesApi* | [**getProductImages**](docs/Api/ImagesApi.md#getproductimages) | **GET** /products/{product_id}/images | 
 *ImagesApi* | [**getProductScreenshots**](docs/Api/ImagesApi.md#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
+*ImagesApi* | [**getSliderImage**](docs/Api/ImagesApi.md#getsliderimage) | **GET** /widgets/slider/images | 
 *ImagesApi* | [**getSubscriptionCoverImage**](docs/Api/ImagesApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *ImagesApi* | [**getVideoCover**](docs/Api/ImagesApi.md#getvideocover) | **GET** /videos/{video_id}/cover | 
 *ImagesApi* | [**uploadActorCover**](docs/Api/ImagesApi.md#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
-*ImagesApi* | [**uploadCategoryBanner**](docs/Api/ImagesApi.md#uploadcategorybanner) | **POST** /category/{category_id}/banner | 
+*ImagesApi* | [**uploadCategoryCover**](docs/Api/ImagesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
 *ImagesApi* | [**uploadDirectorCover**](docs/Api/ImagesApi.md#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
 *ImagesApi* | [**uploadProductCover**](docs/Api/ImagesApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
-*ImagesApi* | [**uploadProductScreenshot**](docs/Api/ImagesApi.md#uploadproductscreenshot) | **PUT** /products/{product_id}/screenshots/{image_id} | 
-*ImagesApi* | [**uploadProductScreenshots**](docs/Api/ImagesApi.md#uploadproductscreenshots) | **POST** /products/{product_id}/screenshots | 
 *ImagesApi* | [**uploadSubscriptionCover**](docs/Api/ImagesApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
 *LanguagesApi* | [**getLanguages**](docs/Api/LanguagesApi.md#getlanguages) | **GET** /languages | 
 *MediaFilesApi* | [**getMediaSourceFiles**](docs/Api/MediaFilesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
@@ -342,6 +344,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getProductGeolocationsByIp**](docs/Api/ProductsApi.md#getproductgeolocationsbyip) | **POST** /products/{product_id}/geolocations | 
 *ProductsApi* | [**getProductGroups**](docs/Api/ProductsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
 *ProductsApi* | [**getProductImages**](docs/Api/ProductsApi.md#getproductimages) | **GET** /products/{product_id}/images | 
+*ProductsApi* | [**getProductScreenshots**](docs/Api/ProductsApi.md#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
 *ProductsApi* | [**getProductSubscription**](docs/Api/ProductsApi.md#getproductsubscription) | **GET** /products/{product_id}/subscription | 
 *ProductsApi* | [**getProducts**](docs/Api/ProductsApi.md#getproducts) | **GET** /products | 
 *ProductsApi* | [**getProductsFromProduct**](docs/Api/ProductsApi.md#getproductsfromproduct) | **GET** /products/{product_id}/products | 
@@ -350,6 +353,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**setProductGeolocation**](docs/Api/ProductsApi.md#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
 *ProductsApi* | [**updateProduct**](docs/Api/ProductsApi.md#updateproduct) | **PUT** /products/{product_id} | 
 *ProductsApi* | [**updateProductGroupRestrictionBehavior**](docs/Api/ProductsApi.md#updateproductgrouprestrictionbehavior) | **PUT** /products/{product_id}/groups/behavior | 
+*ProductsApi* | [**uploadProductCover**](docs/Api/ProductsApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
 *StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
@@ -360,6 +364,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCategories**](docs/Api/SubscriptionsApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
+*SubscriptionsApi* | [**uploadSubscriptionCover**](docs/Api/SubscriptionsApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
 *TaxRulesApi* | [**getTaxRules**](docs/Api/TaxRulesApi.md#gettaxrules) | **GET** /tax-rules | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
@@ -375,6 +380,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
 *VideosApi* | [**getVideoBonus**](docs/Api/VideosApi.md#getvideobonus) | **GET** /videos/{video_id}/bonus | 
+*VideosApi* | [**getVideoCover**](docs/Api/VideosApi.md#getvideocover) | **GET** /videos/{video_id}/cover | 
 *VideosApi* | [**getVideoDownloadUrl**](docs/Api/VideosApi.md#getvideodownloadurl) | **GET** /videos/{video_id}/download-url | 
 *VideosApi* | [**getVideoFeatures**](docs/Api/VideosApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *VideosApi* | [**getVideoGeolocation**](docs/Api/VideosApi.md#getvideogeolocation) | **GET** /videos/{video_id}/geolocation | 
@@ -388,7 +394,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getVideosFromProduct**](docs/Api/VideosApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
 *VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
-*WidgetsApi* | [**getIntroImage**](docs/Api/WidgetsApi.md#getintroimage) | **GET** /widgets/intro/images | 
+*WidgetsApi* | [**getSliderImage**](docs/Api/WidgetsApi.md#getsliderimage) | **GET** /widgets/slider/images | 
 *WidgetsApi* | [**getWidgetAnalytics**](docs/Api/WidgetsApi.md#getwidgetanalytics) | **GET** /widgets/analytics | 
 *WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
 *WidgetsApi* | [**getWidgetHookPhrase**](docs/Api/WidgetsApi.md#getwidgethookphrase) | **GET** /widgets/hook-phrase | 
@@ -402,6 +408,7 @@ Class | Method | HTTP request | Description
  - [Actor](docs/Model/Actor.md)
  - [Actor1](docs/Model/Actor1.md)
  - [Actor2](docs/Model/Actor2.md)
+ - [ActorImages](docs/Model/ActorImages.md)
  - [Actors](docs/Model/Actors.md)
  - [Address](docs/Model/Address.md)
  - [Address1](docs/Model/Address1.md)
@@ -424,7 +431,6 @@ Class | Method | HTTP request | Description
  - [Carts](docs/Model/Carts.md)
  - [Categories](docs/Model/Categories.md)
  - [Category](docs/Model/Category.md)
- - [CategoryImages](docs/Model/CategoryImages.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationList](docs/Model/ConfigurationList.md)
  - [Countries](docs/Model/Countries.md)

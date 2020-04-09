@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**getProductGeolocationsByIp**](#getProductGeolocationsByIp) | **POST** /products/{product_id}/geolocations | 
 [**getProductGroups**](#getProductGroups) | **GET** /products/{product_id}/groups | 
 [**getProductImages**](#getProductImages) | **GET** /products/{product_id}/images | 
+[**getProductScreenshots**](#getProductScreenshots) | **GET** /products/{product_id}/screenshots | 
 [**getProductSubscription**](#getProductSubscription) | **GET** /products/{product_id}/subscription | 
 [**getProducts**](#getProducts) | **GET** /products | 
 [**getProductsFromProduct**](#getProductsFromProduct) | **GET** /products/{product_id}/products | 
@@ -41,6 +42,7 @@ Method | HTTP request | Description
 [**setProductGeolocation**](#setProductGeolocation) | **PUT** /products/{product_id}/geolocations | 
 [**updateProduct**](#updateProduct) | **PUT** /products/{product_id} | 
 [**updateProductGroupRestrictionBehavior**](#updateProductGroupRestrictionBehavior) | **PUT** /products/{product_id}/groups/behavior | 
+[**uploadProductCover**](#uploadProductCover) | **POST** /products/{product_id}/cover | 
 
 
 ## **attachFeaturesToProduct**
@@ -1340,7 +1342,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
-$type = "type_example"; // string | type as screen_small or screen_large
+$type = "type_example"; // string | Filter on specific Image type
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -1358,13 +1360,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
- **type** | **string**| type as screen_small or screen_large | [optional]
+ **type** | **string**| Filter on specific Image type | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
 ### Return type
 
 [**\Kaemo\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getProductScreenshots**
+> \Kaemo\Client\Model\Screenshot[] getProductScreenshots($product_id)
+
+
+
+Get product screenshots
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+
+try {
+    $result = $api_instance->getProductScreenshots($product_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getProductScreenshots: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+
+### Return type
+
+[**\Kaemo\Client\Model\Screenshot[]**](#Screenshot)
 
 ### Authorization
 
@@ -1785,5 +1830,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **uploadProductCover**
+> \Kaemo\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
+
+
+
+Upload product cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 3.4; // float | Product ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadProductCover($product_id, $file, $hash, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->uploadProductCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **float**| Product ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 

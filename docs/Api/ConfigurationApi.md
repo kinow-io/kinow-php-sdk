@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Get configuration by name.       Available :          - LANG_DEFAULT          - CURRENCY_DEFAULT          - COUNTRY_DEFAULT          - TIMEZONE
+Get configuration by name.       Available :          - LANG_DEFAULT          - CURRENCY_DEFAULT          - COUNTRY_DEFAULT          - TIMEZONE          - FORCE_TAX_ID
 
 ### Example
 ```php

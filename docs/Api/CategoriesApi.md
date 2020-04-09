@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
 [**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
 [**updateCategory**](#updateCategory) | **PUT** /categories/{category_id} | 
+[**uploadCategoryCover**](#uploadCategoryCover) | **POST** /categories/{category_id}/cover | 
 
 
 ## **createCategory**
@@ -304,7 +305,7 @@ No authorization required
 
 
 
-Get banner of a category
+Get Category banner
 
 ### Example
 ```php
@@ -787,5 +788,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **uploadCategoryCover**
+> \Kaemo\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
+
+
+
+Upload Category cover
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$category_id = 3.4; // float | Category ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadCategoryCover($category_id, $file, $hash, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->uploadCategoryCover: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **float**| Category ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Image**](#Image)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
