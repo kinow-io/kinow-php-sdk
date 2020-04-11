@@ -408,7 +408,6 @@ Class | Method | HTTP request | Description
  - [Actor](docs/Model/Actor.md)
  - [Actor1](docs/Model/Actor1.md)
  - [Actor2](docs/Model/Actor2.md)
- - [ActorImages](docs/Model/ActorImages.md)
  - [Actors](docs/Model/Actors.md)
  - [Address](docs/Model/Address.md)
  - [Address1](docs/Model/Address1.md)
