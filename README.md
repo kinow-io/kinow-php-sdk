@@ -454,7 +454,7 @@ Class | Method | HTTP request | Description
  - [Director1](docs/Model/Director1.md)
  - [Director2](docs/Model/Director2.md)
  - [Directors](docs/Model/Directors.md)
- - [DownloadUrl](docs/Model/DownloadUrl.md)
+ - [DownloadInformations](docs/Model/DownloadInformations.md)
  - [Extract](docs/Model/Extract.md)
  - [Feature](docs/Model/Feature.md)
  - [FeatureValue](docs/Model/FeatureValue.md)

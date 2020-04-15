@@ -654,7 +654,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoDownloadUrl**
-> \Kaemo\Client\Model\DownloadUrl getVideoDownloadUrl($video_id, $customer_id, $ip_address)
+> \Kaemo\Client\Model\DownloadInformations getVideoDownloadUrl($video_id, $customer_id, $ip_address)
 
 
 
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\DownloadUrl**](#DownloadUrl)
+[**\Kaemo\Client\Model\DownloadInformations**](#DownloadInformations)
 
 ### Authorization
 
