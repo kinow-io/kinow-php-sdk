@@ -149,7 +149,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getOrderInvoice**
-> string getOrderInvoice($order_id)
+> string getOrderInvoice($order_id, $to_blob)
 
 
 
@@ -162,9 +162,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\OrdersApi();
 $order_id = 789; // int | Order ID to fetch
+$to_blob = true; // bool | Get PDF content in blob
 
 try {
-    $result = $api_instance->getOrderInvoice($order_id);
+    $result = $api_instance->getOrderInvoice($order_id, $to_blob);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrderInvoice: ', $e->getMessage(), PHP_EOL;
@@ -177,6 +178,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **int**| Order ID to fetch |
+ **to_blob** | **bool**| Get PDF content in blob | [optional] [default to true]
 
 ### Return type
 

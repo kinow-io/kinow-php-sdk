@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 [**detachProductFromCategory**](#detachProductFromCategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
 [**detachProductFromGroup**](#detachProductFromGroup) | **DELETE** /products/{product_id}/groups/{group_id} | 
+[**getBestSales**](#getBestSales) | **GET** /products/best-sales | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 [**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
@@ -516,6 +517,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getBestSales**
+> \Kaemo\Client\Model\Products getBestSales($page, $per_page, $ip)
+
+
+
+Get most saled Products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$ip = "ip_example"; // string | filter by Customer IP
+
+try {
+    $result = $api_instance->getBestSales($page, $per_page, $ip);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getBestSales: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **ip** | **string**| filter by Customer IP | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\Products**](#Products)
 
 ### Authorization
 
