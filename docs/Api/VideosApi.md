@@ -658,7 +658,7 @@ No authorization required
 
 
 
-Get video download url
+Get video download informations
 
 ### Example
 ```php
