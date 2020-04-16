@@ -843,7 +843,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoPlayer**
-> \Kaemo\Client\Model\Player getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
+> \Kaemo\Client\Model\Player1 getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
 
 
 
@@ -880,7 +880,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Player**](#Player)
+[**\Kaemo\Client\Model\Player1**](#Player1)
 
 ### Authorization
 

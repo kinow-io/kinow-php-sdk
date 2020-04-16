@@ -500,6 +500,7 @@ Class | Method | HTTP request | Description
  - [PaymentUrl](docs/Model/PaymentUrl.md)
  - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)
+ - [Player1](docs/Model/Player1.md)
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
  - [PrepaymentBonus1](docs/Model/PrepaymentBonus1.md)

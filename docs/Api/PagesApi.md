@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Get page
+Get automatic page
 
 ### Example
 ```php
@@ -56,7 +56,7 @@ No authorization required
 
 
 
-Get pages
+Get automatic pages
 
 ### Example
 ```php
