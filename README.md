@@ -159,8 +159,6 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
 *CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
-*CustomerThreadsApi* | [**getCustomerThread**](docs/Api/CustomerThreadsApi.md#getcustomerthread) | **GET** /customer-threads/{customer_thread_id} | 
-*CustomerThreadsApi* | [**getCustomerThreads**](docs/Api/CustomerThreadsApi.md#getcustomerthreads) | **GET** /customer-threads | 
 *CustomersApi* | [**attachCartToCustomer**](docs/Api/CustomersApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
 *CustomersApi* | [**checkCustomerCredentials**](docs/Api/CustomersApi.md#checkcustomercredentials) | **POST** /customers/check-credentials | 
 *CustomersApi* | [**createCustomer**](docs/Api/CustomersApi.md#createcustomer) | **POST** /customers | 
@@ -366,6 +364,8 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
 *SubscriptionsApi* | [**uploadSubscriptionCover**](docs/Api/SubscriptionsApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
+*SupportApi* | [**createMessage**](docs/Api/SupportApi.md#createmessage) | **POST** /support | 
+*SupportApi* | [**getContacts**](docs/Api/SupportApi.md#getcontacts) | **GET** /support/contacts | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
 *TaxRulesApi* | [**getTaxRules**](docs/Api/TaxRulesApi.md#gettaxrules) | **GET** /tax-rules | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
@@ -433,6 +433,8 @@ Class | Method | HTTP request | Description
  - [Category](docs/Model/Category.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationList](docs/Model/ConfigurationList.md)
+ - [Contact](docs/Model/Contact.md)
+ - [Contacts](docs/Model/Contacts.md)
  - [Countries](docs/Model/Countries.md)
  - [Country](docs/Model/Country.md)
  - [Currencies](docs/Model/Currencies.md)
@@ -443,8 +445,6 @@ Class | Method | HTTP request | Description
  - [CustomerGroupVideoStats](docs/Model/CustomerGroupVideoStats.md)
  - [CustomerGroupVideoStats1](docs/Model/CustomerGroupVideoStats1.md)
  - [CustomerId](docs/Model/CustomerId.md)
- - [CustomerThread](docs/Model/CustomerThread.md)
- - [CustomerThreadList](docs/Model/CustomerThreadList.md)
  - [CustomerVideoStats](docs/Model/CustomerVideoStats.md)
  - [CustomerVideoStats1](docs/Model/CustomerVideoStats1.md)
  - [Customers](docs/Model/Customers.md)
@@ -526,6 +526,8 @@ Class | Method | HTTP request | Description
  - [SubscriptionAccesses](docs/Model/SubscriptionAccesses.md)
  - [Subscriptions](docs/Model/Subscriptions.md)
  - [Subtitle](docs/Model/Subtitle.md)
+ - [Support](docs/Model/Support.md)
+ - [SupportMessage](docs/Model/SupportMessage.md)
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
