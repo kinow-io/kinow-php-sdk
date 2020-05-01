@@ -15,5 +15,7 @@ Name | Type | Description | Notes
 **active** | **int** |  | [optional] 
 **message** | **string** |  | [optional] 
 **id_order** | **int** |  | [optional] 
+**date_renewal** | **string** |  | [optional] 
+**payment_method** | **string** |  | [optional] 
 
 

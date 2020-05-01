@@ -205,6 +205,8 @@ Class | Method | HTTP request | Description
 *DirectorsApi* | [**getProductDirectorsRole**](docs/Api/DirectorsApi.md#getproductdirectorsrole) | **GET** /products/{product_id}/directors-role | 
 *DirectorsApi* | [**updateDirector**](docs/Api/DirectorsApi.md#updatedirector) | **PUT** /directors/{director_id} | 
 *DirectorsApi* | [**uploadDirectorCover**](docs/Api/DirectorsApi.md#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
+*EmployeesApi* | [**getEmployee**](docs/Api/EmployeesApi.md#getemployee) | **GET** /employees/{employee_id} | 
+*EmployeesApi* | [**getEmployees**](docs/Api/EmployeesApi.md#getemployees) | **GET** /employees | 
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**attachFeaturesToExtract**](docs/Api/ExtractsApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
@@ -455,6 +457,8 @@ Class | Method | HTTP request | Description
  - [Director2](docs/Model/Director2.md)
  - [Directors](docs/Model/Directors.md)
  - [DownloadInformations](docs/Model/DownloadInformations.md)
+ - [Employee](docs/Model/Employee.md)
+ - [Employees](docs/Model/Employees.md)
  - [Extract](docs/Model/Extract.md)
  - [Feature](docs/Model/Feature.md)
  - [FeatureValue](docs/Model/FeatureValue.md)
