@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
  **email** | **string**|  |
  **id_contact** | **int**|  |
  **message** | **string**|  |
- **id_product** | **int**|  |
+ **id_product** | **int**|  | [optional]
  **id_order** | **int**|  | [optional]
 
 ### Return type
