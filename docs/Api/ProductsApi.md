@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**associateProducts**](#associateProducts) | **POST** /products/{product_id}/products | 
 [**attachFeaturesToProduct**](#attachFeaturesToProduct) | **POST** /products/{product_id}/features | 
 [**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
 [**attachProductToCategory**](#attachProductToCategory) | **POST** /products/{product_id}/categories | 
@@ -45,6 +46,50 @@ Method | HTTP request | Description
 [**updateProductGroupRestrictionBehavior**](#updateProductGroupRestrictionBehavior) | **PUT** /products/{product_id}/groups/behavior | 
 [**uploadProductCover**](#uploadProductCover) | **POST** /products/{product_id}/cover | 
 
+
+## **associateProducts**
+> associateProducts($product_id, $associated_product_ids)
+
+
+
+Associate products to another product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$associated_product_ids = "associated_product_ids_example"; // string | Products IDs to associate to another product. IDs must be separated with comma (,)
+
+try {
+    $api_instance->associateProducts($product_id, $associated_product_ids);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->associateProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **associated_product_ids** | **string**| Products IDs to associate to another product. IDs must be separated with comma (,) |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **attachFeaturesToProduct**
 > attachFeaturesToProduct($product_id, $features)

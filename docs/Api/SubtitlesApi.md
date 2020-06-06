@@ -4,15 +4,15 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getVideoSubtitles**](#getVideoSubtitles) | **GET** /videos/{video_id}/subtitles | 
+[**getSubtitles**](#getSubtitles) | **GET** /subtitles | 
 
 
-## **getVideoSubtitles**
-> \Kaemo\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
+## **getSubtitles**
+> \Kaemo\Client\Model\SubtitleFiles getSubtitles($page, $per_page)
 
 
 
-Get subtitles of a video
+Get Subtitles list
 
 ### Example
 ```php
@@ -20,15 +20,14 @@ Get subtitles of a video
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\SubtitlesApi();
-$video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getVideoSubtitles($video_id, $page, $per_page);
+    $result = $api_instance->getSubtitles($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubtitlesApi->getVideoSubtitles: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubtitlesApi->getSubtitles: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -37,13 +36,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Video ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kaemo\Client\Model\SubtitleFiles**](#SubtitleFiles)
 
 ### Authorization
 

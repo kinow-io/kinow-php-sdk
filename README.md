@@ -160,6 +160,7 @@ Class | Method | HTTP request | Description
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
 *CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
 *CustomersApi* | [**attachCartToCustomer**](docs/Api/CustomersApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
+*CustomersApi* | [**checkAuthenticationToken**](docs/Api/CustomersApi.md#checkauthenticationtoken) | **POST** /customers/check-authentication-token | 
 *CustomersApi* | [**checkCustomerCredentials**](docs/Api/CustomersApi.md#checkcustomercredentials) | **POST** /customers/check-credentials | 
 *CustomersApi* | [**createCustomer**](docs/Api/CustomersApi.md#createcustomer) | **POST** /customers | 
 *CustomersApi* | [**createFacebookId**](docs/Api/CustomersApi.md#createfacebookid) | **POST** /customers/facebook | 
@@ -210,6 +211,7 @@ Class | Method | HTTP request | Description
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**attachFeaturesToExtract**](docs/Api/ExtractsApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
+*ExtractsApi* | [**createSubtitle**](docs/Api/ExtractsApi.md#createsubtitle) | **POST** /extracts/{extract_id}/subtitle | 
 *ExtractsApi* | [**deleteExtract**](docs/Api/ExtractsApi.md#deleteextract) | **DELETE** /extracts/{extract_id} | 
 *ExtractsApi* | [**getExtract**](docs/Api/ExtractsApi.md#getextract) | **GET** /extracts/{extract_id} | 
 *ExtractsApi* | [**getExtractFeatures**](docs/Api/ExtractsApi.md#getextractfeatures) | **GET** /extracts/{extract_id}/features | 
@@ -315,6 +317,7 @@ Class | Method | HTTP request | Description
 *ProductAccessesApi* | [**switchSubscriptionPending**](docs/Api/ProductAccessesApi.md#switchsubscriptionpending) | **GET** /product-accesses/{product_access_id}/switch | 
 *ProductAccessesApi* | [**unsubscribe**](docs/Api/ProductAccessesApi.md#unsubscribe) | **PUT** /product-accesses/{product_access_id}/unsubscribe | 
 *ProductAccessesApi* | [**updateProductAccess**](docs/Api/ProductAccessesApi.md#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
+*ProductsApi* | [**associateProducts**](docs/Api/ProductsApi.md#associateproducts) | **POST** /products/{product_id}/products | 
 *ProductsApi* | [**attachFeaturesToProduct**](docs/Api/ProductsApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
 *ProductsApi* | [**attachProductToActor**](docs/Api/ProductsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
 *ProductsApi* | [**attachProductToCategory**](docs/Api/ProductsApi.md#attachproducttocategory) | **POST** /products/{product_id}/categories | 
@@ -366,6 +369,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
 *SubscriptionsApi* | [**uploadSubscriptionCover**](docs/Api/SubscriptionsApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
+*SubtitlesApi* | [**getSubtitles**](docs/Api/SubtitlesApi.md#getsubtitles) | **GET** /subtitles | 
 *SupportApi* | [**createMessage**](docs/Api/SupportApi.md#createmessage) | **POST** /support | 
 *SupportApi* | [**getContacts**](docs/Api/SupportApi.md#getcontacts) | **GET** /support/contacts | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
@@ -373,6 +377,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
+*VideosApi* | [**createSubtitle**](docs/Api/VideosApi.md#createsubtitle) | **POST** /videos/{video_id}/subtitle | 
 *VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
 *VideosApi* | [**getCategoryVideoPlayer**](docs/Api/VideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
@@ -439,6 +444,8 @@ Class | Method | HTTP request | Description
  - [Contacts](docs/Model/Contacts.md)
  - [Countries](docs/Model/Countries.md)
  - [Country](docs/Model/Country.md)
+ - [CreateExtractSubtitleRequest](docs/Model/CreateExtractSubtitleRequest.md)
+ - [CreateVideoSubtitleRequest](docs/Model/CreateVideoSubtitleRequest.md)
  - [Currencies](docs/Model/Currencies.md)
  - [Currency](docs/Model/Currency.md)
  - [Customer](docs/Model/Customer.md)
@@ -530,6 +537,8 @@ Class | Method | HTTP request | Description
  - [SubscriptionAccesses](docs/Model/SubscriptionAccesses.md)
  - [Subscriptions](docs/Model/Subscriptions.md)
  - [Subtitle](docs/Model/Subtitle.md)
+ - [SubtitleFile](docs/Model/SubtitleFile.md)
+ - [SubtitleFiles](docs/Model/SubtitleFiles.md)
  - [Support](docs/Model/Support.md)
  - [SupportMessage](docs/Model/SupportMessage.md)
  - [Tag](docs/Model/Tag.md)

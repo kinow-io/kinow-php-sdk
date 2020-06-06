@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**attachCoverToExtract**](#attachCoverToExtract) | **POST** /extracts/{extract_id}/cover | 
 [**attachFeaturesToExtract**](#attachFeaturesToExtract) | **POST** /extracts/{extract_id}/features | 
 [**createExtract**](#createExtract) | **POST** /extracts | 
+[**createSubtitle**](#createSubtitle) | **POST** /extracts/{extract_id}/subtitle | 
 [**deleteExtract**](#deleteExtract) | **DELETE** /extracts/{extract_id} | 
 [**getExtract**](#getExtract) | **GET** /extracts/{extract_id} | 
 [**getExtractFeatures**](#getExtractFeatures) | **GET** /extracts/{extract_id}/features | 
@@ -137,6 +138,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Extract**](#Extract)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createSubtitle**
+> \Kaemo\Client\Model\Subtitle createSubtitle($extract_id, $body)
+
+
+
+Create new Extract Subtitle
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$extract_id = 789; // int | Extract ID to attach the created Subtitle
+$body = new \Kaemo\Client\Model\CreateExtractSubtitleRequest(); // \Kaemo\Client\Model\CreateExtractSubtitleRequest | Subtitle settings
+
+try {
+    $result = $api_instance->createSubtitle($extract_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ExtractsApi->createSubtitle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **extract_id** | **int**| Extract ID to attach the created Subtitle |
+ **body** | [**\Kaemo\Client\Model\CreateExtractSubtitleRequest**](#\Kaemo\Client\Model\CreateExtractSubtitleRequest)| Subtitle settings |
+
+### Return type
+
+[**\Kaemo\Client\Model\Subtitle**](#Subtitle)
 
 ### Authorization
 

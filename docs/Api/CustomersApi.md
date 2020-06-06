@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attachCartToCustomer**](#attachCartToCustomer) | **POST** /customers/{customer_id}/carts | 
+[**checkAuthenticationToken**](#checkAuthenticationToken) | **POST** /customers/check-authentication-token | 
 [**checkCustomerCredentials**](#checkCustomerCredentials) | **POST** /customers/check-credentials | 
 [**createCustomer**](#createCustomer) | **POST** /customers | 
 [**createFacebookId**](#createFacebookId) | **POST** /customers/facebook | 
@@ -72,6 +73,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\Cart**](#Cart)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **checkAuthenticationToken**
+> \Kaemo\Client\Model\Customer checkAuthenticationToken($token)
+
+
+
+Check authentication token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$token = "token_example"; // string | Authentication token
+
+try {
+    $result = $api_instance->checkAuthenticationToken($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->checkAuthenticationToken: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| Authentication token |
+
+### Return type
+
+[**\Kaemo\Client\Model\Customer**](#Customer)
 
 ### Authorization
 

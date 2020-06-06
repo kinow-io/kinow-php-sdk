@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**attachCoverToVideo**](#attachCoverToVideo) | **POST** /videos/{video_id}/cover | 
 [**attachFeaturesToVideo**](#attachFeaturesToVideo) | **POST** /videos/{video_id}/features | 
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
+[**createSubtitle**](#createSubtitle) | **POST** /videos/{video_id}/subtitle | 
 [**createVideo**](#createVideo) | **POST** /videos | 
 [**deleteVideo**](#deleteVideo) | **DELETE** /videos/{video_id} | 
 [**getCategoryVideoPlayer**](#getCategoryVideoPlayer) | **GET** /categories/videos/{video_id}/player | 
@@ -155,6 +156,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createSubtitle**
+> \Kaemo\Client\Model\Subtitle createSubtitle($video_id, $body)
+
+
+
+Create new Video Subtitle
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$video_id = 789; // int | Video ID to attach the created Subtitle
+$body = new \Kaemo\Client\Model\CreateVideoSubtitleRequest(); // \Kaemo\Client\Model\CreateVideoSubtitleRequest | Subtitle settings
+
+try {
+    $result = $api_instance->createSubtitle($video_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->createSubtitle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to attach the created Subtitle |
+ **body** | [**\Kaemo\Client\Model\CreateVideoSubtitleRequest**](#\Kaemo\Client\Model\CreateVideoSubtitleRequest)| Subtitle settings |
+
+### Return type
+
+[**\Kaemo\Client\Model\Subtitle**](#Subtitle)
 
 ### Authorization
 
