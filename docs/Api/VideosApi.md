@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**getCategoryVideoSubtitles**](#getCategoryVideoSubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerHasAccessToVideos**](#getCustomerHasAccessToVideos) | **POST** /customers/{customer_id}/videos/has-access | 
+[**getCustomerSessionsMultiple**](#getCustomerSessionsMultiple) | **POST** /video-stats/{customer_id}/sessions | 
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 [**getVideo**](#getVideo) | **GET** /videos/{video_id} | 
 [**getVideoAccess**](#getVideoAccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
@@ -469,6 +470,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerSessionsMultiple**
+> \Kaemo\Client\Model\SessionVideoStats getCustomerSessionsMultiple($customer_id, $body)
+
+
+
+Get Customer sessions statistics for multiple videos
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\VideosApi();
+$customer_id = 789; // int | Customer ID to fetch
+$body = new \Kaemo\Client\Model\VideoIDList1(); // \Kaemo\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerSessionsMultiple($customer_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->getCustomerSessionsMultiple: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **body** | [**\Kaemo\Client\Model\VideoIDList1**](#\Kaemo\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kaemo\Client\Model\SessionVideoStats**](#SessionVideoStats)
 
 ### Authorization
 

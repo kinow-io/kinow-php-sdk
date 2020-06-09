@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
 *CustomersApi* | [**getCustomerPrepaymentBalances**](docs/Api/CustomersApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *CustomersApi* | [**getCustomerPrepaymentOperations**](docs/Api/CustomersApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
+*CustomersApi* | [**getCustomerSessionsMultiple**](docs/Api/CustomersApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
@@ -384,6 +385,7 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getCategoryVideoSubtitles**](docs/Api/VideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
+*VideosApi* | [**getCustomerSessionsMultiple**](docs/Api/VideosApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
@@ -552,6 +554,7 @@ Class | Method | HTTP request | Description
  - [VideoCategory](docs/Model/VideoCategory.md)
  - [VideoFreeAccess](docs/Model/VideoFreeAccess.md)
  - [VideoIDList](docs/Model/VideoIDList.md)
+ - [VideoIDList1](docs/Model/VideoIDList1.md)
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStats](docs/Model/VideoStats.md)
  - [VideoSubtitlesResponse](docs/Model/VideoSubtitlesResponse.md)
