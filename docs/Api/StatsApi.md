@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCustomerGroupTotalWatched**](#getCustomerGroupTotalWatched) | **GET** /video-stats/customer-group | 
 [**getCustomerSessions**](#getCustomerSessions) | **GET** /video-stats/sessions | 
+[**getCustomerSessionsMultiple**](#getCustomerSessionsMultiple) | **POST** /video-stats/{customer_id}/sessions | 
 [**getCustomerVideoStats**](#getCustomerVideoStats) | **GET** /video-stats/customers | 
 [**getVideoStats**](#getVideoStats) | **GET** /video-stats/videos | 
 
@@ -98,6 +99,51 @@ Name | Type | Description  | Notes
  **date_to** | **string**| Search entries to this date | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\SessionVideoStats**](#SessionVideoStats)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerSessionsMultiple**
+> \Kaemo\Client\Model\SessionVideoStats getCustomerSessionsMultiple($customer_id, $body)
+
+
+
+Get Customer sessions statistics for multiple videos
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$body = new \Kaemo\Client\Model\VideoIDList1(); // \Kaemo\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerSessionsMultiple($customer_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getCustomerSessionsMultiple: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **body** | [**\Kaemo\Client\Model\VideoIDList1**](#\Kaemo\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 

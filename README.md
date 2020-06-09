@@ -181,7 +181,6 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
 *CustomersApi* | [**getCustomerPrepaymentBalances**](docs/Api/CustomersApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *CustomersApi* | [**getCustomerPrepaymentOperations**](docs/Api/CustomersApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
-*CustomersApi* | [**getCustomerSessionsMultiple**](docs/Api/CustomersApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
@@ -361,6 +360,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**uploadProductCover**](docs/Api/ProductsApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
 *StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
+*StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
 *StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
 *SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
@@ -385,7 +385,6 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getCategoryVideoSubtitles**](docs/Api/VideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
-*VideosApi* | [**getCustomerSessionsMultiple**](docs/Api/VideosApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *VideosApi* | [**getVideo**](docs/Api/VideosApi.md#getvideo) | **GET** /videos/{video_id} | 
 *VideosApi* | [**getVideoAccess**](docs/Api/VideosApi.md#getvideoaccess) | **GET** /videos/{video_id}/customers/{customer_id}/access | 
