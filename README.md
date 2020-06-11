@@ -191,6 +191,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 *CustomersApi* | [**updateCustomer**](docs/Api/CustomersApi.md#updatecustomer) | **PUT** /customers/{customer_id} | 
 *CustomersApi* | [**updatePaymentMethod**](docs/Api/CustomersApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
+*CustomersApi* | [**validateCustomerCredentials**](docs/Api/CustomersApi.md#validatecustomercredentials) | **POST** /customers/validate-credentials | 
 *DevicesApi* | [**createDevices**](docs/Api/DevicesApi.md#createdevices) | **POST** /devices | 
 *DevicesApi* | [**deleteDevice**](docs/Api/DevicesApi.md#deletedevice) | **DELETE** /devices/{device_id} | 
 *DevicesApi* | [**getCustomerDevices**](docs/Api/DevicesApi.md#getcustomerdevices) | **GET** /devices/{customer_id} | 
@@ -447,6 +448,7 @@ Class | Method | HTTP request | Description
  - [Country](docs/Model/Country.md)
  - [CreateExtractSubtitleRequest](docs/Model/CreateExtractSubtitleRequest.md)
  - [CreateVideoSubtitleRequest](docs/Model/CreateVideoSubtitleRequest.md)
+ - [CredentialsValidation](docs/Model/CredentialsValidation.md)
  - [Currencies](docs/Model/Currencies.md)
  - [Currency](docs/Model/Currency.md)
  - [Customer](docs/Model/Customer.md)

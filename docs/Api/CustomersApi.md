@@ -36,6 +36,7 @@ Method | HTTP request | Description
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
 [**updateCustomer**](#updateCustomer) | **PUT** /customers/{customer_id} | 
 [**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
+[**validateCustomerCredentials**](#validateCustomerCredentials) | **POST** /customers/validate-credentials | 
 
 
 ## **attachCartToCustomer**
@@ -1471,6 +1472,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **validateCustomerCredentials**
+> \Kaemo\Client\Model\CredentialsValidation validateCustomerCredentials($email, $password)
+
+
+
+Validate Customer credentials
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$email = "email_example"; // string | Customer email to validate
+$password = "password_example"; // string | Customer password to check
+
+try {
+    $result = $api_instance->validateCustomerCredentials($email, $password);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->validateCustomerCredentials: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string**| Customer email to validate |
+ **password** | **string**| Customer password to check |
+
+### Return type
+
+[**\Kaemo\Client\Model\CredentialsValidation**](#CredentialsValidation)
 
 ### Authorization
 

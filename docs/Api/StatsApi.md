@@ -114,7 +114,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerSessionsMultiple**
-> \Kaemo\Client\Model\SessionVideoStats getCustomerSessionsMultiple($customer_id, $body)
+> \Kaemo\Client\Model\SessionVideoStat[] getCustomerSessionsMultiple($customer_id, $body)
 
 
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SessionVideoStats**](#SessionVideoStats)
+[**\Kaemo\Client\Model\SessionVideoStat[]**](#SessionVideoStat)
 
 ### Authorization
 
