@@ -529,6 +529,7 @@ Class | Method | HTTP request | Description
  - [ProductAttributeCreateRequest](docs/Model/ProductAttributeCreateRequest.md)
  - [ProductAttributeCreateRequest1](docs/Model/ProductAttributeCreateRequest1.md)
  - [ProductAttributesResponse](docs/Model/ProductAttributesResponse.md)
+ - [ProductCategories](docs/Model/ProductCategories.md)
  - [ProductIDList](docs/Model/ProductIDList.md)
  - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
  - [Products](docs/Model/Products.md)

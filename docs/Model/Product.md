@@ -39,5 +39,6 @@ Name | Type | Description | Notes
 **behavior_non_detected_countries** | **string** |  | [optional] 
 **id_product_attribute** | **int** | Only available when the product is in a cart | [optional] 
 **roles** | **string** |  | [optional] 
+**categories** | [**\Kaemo\Client\Model\ProductCategories[]**](#ProductCategories) |  | [optional] 
 
 
