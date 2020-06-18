@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **every_recurring_payments** | **bool** | If customer cart contains a subscription, select if cart rule will apply on recurring payments | [optional] 
 **reduction_percent** | **float** | Discount applied to cart when rule is added (in %). | [optional] 
 **reduction_amount** | **float** | Discount applied to cart when rule is added (in currency). | [optional] 
+**reduction_tax** | **int** | Tax application for currency discount | [optional] 
 **restriction_groups** | [**\Kaemo\Client\Model\CartRuleRestrictionGroup[]**](#CartRuleRestrictionGroup) |  | [optional] 
 
 
