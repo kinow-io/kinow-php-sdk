@@ -184,7 +184,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCartRules**
-> \Kaemo\Client\Model\CartRules getCartRules($page, $per_page)
+> \Kaemo\Client\Model\CartRules getCartRules($page, $per_page, $filters)
 
 
 
@@ -198,9 +198,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kaemo\Client\Api\CartRulesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
+$filters = "filters_example"; // string | ```      type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains      _______________        {      \"type\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"cancel\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be strict, contains, gt or lt.
 
 try {
-    $result = $api_instance->getCartRules($page, $per_page);
+    $result = $api_instance->getCartRules($page, $per_page, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartRulesApi->getCartRules: ', $e->getMessage(), PHP_EOL;
@@ -214,6 +215,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60;      type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains      _______________        {      \&quot;type\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;strict\&quot;      },      \&quot;cancel\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      }      } &#x60;&#x60;&#x60;Operator can be strict, contains, gt or lt. | [optional]
 
 ### Return type
 

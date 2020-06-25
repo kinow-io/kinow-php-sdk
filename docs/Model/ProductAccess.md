@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **id_order** | **int** |  | [optional] 
 **date_renewal** | **string** |  | [optional] 
 **payment_method** | **string** |  | [optional] 
+**renewed** | **int** |  | [optional] 
 
 
