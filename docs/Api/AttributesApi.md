@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProductAttribute**](#createProductAttribute) | **POST** /attributes | 
+[**deleteAttribute**](#deleteAttribute) | **DELETE** /attributes/{attribute_id} | 
 [**getProductAttributes**](#getProductAttributes) | **GET** /products/{product_id}/attributes | 
 
 
@@ -41,6 +42,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\ProductAttribute**](#ProductAttribute)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **deleteAttribute**
+> deleteAttribute($attribute_id)
+
+
+
+Delete Attribute
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\AttributesApi();
+$attribute_id = 789; // int | Attribute ID to delete
+
+try {
+    $api_instance->deleteAttribute($attribute_id);
+} catch (Exception $e) {
+    echo 'Exception when calling AttributesApi->deleteAttribute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attribute_id** | **int**| Attribute ID to delete |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

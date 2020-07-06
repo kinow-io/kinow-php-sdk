@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**getCustomerAddress**](docs/Api/AddressApi.md#getcustomeraddress) | **GET** /customers/{customer_id}/address | 
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /addresses/{address_id} | 
 *AttributesApi* | [**createProductAttribute**](docs/Api/AttributesApi.md#createproductattribute) | **POST** /attributes | 
+*AttributesApi* | [**deleteAttribute**](docs/Api/AttributesApi.md#deleteattribute) | **DELETE** /attributes/{attribute_id} | 
 *AttributesApi* | [**getProductAttributes**](docs/Api/AttributesApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *BlogCategoriesApi* | [**getBlogCategories**](docs/Api/BlogCategoriesApi.md#getblogcategories) | **GET** /blog-categories | 
 *BlogCategoriesApi* | [**getBlogCategory**](docs/Api/BlogCategoriesApi.md#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
@@ -121,6 +122,7 @@ Class | Method | HTTP request | Description
 *CartRulesApi* | [**attachCartRuleToCart**](docs/Api/CartRulesApi.md#attachcartruletocart) | **POST** /carts/{cart_id}/cart-rules | 
 *CartRulesApi* | [**createCartRule**](docs/Api/CartRulesApi.md#createcartrule) | **POST** /cart-rules | 
 *CartRulesApi* | [**deleteCartRule**](docs/Api/CartRulesApi.md#deletecartrule) | **DELETE** /cart-rules/{cart_rule_id} | 
+*CartRulesApi* | [**detachCartRuleFromCart**](docs/Api/CartRulesApi.md#detachcartrulefromcart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 *CartRulesApi* | [**getCartRule**](docs/Api/CartRulesApi.md#getcartrule) | **GET** /cart-rules/{cart_rule_id} | 
 *CartRulesApi* | [**getCartRules**](docs/Api/CartRulesApi.md#getcartrules) | **GET** /cart-rules | 
 *CartRulesApi* | [**updateCartRule**](docs/Api/CartRulesApi.md#updatecartrule) | **PUT** /cart-rules/{cart_rule_id} | 
@@ -130,6 +132,8 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**createCart**](docs/Api/CartsApi.md#createcart) | **POST** /carts | 
 *CartsApi* | [**deleteCart**](docs/Api/CartsApi.md#deletecart) | **DELETE** /carts/{cart_id} | 
 *CartsApi* | [**deleteProductFromCart**](docs/Api/CartsApi.md#deleteproductfromcart) | **DELETE** /carts/{cart_id}/products | 
+*CartsApi* | [**detachCartRuleFromCart**](docs/Api/CartsApi.md#detachcartrulefromcart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
+*CartsApi* | [**emptyCart**](docs/Api/CartsApi.md#emptycart) | **POST** /carts/{cart_id}/empty | 
 *CartsApi* | [**getCart**](docs/Api/CartsApi.md#getcart) | **GET** /carts/{cart_id} | 
 *CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 

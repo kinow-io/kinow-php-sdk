@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**attachCartRuleToCart**](#attachCartRuleToCart) | **POST** /carts/{cart_id}/cart-rules | 
 [**createCartRule**](#createCartRule) | **POST** /cart-rules | 
 [**deleteCartRule**](#deleteCartRule) | **DELETE** /cart-rules/{cart_rule_id} | 
+[**detachCartRuleFromCart**](#detachCartRuleFromCart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 [**getCartRule**](#getCartRule) | **GET** /cart-rules/{cart_rule_id} | 
 [**getCartRules**](#getCartRules) | **GET** /cart-rules | 
 [**updateCartRule**](#updateCartRule) | **PUT** /cart-rules/{cart_rule_id} | 
@@ -126,6 +127,50 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_rule_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachCartRuleFromCart**
+> detachCartRuleFromCart($cart_id, $cart_rule_id)
+
+
+
+Detach Cart rule from Cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$cart_id = 789; // int | Cart ID to fetch
+$cart_rule_id = 789; // int | Cart rule ID to detach
+
+try {
+    $api_instance->detachCartRuleFromCart($cart_id, $cart_rule_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CartRulesApi->detachCartRuleFromCart: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **cart_rule_id** | **int**| Cart rule ID to detach |
 
 ### Return type
 

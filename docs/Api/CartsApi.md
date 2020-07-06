@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**createCart**](#createCart) | **POST** /carts | 
 [**deleteCart**](#deleteCart) | **DELETE** /carts/{cart_id} | 
 [**deleteProductFromCart**](#deleteProductFromCart) | **DELETE** /carts/{cart_id}/products | 
+[**detachCartRuleFromCart**](#detachCartRuleFromCart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
+[**emptyCart**](#emptyCart) | **POST** /carts/{cart_id}/empty | 
 [**getCart**](#getCart) | **GET** /carts/{cart_id} | 
 [**getCustomerCarts**](#getCustomerCarts) | **GET** /customers/{customer_id}/carts | 
 [**getLastCart**](#getLastCart) | **GET** /customers/{customer_id}/last-cart | 
@@ -279,6 +281,92 @@ Name | Type | Description  | Notes
  **cart_id** | **int**| Cart ID to fetch |
  **product_id** | **int**| Product ID to delete from cart |
  **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachCartRuleFromCart**
+> detachCartRuleFromCart($cart_id, $cart_rule_id)
+
+
+
+Detach Cart rule from Cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CartsApi();
+$cart_id = 789; // int | Cart ID to fetch
+$cart_rule_id = 789; // int | Cart rule ID to detach
+
+try {
+    $api_instance->detachCartRuleFromCart($cart_id, $cart_rule_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->detachCartRuleFromCart: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **cart_rule_id** | **int**| Cart rule ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **emptyCart**
+> emptyCart($cart_id)
+
+
+
+Remove all items in a Cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CartsApi();
+$cart_id = 789; // int | Cart ID to empty
+
+try {
+    $api_instance->emptyCart($cart_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->emptyCart: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to empty |
 
 ### Return type
 

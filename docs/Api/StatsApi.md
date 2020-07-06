@@ -61,7 +61,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerSessions**
-> \Kaemo\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page)
+> \Kaemo\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -74,6 +74,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kaemo\Client\Api\StatsApi();
 $customer_id = 789; // int | Customer ID to fetch
+$group_id = 789; // int | Group ID to fetch
 $video_id = 789; // int | Video ID to fetch
 $date_from = "date_from_example"; // string | Search entries from this date
 $date_to = "date_to_example"; // string | Search entries to this date
@@ -81,7 +82,7 @@ $page = 789; // int |
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getCustomerSessions($customer_id, $video_id, $date_from, $date_to, $page, $per_page);
+    $result = $api_instance->getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatsApi->getCustomerSessions: ', $e->getMessage(), PHP_EOL;
@@ -94,6 +95,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch | [optional]
+ **group_id** | **int**| Group ID to fetch | [optional]
  **video_id** | **int**| Video ID to fetch | [optional]
  **date_from** | **string**| Search entries from this date | [optional]
  **date_to** | **string**| Search entries to this date | [optional]
