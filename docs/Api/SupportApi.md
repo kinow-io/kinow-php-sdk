@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **createMessage**
-> \Kaemo\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order)
+> \Kaemo\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail)
 
 
 
@@ -27,9 +27,10 @@ $id_contact = 56; // int |
 $message = "message_example"; // string | 
 $id_product = 56; // int | 
 $id_order = 56; // int | 
+$send_mail = true; // bool | 
 
 try {
-    $result = $api_instance->createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order);
+    $result = $api_instance->createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SupportApi->createMessage: ', $e->getMessage(), PHP_EOL;
@@ -47,6 +48,7 @@ Name | Type | Description  | Notes
  **message** | **string**|  |
  **id_product** | **int**|  | [optional]
  **id_order** | **int**|  | [optional]
+ **send_mail** | **bool**|  | [optional]
 
 ### Return type
 

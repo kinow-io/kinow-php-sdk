@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **postcode** | **string** |  | [optional] 
 **address1** | **string** |  | [optional] 
 **company** | **string** |  | [optional] 
+**send_mail** | **bool** |  | [optional] 
 
 

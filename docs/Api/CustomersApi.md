@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+[**getRegistrationFields**](#getRegistrationFields) | **GET** /customer/registration-fields | 
 [**loginWithFacebook**](#loginWithFacebook) | **POST** /customers/facebook-login | 
 [**passwordToken**](#passwordToken) | **POST** /customers/password-token | 
 [**passwordTokenConsume**](#passwordTokenConsume) | **POST** /customers/password-token-consume | 
@@ -1203,6 +1204,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getRegistrationFields**
+> \Kaemo\Client\Model\RegistrationFields getRegistrationFields($page, $per_page)
+
+
+
+Get registration fields
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\CustomersApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getRegistrationFields($page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getRegistrationFields: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kaemo\Client\Model\RegistrationFields**](#RegistrationFields)
 
 ### Authorization
 
