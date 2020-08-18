@@ -241,6 +241,7 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**getProductFeatures**](docs/Api/FeaturesApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
 *FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
+*GeolocationsApi* | [**getGeolocSettings**](docs/Api/GeolocationsApi.md#getgeolocsettings) | **GET** /geolocations/settings | 
 *GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
 *GeolocationsApi* | [**getPlatformAccessInfo**](docs/Api/GeolocationsApi.md#getplatformaccessinfo) | **GET** /geolocations/platform-access | 
 *GeolocationsApi* | [**getProductGeolocations**](docs/Api/GeolocationsApi.md#getproductgeolocations) | **GET** /products/{product_id}/geolocations | 
@@ -481,6 +482,7 @@ Class | Method | HTTP request | Description
  - [Gender](docs/Model/Gender.md)
  - [Genders](docs/Model/Genders.md)
  - [Geoloc](docs/Model/Geoloc.md)
+ - [GeolocSettings](docs/Model/GeolocSettings.md)
  - [Geolocs](docs/Model/Geolocs.md)
  - [Gift](docs/Model/Gift.md)
  - [Gift1](docs/Model/Gift1.md)

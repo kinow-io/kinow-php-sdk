@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getGeolocSettings**](#getGeolocSettings) | **GET** /geolocations/settings | 
 [**getIPLocation**](#getIPLocation) | **GET** /geolocations/ip | 
 [**getPlatformAccessInfo**](#getPlatformAccessInfo) | **GET** /geolocations/platform-access | 
 [**getProductGeolocations**](#getProductGeolocations) | **GET** /products/{product_id}/geolocations | 
@@ -12,6 +13,51 @@ Method | HTTP request | Description
 [**setProductGeolocation**](#setProductGeolocation) | **PUT** /products/{product_id}/geolocations | 
 [**setVideoGeolocation**](#setVideoGeolocation) | **PUT** /videos/{video_id}/geolocations | 
 
+
+## **getGeolocSettings**
+> \Kaemo\Client\Model\GeolocSettings getGeolocSettings($type, $type_id)
+
+
+
+Get geolocation settings for an item
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$type = "type_example"; // string | Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu
+$type_id = 56; // int | Item ID
+
+try {
+    $result = $api_instance->getGeolocSettings($type, $type_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GeolocationsApi->getGeolocSettings: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu |
+ **type_id** | **int**| Item ID |
+
+### Return type
+
+[**\Kaemo\Client\Model\GeolocSettings**](#GeolocSettings)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **getIPLocation**
 > \Kaemo\Client\Model\IPLocation getIPLocation($ip_address)
