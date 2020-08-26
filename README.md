@@ -159,6 +159,10 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getVideosFromCategory**](docs/Api/CategoriesApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{category_id} | 
 *CategoriesApi* | [**uploadCategoryCover**](docs/Api/CategoriesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
+*CategoryVideosApi* | [**getCategoryVideoPlayer**](docs/Api/CategoryVideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
+*CategoryVideosApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoryVideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
+*CategoryVideosApi* | [**getVideosFromCategories**](docs/Api/CategoryVideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
+*CategoryVideosApi* | [**getVideosFromCategory**](docs/Api/CategoryVideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
@@ -359,6 +363,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getProductSubscription**](docs/Api/ProductsApi.md#getproductsubscription) | **GET** /products/{product_id}/subscription | 
 *ProductsApi* | [**getProducts**](docs/Api/ProductsApi.md#getproducts) | **GET** /products | 
 *ProductsApi* | [**getProductsFromProduct**](docs/Api/ProductsApi.md#getproductsfromproduct) | **GET** /products/{product_id}/products | 
+*ProductsApi* | [**getVideoGroupsFromProduct**](docs/Api/ProductsApi.md#getvideogroupsfromproduct) | **GET** /products/{product_id}/video-groups | 
 *ProductsApi* | [**getVideosFromProduct**](docs/Api/ProductsApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
 *ProductsApi* | [**searchProducts**](docs/Api/ProductsApi.md#searchproducts) | **GET** /products/search/{search_query} | 
 *ProductsApi* | [**setProductGeolocation**](docs/Api/ProductsApi.md#setproductgeolocation) | **PUT** /products/{product_id}/geolocations | 
@@ -382,14 +387,15 @@ Class | Method | HTTP request | Description
 *SupportApi* | [**getContacts**](docs/Api/SupportApi.md#getcontacts) | **GET** /support/contacts | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
 *TaxRulesApi* | [**getTaxRules**](docs/Api/TaxRulesApi.md#gettaxrules) | **GET** /tax-rules | 
+*VideoGroupsApi* | [**getVideoGroup**](docs/Api/VideoGroupsApi.md#getvideogroup) | **GET** /video-groups/{video_group_id} | 
+*VideoGroupsApi* | [**getVideoGroups**](docs/Api/VideoGroupsApi.md#getvideogroups) | **GET** /video-groups | 
+*VideoGroupsApi* | [**getVideoGroupsFromProduct**](docs/Api/VideoGroupsApi.md#getvideogroupsfromproduct) | **GET** /products/{product_id}/video-groups | 
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
 *VideosApi* | [**createSubtitle**](docs/Api/VideosApi.md#createsubtitle) | **POST** /videos/{video_id}/subtitle | 
 *VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
-*VideosApi* | [**getCategoryVideoPlayer**](docs/Api/VideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
-*VideosApi* | [**getCategoryVideoSubtitles**](docs/Api/VideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
 *VideosApi* | [**getDisabledSubscriptions**](docs/Api/VideosApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
@@ -405,8 +411,6 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**getVideoSubtitles**](docs/Api/VideosApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *VideosApi* | [**getVideoViews**](docs/Api/VideosApi.md#getvideoviews) | **GET** /videos/{video_id}/views | 
 *VideosApi* | [**getVideos**](docs/Api/VideosApi.md#getvideos) | **GET** /videos | 
-*VideosApi* | [**getVideosFromCategories**](docs/Api/VideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
-*VideosApi* | [**getVideosFromCategory**](docs/Api/VideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *VideosApi* | [**getVideosFromProduct**](docs/Api/VideosApi.md#getvideosfromproduct) | **GET** /products/{product_id}/videos | 
 *VideosApi* | [**setVideoGeolocation**](docs/Api/VideosApi.md#setvideogeolocation) | **PUT** /videos/{video_id}/geolocations | 
 *VideosApi* | [**updateVideo**](docs/Api/VideosApi.md#updatevideo) | **PUT** /videos/{video_id} | 
@@ -564,6 +568,8 @@ Class | Method | HTTP request | Description
  - [VideoAccessInfo](docs/Model/VideoAccessInfo.md)
  - [VideoCategory](docs/Model/VideoCategory.md)
  - [VideoFreeAccess](docs/Model/VideoFreeAccess.md)
+ - [VideoGroup](docs/Model/VideoGroup.md)
+ - [VideoGroup1](docs/Model/VideoGroup1.md)
  - [VideoIDList](docs/Model/VideoIDList.md)
  - [VideoIDList1](docs/Model/VideoIDList1.md)
  - [VideoStat](docs/Model/VideoStat.md)

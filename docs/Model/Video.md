@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **id_product** | **int** |  | [optional] 
+**id_video_group** | **int** |  | [optional] 
 **id_product_image** | **int** |  | [optional] 
 **id_language** | **int** |  | [optional] 
 **language_filter** | **int** |  | [optional] 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **product_id** | **int** | Product ID to attach this access | [optional] 
+**video__group_id** | **int** | Video Group ID to restrict this access | [optional] 
 **video_id** | **int** | Video ID to restrict this access | [optional] 
 **mode** | **string** | RENT, BUY or SUBSCRIPTION | [optional] 
 **type** | **string** | BOTH (Streaming &amp; Download), STREAMING or DOWNLOAD | [optional] 
