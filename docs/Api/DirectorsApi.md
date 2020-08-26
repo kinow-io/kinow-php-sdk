@@ -30,7 +30,7 @@ Attach product to director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $product_id = 789; // int | Product ID to fetch
 $director_id = 789; // int | Director ID to attach
 
@@ -63,7 +63,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createDirector**
-> \Kaemo\Client\Model\Director createDirector($body)
+> \Kinow\Client\Model\Director createDirector($body)
 
 
 
@@ -74,8 +74,8 @@ Create new director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
-$body = new \Kaemo\Client\Model\Director1(); // \Kaemo\Client\Model\Director1 | Directory settings
+$api_instance = new Kinow\Client\Api\DirectorsApi();
+$body = new \Kinow\Client\Model\Director1(); // \Kinow\Client\Model\Director1 | Directory settings
 
 try {
     $result = $api_instance->createDirector($body);
@@ -90,11 +90,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Director1**](#\Kaemo\Client\Model\Director1)| Directory settings |
+ **body** | [**\Kinow\Client\Model\Director1**](#\Kinow\Client\Model\Director1)| Directory settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Director**](#Director)
+[**\Kinow\Client\Model\Director**](#Director)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Delete director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 56; // int | 
 
 try {
@@ -148,7 +148,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirector**
-> \Kaemo\Client\Model\Director getDirector($director_id)
+> \Kinow\Client\Model\Director getDirector($director_id)
 
 
 
@@ -159,7 +159,7 @@ Get Director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 789; // int | Director ID to fetch
 
 try {
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Director**](#Director)
+[**\Kinow\Client\Model\Director**](#Director)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectorCoverImage**
-> \Kaemo\Client\Model\Image getDirectorCoverImage($director_id)
+> \Kinow\Client\Model\Image getDirectorCoverImage($director_id)
 
 
 
@@ -202,7 +202,7 @@ Get cover image of a director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 789; // int | Director ID to fetch
 
 try {
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectorProducts**
-> \Kaemo\Client\Model\Products getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\Products getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -245,7 +245,7 @@ Get director products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 789; // int | Director ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectorProductsRole**
-> \Kaemo\Client\Model\Products getDirectorProductsRole($director_id, $page, $per_page)
+> \Kinow\Client\Model\Products getDirectorProductsRole($director_id, $page, $per_page)
 
 
 
@@ -302,7 +302,7 @@ Get Products linked to Product with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 789; // int | Director ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectors**
-> \Kaemo\Client\Model\Directors getDirectors($page, $per_page)
+> \Kinow\Client\Model\Directors getDirectors($page, $per_page)
 
 
 
@@ -349,7 +349,7 @@ Get directors list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kaemo\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -394,7 +394,7 @@ Get directors of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kaemo\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -443,7 +443,7 @@ Get Directors attached to Product with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -490,9 +490,9 @@ Update director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 56; // int | 
-$body = new \Kaemo\Client\Model\Director2(); // \Kaemo\Client\Model\Director2 | Directory settings
+$body = new \Kinow\Client\Model\Director2(); // \Kinow\Client\Model\Director2 | Directory settings
 
 try {
     $api_instance->updateDirector($director_id, $body);
@@ -507,7 +507,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**|  |
- **body** | [**\Kaemo\Client\Model\Director2**](#\Kaemo\Client\Model\Director2)| Directory settings |
+ **body** | [**\Kinow\Client\Model\Director2**](#\Kinow\Client\Model\Director2)| Directory settings |
 
 ### Return type
 
@@ -523,7 +523,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kaemo\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -534,7 +534,7 @@ Upload director cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DirectorsApi();
+$api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 3.4; // float | Director ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

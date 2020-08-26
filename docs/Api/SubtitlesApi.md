@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getSubtitles**
-> \Kaemo\Client\Model\SubtitleFiles getSubtitles($page, $per_page)
+> \Kinow\Client\Model\SubtitleFiles getSubtitles($page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get Subtitles list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubtitlesApi();
+$api_instance = new Kinow\Client\Api\SubtitlesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubtitleFiles**](#SubtitleFiles)
+[**\Kinow\Client\Model\SubtitleFiles**](#SubtitleFiles)
 
 ### Authorization
 

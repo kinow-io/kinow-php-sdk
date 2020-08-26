@@ -60,7 +60,7 @@ Associate products to another product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $associated_product_ids = "associated_product_ids_example"; // string | Products IDs to associate to another product. IDs must be separated with comma (,)
 
@@ -104,7 +104,7 @@ Attach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]```
 
@@ -148,7 +148,7 @@ Attach product to actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $actor_id = 789; // int | Actor ID to attach
 
@@ -192,7 +192,7 @@ Attach product to category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $category_id = 789; // int | Category ID to attach
 
@@ -236,7 +236,7 @@ Attach product to director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $director_id = 789; // int | Director ID to attach
 
@@ -280,7 +280,7 @@ Attach product to group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $group_id = 789; // int | Group ID to attach
 
@@ -324,7 +324,7 @@ Attach video to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $video_id = 789; // int | Video ID to attach
 
@@ -357,7 +357,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createProduct**
-> \Kaemo\Client\Model\Product createProduct($body)
+> \Kinow\Client\Model\Product createProduct($body)
 
 
 
@@ -368,8 +368,8 @@ Create new product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
-$body = new \Kaemo\Client\Model\Product(); // \Kaemo\Client\Model\Product | 
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$body = new \Kinow\Client\Model\Product(); // \Kinow\Client\Model\Product | 
 
 try {
     $result = $api_instance->createProduct($body);
@@ -384,11 +384,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Product**](#\Kaemo\Client\Model\Product)|  |
+ **body** | [**\Kinow\Client\Model\Product**](#\Kinow\Client\Model\Product)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\Product**](#Product)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Delete product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -453,7 +453,7 @@ Detach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | 
 $feature_id = 789; // int | 
 
@@ -497,7 +497,7 @@ Detach product from category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $category_id = 789; // int | Category ID to detach
 
@@ -541,7 +541,7 @@ Detach product from group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $group_id = 789; // int | Group ID to detach
 
@@ -574,7 +574,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getBestSales**
-> \Kaemo\Client\Model\Products getBestSales($page, $per_page, $ip)
+> \Kinow\Client\Model\Products getBestSales($page, $per_page, $ip)
 
 
 
@@ -585,7 +585,7 @@ Get most saled Products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $ip = "ip_example"; // string | filter by Customer IP
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -621,7 +621,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryProducts**
-> \Kaemo\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -632,7 +632,7 @@ Get category products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -689,7 +689,7 @@ Get customer access to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | Product ID to fetch
 
@@ -722,7 +722,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
+> \Kinow\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
 
 
 
@@ -733,9 +733,9 @@ Get customer access to Products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\ProductIDList(); // \Kinow\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $body);
@@ -751,11 +751,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\ProductIDList**](#\Kinow\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+[**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProduct**
-> \Kaemo\Client\Model\Product getProduct($product_id)
+> \Kinow\Client\Model\Product getProduct($product_id)
 
 
 
@@ -778,7 +778,7 @@ Get product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\Product**](#Product)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductActors**
-> \Kaemo\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -821,7 +821,7 @@ Get actors attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -847,7 +847,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\Actors**](#Actors)
 
 ### Authorization
 
@@ -859,7 +859,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductActorsRole**
-> \Kaemo\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
 
 
 
@@ -870,7 +870,7 @@ Get Actors attached to Product with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -894,7 +894,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\Actors**](#Actors)
 
 ### Authorization
 
@@ -906,7 +906,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductAttributes**
-> \Kaemo\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
 
 
 
@@ -917,7 +917,7 @@ Get Product attributes. Mandatory to add TVOD Product in cart.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
+[**\Kinow\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
 
 ### Authorization
 
@@ -964,7 +964,7 @@ Get availability of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -995,7 +995,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductCategories**
-> \Kaemo\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -1006,7 +1006,7 @@ Get product categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -1048,7 +1048,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductCoverImage**
-> \Kaemo\Client\Model\Image getProductCoverImage($product_id)
+> \Kinow\Client\Model\Image getProductCoverImage($product_id)
 
 
 
@@ -1059,7 +1059,7 @@ Get cover image of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -1079,7 +1079,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -1091,7 +1091,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kaemo\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -1102,7 +1102,7 @@ Get directors of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -1140,7 +1140,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kaemo\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -1151,7 +1151,7 @@ Get Directors attached to Product with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\Directors**](#Directors)
 
 ### Authorization
 
@@ -1187,7 +1187,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kaemo\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
+> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -1198,7 +1198,7 @@ Get extracts of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1222,7 +1222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -1234,7 +1234,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductFeatures**
-> \Kaemo\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
+> \Kinow\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
 
 
 
@@ -1245,7 +1245,7 @@ Get product features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1269,7 +1269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -1281,7 +1281,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductGeolocations**
-> \Kaemo\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
+> \Kinow\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
 
 
 
@@ -1292,7 +1292,7 @@ Get product geolocation restrictions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1316,7 +1316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\Geolocs**](#Geolocs)
 
 ### Authorization
 
@@ -1339,7 +1339,7 @@ Check product access using geolocation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
@@ -1376,7 +1376,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductGroups**
-> \Kaemo\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
+> \Kinow\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
 
 
 
@@ -1387,7 +1387,7 @@ Get groups allowed to see this product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1411,7 +1411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\Groups**](#Groups)
 
 ### Authorization
 
@@ -1423,7 +1423,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductImages**
-> \Kaemo\Client\Model\ProductImagesResponse getProductImages($product_id, $type, $page, $per_page)
+> \Kinow\Client\Model\ProductImagesResponse getProductImages($product_id, $type, $page, $per_page)
 
 
 
@@ -1434,7 +1434,7 @@ Get images attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $type = "type_example"; // string | Filter on specific Image type
 $page = 789; // int | 
@@ -1460,7 +1460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
+[**\Kinow\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
 
 ### Authorization
 
@@ -1472,7 +1472,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductScreenshots**
-> \Kaemo\Client\Model\Screenshot[] getProductScreenshots($product_id)
+> \Kinow\Client\Model\Screenshot[] getProductScreenshots($product_id)
 
 
 
@@ -1483,7 +1483,7 @@ Get product screenshots
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -1503,7 +1503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Screenshot[]**](#Screenshot)
+[**\Kinow\Client\Model\Screenshot[]**](#Screenshot)
 
 ### Authorization
 
@@ -1515,7 +1515,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductSubscription**
-> \Kaemo\Client\Model\Subscription getProductSubscription($product_id)
+> \Kinow\Client\Model\Subscription getProductSubscription($product_id)
 
 
 
@@ -1526,7 +1526,7 @@ Get Subscription linked to a Product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 
@@ -1558,7 +1558,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProducts**
-> \Kaemo\Client\Model\Products getProducts($page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip, $customer_id)
+> \Kinow\Client\Model\Products getProducts($page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip, $customer_id)
 
 
 
@@ -1569,7 +1569,7 @@ Get products list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $features = "features_example"; // string | ```      featureId[value]=string&featureId[operator]=strict      _______________        {      \"*\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"1\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).      To search on all features, you can pass * as featureId.
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -1615,7 +1615,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductsFromProduct**
-> \Kaemo\Client\Model\Products getProductsFromProduct($product_id, $page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip)
+> \Kinow\Client\Model\Products getProductsFromProduct($product_id, $page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip)
 
 
 
@@ -1626,7 +1626,7 @@ Get products linked to another product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1660,7 +1660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -1672,7 +1672,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoGroupsFromProduct**
-> \Kaemo\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -1683,7 +1683,7 @@ Get Video Groups attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"duration\": {      \"value\": \"string\",      \"operator\": \"gt\"      }      } ```      Operator can be strict, contains, gt or lt.
@@ -1713,7 +1713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
 
 ### Authorization
 
@@ -1725,7 +1725,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -1736,7 +1736,7 @@ Get videos attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"duration\": {      \"value\": \"string\",      \"operator\": \"gt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -1768,7 +1768,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\Videos2**](#Videos2)
 
 ### Authorization
 
@@ -1780,7 +1780,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **searchProducts**
-> \Kaemo\Client\Model\Products searchProducts($search_query, $page, $per_page, $sort_by, $sort_direction, $in_categories, $in_features, $feature_values)
+> \Kinow\Client\Model\Products searchProducts($search_query, $page, $per_page, $sort_by, $sort_direction, $in_categories, $in_features, $feature_values)
 
 
 
@@ -1791,7 +1791,7 @@ Search product with a keyword
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $search_query = "search_query_example"; // string | Keyword used to search the products
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -1825,7 +1825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -1848,7 +1848,7 @@ Handle geolocation for products by countries
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
@@ -1891,7 +1891,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateProduct**
-> \Kaemo\Client\Model\Product updateProduct($product_id, $body)
+> \Kinow\Client\Model\Product updateProduct($product_id, $body)
 
 
 
@@ -1902,9 +1902,9 @@ Update product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
-$body = new \Kaemo\Client\Model\Product(); // \Kaemo\Client\Model\Product | 
+$body = new \Kinow\Client\Model\Product(); // \Kinow\Client\Model\Product | 
 
 try {
     $result = $api_instance->updateProduct($product_id, $body);
@@ -1920,11 +1920,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
- **body** | [**\Kaemo\Client\Model\Product**](#\Kaemo\Client\Model\Product)|  |
+ **body** | [**\Kinow\Client\Model\Product**](#\Kinow\Client\Model\Product)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\Product**](#Product)
 
 ### Authorization
 
@@ -1947,7 +1947,7 @@ Update product group restriction behavior
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $behavior = 56; // int | Group restriction behavior        0 - Disable      1 - Allow Groups      2 - Forbid Groups
 
@@ -1980,7 +1980,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadProductCover**
-> \Kaemo\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -1991,7 +1991,7 @@ Upload product cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductsApi();
+$api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 3.4; // float | Product ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -2017,7 +2017,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

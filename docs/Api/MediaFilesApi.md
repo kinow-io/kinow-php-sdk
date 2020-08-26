@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getMediaSourceFiles**
-> \Kaemo\Client\Model\MediaFiles getMediaSourceFiles($source_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\MediaFiles getMediaSourceFiles($source_id, $page, $per_page, $filters)
 
 
 
@@ -20,7 +20,7 @@ Get media source files
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaFilesApi();
+$api_instance = new Kinow\Client\Api\MediaFilesApi();
 $source_id = 789; // int | Media source ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaFiles**](#MediaFiles)
+[**\Kinow\Client\Model\MediaFiles**](#MediaFiles)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **postMediaSourceFiles**
-> \Kaemo\Client\Model\MediaFile postMediaSourceFiles($source_id, $body)
+> \Kinow\Client\Model\MediaFile postMediaSourceFiles($source_id, $body)
 
 
 
@@ -69,9 +69,9 @@ Post media file
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaFilesApi();
+$api_instance = new Kinow\Client\Api\MediaFilesApi();
 $source_id = 789; // int | Media source ID to fetch
-$body = new \Kaemo\Client\Model\MediaFile(); // \Kaemo\Client\Model\MediaFile | Create MediaFile object
+$body = new \Kinow\Client\Model\MediaFile(); // \Kinow\Client\Model\MediaFile | Create MediaFile object
 
 try {
     $result = $api_instance->postMediaSourceFiles($source_id, $body);
@@ -87,11 +87,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source_id** | **int**| Media source ID to fetch |
- **body** | [**\Kaemo\Client\Model\MediaFile**](#\Kaemo\Client\Model\MediaFile)| Create MediaFile object |
+ **body** | [**\Kinow\Client\Model\MediaFile**](#\Kinow\Client\Model\MediaFile)| Create MediaFile object |
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaFile**](#MediaFile)
+[**\Kinow\Client\Model\MediaFile**](#MediaFile)
 
 ### Authorization
 

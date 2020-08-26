@@ -25,7 +25,7 @@ Attach cart rule to cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $code = "code_example"; // string | Code of the cart rule to attach
 
@@ -69,8 +69,8 @@ Create new cart rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
-$body = new \Kaemo\Client\Model\CartRule(); // \Kaemo\Client\Model\CartRule | 
+$api_instance = new Kinow\Client\Api\CartRulesApi();
+$body = new \Kinow\Client\Model\CartRule(); // \Kinow\Client\Model\CartRule | 
 
 try {
     $api_instance->createCartRule($body);
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CartRule**](#\Kaemo\Client\Model\CartRule)|  |
+ **body** | [**\Kinow\Client\Model\CartRule**](#\Kinow\Client\Model\CartRule)|  |
 
 ### Return type
 
@@ -111,7 +111,7 @@ Delete cart rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_rule_id = 56; // int | 
 
 try {
@@ -153,7 +153,7 @@ Detach Cart rule from Cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $cart_rule_id = 789; // int | Cart rule ID to detach
 
@@ -186,7 +186,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCartRule**
-> \Kaemo\Client\Model\CartRule getCartRule($cart_rule_id)
+> \Kinow\Client\Model\CartRule getCartRule($cart_rule_id)
 
 
 
@@ -197,7 +197,7 @@ Get cart rule by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_rule_id = 789; // int | Cart rule ID to fetch
 
 try {
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CartRule**](#CartRule)
+[**\Kinow\Client\Model\CartRule**](#CartRule)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCartRules**
-> \Kaemo\Client\Model\CartRules getCartRules($page, $per_page, $filters)
+> \Kinow\Client\Model\CartRules getCartRules($page, $per_page, $filters)
 
 
 
@@ -240,7 +240,7 @@ Get cart rules list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains      _______________        {      \"type\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"cancel\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CartRules**](#CartRules)
+[**\Kinow\Client\Model\CartRules**](#CartRules)
 
 ### Authorization
 
@@ -287,9 +287,9 @@ Update cart rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartRulesApi();
+$api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_rule_id = 56; // int | 
-$body = new \Kaemo\Client\Model\CartRule(); // \Kaemo\Client\Model\CartRule | 
+$body = new \Kinow\Client\Model\CartRule(); // \Kinow\Client\Model\CartRule | 
 
 try {
     $api_instance->updateCartRule($cart_rule_id, $body);
@@ -304,7 +304,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_rule_id** | **int**|  |
- **body** | [**\Kaemo\Client\Model\CartRule**](#\Kaemo\Client\Model\CartRule)|  |
+ **body** | [**\Kinow\Client\Model\CartRule**](#\Kinow\Client\Model\CartRule)|  |
 
 ### Return type
 

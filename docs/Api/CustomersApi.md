@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 
 ## **attachCartToCustomer**
-> \Kaemo\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
+> \Kinow\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
 
 
 
@@ -52,7 +52,7 @@ Attach cart to customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $cart_id = 789; // int | Cart ID to attach
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **checkAuthenticationToken**
-> \Kaemo\Client\Model\Customer checkAuthenticationToken($token)
+> \Kinow\Client\Model\Customer checkAuthenticationToken($token)
 
 
 
@@ -97,7 +97,7 @@ Check authentication token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $token = "token_example"; // string | Authentication token
 
 try {
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **checkCustomerCredentials**
-> \Kaemo\Client\Model\Customer checkCustomerCredentials($email, $password)
+> \Kinow\Client\Model\Customer checkCustomerCredentials($email, $password)
 
 
 
@@ -140,7 +140,7 @@ Check customer credentials
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $email = "email_example"; // string | Email of the customer to check
 $password = "password_example"; // string | Password of the customer to check
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createCustomer**
-> \Kaemo\Client\Model\Customer createCustomer($body)
+> \Kinow\Client\Model\Customer createCustomer($body)
 
 
 
@@ -185,8 +185,8 @@ Create new customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
-$body = new \Kaemo\Client\Model\CustomerCreateRequest(); // \Kaemo\Client\Model\CustomerCreateRequest | Created user object
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$body = new \Kinow\Client\Model\CustomerCreateRequest(); // \Kinow\Client\Model\CustomerCreateRequest | Created user object
 
 try {
     $result = $api_instance->createCustomer($body);
@@ -201,11 +201,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CustomerCreateRequest**](#\Kaemo\Client\Model\CustomerCreateRequest)| Created user object |
+ **body** | [**\Kinow\Client\Model\CustomerCreateRequest**](#\Kinow\Client\Model\CustomerCreateRequest)| Created user object |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Link a Facebook account ID to a Customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID
 $facebook_id = "facebook_id_example"; // string | Facebook ID
 
@@ -272,7 +272,7 @@ Delete customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to delete
 
 try {
@@ -314,7 +314,7 @@ Create authentication token for customer.        You can use it to auto login cu
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to authenticate
 
 try {
@@ -345,7 +345,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomer**
-> \Kaemo\Client\Model\Customer getCustomer($customer_id)
+> \Kinow\Client\Model\Customer getCustomer($customer_id)
 
 
 
@@ -356,7 +356,7 @@ Get Customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerAccessesSubscriptions**
-> \Kaemo\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
 
 
 
@@ -399,7 +399,7 @@ Get customer accesses for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
 
 ### Authorization
 
@@ -437,7 +437,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerAccessesVideos**
-> \Kaemo\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
+> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
 
 
 
@@ -448,7 +448,7 @@ Get customer access for videos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
 
 ### Authorization
 
@@ -484,7 +484,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerAddress**
-> \Kaemo\Client\Model\Address getCustomerAddress($customer_id)
+> \Kinow\Client\Model\Address getCustomerAddress($customer_id)
 
 
 
@@ -495,7 +495,7 @@ Get customer address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\Address**](#Address)
 
 ### Authorization
 
@@ -538,7 +538,7 @@ Check if the customer can see this product (restriction by group)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | Product ID to fetch
 
@@ -571,7 +571,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerCarts**
-> \Kaemo\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -582,7 +582,7 @@ Get customer carts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -612,7 +612,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\Carts**](#Carts)
 
 ### Authorization
 
@@ -624,7 +624,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerCurrentViews**
-> \Kaemo\Client\Model\CustomerCurrentViews getCustomerCurrentViews($customer_id)
+> \Kinow\Client\Model\CustomerCurrentViews getCustomerCurrentViews($customer_id)
 
 
 
@@ -635,7 +635,7 @@ Get customer current number of views
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerCurrentViews**](#CustomerCurrentViews)
+[**\Kinow\Client\Model\CustomerCurrentViews**](#CustomerCurrentViews)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerGroups**
-> \Kaemo\Client\Model\Groups getCustomerGroups($customer_id, $page, $per_page)
+> \Kinow\Client\Model\Groups getCustomerGroups($customer_id, $page, $per_page)
 
 
 
@@ -678,7 +678,7 @@ Get groups attached to this customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -702,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\Groups**](#Groups)
 
 ### Authorization
 
@@ -725,7 +725,7 @@ Get customer access to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | Product ID to fetch
 
@@ -758,7 +758,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kaemo\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
+> \Kinow\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
 
 
 
@@ -769,9 +769,9 @@ Get customer access to Products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\ProductIDList(); // \Kaemo\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\ProductIDList(); // \Kinow\Client\Model\ProductIDList | List of Product IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerHasAccessToProducts($customer_id, $body);
@@ -787,11 +787,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\ProductIDList**](#\Kaemo\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\ProductIDList**](#\Kinow\Client\Model\ProductIDList)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+[**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ Get customer access to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $video_id = 789; // int | Video ID to fetch
 
@@ -847,7 +847,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -858,9 +858,9 @@ Get customer access to Videos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\VideoIDList(); // \Kaemo\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\VideoIDList(); // \Kinow\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $body);
@@ -876,11 +876,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\VideoIDList**](#\Kaemo\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\VideoIDList**](#\Kinow\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
+[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 
@@ -892,7 +892,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerOrders**
-> \Kaemo\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
+> \Kinow\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
 
 
 
@@ -903,7 +903,7 @@ Get customer orders
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -927,7 +927,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\Orders**](#Orders)
 
 ### Authorization
 
@@ -939,7 +939,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
 
 
 
@@ -950,7 +950,7 @@ Get PrepaymentBalances list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -970,7 +970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 
@@ -982,7 +982,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentOperations**
-> \Kaemo\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
 
 
 
@@ -993,7 +993,7 @@ Get PrepaymentOperations list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $type = "type_example"; // string | 
 $page = 789; // int | 
@@ -1019,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
 
 ### Authorization
 
@@ -1031,7 +1031,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomers**
-> \Kaemo\Client\Model\Customers getCustomers($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Customers getCustomers($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -1042,7 +1042,7 @@ Get customer list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains      _______________        {      \"email\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"firstname\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customers**](#Customers)
+[**\Kinow\Client\Model\Customers**](#Customers)
 
 ### Authorization
 
@@ -1082,7 +1082,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getFacebookCustomer**
-> \Kaemo\Client\Model\CustomerId getFacebookCustomer($facebook_id)
+> \Kinow\Client\Model\CustomerId getFacebookCustomer($facebook_id)
 
 
 
@@ -1093,7 +1093,7 @@ Get Customer ID linked to a Facebook ID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $facebook_id = 789; // int | Facebook ID to fetch
 
 try {
@@ -1113,7 +1113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerId**](#CustomerId)
+[**\Kinow\Client\Model\CustomerId**](#CustomerId)
 
 ### Authorization
 
@@ -1125,7 +1125,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPaymentMethods**
-> \Kaemo\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -1136,7 +1136,7 @@ Get payment methods saved for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
 
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -1170,7 +1170,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kaemo\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -1181,7 +1181,7 @@ Get pending payments for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $payment_name = "payment_name_example"; // string | 
 $customer_id = 789; // int | 
 
@@ -1203,7 +1203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 
@@ -1215,7 +1215,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getRegistrationFields**
-> \Kaemo\Client\Model\RegistrationFields getRegistrationFields($page, $per_page)
+> \Kinow\Client\Model\RegistrationFields getRegistrationFields($page, $per_page)
 
 
 
@@ -1226,7 +1226,7 @@ Get registration fields
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\RegistrationFields**](#RegistrationFields)
+[**\Kinow\Client\Model\RegistrationFields**](#RegistrationFields)
 
 ### Authorization
 
@@ -1260,7 +1260,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **loginWithFacebook**
-> \Kaemo\Client\Model\Customer loginWithFacebook($token_type, $token, $redirect_uri)
+> \Kinow\Client\Model\Customer loginWithFacebook($token_type, $token, $redirect_uri)
 
 
 
@@ -1271,7 +1271,7 @@ Create or retrieve existing Customer account using Facebook authorization token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $token_type = "token_type_example"; // string | Can be 'oauth2' or 'authorization'
 $token = "token_example"; // string | oAuth2 token or authorization code given by Facebook
 $redirect_uri = "redirect_uri_example"; // string | Redirect URI is required if you're using authorization code method
@@ -1295,7 +1295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -1307,7 +1307,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **passwordToken**
-> \Kaemo\Client\Model\Token passwordToken($email)
+> \Kinow\Client\Model\Token passwordToken($email)
 
 
 
@@ -1318,7 +1318,7 @@ Create temporary token to update password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $email = "email_example"; // string | Email of the Customer
 
 try {
@@ -1338,7 +1338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Token**](#Token)
+[**\Kinow\Client\Model\Token**](#Token)
 
 ### Authorization
 
@@ -1361,7 +1361,7 @@ Consume password token and update password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $token = "token_example"; // string | Temporary token to consume
 $password = "password_example"; // string | Password to set on Customer account
 
@@ -1405,7 +1405,7 @@ Unsubcribe an Access recurring payment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to unsubscribe
 $product_access_id = "product_access_id_example"; // string | Product access ID to unsubscribe from
 
@@ -1438,7 +1438,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateCustomer**
-> \Kaemo\Client\Model\Customer updateCustomer($customer_id, $body)
+> \Kinow\Client\Model\Customer updateCustomer($customer_id, $body)
 
 
 
@@ -1449,9 +1449,9 @@ Update customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\Customer(); // \Kaemo\Client\Model\Customer | Body of the customer
+$body = new \Kinow\Client\Model\Customer(); // \Kinow\Client\Model\Customer | Body of the customer
 
 try {
     $result = $api_instance->updateCustomer($customer_id, $body);
@@ -1467,11 +1467,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\Customer**](#\Kaemo\Client\Model\Customer)| Body of the customer |
+ **body** | [**\Kinow\Client\Model\Customer**](#\Kinow\Client\Model\Customer)| Body of the customer |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\Customer**](#Customer)
 
 ### Authorization
 
@@ -1494,10 +1494,10 @@ Update payment method for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
-$payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment arguments
+$payment_arguments = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment arguments
 
 try {
     $api_instance->updatePaymentMethod($customer_id, $payment_name, $payment_arguments);
@@ -1513,7 +1513,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**|  |
  **payment_name** | **string**|  |
- **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment arguments |
+ **payment_arguments** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment arguments |
 
 ### Return type
 
@@ -1529,7 +1529,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **validateCustomerCredentials**
-> \Kaemo\Client\Model\CredentialsValidation validateCustomerCredentials($email, $password)
+> \Kinow\Client\Model\CredentialsValidation validateCustomerCredentials($email, $password)
 
 
 
@@ -1540,7 +1540,7 @@ Validate Customer credentials
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CustomersApi();
+$api_instance = new Kinow\Client\Api\CustomersApi();
 $email = "email_example"; // string | Customer email to validate
 $password = "password_example"; // string | Customer password to check
 
@@ -1562,7 +1562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CredentialsValidation**](#CredentialsValidation)
+[**\Kinow\Client\Model\CredentialsValidation**](#CredentialsValidation)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getEmployee**
-> \Kaemo\Client\Model\Employee getEmployee($employee_id)
+> \Kinow\Client\Model\Employee getEmployee($employee_id)
 
 
 
@@ -20,7 +20,7 @@ Get employee
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\EmployeesApi();
+$api_instance = new Kinow\Client\Api\EmployeesApi();
 $employee_id = 789; // int | Employee ID to fetch
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Employee**](#Employee)
+[**\Kinow\Client\Model\Employee**](#Employee)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getEmployees**
-> \Kaemo\Client\Model\Employees getEmployees($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Employees getEmployees($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -63,7 +63,7 @@ Get employees list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\EmployeesApi();
+$api_instance = new Kinow\Client\Api\EmployeesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains      _______________        {      \"email\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"firstname\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Employees**](#Employees)
+[**\Kinow\Client\Model\Employees**](#Employees)
 
 ### Authorization
 

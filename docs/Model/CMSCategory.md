@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **active** | **bool** | $active | [optional] 
 **date_add** | **string** | $date_add | [optional] 
 **date_upd** | **string** | $date_upd | [optional] 
-**name** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**link_rewrite** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**meta_title** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**meta_keywords** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**meta_description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**link_rewrite** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_title** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_keywords** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**meta_description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **id** | **int** |  | [optional] 
 
 

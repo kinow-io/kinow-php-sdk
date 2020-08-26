@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## **getCategoryVideoPlayer**
-> \Kaemo\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
+> \Kinow\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
 
 
 
@@ -22,7 +22,7 @@ Get video player
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoryVideosApi();
+$api_instance = new Kinow\Client\Api\CategoryVideosApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $country_id = 789; // int | Country ID to use in video analytics
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Player**](#Player)
+[**\Kinow\Client\Model\Player**](#Player)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryVideoSubtitles**
-> \Kaemo\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -69,7 +69,7 @@ Get subtitles of a video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoryVideosApi();
+$api_instance = new Kinow\Client\Api\CategoryVideosApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromCategories**
-> \Kaemo\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -116,7 +116,7 @@ Get Videos attached to Categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoryVideosApi();
+$api_instance = new Kinow\Client\Api\CategoryVideosApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\Videos**](#Videos)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromCategory**
-> \Kaemo\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -165,7 +165,7 @@ Get Videos attached to Category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoryVideosApi();
+$api_instance = new Kinow\Client\Api\CategoryVideosApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\Videos**](#Videos)
 
 ### Authorization
 

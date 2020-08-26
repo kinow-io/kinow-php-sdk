@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getPage**
-> \Kaemo\Client\Model\Page getPage($page_id)
+> \Kinow\Client\Model\Page getPage($page_id)
 
 
 
@@ -20,7 +20,7 @@ Get automatic page
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PagesApi();
+$api_instance = new Kinow\Client\Api\PagesApi();
 $page_id = 789; // int | Page ID to fetch
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Page**](#Page)
+[**\Kinow\Client\Model\Page**](#Page)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPages**
-> \Kaemo\Client\Model\PageLists getPages($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\PageLists getPages($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -63,7 +63,7 @@ Get automatic pages
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PagesApi();
+$api_instance = new Kinow\Client\Api\PagesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```  name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt  _______________  {      \"name\": {          \"value\": \"string\",          \"operator\": \"contains\"      },      \"date_add\": {          \"value\": \"string\",          \"operator\": \"lt\"      }  } ```  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PageLists**](#PageLists)
+[**\Kinow\Client\Model\PageLists**](#PageLists)
 
 ### Authorization
 

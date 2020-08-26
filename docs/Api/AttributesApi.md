@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **createProductAttribute**
-> \Kaemo\Client\Model\ProductAttribute createProductAttribute($body)
+> \Kinow\Client\Model\ProductAttribute createProductAttribute($body)
 
 
 
@@ -21,8 +21,8 @@ Create new product attribute
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AttributesApi();
-$body = new \Kaemo\Client\Model\ProductAttributeCreateRequest(); // \Kaemo\Client\Model\ProductAttributeCreateRequest | 
+$api_instance = new Kinow\Client\Api\AttributesApi();
+$body = new \Kinow\Client\Model\ProductAttributeCreateRequest(); // \Kinow\Client\Model\ProductAttributeCreateRequest | 
 
 try {
     $result = $api_instance->createProductAttribute($body);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\ProductAttributeCreateRequest**](#\Kaemo\Client\Model\ProductAttributeCreateRequest)|  |
+ **body** | [**\Kinow\Client\Model\ProductAttributeCreateRequest**](#\Kinow\Client\Model\ProductAttributeCreateRequest)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAttribute**](#ProductAttribute)
+[**\Kinow\Client\Model\ProductAttribute**](#ProductAttribute)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Delete Attribute
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AttributesApi();
+$api_instance = new Kinow\Client\Api\AttributesApi();
 $attribute_id = 789; // int | Attribute ID to delete
 
 try {
@@ -95,7 +95,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductAttributes**
-> \Kaemo\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
 
 
 
@@ -106,7 +106,7 @@ Get Product attributes. Mandatory to add TVOD Product in cart.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AttributesApi();
+$api_instance = new Kinow\Client\Api\AttributesApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
+[**\Kinow\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
 
 ### Authorization
 

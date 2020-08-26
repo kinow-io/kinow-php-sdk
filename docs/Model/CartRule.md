@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **active** | **bool** | Status of the cart rule | [optional] 
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
-**name** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) | This will be displayed in the cart summary, as well as on the invoice | [optional] 
+**name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) | This will be displayed in the cart summary, as well as on the invoice | [optional] 
 **date_from** | **string** | Rule starts when this date is reached | [optional] 
 **date_to** | **string** | Rule ends when this date is reached | [optional] 
 **quantity** | **int** | The cart rule will be applied to the first \&quot;X\&quot; orders only | [optional] 
@@ -24,6 +24,6 @@ Name | Type | Description | Notes
 **reduction_percent** | **float** | Discount applied to cart when rule is added (in %). | [optional] 
 **reduction_amount** | **float** | Discount applied to cart when rule is added (in currency). | [optional] 
 **reduction_tax** | **int** | Tax application for currency discount | [optional] 
-**restriction_groups** | [**\Kaemo\Client\Model\CartRuleRestrictionGroup[]**](#CartRuleRestrictionGroup) |  | [optional] 
+**restriction_groups** | [**\Kinow\Client\Model\CartRuleRestrictionGroup[]**](#CartRuleRestrictionGroup) |  | [optional] 
 
 

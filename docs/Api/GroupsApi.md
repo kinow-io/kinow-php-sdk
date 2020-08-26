@@ -23,7 +23,7 @@ Attach customer to the group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GroupsApi();
+$api_instance = new Kinow\Client\Api\GroupsApi();
 $group_id = 789; // int | Group ID to fetch
 $customer_id = 789; // int | Customer ID to attach
 
@@ -67,7 +67,7 @@ Detach customer from group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GroupsApi();
+$api_instance = new Kinow\Client\Api\GroupsApi();
 $group_id = 789; // int | Group ID to fetch
 $customer_id = 789; // int | Customer ID to attach
 
@@ -100,7 +100,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGroup**
-> \Kaemo\Client\Model\Group getGroup($group_id)
+> \Kinow\Client\Model\Group getGroup($group_id)
 
 
 
@@ -111,7 +111,7 @@ Get Group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GroupsApi();
+$api_instance = new Kinow\Client\Api\GroupsApi();
 $group_id = 789; // int | Group ID to fetch
 
 try {
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Group**](#Group)
+[**\Kinow\Client\Model\Group**](#Group)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGroups**
-> \Kaemo\Client\Model\Groups getGroups($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Groups getGroups($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -154,7 +154,7 @@ Get group list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GroupsApi();
+$api_instance = new Kinow\Client\Api\GroupsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains      _______________        {      \"email\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"firstname\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\Groups**](#Groups)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductGroups**
-> \Kaemo\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
+> \Kinow\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
 
 
 
@@ -205,7 +205,7 @@ Get groups allowed to see this product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GroupsApi();
+$api_instance = new Kinow\Client\Api\GroupsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\Groups**](#Groups)
 
 ### Authorization
 

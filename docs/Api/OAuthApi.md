@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getToken**
-> \Kaemo\Client\Model\OAuthToken getToken($client_id, $client_secret)
+> \Kinow\Client\Model\OAuthToken getToken($client_id, $client_secret)
 
 
 
@@ -19,7 +19,7 @@ Get authentication token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OAuthApi();
+$api_instance = new Kinow\Client\Api\OAuthApi();
 $client_id = "client_id_example"; // string | Client Id given by your back office
 $client_secret = "client_secret_example"; // string | Client secret given by your back office
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\OAuthToken**](#OAuthToken)
+[**\Kinow\Client\Model\OAuthToken**](#OAuthToken)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getTaxRules**
-> \Kaemo\Client\Model\TaxRules getTaxRules($page, $per_page)
+> \Kinow\Client\Model\TaxRules getTaxRules($page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get tax rules list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\TaxRulesApi();
+$api_instance = new Kinow\Client\Api\TaxRulesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\TaxRules**](#TaxRules)
+[**\Kinow\Client\Model\TaxRules**](#TaxRules)
 
 ### Authorization
 

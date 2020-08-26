@@ -3,7 +3,7 @@
 ### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pagination** | [**\Kaemo\Client\Model\Pagination**](#Pagination) |  | [optional] 
-**data** | [**\Kaemo\Client\Model\Gender[]**](#Gender) |  | [optional] 
+**pagination** | [**\Kinow\Client\Model\Pagination**](#Pagination) |  | [optional] 
+**data** | [**\Kinow\Client\Model\Gender[]**](#Gender) |  | [optional] 
 
 

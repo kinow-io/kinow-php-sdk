@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getBlogCategories**
-> \Kaemo\Client\Model\BlogCategoryLists getBlogCategories($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\BlogCategoryLists getBlogCategories($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -20,7 +20,7 @@ Get blog categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BlogCategoriesApi();
+$api_instance = new Kinow\Client\Api\BlogCategoriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\BlogCategoryLists**](#BlogCategoryLists)
+[**\Kinow\Client\Model\BlogCategoryLists**](#BlogCategoryLists)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getBlogCategory**
-> \Kaemo\Client\Model\BlogCategory getBlogCategory($blog_category_id)
+> \Kinow\Client\Model\BlogCategory getBlogCategory($blog_category_id)
 
 
 
@@ -71,7 +71,7 @@ Get blog category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BlogCategoriesApi();
+$api_instance = new Kinow\Client\Api\BlogCategoriesApi();
 $blog_category_id = 789; // int | 
 
 try {
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\BlogCategory**](#BlogCategory)
+[**\Kinow\Client\Model\BlogCategory**](#BlogCategory)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerAddress**
-> \Kaemo\Client\Model\Address getCustomerAddress($customer_id)
+> \Kinow\Client\Model\Address getCustomerAddress($customer_id)
 
 
 
@@ -20,7 +20,7 @@ Get customer address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AddressApi();
+$api_instance = new Kinow\Client\Api\AddressApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\Address**](#Address)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateAddress**
-> \Kaemo\Client\Model\Address updateAddress($address_id, $body)
+> \Kinow\Client\Model\Address updateAddress($address_id, $body)
 
 
 
@@ -63,9 +63,9 @@ Update address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\AddressApi();
+$api_instance = new Kinow\Client\Api\AddressApi();
 $address_id = 789; // int | Address ID to update
-$body = new \Kaemo\Client\Model\Address1(); // \Kaemo\Client\Model\Address1 | Address settings
+$body = new \Kinow\Client\Model\Address1(); // \Kinow\Client\Model\Address1 | Address settings
 
 try {
     $result = $api_instance->updateAddress($address_id, $body);
@@ -81,11 +81,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| Address ID to update |
- **body** | [**\Kaemo\Client\Model\Address1**](#\Kaemo\Client\Model\Address1)| Address settings |
+ **body** | [**\Kinow\Client\Model\Address1**](#\Kinow\Client\Model\Address1)| Address settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\Address**](#Address)
 
 ### Authorization
 

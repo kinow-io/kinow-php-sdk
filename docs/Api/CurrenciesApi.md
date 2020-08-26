@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getCurrencies**
-> \Kaemo\Client\Model\Currencies getCurrencies($page, $per_page)
+> \Kinow\Client\Model\Currencies getCurrencies($page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get currency list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CurrenciesApi();
+$api_instance = new Kinow\Client\Api\CurrenciesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Currencies**](#Currencies)
+[**\Kinow\Client\Model\Currencies**](#Currencies)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Kaemo PHP SDK Documentation
+# Kinow PHP SDK Documentation
 
 ## Requirements
 
@@ -10,7 +10,7 @@ PHP 5.4.0 and later
 
 #### Method 1:
 
-To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kaemo-php-sdk`
+To install the bindings via [Composer](http://getcomposer.org/), type in your console: `composer require kinow-io/kinow-php-sdk`
 
 #### Method 2:
 
@@ -35,7 +35,7 @@ Then run `composer install`
 Download the files and include `autoload.php`:
 
 ```php
-    require_once('/path/to/KaemoClient/autoload.php');
+    require_once('/path/to/KinowClient/autoload.php');
 ```
 
 ## Tests
@@ -55,7 +55,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $product_id = 789; // int | Product ID to fetch
 $actor_id = 789; // int | Actor ID to attach
 
@@ -77,10 +77,10 @@ When submitting a support request, it is best to provide the logs file for a fas
 ```php
 // To be done before doing anything with the SDK
 // Activate debug logs
-Kaemo\Client\Configuration::getDefaultConfiguration()->setDebug(true);
+Kinow\Client\Configuration::getDefaultConfiguration()->setDebug(true);
 
 // (optionally) Change debug file location (default is 'php://output')
-Kaemo\Client\Configuration::getDefaultConfiguration()->setDebugFile('php://output');
+Kinow\Client\Configuration::getDefaultConfiguration()->setDebugFile('php://output');
 ```
 
 ## Documentation for API Endpoints

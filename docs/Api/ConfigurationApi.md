@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getConfiguration**
-> \Kaemo\Client\Model\ConfigurationList getConfiguration($page, $per_page)
+> \Kinow\Client\Model\ConfigurationList getConfiguration($page, $per_page)
 
 
 
@@ -20,7 +20,7 @@ Get configuration by name.       Available :          - LANG_DEFAULT          - 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ConfigurationApi();
+$api_instance = new Kinow\Client\Api\ConfigurationApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ConfigurationList**](#ConfigurationList)
+[**\Kinow\Client\Model\ConfigurationList**](#ConfigurationList)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getConfigurationByName**
-> \Kaemo\Client\Model\Configuration getConfigurationByName($configuration_name)
+> \Kinow\Client\Model\Configuration getConfigurationByName($configuration_name)
 
 
 
@@ -65,7 +65,7 @@ Get configuration by name.      Available :      - LANG_DEFAULT      - CURRENCY_
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ConfigurationApi();
+$api_instance = new Kinow\Client\Api\ConfigurationApi();
 $configuration_name = "configuration_name_example"; // string | 
 
 try {
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Configuration**](#Configuration)
+[**\Kinow\Client\Model\Configuration**](#Configuration)
 
 ### Authorization
 

@@ -29,7 +29,7 @@ Attach cover to extract (the image need to be attached to the product)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
 $id_image = 789; // int | Image ID to attach
 
@@ -73,7 +73,7 @@ Attach feature to extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -106,7 +106,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createExtract**
-> \Kaemo\Client\Model\Extract createExtract($body)
+> \Kinow\Client\Model\Extract createExtract($body)
 
 
 
@@ -117,8 +117,8 @@ Create new extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
-$body = new \Kaemo\Client\Model\Extract(); // \Kaemo\Client\Model\Extract | 
+$api_instance = new Kinow\Client\Api\ExtractsApi();
+$body = new \Kinow\Client\Model\Extract(); // \Kinow\Client\Model\Extract | 
 
 try {
     $result = $api_instance->createExtract($body);
@@ -133,11 +133,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Extract**](#\Kaemo\Client\Model\Extract)|  |
+ **body** | [**\Kinow\Client\Model\Extract**](#\Kinow\Client\Model\Extract)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\Extract**](#Extract)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createSubtitle**
-> \Kaemo\Client\Model\Subtitle createSubtitle($extract_id, $body)
+> \Kinow\Client\Model\Subtitle createSubtitle($extract_id, $body)
 
 
 
@@ -160,9 +160,9 @@ Create new Extract Subtitle
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to attach the created Subtitle
-$body = new \Kaemo\Client\Model\CreateExtractSubtitleRequest(); // \Kaemo\Client\Model\CreateExtractSubtitleRequest | Subtitle settings
+$body = new \Kinow\Client\Model\CreateExtractSubtitleRequest(); // \Kinow\Client\Model\CreateExtractSubtitleRequest | Subtitle settings
 
 try {
     $result = $api_instance->createSubtitle($extract_id, $body);
@@ -178,11 +178,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **extract_id** | **int**| Extract ID to attach the created Subtitle |
- **body** | [**\Kaemo\Client\Model\CreateExtractSubtitleRequest**](#\Kaemo\Client\Model\CreateExtractSubtitleRequest)| Subtitle settings |
+ **body** | [**\Kinow\Client\Model\CreateExtractSubtitleRequest**](#\Kinow\Client\Model\CreateExtractSubtitleRequest)| Subtitle settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\Subtitle**](#Subtitle)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Delete extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to update
 
 try {
@@ -236,7 +236,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtract**
-> \Kaemo\Client\Model\Extract getExtract($extract_id)
+> \Kinow\Client\Model\Extract getExtract($extract_id)
 
 
 
@@ -247,7 +247,7 @@ Get extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
 
 try {
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\Extract**](#Extract)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtractFeatures**
-> \Kaemo\Client\Model\Features getExtractFeatures($extract_id, $page, $per_page)
+> \Kinow\Client\Model\Features getExtractFeatures($extract_id, $page, $per_page)
 
 
 
@@ -290,7 +290,7 @@ Get extract features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtractPlayer**
-> \Kaemo\Client\Model\Player getExtractPlayer($extract_id)
+> \Kinow\Client\Model\Player getExtractPlayer($extract_id)
 
 
 
@@ -337,7 +337,7 @@ Get extract's player
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
 
 try {
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Player**](#Player)
+[**\Kinow\Client\Model\Player**](#Player)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtracts**
-> \Kaemo\Client\Model\Videos1 getExtracts($page, $per_page, $features, $filters)
+> \Kinow\Client\Model\Videos1 getExtracts($page, $per_page, $features, $filters)
 
 
 
@@ -380,7 +380,7 @@ Get extracts list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $features = "features_example"; // string | ```      features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict      _______________        {      \"*\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"1\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).      To search on all features, you can pass * as featureId.
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kaemo\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
+> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
 
 
 
@@ -429,7 +429,7 @@ Get extracts of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\Videos1**](#Videos1)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateExtract**
-> \Kaemo\Client\Model\Extract updateExtract($extract_id, $body)
+> \Kinow\Client\Model\Extract updateExtract($extract_id, $body)
 
 
 
@@ -476,9 +476,9 @@ Update extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ExtractsApi();
+$api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
-$body = new \Kaemo\Client\Model\Extract(); // \Kaemo\Client\Model\Extract | 
+$body = new \Kinow\Client\Model\Extract(); // \Kinow\Client\Model\Extract | 
 
 try {
     $result = $api_instance->updateExtract($extract_id, $body);
@@ -494,11 +494,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **extract_id** | **int**| Extract ID to fetch |
- **body** | [**\Kaemo\Client\Model\Extract**](#\Kaemo\Client\Model\Extract)|  |
+ **body** | [**\Kinow\Client\Model\Extract**](#\Kinow\Client\Model\Extract)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\Extract**](#Extract)
 
 ### Authorization
 

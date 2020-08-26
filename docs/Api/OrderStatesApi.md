@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getOrderState**
-> \Kaemo\Client\Model\OrderState getOrderState($order_state_id)
+> \Kinow\Client\Model\OrderState getOrderState($order_state_id)
 
 
 
@@ -20,7 +20,7 @@ Get order state
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrderStatesApi();
+$api_instance = new Kinow\Client\Api\OrderStatesApi();
 $order_state_id = 789; // int | Order state ID to fetch
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\OrderState**](#OrderState)
+[**\Kinow\Client\Model\OrderState**](#OrderState)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getOrderStates**
-> \Kaemo\Client\Model\OrderStates getOrderStates($page, $per_page)
+> \Kinow\Client\Model\OrderStates getOrderStates($page, $per_page)
 
 
 
@@ -63,7 +63,7 @@ Get order state list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrderStatesApi();
+$api_instance = new Kinow\Client\Api\OrderStatesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\OrderStates**](#OrderStates)
+[**\Kinow\Client\Model\OrderStates**](#OrderStates)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getBlogPage**
-> \Kaemo\Client\Model\BlogPage getBlogPage($blog_page_id)
+> \Kinow\Client\Model\BlogPage getBlogPage($blog_page_id)
 
 
 
@@ -20,7 +20,7 @@ Get blog page
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BlogPagesApi();
+$api_instance = new Kinow\Client\Api\BlogPagesApi();
 $blog_page_id = 789; // int | 
 
 try {
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\BlogPage**](#BlogPage)
+[**\Kinow\Client\Model\BlogPage**](#BlogPage)
 
 ### Authorization
 
@@ -52,7 +52,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getBlogPages**
-> \Kaemo\Client\Model\BlogPageLists getBlogPages($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\BlogPageLists getBlogPages($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -63,7 +63,7 @@ Get blog pages
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BlogPagesApi();
+$api_instance = new Kinow\Client\Api\BlogPagesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```  name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt  _______________    {  \"name\": {  \"value\": \"string\",  \"operator\": \"contains\"  },  \"date_add\": {  \"value\": \"string\",  \"operator\": \"lt\"  }  } ```  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\BlogPageLists**](#BlogPageLists)
+[**\Kinow\Client\Model\BlogPageLists**](#BlogPageLists)
 
 ### Authorization
 

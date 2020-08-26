@@ -42,7 +42,7 @@ Attach cover to video (the image need to be attached to the product)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $id_image = 789; // int | Image ID to attach
 
@@ -86,7 +86,7 @@ Attach feature to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -130,7 +130,7 @@ Attach video to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $product_id = 789; // int | Product ID to fetch
 $video_id = 789; // int | Video ID to attach
 
@@ -163,7 +163,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createSubtitle**
-> \Kaemo\Client\Model\Subtitle createSubtitle($video_id, $body)
+> \Kinow\Client\Model\Subtitle createSubtitle($video_id, $body)
 
 
 
@@ -174,9 +174,9 @@ Create new Video Subtitle
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to attach the created Subtitle
-$body = new \Kaemo\Client\Model\CreateVideoSubtitleRequest(); // \Kaemo\Client\Model\CreateVideoSubtitleRequest | Subtitle settings
+$body = new \Kinow\Client\Model\CreateVideoSubtitleRequest(); // \Kinow\Client\Model\CreateVideoSubtitleRequest | Subtitle settings
 
 try {
     $result = $api_instance->createSubtitle($video_id, $body);
@@ -192,11 +192,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| Video ID to attach the created Subtitle |
- **body** | [**\Kaemo\Client\Model\CreateVideoSubtitleRequest**](#\Kaemo\Client\Model\CreateVideoSubtitleRequest)| Subtitle settings |
+ **body** | [**\Kinow\Client\Model\CreateVideoSubtitleRequest**](#\Kinow\Client\Model\CreateVideoSubtitleRequest)| Subtitle settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\Subtitle**](#Subtitle)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createVideo**
-> \Kaemo\Client\Model\Video createVideo($body)
+> \Kinow\Client\Model\Video createVideo($body)
 
 
 
@@ -219,8 +219,8 @@ Create new video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
-$body = new \Kaemo\Client\Model\Video(); // \Kaemo\Client\Model\Video | 
+$api_instance = new Kinow\Client\Api\VideosApi();
+$body = new \Kinow\Client\Model\Video(); // \Kinow\Client\Model\Video | 
 
 try {
     $result = $api_instance->createVideo($body);
@@ -235,11 +235,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Video**](#\Kaemo\Client\Model\Video)|  |
+ **body** | [**\Kinow\Client\Model\Video**](#\Kinow\Client\Model\Video)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\Video**](#Video)
 
 ### Authorization
 
@@ -262,7 +262,7 @@ Delete video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -304,7 +304,7 @@ Get customer access to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $customer_id = 789; // int | Customer ID to fetch
 $video_id = 789; // int | Video ID to fetch
 
@@ -337,7 +337,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kaemo\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -348,9 +348,9 @@ Get customer access to Videos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\VideoIDList(); // \Kaemo\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\VideoIDList(); // \Kinow\Client\Model\VideoIDList | List of Video IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerHasAccessToVideos($customer_id, $body);
@@ -366,11 +366,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\VideoIDList**](#\Kaemo\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\VideoIDList**](#\Kinow\Client\Model\VideoIDList)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
+[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDisabledSubscriptions**
-> \Kaemo\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
+> \Kinow\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
 
 
 
@@ -393,7 +393,7 @@ Get disabled subscriptions list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
 
 ### Authorization
 
@@ -429,7 +429,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideo**
-> \Kaemo\Client\Model\Video getVideo($video_id)
+> \Kinow\Client\Model\Video getVideo($video_id)
 
 
 
@@ -440,7 +440,7 @@ Get video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\Video**](#Video)
 
 ### Authorization
 
@@ -483,7 +483,7 @@ Get video access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 
@@ -516,7 +516,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoBonus**
-> \Kaemo\Client\Model\Bonus[] getVideoBonus($video_id)
+> \Kinow\Client\Model\Bonus[] getVideoBonus($video_id)
 
 
 
@@ -527,7 +527,7 @@ Get bonus list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Bonus[]**](#Bonus)
+[**\Kinow\Client\Model\Bonus[]**](#Bonus)
 
 ### Authorization
 
@@ -559,7 +559,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoCover**
-> \Kaemo\Client\Model\Image getVideoCover($video_id)
+> \Kinow\Client\Model\Image getVideoCover($video_id)
 
 
 
@@ -570,7 +570,7 @@ Get video cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -602,7 +602,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoDownloadUrl**
-> \Kaemo\Client\Model\DownloadInformations getVideoDownloadUrl($video_id, $customer_id, $ip_address)
+> \Kinow\Client\Model\DownloadInformations getVideoDownloadUrl($video_id, $customer_id, $ip_address)
 
 
 
@@ -613,7 +613,7 @@ Get video download informations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $ip_address = "ip_address_example"; // string | IP address
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\DownloadInformations**](#DownloadInformations)
+[**\Kinow\Client\Model\DownloadInformations**](#DownloadInformations)
 
 ### Authorization
 
@@ -649,7 +649,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoFeatures**
-> \Kaemo\Client\Model\Features getVideoFeatures($video_id, $page, $per_page)
+> \Kinow\Client\Model\Features getVideoFeatures($video_id, $page, $per_page)
 
 
 
@@ -660,7 +660,7 @@ Get video features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -696,7 +696,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoGeolocation**
-> \Kaemo\Client\Model\Geolocs getVideoGeolocation($video_id, $page, $per_page)
+> \Kinow\Client\Model\Geolocs getVideoGeolocation($video_id, $page, $per_page)
 
 
 
@@ -707,7 +707,7 @@ Get geoloc list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\Geolocs**](#Geolocs)
 
 ### Authorization
 
@@ -754,7 +754,7 @@ Check access to a video by geolocation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $ip_address = "ip_address_example"; // string | IP address
 $page = 789; // int | 
@@ -791,7 +791,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoPlayer**
-> \Kaemo\Client\Model\Player1 getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
+> \Kinow\Client\Model\Player1 getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
 
 
 
@@ -802,7 +802,7 @@ Get video player
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $country_id = 789; // int | Country ID to use in video analytics
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Player1**](#Player1)
+[**\Kinow\Client\Model\Player1**](#Player1)
 
 ### Authorization
 
@@ -840,7 +840,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoSubtitles**
-> \Kaemo\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -851,7 +851,7 @@ Get subtitles of a video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -875,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
 
 ### Authorization
 
@@ -887,7 +887,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoViews**
-> \Kaemo\Client\Model\VideoViews getVideoViews($video_id)
+> \Kinow\Client\Model\VideoViews getVideoViews($video_id)
 
 
 
@@ -898,7 +898,7 @@ Get video views
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoViews**](#VideoViews)
+[**\Kinow\Client\Model\VideoViews**](#VideoViews)
 
 ### Authorization
 
@@ -930,7 +930,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideos**
-> \Kaemo\Client\Model\Videos2 getVideos($page, $per_page, $features, $filters, $ip)
+> \Kinow\Client\Model\Videos2 getVideos($page, $per_page, $features, $filters, $ip)
 
 
 
@@ -941,7 +941,7 @@ Get video list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $features = "features_example"; // string | ```      features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict      _______________        {      \"*\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"1\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).      To search on all features, you can pass * as featureId.
@@ -969,7 +969,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\Videos2**](#Videos2)
 
 ### Authorization
 
@@ -981,7 +981,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kaemo\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
 
 
 
@@ -992,7 +992,7 @@ Get videos attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"duration\": {      \"value\": \"string\",      \"operator\": \"gt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -1024,7 +1024,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\Videos2**](#Videos2)
 
 ### Authorization
 
@@ -1047,7 +1047,7 @@ Handle geolocation for videos by countries
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
@@ -1086,7 +1086,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateVideo**
-> \Kaemo\Client\Model\Video updateVideo($video_id, $body)
+> \Kinow\Client\Model\Video updateVideo($video_id, $body)
 
 
 
@@ -1097,9 +1097,9 @@ Update video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideosApi();
+$api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to update
-$body = new \Kaemo\Client\Model\Video(); // \Kaemo\Client\Model\Video | 
+$body = new \Kinow\Client\Model\Video(); // \Kinow\Client\Model\Video | 
 
 try {
     $result = $api_instance->updateVideo($video_id, $body);
@@ -1115,11 +1115,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| Video ID to update |
- **body** | [**\Kaemo\Client\Model\Video**](#\Kaemo\Client\Model\Video)|  |
+ **body** | [**\Kinow\Client\Model\Video**](#\Kinow\Client\Model\Video)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\Video**](#Video)
 
 ### Authorization
 

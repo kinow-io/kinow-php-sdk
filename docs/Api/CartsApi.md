@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 ## **addProductToCart**
-> \Kaemo\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address)
+> \Kinow\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address)
 
 
 
@@ -34,7 +34,7 @@ Add product to cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to add to cart
 $product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ Attach cart rule to cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $code = "code_example"; // string | Code of the cart rule to attach
 
@@ -120,7 +120,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **attachCartToCustomer**
-> \Kaemo\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
+> \Kinow\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
 
 
 
@@ -131,7 +131,7 @@ Attach cart to customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $cart_id = 789; // int | Cart ID to attach
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createCart**
-> \Kaemo\Client\Model\Cart createCart($body)
+> \Kinow\Client\Model\Cart createCart($body)
 
 
 
@@ -176,8 +176,8 @@ Create new cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
-$body = new \Kaemo\Client\Model\Cart1(); // \Kaemo\Client\Model\Cart1 | Cart settings
+$api_instance = new Kinow\Client\Api\CartsApi();
+$body = new \Kinow\Client\Model\Cart1(); // \Kinow\Client\Model\Cart1 | Cart settings
 
 try {
     $result = $api_instance->createCart($body);
@@ -192,11 +192,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Cart1**](#\Kaemo\Client\Model\Cart1)| Cart settings |
+ **body** | [**\Kinow\Client\Model\Cart1**](#\Kinow\Client\Model\Cart1)| Cart settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Delete cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 
 try {
@@ -261,7 +261,7 @@ Remove product from cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to delete from cart
 $product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
@@ -307,7 +307,7 @@ Detach Cart rule from Cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $cart_rule_id = 789; // int | Cart rule ID to detach
 
@@ -351,7 +351,7 @@ Remove all items in a Cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to empty
 
 try {
@@ -382,7 +382,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCart**
-> \Kaemo\Client\Model\Cart getCart($cart_id)
+> \Kinow\Client\Model\Cart getCart($cart_id)
 
 
 
@@ -393,7 +393,7 @@ Get cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 
 try {
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerCarts**
-> \Kaemo\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -436,7 +436,7 @@ Get customer carts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\Carts**](#Carts)
 
 ### Authorization
 
@@ -478,7 +478,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getLastCart**
-> \Kaemo\Client\Model\Cart getLastCart($customer_id)
+> \Kinow\Client\Model\Cart getLastCart($customer_id)
 
 
 
@@ -489,7 +489,7 @@ Get customer last cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPaymentUrl**
-> \Kaemo\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
 
 
 
@@ -532,7 +532,7 @@ Get payment gateway URL to use in iframe
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentUrl**](#PaymentUrl)
+[**\Kinow\Client\Model\PaymentUrl**](#PaymentUrl)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kaemo\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
 
 
 
@@ -577,7 +577,7 @@ Prepare payment on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
 
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentDetails1**](#PaymentDetails1)
+[**\Kinow\Client\Model\PaymentDetails1**](#PaymentDetails1)
 
 ### Authorization
 
@@ -611,7 +611,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateCart**
-> \Kaemo\Client\Model\Cart updateCart($cart_id, $body)
+> \Kinow\Client\Model\Cart updateCart($cart_id, $body)
 
 
 
@@ -622,9 +622,9 @@ Update cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart id
-$body = new \Kaemo\Client\Model\Cart2(); // \Kaemo\Client\Model\Cart2 | Cart settings
+$body = new \Kinow\Client\Model\Cart2(); // \Kinow\Client\Model\Cart2 | Cart settings
 
 try {
     $result = $api_instance->updateCart($cart_id, $body);
@@ -640,11 +640,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart id |
- **body** | [**\Kaemo\Client\Model\Cart2**](#\Kaemo\Client\Model\Cart2)| Cart settings |
+ **body** | [**\Kinow\Client\Model\Cart2**](#\Kinow\Client\Model\Cart2)| Cart settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\Cart**](#Cart)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ Validate cart without payment method (only for carts with a total of 0)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to validate
 
 try {
@@ -709,10 +709,10 @@ Validate payment on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CartsApi();
+$api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
-$payment_argument = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment argument
+$payment_argument = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment argument
 
 try {
     $api_instance->validatePayment($cart_id, $payment_name, $payment_argument);
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
- **payment_argument** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment argument |
+ **payment_argument** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment argument |
 
 ### Return type
 

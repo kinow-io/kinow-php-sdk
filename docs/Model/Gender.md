@@ -5,6 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **type** | **int** |  | [optional] 
-**name** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 
 

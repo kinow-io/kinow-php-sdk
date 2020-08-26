@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 ## **getPaymentMethods**
-> \Kaemo\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -26,7 +26,7 @@ Get payment methods saved for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPaymentModules**
-> \Kaemo\Client\Model\PaymentModules getPaymentModules($page, $per_page)
+> \Kinow\Client\Model\PaymentModules getPaymentModules($page, $per_page)
 
 
 
@@ -71,7 +71,7 @@ Get payment gateways list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentModules**](#PaymentModules)
+[**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPaymentUrl**
-> \Kaemo\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
 
 
 
@@ -116,7 +116,7 @@ Get payment gateway URL to use in iframe
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentUrl**](#PaymentUrl)
+[**\Kinow\Client\Model\PaymentUrl**](#PaymentUrl)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kaemo\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -161,7 +161,7 @@ Get pending payments for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $payment_name = "payment_name_example"; // string | 
 $customer_id = 789; // int | 
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kaemo\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
 
 
 
@@ -206,7 +206,7 @@ Prepare payment on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PaymentDetails1**](#PaymentDetails1)
+[**\Kinow\Client\Model\PaymentDetails1**](#PaymentDetails1)
 
 ### Authorization
 
@@ -251,10 +251,10 @@ Update payment method for a Customer on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
-$payment_arguments = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment arguments
+$payment_arguments = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment arguments
 
 try {
     $api_instance->updatePaymentMethod($customer_id, $payment_name, $payment_arguments);
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**|  |
  **payment_name** | **string**|  |
- **payment_arguments** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment arguments |
+ **payment_arguments** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment arguments |
 
 ### Return type
 
@@ -297,7 +297,7 @@ Validate cart without payment method (only for carts with a total of 0)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $cart_id = 789; // int | Cart ID to validate
 
 try {
@@ -339,10 +339,10 @@ Validate payment on a payment gateway
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PaymentModulesApi();
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
-$payment_argument = new \Kaemo\Client\Model\PaymentArguments(); // \Kaemo\Client\Model\PaymentArguments | Payment argument
+$payment_argument = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment argument
 
 try {
     $api_instance->validatePayment($cart_id, $payment_name, $payment_argument);
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
- **payment_argument** | [**\Kaemo\Client\Model\PaymentArguments**](#\Kaemo\Client\Model\PaymentArguments)| Payment argument |
+ **payment_argument** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment argument |
 
 ### Return type
 

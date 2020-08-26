@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 ## **createCategory**
-> \Kaemo\Client\Model\Category createCategory($body)
+> \Kinow\Client\Model\Category createCategory($body)
 
 
 
@@ -35,8 +35,8 @@ Create new category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
-$body = new \Kaemo\Client\Model\Category(); // \Kaemo\Client\Model\Category | 
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$body = new \Kinow\Client\Model\Category(); // \Kinow\Client\Model\Category | 
 
 try {
     $result = $api_instance->createCategory($body);
@@ -51,11 +51,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Category**](#\Kaemo\Client\Model\Category)|  |
+ **body** | [**\Kinow\Client\Model\Category**](#\Kinow\Client\Model\Category)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\Category**](#Category)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Delete Category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 
 try {
@@ -109,7 +109,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getAvailableCategory**
-> \Kaemo\Client\Model\Category getAvailableCategory($category_id, $customer_id)
+> \Kinow\Client\Model\Category getAvailableCategory($category_id, $customer_id)
 
 
 
@@ -120,7 +120,7 @@ Get available category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 $customer_id = 789; // int | 
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\Category**](#Category)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategories**
-> \Kaemo\Client\Model\Categories getCategories($page, $per_page, $features, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getCategories($page, $per_page, $features, $filters, $sort_by, $sort_direction)
 
 
 
@@ -165,7 +165,7 @@ Get categories list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $features = "features_example"; // string | ```  features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict  _______________    {      \"*\": {          \"value\": \"string\",          \"operator\": \"strict\"      },      \"1\": {          \"value\": \"string\",          \"operator\": \"contains\"      }  } ```  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).  To search on all features, you can pass * as featureId.
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoriesFromCategory**
-> \Kaemo\Client\Model\Categories getCategoriesFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getCategoriesFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -218,7 +218,7 @@ Get categories list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategory**
-> \Kaemo\Client\Model\Category getCategory($category_id)
+> \Kinow\Client\Model\Category getCategory($category_id)
 
 
 
@@ -269,7 +269,7 @@ Get category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 
 try {
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\Category**](#Category)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryBanner**
-> \Kaemo\Client\Model\Image getCategoryBanner($category_id)
+> \Kinow\Client\Model\Image getCategoryBanner($category_id)
 
 
 
@@ -312,7 +312,7 @@ Get Category banner
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 
 try {
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryFeatures**
-> \Kaemo\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
+> \Kinow\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
 
 
 
@@ -355,7 +355,7 @@ Get category features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -391,7 +391,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryProducts**
-> \Kaemo\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -402,7 +402,7 @@ Get category products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -448,7 +448,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryVideoPlayer**
-> \Kaemo\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
+> \Kinow\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
 
 
 
@@ -459,7 +459,7 @@ Get video player
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $country_id = 789; // int | Country ID to use in video analytics
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Player**](#Player)
+[**\Kinow\Client\Model\Player**](#Player)
 
 ### Authorization
 
@@ -495,7 +495,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryVideoSubtitles**
-> \Kaemo\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -506,7 +506,7 @@ Get subtitles of a video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductCategories**
-> \Kaemo\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -553,7 +553,7 @@ Get product categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -595,7 +595,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptionCategories**
-> \Kaemo\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -606,7 +606,7 @@ Get categories list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $subscription_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -646,7 +646,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromCategories**
-> \Kaemo\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -657,7 +657,7 @@ Get Videos attached to Categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\Videos**](#Videos)
 
 ### Authorization
 
@@ -695,7 +695,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromCategory**
-> \Kaemo\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -706,7 +706,7 @@ Get Videos attached to Category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\Videos**](#Videos)
 
 ### Authorization
 
@@ -746,7 +746,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateCategory**
-> \Kaemo\Client\Model\Category updateCategory($category_id, $body)
+> \Kinow\Client\Model\Category updateCategory($category_id, $body)
 
 
 
@@ -757,9 +757,9 @@ Update category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to update
-$body = new \Kaemo\Client\Model\Category(); // \Kaemo\Client\Model\Category | 
+$body = new \Kinow\Client\Model\Category(); // \Kinow\Client\Model\Category | 
 
 try {
     $result = $api_instance->updateCategory($category_id, $body);
@@ -775,11 +775,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| Category ID to update |
- **body** | [**\Kaemo\Client\Model\Category**](#\Kaemo\Client\Model\Category)|  |
+ **body** | [**\Kinow\Client\Model\Category**](#\Kinow\Client\Model\Category)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\Category**](#Category)
 
 ### Authorization
 
@@ -791,7 +791,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadCategoryCover**
-> \Kaemo\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -802,7 +802,7 @@ Upload Category cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CategoriesApi();
+$api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 3.4; // float | Category ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

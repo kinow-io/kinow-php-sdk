@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getLanguages**
-> \Kaemo\Client\Model\Languages getLanguages($page, $per_page)
+> \Kinow\Client\Model\Languages getLanguages($page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get language list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\LanguagesApi();
+$api_instance = new Kinow\Client\Api\LanguagesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Languages**](#Languages)
+[**\Kinow\Client\Model\Languages**](#Languages)
 
 ### Authorization
 

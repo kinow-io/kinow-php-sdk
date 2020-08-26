@@ -28,7 +28,7 @@ Consume gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $token = "token_example"; // string | Gift token to check (optional)
@@ -63,7 +63,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createGift**
-> \Kaemo\Client\Model\Gift createGift($body)
+> \Kinow\Client\Model\Gift createGift($body)
 
 
 
@@ -74,8 +74,8 @@ Create gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
-$body = new \Kaemo\Client\Model\Gift1(); // \Kaemo\Client\Model\Gift1 | Gift settings
+$api_instance = new Kinow\Client\Api\GiftsApi();
+$body = new \Kinow\Client\Model\Gift1(); // \Kinow\Client\Model\Gift1 | Gift settings
 
 try {
     $result = $api_instance->createGift($body);
@@ -90,11 +90,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Gift1**](#\Kaemo\Client\Model\Gift1)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift1**](#\Kinow\Client\Model\Gift1)| Gift settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\Gift**](#Gift)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Delete gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 
 try {
@@ -159,7 +159,7 @@ Delete gifts in cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $cart_id = 789; // int | Cart ID to fetch
 
 try {
@@ -190,7 +190,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGift**
-> \Kaemo\Client\Model\Gift getGift($gift_id)
+> \Kinow\Client\Model\Gift getGift($gift_id)
 
 
 
@@ -201,7 +201,7 @@ Get gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 
 try {
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\Gift**](#Gift)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGiftInCart**
-> \Kaemo\Client\Model\Gift getGiftInCart($cart_id)
+> \Kinow\Client\Model\Gift getGiftInCart($cart_id)
 
 
 
@@ -244,7 +244,7 @@ Get gift in cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $cart_id = 789; // int | Cart ID to fetch
 
 try {
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\Gift**](#Gift)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGiftToken**
-> \Kaemo\Client\Model\GiftToken getGiftToken($gift_id)
+> \Kinow\Client\Model\GiftToken getGiftToken($gift_id)
 
 
 
@@ -287,7 +287,7 @@ Get gift token
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 
 try {
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\GiftToken**](#GiftToken)
+[**\Kinow\Client\Model\GiftToken**](#GiftToken)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGifts**
-> \Kaemo\Client\Model\Gifts getGifts($unused_only)
+> \Kinow\Client\Model\Gifts getGifts($unused_only)
 
 
 
@@ -330,7 +330,7 @@ Get gifts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $unused_only = 56; // int | Only unused gifts
 
 try {
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Gifts**](#Gifts)
+[**\Kinow\Client\Model\Gifts**](#Gifts)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Send gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
 
 try {
@@ -404,7 +404,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateGift**
-> \Kaemo\Client\Model\Gift updateGift($gift_id, $body)
+> \Kinow\Client\Model\Gift updateGift($gift_id, $body)
 
 
 
@@ -415,9 +415,9 @@ Update gift
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GiftsApi();
+$api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
-$body = new \Kaemo\Client\Model\Gift2(); // \Kaemo\Client\Model\Gift2 | Gift settings
+$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
 
 try {
     $result = $api_instance->updateGift($gift_id, $body);
@@ -433,11 +433,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
- **body** | [**\Kaemo\Client\Model\Gift2**](#\Kaemo\Client\Model\Gift2)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\Gift**](#Gift)
 
 ### Authorization
 

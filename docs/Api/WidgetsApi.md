@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 ## **getSliderImage**
-> \Kaemo\Client\Model\Image[] getSliderImage()
+> \Kinow\Client\Model\Image[] getSliderImage()
 
 
 
@@ -25,7 +25,7 @@ Get slider images
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 
 try {
     $result = $api_instance->getSliderImage();
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image[]**](#Image)
+[**\Kinow\Client\Model\Image[]**](#Image)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetAnalytics**
-> \Kaemo\Client\Model\GoogleAnalytics getWidgetAnalytics()
+> \Kinow\Client\Model\GoogleAnalytics getWidgetAnalytics()
 
 
 
@@ -64,7 +64,7 @@ Get Google Analytics configuration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 
 try {
     $result = $api_instance->getWidgetAnalytics();
@@ -80,7 +80,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kaemo\Client\Model\GoogleAnalytics**](#GoogleAnalytics)
+[**\Kinow\Client\Model\GoogleAnalytics**](#GoogleAnalytics)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetFooterMenu**
-> \Kaemo\Client\Model\WidgetFooterMenus getWidgetFooterMenu($page, $per_page)
+> \Kinow\Client\Model\WidgetFooterMenus getWidgetFooterMenu($page, $per_page)
 
 
 
@@ -103,7 +103,7 @@ Get footer menu list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\WidgetFooterMenus**](#WidgetFooterMenus)
+[**\Kinow\Client\Model\WidgetFooterMenus**](#WidgetFooterMenus)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetHookPhrase**
-> \Kaemo\Client\Model\WidgetHookPhrases getWidgetHookPhrase($page, $per_page)
+> \Kinow\Client\Model\WidgetHookPhrases getWidgetHookPhrase($page, $per_page)
 
 
 
@@ -148,7 +148,7 @@ Get hook phrase list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\WidgetHookPhrases**](#WidgetHookPhrases)
+[**\Kinow\Client\Model\WidgetHookPhrases**](#WidgetHookPhrases)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetSlider**
-> \Kaemo\Client\Model\WidgetSliders getWidgetSlider($page, $per_page)
+> \Kinow\Client\Model\WidgetSliders getWidgetSlider($page, $per_page)
 
 
 
@@ -193,7 +193,7 @@ Get slider list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\WidgetSliders**](#WidgetSliders)
+[**\Kinow\Client\Model\WidgetSliders**](#WidgetSliders)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetSliderItem**
-> \Kaemo\Client\Model\WidgetSlider getWidgetSliderItem($slider_id)
+> \Kinow\Client\Model\WidgetSlider getWidgetSliderItem($slider_id)
 
 
 
@@ -238,7 +238,7 @@ Get slider item
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 $slider_id = 789; // int | Slider ID to fetch
 
 try {
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\WidgetSlider**](#WidgetSlider)
+[**\Kinow\Client\Model\WidgetSlider**](#WidgetSlider)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getWidgetTopMenu**
-> \Kaemo\Client\Model\WidgetTopMenus getWidgetTopMenu($page, $per_page)
+> \Kinow\Client\Model\WidgetTopMenus getWidgetTopMenu($page, $per_page)
 
 
 
@@ -281,7 +281,7 @@ Get top menu list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\WidgetsApi();
+$api_instance = new Kinow\Client\Api\WidgetsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\WidgetTopMenus**](#WidgetTopMenus)
+[**\Kinow\Client\Model\WidgetTopMenus**](#WidgetTopMenus)
 
 ### Authorization
 

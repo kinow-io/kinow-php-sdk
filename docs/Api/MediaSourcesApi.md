@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 ## **getMediaSource**
-> \Kaemo\Client\Model\MediaSource getMediaSource($source_id)
+> \Kinow\Client\Model\MediaSource getMediaSource($source_id)
 
 
 
@@ -22,7 +22,7 @@ Get media source
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaSourcesApi();
+$api_instance = new Kinow\Client\Api\MediaSourcesApi();
 $source_id = 789; // int | Media source ID to fetch
 
 try {
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaSource**](#MediaSource)
+[**\Kinow\Client\Model\MediaSource**](#MediaSource)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getMediaSourceFiles**
-> \Kaemo\Client\Model\MediaFiles getMediaSourceFiles($source_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\MediaFiles getMediaSourceFiles($source_id, $page, $per_page, $filters)
 
 
 
@@ -65,7 +65,7 @@ Get media source files
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaSourcesApi();
+$api_instance = new Kinow\Client\Api\MediaSourcesApi();
 $source_id = 789; // int | Media source ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaFiles**](#MediaFiles)
+[**\Kinow\Client\Model\MediaFiles**](#MediaFiles)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getMediaSources**
-> \Kaemo\Client\Model\MediaSources getMediaSources($page, $per_page)
+> \Kinow\Client\Model\MediaSources getMediaSources($page, $per_page)
 
 
 
@@ -114,7 +114,7 @@ Get media source list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaSourcesApi();
+$api_instance = new Kinow\Client\Api\MediaSourcesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaSources**](#MediaSources)
+[**\Kinow\Client\Model\MediaSources**](#MediaSources)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **postMediaSourceFiles**
-> \Kaemo\Client\Model\MediaFile postMediaSourceFiles($source_id, $body)
+> \Kinow\Client\Model\MediaFile postMediaSourceFiles($source_id, $body)
 
 
 
@@ -159,9 +159,9 @@ Post media file
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\MediaSourcesApi();
+$api_instance = new Kinow\Client\Api\MediaSourcesApi();
 $source_id = 789; // int | Media source ID to fetch
-$body = new \Kaemo\Client\Model\MediaFile(); // \Kaemo\Client\Model\MediaFile | Create MediaFile object
+$body = new \Kinow\Client\Model\MediaFile(); // \Kinow\Client\Model\MediaFile | Create MediaFile object
 
 try {
     $result = $api_instance->postMediaSourceFiles($source_id, $body);
@@ -177,11 +177,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source_id** | **int**| Media source ID to fetch |
- **body** | [**\Kaemo\Client\Model\MediaFile**](#\Kaemo\Client\Model\MediaFile)| Create MediaFile object |
+ **body** | [**\Kinow\Client\Model\MediaFile**](#\Kinow\Client\Model\MediaFile)| Create MediaFile object |
 
 ### Return type
 
-[**\Kaemo\Client\Model\MediaFile**](#MediaFile)
+[**\Kinow\Client\Model\MediaFile**](#MediaFile)
 
 ### Authorization
 

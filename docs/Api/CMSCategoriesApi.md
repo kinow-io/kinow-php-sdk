@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **createCMSCategory**
-> \Kaemo\Client\Model\CMSCategory createCMSCategory($body)
+> \Kinow\Client\Model\CMSCategory createCMSCategory($body)
 
 
 
@@ -21,8 +21,8 @@ Create cms category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSCategoriesApi();
-$body = new \Kaemo\Client\Model\CMSCategory(); // \Kaemo\Client\Model\CMSCategory | 
+$api_instance = new Kinow\Client\Api\CMSCategoriesApi();
+$body = new \Kinow\Client\Model\CMSCategory(); // \Kinow\Client\Model\CMSCategory | 
 
 try {
     $result = $api_instance->createCMSCategory($body);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CMSCategory**](#\Kaemo\Client\Model\CMSCategory)|  |
+ **body** | [**\Kinow\Client\Model\CMSCategory**](#\Kinow\Client\Model\CMSCategory)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSCategory**](#CMSCategory)
+[**\Kinow\Client\Model\CMSCategory**](#CMSCategory)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCMSCategories**
-> \Kaemo\Client\Model\CMSCategoriesLists getCMSCategories($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CMSCategoriesLists getCMSCategories($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -64,7 +64,7 @@ Get cms categories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSCategoriesApi();
+$api_instance = new Kinow\Client\Api\CMSCategoriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```  name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt  _______________    {      \"name\": {          \"value\": \"string\",          \"operator\": \"contains\"      },      \"date_add\": {          \"value\": \"string\",          \"operator\": \"lt\"      }  } ```  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSCategoriesLists**](#CMSCategoriesLists)
+[**\Kinow\Client\Model\CMSCategoriesLists**](#CMSCategoriesLists)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateCMSCategory**
-> \Kaemo\Client\Model\CMSCategory updateCMSCategory($cms_category_id, $body)
+> \Kinow\Client\Model\CMSCategory updateCMSCategory($cms_category_id, $body)
 
 
 
@@ -115,9 +115,9 @@ Update cms category
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSCategoriesApi();
+$api_instance = new Kinow\Client\Api\CMSCategoriesApi();
 $cms_category_id = 789; // int | CMS category ID to update
-$body = new \Kaemo\Client\Model\CMSCategory(); // \Kaemo\Client\Model\CMSCategory | 
+$body = new \Kinow\Client\Model\CMSCategory(); // \Kinow\Client\Model\CMSCategory | 
 
 try {
     $result = $api_instance->updateCMSCategory($cms_category_id, $body);
@@ -133,11 +133,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cms_category_id** | **int**| CMS category ID to update |
- **body** | [**\Kaemo\Client\Model\CMSCategory**](#\Kaemo\Client\Model\CMSCategory)|  |
+ **body** | [**\Kinow\Client\Model\CMSCategory**](#\Kinow\Client\Model\CMSCategory)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSCategory**](#CMSCategory)
+[**\Kinow\Client\Model\CMSCategory**](#CMSCategory)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **getVideoGroup**
-> \Kaemo\Client\Model\VideoGroup getVideoGroup($video_group_id)
+> \Kinow\Client\Model\VideoGroup getVideoGroup($video_group_id)
 
 
 
@@ -21,7 +21,7 @@ Get video group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideoGroupsApi();
+$api_instance = new Kinow\Client\Api\VideoGroupsApi();
 $video_group_id = 789; // int | Video group ID to fetch
 
 try {
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoGroup**](#VideoGroup)
+[**\Kinow\Client\Model\VideoGroup**](#VideoGroup)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoGroups**
-> \Kaemo\Client\Model\VideoGroup1 getVideoGroups($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroup1 getVideoGroups($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -64,7 +64,7 @@ Get video group list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideoGroupsApi();
+$api_instance = new Kinow\Client\Api\VideoGroupsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains      _______________        {      \"email\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"firstname\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```Operator can be strict, contains, gt or lt.
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoGroupsFromProduct**
-> \Kaemo\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -115,7 +115,7 @@ Get Video Groups attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\VideoGroupsApi();
+$api_instance = new Kinow\Client\Api\VideoGroupsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"duration\": {      \"value\": \"string\",      \"operator\": \"gt\"      }      } ```      Operator can be strict, contains, gt or lt.
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
 
 ### Authorization
 

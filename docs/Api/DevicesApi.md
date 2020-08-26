@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **createDevices**
-> \Kaemo\Client\Model\Device createDevices($body)
+> \Kinow\Client\Model\Device createDevices($body)
 
 
 
@@ -21,8 +21,8 @@ Create new devices
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DevicesApi();
-$body = new \Kaemo\Client\Model\ProductAttributeCreateRequest1(); // \Kaemo\Client\Model\ProductAttributeCreateRequest1 | 
+$api_instance = new Kinow\Client\Api\DevicesApi();
+$body = new \Kinow\Client\Model\ProductAttributeCreateRequest1(); // \Kinow\Client\Model\ProductAttributeCreateRequest1 | 
 
 try {
     $result = $api_instance->createDevices($body);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\ProductAttributeCreateRequest1**](#\Kaemo\Client\Model\ProductAttributeCreateRequest1)|  |
+ **body** | [**\Kinow\Client\Model\ProductAttributeCreateRequest1**](#\Kinow\Client\Model\ProductAttributeCreateRequest1)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Device**](#Device)
+[**\Kinow\Client\Model\Device**](#Device)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Delete Device
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DevicesApi();
+$api_instance = new Kinow\Client\Api\DevicesApi();
 $device_id = 789; // int | Device ID to delete
 
 try {
@@ -95,7 +95,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerDevices**
-> \Kaemo\Client\Model\DeviceList getCustomerDevices($customer_id, $page, $per_page)
+> \Kinow\Client\Model\DeviceList getCustomerDevices($customer_id, $page, $per_page)
 
 
 
@@ -106,7 +106,7 @@ Get customer devices list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\DevicesApi();
+$api_instance = new Kinow\Client\Api\DevicesApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\DeviceList**](#DeviceList)
+[**\Kinow\Client\Model\DeviceList**](#DeviceList)
 
 ### Authorization
 

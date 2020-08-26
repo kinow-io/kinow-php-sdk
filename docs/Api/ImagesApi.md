@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 ## **getActorCoverImage**
-> \Kaemo\Client\Model\Image getActorCoverImage($actor_id)
+> \Kinow\Client\Model\Image getActorCoverImage($actor_id)
 
 
 
@@ -32,7 +32,7 @@ Get cover image of an actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $actor_id = 789; // int | Actor ID to fetch
 
 try {
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryBanner**
-> \Kaemo\Client\Model\Image getCategoryBanner($category_id)
+> \Kinow\Client\Model\Image getCategoryBanner($category_id)
 
 
 
@@ -75,7 +75,7 @@ Get Category banner
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $category_id = 789; // int | Category ID to fetch
 
 try {
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getDirectorCoverImage**
-> \Kaemo\Client\Model\Image getDirectorCoverImage($director_id)
+> \Kinow\Client\Model\Image getDirectorCoverImage($director_id)
 
 
 
@@ -118,7 +118,7 @@ Get cover image of a director
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $director_id = 789; // int | Director ID to fetch
 
 try {
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductCoverImage**
-> \Kaemo\Client\Model\Image getProductCoverImage($product_id)
+> \Kinow\Client\Model\Image getProductCoverImage($product_id)
 
 
 
@@ -161,7 +161,7 @@ Get cover image of a product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductImages**
-> \Kaemo\Client\Model\ProductImagesResponse getProductImages($product_id, $type, $page, $per_page)
+> \Kinow\Client\Model\ProductImagesResponse getProductImages($product_id, $type, $page, $per_page)
 
 
 
@@ -204,7 +204,7 @@ Get images attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $product_id = 789; // int | Product ID to fetch
 $type = "type_example"; // string | Filter on specific Image type
 $page = 789; // int | 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
+[**\Kinow\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductScreenshots**
-> \Kaemo\Client\Model\Screenshot[] getProductScreenshots($product_id)
+> \Kinow\Client\Model\Screenshot[] getProductScreenshots($product_id)
 
 
 
@@ -253,7 +253,7 @@ Get product screenshots
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Screenshot[]**](#Screenshot)
+[**\Kinow\Client\Model\Screenshot[]**](#Screenshot)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSliderImage**
-> \Kaemo\Client\Model\Image[] getSliderImage()
+> \Kinow\Client\Model\Image[] getSliderImage()
 
 
 
@@ -296,7 +296,7 @@ Get slider images
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 
 try {
     $result = $api_instance->getSliderImage();
@@ -312,7 +312,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image[]**](#Image)
+[**\Kinow\Client\Model\Image[]**](#Image)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptionCoverImage**
-> \Kaemo\Client\Model\Image getSubscriptionCoverImage($subscription_id)
+> \Kinow\Client\Model\Image getSubscriptionCoverImage($subscription_id)
 
 
 
@@ -335,7 +335,7 @@ Get cover image of a subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $subscription_id = 789; // int | Subscription ID to fetch
 
 try {
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoCover**
-> \Kaemo\Client\Model\Image getVideoCover($video_id)
+> \Kinow\Client\Model\Image getVideoCover($video_id)
 
 
 
@@ -378,7 +378,7 @@ Get video cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $video_id = 789; // int | Video ID to fetch
 
 try {
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadActorCover**
-> \Kaemo\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -421,7 +421,7 @@ Upload actor cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $actor_id = 3.4; // float | Actor ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadCategoryCover**
-> \Kaemo\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -470,7 +470,7 @@ Upload Category cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $category_id = 3.4; // float | Category ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kaemo\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -519,7 +519,7 @@ Upload director cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $director_id = 3.4; // float | Director ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadProductCover**
-> \Kaemo\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -568,7 +568,7 @@ Upload product cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $product_id = 3.4; // float | Product ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -606,7 +606,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadSubscriptionCover**
-> \Kaemo\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -617,7 +617,7 @@ Upload subscription cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ImagesApi();
+$api_instance = new Kinow\Client\Api\ImagesApi();
 $subscription_id = 3.4; // float | Subscription ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

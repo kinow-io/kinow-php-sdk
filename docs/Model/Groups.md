@@ -3,7 +3,7 @@
 ### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pagination** | [**\Kaemo\Client\Model\Pagination**](#Pagination) |  | [optional] 
-**data** | [**\Kaemo\Client\Model\Group[]**](#Group) |  | [optional] 
+**pagination** | [**\Kinow\Client\Model\Pagination**](#Pagination) |  | [optional] 
+**data** | [**\Kinow\Client\Model\Group[]**](#Group) |  | [optional] 
 
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerOrders**
-> \Kaemo\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
+> \Kinow\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
 
 
 
@@ -23,7 +23,7 @@ Get customer orders
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrdersApi();
+$api_instance = new Kinow\Client\Api\OrdersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\Orders**](#Orders)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getOrder**
-> \Kaemo\Client\Model\Order getOrder($order_id)
+> \Kinow\Client\Model\Order getOrder($order_id)
 
 
 
@@ -70,7 +70,7 @@ Get order
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrdersApi();
+$api_instance = new Kinow\Client\Api\OrdersApi();
 $order_id = 789; // int | Order ID to fetch
 
 try {
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Order**](#Order)
+[**\Kinow\Client\Model\Order**](#Order)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getOrderHistories**
-> \Kaemo\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
+> \Kinow\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
 
 
 
@@ -113,7 +113,7 @@ Get order histories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrdersApi();
+$api_instance = new Kinow\Client\Api\OrdersApi();
 $order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\OrderHistories**](#OrderHistories)
+[**\Kinow\Client\Model\OrderHistories**](#OrderHistories)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Get order invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrdersApi();
+$api_instance = new Kinow\Client\Api\OrdersApi();
 $order_id = 789; // int | Order ID to fetch
 $to_blob = true; // bool | Get PDF content in blob
 
@@ -194,7 +194,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getOrders**
-> \Kaemo\Client\Model\Orders getOrders($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Orders getOrders($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -205,7 +205,7 @@ Get order list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrdersApi();
+$api_instance = new Kinow\Client\Api\OrdersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains    ```  {      \"email\": {          \"value\": \"string\",          \"operator\": \"strict\"      },      \"firstname\": {          \"value\": \"string\",          \"operator\": \"contains\"      },      \"invoice_date\": {          \"value\": [\"Y-m-d\", \"Y-m-d\"],          \"operator\": \"between\"      }  }```  Operator can be strict, contains, between, gt or lt.
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\Orders**](#Orders)
 
 ### Authorization
 

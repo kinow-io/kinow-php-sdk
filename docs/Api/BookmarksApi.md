@@ -21,7 +21,7 @@ Attach bookmark to customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BookmarksApi();
+$api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
 
@@ -65,7 +65,7 @@ Detach bookmark from customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BookmarksApi();
+$api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
 
@@ -98,7 +98,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerBookmarks**
-> \Kaemo\Client\Model\Products getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Products getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -109,7 +109,7 @@ Get customer bookmarks
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\BookmarksApi();
+$api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 

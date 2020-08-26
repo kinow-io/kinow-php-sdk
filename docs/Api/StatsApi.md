@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerGroupTotalWatched**
-> \Kaemo\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page)
+> \Kinow\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page)
 
 
 
@@ -23,7 +23,7 @@ Get video statistics for a given customer group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\StatsApi();
+$api_instance = new Kinow\Client\Api\StatsApi();
 $group_id = 789; // int | Customer group ID to fecth
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerGroupVideoStats1**](#CustomerGroupVideoStats1)
+[**\Kinow\Client\Model\CustomerGroupVideoStats1**](#CustomerGroupVideoStats1)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerSessions**
-> \Kaemo\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page)
+> \Kinow\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -72,7 +72,7 @@ Get Customer video sessions statistics
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\StatsApi();
+$api_instance = new Kinow\Client\Api\StatsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $group_id = 789; // int | Group ID to fetch
 $video_id = 789; // int | Video ID to fetch
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SessionVideoStats**](#SessionVideoStats)
+[**\Kinow\Client\Model\SessionVideoStats**](#SessionVideoStats)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerSessionsMultiple**
-> \Kaemo\Client\Model\SessionVideoStat[] getCustomerSessionsMultiple($customer_id, $body)
+> \Kinow\Client\Model\SessionVideoStat[] getCustomerSessionsMultiple($customer_id, $body)
 
 
 
@@ -127,9 +127,9 @@ Get Customer sessions statistics for multiple videos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\StatsApi();
+$api_instance = new Kinow\Client\Api\StatsApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kaemo\Client\Model\VideoIDList1(); // \Kaemo\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\VideoIDList1(); // \Kinow\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerSessionsMultiple($customer_id, $body);
@@ -145,11 +145,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kaemo\Client\Model\VideoIDList1**](#\Kaemo\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\VideoIDList1**](#\Kinow\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
-[**\Kaemo\Client\Model\SessionVideoStat[]**](#SessionVideoStat)
+[**\Kinow\Client\Model\SessionVideoStat[]**](#SessionVideoStat)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerVideoStats**
-> \Kaemo\Client\Model\CustomerVideoStats1 getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page)
+> \Kinow\Client\Model\CustomerVideoStats1 getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -172,7 +172,7 @@ Get customer video statistics
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\StatsApi();
+$api_instance = new Kinow\Client\Api\StatsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $date_from = "date_from_example"; // string | Search entries from this date
 $date_to = "date_to_example"; // string | Search entries to this date
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CustomerVideoStats1**](#CustomerVideoStats1)
+[**\Kinow\Client\Model\CustomerVideoStats1**](#CustomerVideoStats1)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoStats**
-> \Kaemo\Client\Model\VideoStats getVideoStats($video_id, $date_from, $date_to, $page)
+> \Kinow\Client\Model\VideoStats getVideoStats($video_id, $date_from, $date_to, $page)
 
 
 
@@ -223,7 +223,7 @@ Get video statistics
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\StatsApi();
+$api_instance = new Kinow\Client\Api\StatsApi();
 $video_id = 789; // int | Video ID to fetch
 $date_from = "date_from_example"; // string | Search entries from this date
 $date_to = "date_to_example"; // string | Search entries to this date
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\VideoStats**](#VideoStats)
+[**\Kinow\Client\Model\VideoStats**](#VideoStats)
 
 ### Authorization
 

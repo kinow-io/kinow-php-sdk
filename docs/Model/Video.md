@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **id_language** | **int** |  | [optional] 
 **language_filter** | **int** |  | [optional] 
 **id_media_source** | **int** |  | [optional] 
-**name** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
-**description** | [**\Kaemo\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **duration** | **int** |  | [optional] 
 **filename** | **string** |  | [optional] 
 **position** | **int** |  | [optional] 
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **geoloc_enabled** | **bool** |  | [optional] 
 **behavior_detected_countries** | **string** |  | [optional] 
 **behavior_non_detected_countries** | **string** |  | [optional] 
-**has_free_access** | [**\Kaemo\Client\Model\VideoFreeAccess**](#VideoFreeAccess) |  | [optional] 
+**has_free_access** | [**\Kinow\Client\Model\VideoFreeAccess**](#VideoFreeAccess) |  | [optional] 
 **advertising_url** | **string** |  | [optional] 
 
 

@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 ## **createProductAccess**
-> \Kaemo\Client\Model\ProductAccess createProductAccess($body)
+> \Kinow\Client\Model\ProductAccess createProductAccess($body)
 
 
 
@@ -30,8 +30,8 @@ Create new product access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
-$body = new \Kaemo\Client\Model\ProductAccess(); // \Kaemo\Client\Model\ProductAccess | 
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
+$body = new \Kinow\Client\Model\ProductAccess(); // \Kinow\Client\Model\ProductAccess | 
 
 try {
     $result = $api_instance->createProductAccess($body);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\ProductAccess**](#\Kaemo\Client\Model\ProductAccess)|  |
+ **body** | [**\Kinow\Client\Model\ProductAccess**](#\Kinow\Client\Model\ProductAccess)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Delete product access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Access ID to fetch
 
 try {
@@ -104,7 +104,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerAccessesSubscriptions**
-> \Kaemo\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
 
 
 
@@ -115,7 +115,7 @@ Get customer accesses for subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerAccessesVideos**
-> \Kaemo\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
+> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
 
 
 
@@ -164,7 +164,7 @@ Get customer access for videos
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductAccess**
-> \Kaemo\Client\Model\ProductAccess getProductAccess($product_access_id)
+> \Kinow\Client\Model\ProductAccess getProductAccess($product_access_id)
 
 
 
@@ -211,7 +211,7 @@ Get product access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Product access ID to fetch
 
 try {
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductAccesses**
-> \Kaemo\Client\Model\SubscriptionAccesses getProductAccesses($page, $per_page, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction, $filters)
+> \Kinow\Client\Model\SubscriptionAccesses getProductAccesses($page, $per_page, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction, $filters)
 
 
 
@@ -254,7 +254,7 @@ Get product accesses list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $type = "type_example"; // string | Filter by access type, available values are: video, sub
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Subcribe to a reccuring payment for an Access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Access ID to fetch
 
 try {
@@ -353,7 +353,7 @@ Switch an Access to another Subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = "product_access_id_example"; // string | Access ID to switch
 $subscription_id = 789; // int | Subscription to switch to
 
@@ -397,7 +397,7 @@ Delete Access pending switch
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Product access ID to fetch
 
 try {
@@ -428,7 +428,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **switchSubscriptionPending**
-> \Kaemo\Client\Model\Subscription switchSubscriptionPending($product_access_id)
+> \Kinow\Client\Model\Subscription switchSubscriptionPending($product_access_id)
 
 
 
@@ -439,7 +439,7 @@ Return Access pending switch
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = "product_access_id_example"; // string | Access ID to fetch
 
 try {
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 
@@ -482,7 +482,7 @@ Unsubcribe an Access recurring payment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Access ID to fetch
 
 try {
@@ -513,7 +513,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateProductAccess**
-> \Kaemo\Client\Model\ProductAccess updateProductAccess($product_access_id, $body)
+> \Kinow\Client\Model\ProductAccess updateProductAccess($product_access_id, $body)
 
 
 
@@ -524,9 +524,9 @@ Update product access
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ProductAccessesApi();
+$api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Product access ID to update
-$body = new \Kaemo\Client\Model\ProductAccess(); // \Kaemo\Client\Model\ProductAccess | 
+$body = new \Kinow\Client\Model\ProductAccess(); // \Kinow\Client\Model\ProductAccess | 
 
 try {
     $result = $api_instance->updateProductAccess($product_access_id, $body);
@@ -542,11 +542,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_access_id** | **int**| Product access ID to update |
- **body** | [**\Kaemo\Client\Model\ProductAccess**](#\Kaemo\Client\Model\ProductAccess)|  |
+ **body** | [**\Kinow\Client\Model\ProductAccess**](#\Kinow\Client\Model\ProductAccess)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
 
 ### Authorization
 

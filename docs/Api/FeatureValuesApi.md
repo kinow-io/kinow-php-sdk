@@ -23,7 +23,7 @@ Attach feature to extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$api_instance = new Kinow\Client\Api\FeatureValuesApi();
 $extract_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -67,7 +67,7 @@ Attach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$api_instance = new Kinow\Client\Api\FeatureValuesApi();
 $product_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]```
 
@@ -111,7 +111,7 @@ Attach feature to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$api_instance = new Kinow\Client\Api\FeatureValuesApi();
 $video_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -155,7 +155,7 @@ Detach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$api_instance = new Kinow\Client\Api\FeatureValuesApi();
 $product_id = 789; // int | 
 $feature_id = 789; // int | 
 
@@ -188,7 +188,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getFeatureValues**
-> \Kaemo\Client\Model\Products1 getFeatureValues($page, $per_page)
+> \Kinow\Client\Model\Products1 getFeatureValues($page, $per_page)
 
 
 
@@ -199,7 +199,7 @@ Get feature value list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeatureValuesApi();
+$api_instance = new Kinow\Client\Api\FeatureValuesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products1**](#Products1)
+[**\Kinow\Client\Model\Products1**](#Products1)
 
 ### Authorization
 

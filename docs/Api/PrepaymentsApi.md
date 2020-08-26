@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerPrepaymentBalances**
-> \Kaemo\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
 
 
 
@@ -26,7 +26,7 @@ Get PrepaymentBalances list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $customer_id = 789; // int | Customer ID to fetch
 
 try {
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentOperations**
-> \Kaemo\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
 
 
 
@@ -69,7 +69,7 @@ Get PrepaymentOperations list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $type = "type_example"; // string | 
 $page = 789; // int | 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentBonus**
-> \Kaemo\Client\Model\PrepaymentBonus getPrepaymentBonus($prepayment_bonus_id)
+> \Kinow\Client\Model\PrepaymentBonus getPrepaymentBonus($prepayment_bonus_id)
 
 
 
@@ -118,7 +118,7 @@ Get PrepaymentBonus
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $prepayment_bonus_id = 789; // int | PrepaymentBonus ID to fetch
 
 try {
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
+[**\Kinow\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentBonusList**
-> \Kaemo\Client\Model\PrepaymentBonus1 getPrepaymentBonusList($page, $per_page)
+> \Kinow\Client\Model\PrepaymentBonus1 getPrepaymentBonusList($page, $per_page)
 
 
 
@@ -161,7 +161,7 @@ Get PrepaymentBonus list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentBonus1**](#PrepaymentBonus1)
+[**\Kinow\Client\Model\PrepaymentBonus1**](#PrepaymentBonus1)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentOperation**
-> \Kaemo\Client\Model\PrepaymentOperation getPrepaymentOperation($prepayment_operation_id)
+> \Kinow\Client\Model\PrepaymentOperation getPrepaymentOperation($prepayment_operation_id)
 
 
 
@@ -206,7 +206,7 @@ Get PrepaymentOperation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $prepayment_operation_id = 789; // int | PrepaymentOperation ID to fetch
 
 try {
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentOperation**](#PrepaymentOperation)
+[**\Kinow\Client\Model\PrepaymentOperation**](#PrepaymentOperation)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentOperations**
-> \Kaemo\Client\Model\PrepaymentOperations getPrepaymentOperations($type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperations getPrepaymentOperations($type, $page, $per_page)
 
 
 
@@ -249,7 +249,7 @@ Get PrepaymentOperations list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $type = "type_example"; // string | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentRecharge**
-> \Kaemo\Client\Model\PrepaymentRecharge getPrepaymentRecharge($prepayment_recharge_id)
+> \Kinow\Client\Model\PrepaymentRecharge getPrepaymentRecharge($prepayment_recharge_id)
 
 
 
@@ -296,7 +296,7 @@ Get PrepaymentRecharge
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $prepayment_recharge_id = 789; // int | PrepaymentRecharge ID to fetch
 
 try {
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentRecharge**](#PrepaymentRecharge)
+[**\Kinow\Client\Model\PrepaymentRecharge**](#PrepaymentRecharge)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPrepaymentRecharges**
-> \Kaemo\Client\Model\PrepaymentRecharges getPrepaymentRecharges($page, $per_page)
+> \Kinow\Client\Model\PrepaymentRecharges getPrepaymentRecharges($page, $per_page)
 
 
 
@@ -339,7 +339,7 @@ Get PrepaymentRecharges list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\PrepaymentsApi();
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PrepaymentRecharges**](#PrepaymentRecharges)
+[**\Kinow\Client\Model\PrepaymentRecharges**](#PrepaymentRecharges)
 
 ### Authorization
 

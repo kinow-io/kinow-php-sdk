@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getCountries**
-> \Kaemo\Client\Model\Countries getCountries($page, $per_page, $bypass_pagination)
+> \Kinow\Client\Model\Countries getCountries($page, $per_page, $bypass_pagination)
 
 
 
@@ -19,7 +19,7 @@ Get country list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CountriesApi();
+$api_instance = new Kinow\Client\Api\CountriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $bypass_pagination = true; // bool | 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Countries**](#Countries)
+[**\Kinow\Client\Model\Countries**](#Countries)
 
 ### Authorization
 

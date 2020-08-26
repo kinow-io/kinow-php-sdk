@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getGenders**
-> \Kaemo\Client\Model\Genders getGenders($page, $per_page)
+> \Kinow\Client\Model\Genders getGenders($page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get gender list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GendersApi();
+$api_instance = new Kinow\Client\Api\GendersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Genders**](#Genders)
+[**\Kinow\Client\Model\Genders**](#Genders)
 
 ### Authorization
 

@@ -28,7 +28,7 @@ Attach feature to extract
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $extract_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -72,7 +72,7 @@ Attach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $product_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]```
 
@@ -116,7 +116,7 @@ Attach feature to video
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $video_id = 789; // int | 
 $features = "features_example"; // string | To attach existing FeatureValue to Product:      ```      [{      \"id_feature\":3,      \"id_feature_value\":5      }]      ```        To create a custom FeatureValue:      ```      [{      \"id_feature\":3,      \"custom_value\":[{      \"lang\": 1,      \"value\": \"string\"      }]      }]      ```
 
@@ -160,7 +160,7 @@ Detach feature to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $product_id = 789; // int | 
 $feature_id = 789; // int | 
 
@@ -193,7 +193,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCategoryFeatures**
-> \Kaemo\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
+> \Kinow\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
 
 
 
@@ -204,7 +204,7 @@ Get category features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $category_id = 789; // int | Category ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtractFeatures**
-> \Kaemo\Client\Model\Features getExtractFeatures($extract_id, $page, $per_page)
+> \Kinow\Client\Model\Features getExtractFeatures($extract_id, $page, $per_page)
 
 
 
@@ -251,7 +251,7 @@ Get extract features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $extract_id = 789; // int | Extract ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getFeatureValues**
-> \Kaemo\Client\Model\Products1 getFeatureValues($page, $per_page)
+> \Kinow\Client\Model\Products1 getFeatureValues($page, $per_page)
 
 
 
@@ -298,7 +298,7 @@ Get feature value list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products1**](#Products1)
+[**\Kinow\Client\Model\Products1**](#Products1)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getFeatures**
-> \Kaemo\Client\Model\Features getFeatures($page, $per_page)
+> \Kinow\Client\Model\Features getFeatures($page, $per_page)
 
 
 
@@ -343,7 +343,7 @@ Get feature list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductFeatures**
-> \Kaemo\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
+> \Kinow\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
 
 
 
@@ -388,7 +388,7 @@ Get product features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 
@@ -424,7 +424,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoFeatures**
-> \Kaemo\Client\Model\Features getVideoFeatures($video_id, $page, $per_page)
+> \Kinow\Client\Model\Features getVideoFeatures($video_id, $page, $per_page)
 
 
 
@@ -435,7 +435,7 @@ Get video features
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\FeaturesApi();
+$api_instance = new Kinow\Client\Api\FeaturesApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\Features**](#Features)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **createTask**
-> \Kaemo\Client\Model\Task createTask($body)
+> \Kinow\Client\Model\Task createTask($body)
 
 
 
@@ -19,8 +19,8 @@ Create new task
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\TasksApi();
-$body = new \Kaemo\Client\Model\TaskCreateRequest(); // \Kaemo\Client\Model\TaskCreateRequest | Create task object
+$api_instance = new Kinow\Client\Api\TasksApi();
+$body = new \Kinow\Client\Model\TaskCreateRequest(); // \Kinow\Client\Model\TaskCreateRequest | Create task object
 
 try {
     $result = $api_instance->createTask($body);
@@ -35,11 +35,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\TaskCreateRequest**](#\Kaemo\Client\Model\TaskCreateRequest)| Create task object |
+ **body** | [**\Kinow\Client\Model\TaskCreateRequest**](#\Kinow\Client\Model\TaskCreateRequest)| Create task object |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Task**](#Task)
+[**\Kinow\Client\Model\Task**](#Task)
 
 ### Authorization
 

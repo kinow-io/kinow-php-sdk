@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **createMessage**
-> \Kaemo\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail)
+> \Kinow\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail)
 
 
 
@@ -20,7 +20,7 @@ Create new message
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SupportApi();
+$api_instance = new Kinow\Client\Api\SupportApi();
 $id_lang = 56; // int | 
 $email = "email_example"; // string | 
 $id_contact = 56; // int | 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Support**](#Support)
+[**\Kinow\Client\Model\Support**](#Support)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getContacts**
-> \Kaemo\Client\Model\Contacts getContacts($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Contacts getContacts($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -75,7 +75,7 @@ Get contacts list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SupportApi();
+$api_instance = new Kinow\Client\Api\SupportApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Contacts**](#Contacts)
+[**\Kinow\Client\Model\Contacts**](#Contacts)
 
 ### Authorization
 

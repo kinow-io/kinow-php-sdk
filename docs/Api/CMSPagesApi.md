@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **createCMSPage**
-> \Kaemo\Client\Model\CMSPage createCMSPage($body)
+> \Kinow\Client\Model\CMSPage createCMSPage($body)
 
 
 
@@ -21,8 +21,8 @@ Create cms page
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSPagesApi();
-$body = new \Kaemo\Client\Model\CMSPage(); // \Kaemo\Client\Model\CMSPage | 
+$api_instance = new Kinow\Client\Api\CMSPagesApi();
+$body = new \Kinow\Client\Model\CMSPage(); // \Kinow\Client\Model\CMSPage | 
 
 try {
     $result = $api_instance->createCMSPage($body);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\CMSPage**](#\Kaemo\Client\Model\CMSPage)|  |
+ **body** | [**\Kinow\Client\Model\CMSPage**](#\Kinow\Client\Model\CMSPage)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSPage**](#CMSPage)
+[**\Kinow\Client\Model\CMSPage**](#CMSPage)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCMSPages**
-> \Kaemo\Client\Model\CMSPageLists getCMSPages($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CMSPageLists getCMSPages($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -64,7 +64,7 @@ Get cms pages
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSPagesApi();
+$api_instance = new Kinow\Client\Api\CMSPagesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSPageLists**](#CMSPageLists)
+[**\Kinow\Client\Model\CMSPageLists**](#CMSPageLists)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updateCMSPage**
-> \Kaemo\Client\Model\CMSPage updateCMSPage($cms_page_id, $body)
+> \Kinow\Client\Model\CMSPage updateCMSPage($cms_page_id, $body)
 
 
 
@@ -115,9 +115,9 @@ Update cms page
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\CMSPagesApi();
+$api_instance = new Kinow\Client\Api\CMSPagesApi();
 $cms_page_id = 789; // int | CMS page ID to update
-$body = new \Kaemo\Client\Model\CMSPage(); // \Kaemo\Client\Model\CMSPage | 
+$body = new \Kinow\Client\Model\CMSPage(); // \Kinow\Client\Model\CMSPage | 
 
 try {
     $result = $api_instance->updateCMSPage($cms_page_id, $body);
@@ -133,11 +133,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cms_page_id** | **int**| CMS page ID to update |
- **body** | [**\Kaemo\Client\Model\CMSPage**](#\Kaemo\Client\Model\CMSPage)|  |
+ **body** | [**\Kinow\Client\Model\CMSPage**](#\Kinow\Client\Model\CMSPage)|  |
 
 ### Return type
 
-[**\Kaemo\Client\Model\CMSPage**](#CMSPage)
+[**\Kinow\Client\Model\CMSPage**](#CMSPage)
 
 ### Authorization
 

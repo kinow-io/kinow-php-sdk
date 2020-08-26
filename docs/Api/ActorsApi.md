@@ -30,7 +30,7 @@ Attach product to actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $product_id = 789; // int | Product ID to fetch
 $actor_id = 789; // int | Actor ID to attach
 
@@ -63,7 +63,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **createActor**
-> \Kaemo\Client\Model\Actor createActor($body)
+> \Kinow\Client\Model\Actor createActor($body)
 
 
 
@@ -74,8 +74,8 @@ Create new actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
-$body = new \Kaemo\Client\Model\Actor1(); // \Kaemo\Client\Model\Actor1 | Actor settings
+$api_instance = new Kinow\Client\Api\ActorsApi();
+$body = new \Kinow\Client\Model\Actor1(); // \Kinow\Client\Model\Actor1 | Actor settings
 
 try {
     $result = $api_instance->createActor($body);
@@ -90,11 +90,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kaemo\Client\Model\Actor1**](#\Kaemo\Client\Model\Actor1)| Actor settings |
+ **body** | [**\Kinow\Client\Model\Actor1**](#\Kinow\Client\Model\Actor1)| Actor settings |
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actor**](#Actor)
+[**\Kinow\Client\Model\Actor**](#Actor)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Delete actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 56; // int | 
 
 try {
@@ -148,7 +148,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActor**
-> \Kaemo\Client\Model\Actor getActor($actor_id)
+> \Kinow\Client\Model\Actor getActor($actor_id)
 
 
 
@@ -159,7 +159,7 @@ Get actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 789; // int | Actor ID to fetch
 
 try {
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actor**](#Actor)
+[**\Kinow\Client\Model\Actor**](#Actor)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActorCoverImage**
-> \Kaemo\Client\Model\Image getActorCoverImage($actor_id)
+> \Kinow\Client\Model\Image getActorCoverImage($actor_id)
 
 
 
@@ -202,7 +202,7 @@ Get cover image of an actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 789; // int | Actor ID to fetch
 
 try {
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActorProducts**
-> \Kaemo\Client\Model\Products getActorProducts($actor_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\Products getActorProducts($actor_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -245,7 +245,7 @@ Get actor products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 789; // int | Actor ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActorProductsRole**
-> \Kaemo\Client\Model\Products getActorProductsRole($actor_id, $page, $per_page)
+> \Kinow\Client\Model\Products getActorProductsRole($actor_id, $page, $per_page)
 
 
 
@@ -302,7 +302,7 @@ Get Products linked to Actor with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 789; // int | Actor ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getActors**
-> \Kaemo\Client\Model\Actors getActors($page, $per_page)
+> \Kinow\Client\Model\Actors getActors($page, $per_page)
 
 
 
@@ -349,7 +349,7 @@ Get actors list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\Actors**](#Actors)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductActors**
-> \Kaemo\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -394,7 +394,7 @@ Get actors attached to product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\Actors**](#Actors)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductActorsRole**
-> \Kaemo\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
 
 
 
@@ -443,7 +443,7 @@ Get Actors attached to Product with their role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\Actors**](#Actors)
 
 ### Authorization
 
@@ -490,9 +490,9 @@ Update actor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 56; // int | 
-$body = new \Kaemo\Client\Model\Actor2(); // \Kaemo\Client\Model\Actor2 | Actor settings
+$body = new \Kinow\Client\Model\Actor2(); // \Kinow\Client\Model\Actor2 | Actor settings
 
 try {
     $api_instance->updateActor($actor_id, $body);
@@ -507,7 +507,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
- **body** | [**\Kaemo\Client\Model\Actor2**](#\Kaemo\Client\Model\Actor2)| Actor settings |
+ **body** | [**\Kinow\Client\Model\Actor2**](#\Kinow\Client\Model\Actor2)| Actor settings |
 
 ### Return type
 
@@ -523,7 +523,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadActorCover**
-> \Kaemo\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -534,7 +534,7 @@ Upload actor cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\ActorsApi();
+$api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 3.4; // float | Actor ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

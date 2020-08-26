@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 ## **getDisabledSubscriptions**
-> \Kaemo\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
+> \Kinow\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
 
 
 
@@ -25,7 +25,7 @@ Get disabled subscriptions list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $video_id = 789; // int | Video ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductSubscription**
-> \Kaemo\Client\Model\Subscription getProductSubscription($product_id)
+> \Kinow\Client\Model\Subscription getProductSubscription($product_id)
 
 
 
@@ -72,7 +72,7 @@ Get Subscription linked to a Product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $product_id = 789; // int | Product ID to fetch
 
 try {
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscription**
-> \Kaemo\Client\Model\Subscription getSubscription($subscription_id)
+> \Kinow\Client\Model\Subscription getSubscription($subscription_id)
 
 
 
@@ -115,7 +115,7 @@ Get Subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $subscription_id = 789; // int | Product ID to fetch
 
 try {
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\Subscription**](#Subscription)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptionCategories**
-> \Kaemo\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -158,7 +158,7 @@ Get categories list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $subscription_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\Categories**](#Categories)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptionCoverImage**
-> \Kaemo\Client\Model\Image getSubscriptionCoverImage($subscription_id)
+> \Kinow\Client\Model\Image getSubscriptionCoverImage($subscription_id)
 
 
 
@@ -209,7 +209,7 @@ Get cover image of a subscription
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $subscription_id = 789; // int | Subscription ID to fetch
 
 try {
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getSubscriptions**
-> \Kaemo\Client\Model\Subscriptions getSubscriptions($page, $per_page)
+> \Kinow\Client\Model\Subscriptions getSubscriptions($page, $per_page)
 
 
 
@@ -252,7 +252,7 @@ Get Subscriptions list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **uploadSubscriptionCover**
-> \Kaemo\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -297,7 +297,7 @@ Upload subscription cover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\SubscriptionsApi();
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
 $subscription_id = 3.4; // float | Subscription ID to fetch
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\Image**](#Image)
 
 ### Authorization
 

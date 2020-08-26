@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getOrderHistories**
-> \Kaemo\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
+> \Kinow\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
 
 
 
@@ -19,7 +19,7 @@ Get order histories
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\OrderHistoriesApi();
+$api_instance = new Kinow\Client\Api\OrderHistoriesApi();
 $order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\OrderHistories**](#OrderHistories)
+[**\Kinow\Client\Model\OrderHistories**](#OrderHistories)
 
 ### Authorization
 

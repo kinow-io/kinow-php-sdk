@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 ## **getGeolocSettings**
-> \Kaemo\Client\Model\GeolocSettings getGeolocSettings($type, $type_id)
+> \Kinow\Client\Model\GeolocSettings getGeolocSettings($type, $type_id)
 
 
 
@@ -26,7 +26,7 @@ Get geolocation settings for an item
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $type = "type_example"; // string | Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu
 $type_id = 56; // int | Item ID
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\GeolocSettings**](#GeolocSettings)
+[**\Kinow\Client\Model\GeolocSettings**](#GeolocSettings)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getIPLocation**
-> \Kaemo\Client\Model\IPLocation getIPLocation($ip_address)
+> \Kinow\Client\Model\IPLocation getIPLocation($ip_address)
 
 
 
@@ -71,7 +71,7 @@ Get IP location
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $ip_address = "ip_address_example"; // string | address ip
 
 try {
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\IPLocation**](#IPLocation)
+[**\Kinow\Client\Model\IPLocation**](#IPLocation)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPlatformAccessInfo**
-> \Kaemo\Client\Model\PlatformAccessInfo getPlatformAccessInfo($ip_address)
+> \Kinow\Client\Model\PlatformAccessInfo getPlatformAccessInfo($ip_address)
 
 
 
@@ -114,7 +114,7 @@ Get PlatformAccessInfo by ip
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $ip_address = "ip_address_example"; // string | IP address
 
 try {
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
+[**\Kinow\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductGeolocations**
-> \Kaemo\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
+> \Kinow\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
 
 
 
@@ -157,7 +157,7 @@ Get product geolocation restrictions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kaemo\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\Geolocs**](#Geolocs)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Check product access using geolocation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $product_id = 789; // int | Product ID to fetch
 $ip_address = "ip_address_example"; // string | address ip
 $page = 789; // int | 
@@ -252,7 +252,7 @@ Check access to a video by geolocation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $video_id = 789; // int | Video ID to fetch
 $ip_address = "ip_address_example"; // string | IP address
 $page = 789; // int | 
@@ -300,7 +300,7 @@ Handle geolocation for products by countries
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $product_id = 789; // int | Product ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries
@@ -354,7 +354,7 @@ Handle geolocation for videos by countries
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Kaemo\Client\Api\GeolocationsApi();
+$api_instance = new Kinow\Client\Api\GeolocationsApi();
 $video_id = 789; // int | Video ID to fetch
 $enabled = 56; // int | Enabled
 $behavior_detected_countries = "behavior_detected_countries_example"; // string | Behavior for detected countries

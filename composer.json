@@ -7,11 +7,11 @@
         "sdk",
         "api"
     ],
-    "homepage": "https://www.kaemo.com",
+    "homepage": "https://www.kinow.com",
     "license": "proprietary",
     "authors": [
         {
-            "name": "Kaemo",
+            "name": "Kinow",
             "homepage": "https://github.com/kinow-io"
         }
     ],
@@ -28,9 +28,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "Kaemo\\Client\\" : "lib/" }
+        "psr-4": { "Kinow\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Kaemo\\Client\\" : "test/" }
+        "psr-4": { "Kinow\\Client\\" : "test/" }
     }
 }

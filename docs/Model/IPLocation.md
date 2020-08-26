@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **continent** | **string** |  | [optional] 
 **country** | **string** |  | [optional] 
 **time_zone** | **string** |  | [optional] 
-**coordinates** | [**\Kaemo\Client\Model\IPCoordinates**](#IPCoordinates) |  | [optional] 
+**coordinates** | [**\Kinow\Client\Model\IPCoordinates**](#IPCoordinates) |  | [optional] 
 
 
