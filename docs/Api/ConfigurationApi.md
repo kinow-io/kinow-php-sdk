@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getConfiguration**](#getConfiguration) | **GET** /configuration | 
 [**getConfigurationByName**](#getConfigurationByName) | **GET** /configuration/{configuration_name} | 
+[**getConfigurationLogo**](#getConfigurationLogo) | **GET** /configuration/logo | 
+[**getConfigurationSocial**](#getConfigurationSocial) | **GET** /configuration/social | 
 
 
 ## **getConfiguration**
@@ -86,6 +88,84 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Configuration**](#Configuration)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getConfigurationLogo**
+> \Kinow\Client\Model\LogoSettings getConfigurationLogo()
+
+
+
+Get logo settings
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\ConfigurationApi();
+
+try {
+    $result = $api_instance->getConfigurationLogo();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ConfigurationApi->getConfigurationLogo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Kinow\Client\Model\LogoSettings**](#LogoSettings)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getConfigurationSocial**
+> \Kinow\Client\Model\SocialSettings getConfigurationSocial()
+
+
+
+Get social networks settings
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\ConfigurationApi();
+
+try {
+    $result = $api_instance->getConfigurationSocial();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ConfigurationApi->getConfigurationSocial: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Kinow\Client\Model\SocialSettings**](#SocialSettings)
 
 ### Authorization
 

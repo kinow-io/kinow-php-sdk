@@ -165,6 +165,8 @@ Class | Method | HTTP request | Description
 *CategoryVideosApi* | [**getVideosFromCategory**](docs/Api/CategoryVideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
+*ConfigurationApi* | [**getConfigurationLogo**](docs/Api/ConfigurationApi.md#getconfigurationlogo) | **GET** /configuration/logo | 
+*ConfigurationApi* | [**getConfigurationSocial**](docs/Api/ConfigurationApi.md#getconfigurationsocial) | **GET** /configuration/social | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
 *CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
 *CustomersApi* | [**attachCartToCustomer**](docs/Api/CustomersApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
@@ -502,6 +504,7 @@ Class | Method | HTTP request | Description
  - [Image](docs/Model/Image.md)
  - [Language](docs/Model/Language.md)
  - [Languages](docs/Model/Languages.md)
+ - [LogoSettings](docs/Model/LogoSettings.md)
  - [MediaFile](docs/Model/MediaFile.md)
  - [MediaFiles](docs/Model/MediaFiles.md)
  - [MediaSource](docs/Model/MediaSource.md)
@@ -550,6 +553,7 @@ Class | Method | HTTP request | Description
  - [Screenshot](docs/Model/Screenshot.md)
  - [SessionVideoStat](docs/Model/SessionVideoStat.md)
  - [SessionVideoStats](docs/Model/SessionVideoStats.md)
+ - [SocialSettings](docs/Model/SocialSettings.md)
  - [Subscription](docs/Model/Subscription.md)
  - [SubscriptionAccesses](docs/Model/SubscriptionAccesses.md)
  - [Subscriptions](docs/Model/Subscriptions.md)
