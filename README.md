@@ -137,6 +137,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**getCart**](docs/Api/CartsApi.md#getcart) | **GET** /carts/{cart_id} | 
 *CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
+*CartsApi* | [**getLostsCarts**](docs/Api/CartsApi.md#getlostscarts) | **GET** /carts/losts-carts | 
 *CartsApi* | [**getPaymentUrl**](docs/Api/CartsApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *CartsApi* | [**preparePayment**](docs/Api/CartsApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
@@ -189,6 +190,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerHasAccessToVideo**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *CustomersApi* | [**getCustomerHasAccessToVideos**](docs/Api/CustomersApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 
 *CustomersApi* | [**getCustomerOrders**](docs/Api/CustomersApi.md#getcustomerorders) | **GET** /customers/{customer_id}/orders | 
+*CustomersApi* | [**getCustomerPlaylists**](docs/Api/CustomersApi.md#getcustomerplaylists) | **GET** /customers/{customer_id}/playlists | 
 *CustomersApi* | [**getCustomerPrepaymentBalances**](docs/Api/CustomersApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *CustomersApi* | [**getCustomerPrepaymentOperations**](docs/Api/CustomersApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
@@ -246,6 +248,14 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**getFeatures**](docs/Api/FeaturesApi.md#getfeatures) | **GET** /features | 
 *FeaturesApi* | [**getProductFeatures**](docs/Api/FeaturesApi.md#getproductfeatures) | **GET** /products/{product_id}/features | 
 *FeaturesApi* | [**getVideoFeatures**](docs/Api/FeaturesApi.md#getvideofeatures) | **GET** /videos/{video_id}/features | 
+*FreeGiftsApi* | [**consumeFreeGift**](docs/Api/FreeGiftsApi.md#consumefreegift) | **PUT** /free-gifts/{free_gift_id}/consume | 
+*FreeGiftsApi* | [**createFreeGift**](docs/Api/FreeGiftsApi.md#createfreegift) | **POST** /free-gifts | 
+*FreeGiftsApi* | [**deleteFreeGift**](docs/Api/FreeGiftsApi.md#deletefreegift) | **DELETE** /free-gifts/{free_gift_id} | 
+*FreeGiftsApi* | [**getFreeGift**](docs/Api/FreeGiftsApi.md#getfreegift) | **GET** /free-gifts/{free_gift_id} | 
+*FreeGiftsApi* | [**getFreeGiftToken**](docs/Api/FreeGiftsApi.md#getfreegifttoken) | **GET** /free-gifts/{free_gift_id}/token | 
+*FreeGiftsApi* | [**getFreeGifts**](docs/Api/FreeGiftsApi.md#getfreegifts) | **GET** /free-gifts | 
+*FreeGiftsApi* | [**sendFreeGift**](docs/Api/FreeGiftsApi.md#sendfreegift) | **POST** /free-gifts/{free_gift_id}/send | 
+*FreeGiftsApi* | [**updateFreeGift**](docs/Api/FreeGiftsApi.md#updatefreegift) | **PUT** /free-gifts/{free_gift_id} | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
 *GeolocationsApi* | [**getGeolocSettings**](docs/Api/GeolocationsApi.md#getgeolocsettings) | **GET** /geolocations/settings | 
 *GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
@@ -266,6 +276,7 @@ Class | Method | HTTP request | Description
 *GiftsApi* | [**sendGift**](docs/Api/GiftsApi.md#sendgift) | **POST** /gifts/{gift_id}/send | 
 *GiftsApi* | [**updateGift**](docs/Api/GiftsApi.md#updategift) | **PUT** /gifts/{gift_id} | 
 *GroupsApi* | [**attachCustomerToGroup**](docs/Api/GroupsApi.md#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
+*GroupsApi* | [**createGroup**](docs/Api/GroupsApi.md#creategroup) | **POST** /groups | 
 *GroupsApi* | [**detachCustomerFromGroup**](docs/Api/GroupsApi.md#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
 *GroupsApi* | [**getGroup**](docs/Api/GroupsApi.md#getgroup) | **GET** /groups/{group_id} | 
 *GroupsApi* | [**getGroups**](docs/Api/GroupsApi.md#getgroups) | **GET** /groups | 
@@ -310,6 +321,11 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*PlaylistsApi* | [**createPlaylistBookmark**](docs/Api/PlaylistsApi.md#createplaylistbookmark) | **POST** /playlists | 
+*PlaylistsApi* | [**deletePlaylistBookmark**](docs/Api/PlaylistsApi.md#deleteplaylistbookmark) | **DELETE** /playlists/{playlist_id} | 
+*PlaylistsApi* | [**getCustomerPlaylists**](docs/Api/PlaylistsApi.md#getcustomerplaylists) | **GET** /customers/{customer_id}/playlists | 
+*PlaylistsApi* | [**getPlaylist**](docs/Api/PlaylistsApi.md#getplaylist) | **GET** /playlists/{playlist_id} | 
+*PlaylistsApi* | [**updatePlaylistBookmark**](docs/Api/PlaylistsApi.md#updateplaylistbookmark) | **PUT** /playlists/{playlist_id} | 
 *PrepaymentsApi* | [**getCustomerPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *PrepaymentsApi* | [**getCustomerPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 *PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
@@ -485,6 +501,8 @@ Class | Method | HTTP request | Description
  - [Feature](docs/Model/Feature.md)
  - [FeatureValue](docs/Model/FeatureValue.md)
  - [Features](docs/Model/Features.md)
+ - [FreeGift](docs/Model/FreeGift.md)
+ - [FreeGift1](docs/Model/FreeGift1.md)
  - [Gender](docs/Model/Gender.md)
  - [Genders](docs/Model/Genders.md)
  - [Geoloc](docs/Model/Geoloc.md)
@@ -493,10 +511,13 @@ Class | Method | HTTP request | Description
  - [Gift](docs/Model/Gift.md)
  - [Gift1](docs/Model/Gift1.md)
  - [Gift2](docs/Model/Gift2.md)
+ - [Gift3](docs/Model/Gift3.md)
  - [GiftToken](docs/Model/GiftToken.md)
  - [Gifts](docs/Model/Gifts.md)
+ - [Gifts1](docs/Model/Gifts1.md)
  - [GoogleAnalytics](docs/Model/GoogleAnalytics.md)
  - [Group](docs/Model/Group.md)
+ - [GroupCreateRequest](docs/Model/GroupCreateRequest.md)
  - [Groups](docs/Model/Groups.md)
  - [I18nField](docs/Model/I18nField.md)
  - [IPCoordinates](docs/Model/IPCoordinates.md)
@@ -529,6 +550,9 @@ Class | Method | HTTP request | Description
  - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)
  - [Player1](docs/Model/Player1.md)
+ - [PlaylistBookmark](docs/Model/PlaylistBookmark.md)
+ - [PlaylistBookmarkUpdate](docs/Model/PlaylistBookmarkUpdate.md)
+ - [Playlists](docs/Model/Playlists.md)
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
  - [PrepaymentBonus1](docs/Model/PrepaymentBonus1.md)

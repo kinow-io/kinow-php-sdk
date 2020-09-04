@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerHasAccessToVideos**](#getCustomerHasAccessToVideos) | **POST** /customers/{customer_id}/videos/has-access | 
 [**getCustomerOrders**](#getCustomerOrders) | **GET** /customers/{customer_id}/orders | 
+[**getCustomerPlaylists**](#getCustomerPlaylists) | **GET** /customers/{customer_id}/playlists | 
 [**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
@@ -178,7 +179,7 @@ No authorization required
 
 
 
-Create new customer
+Create new Customer
 
 ### Example
 ```php
@@ -186,7 +187,7 @@ Create new customer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
-$body = new \Kinow\Client\Model\CustomerCreateRequest(); // \Kinow\Client\Model\CustomerCreateRequest | Created user object
+$body = new \Kinow\Client\Model\CustomerCreateRequest(); // \Kinow\Client\Model\CustomerCreateRequest | Customer settings
 
 try {
     $result = $api_instance->createCustomer($body);
@@ -201,7 +202,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\CustomerCreateRequest**](#\Kinow\Client\Model\CustomerCreateRequest)| Created user object |
+ **body** | [**\Kinow\Client\Model\CustomerCreateRequest**](#\Kinow\Client\Model\CustomerCreateRequest)| Customer settings |
 
 ### Return type
 
@@ -938,6 +939,57 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCustomerPlaylists**
+> \Kinow\Client\Model\Playlists getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get customer playlists
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | 
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerPlaylists: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**|  |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Playlists**](#Playlists)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCustomerPrepaymentBalances**
 > \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
 
@@ -1307,7 +1359,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **passwordToken**
-> \Kinow\Client\Model\Token passwordToken($email)
+> \Kinow\Client\Model\Token passwordToken($email, $send_notification)
 
 
 
@@ -1320,9 +1372,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $email = "email_example"; // string | Email of the Customer
+$send_notification = false; // bool | Send notification email
 
 try {
-    $result = $api_instance->passwordToken($email);
+    $result = $api_instance->passwordToken($email, $send_notification);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->passwordToken: ', $e->getMessage(), PHP_EOL;
@@ -1335,6 +1388,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**| Email of the Customer |
+ **send_notification** | **bool**| Send notification email | [optional] [default to false]
 
 ### Return type
 

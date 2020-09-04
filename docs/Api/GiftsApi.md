@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 
-Consume gift
+Consume Gift
 
 ### Example
 ```php
@@ -67,7 +67,7 @@ No authorization required
 
 
 
-Create gift
+Create Gift
 
 ### Example
 ```php
@@ -75,7 +75,7 @@ Create gift
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
-$body = new \Kinow\Client\Model\Gift1(); // \Kinow\Client\Model\Gift1 | Gift settings
+$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
 
 try {
     $result = $api_instance->createGift($body);
@@ -90,7 +90,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Gift1**](#\Kinow\Client\Model\Gift1)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
 
 ### Return type
 
@@ -110,7 +110,7 @@ No authorization required
 
 
 
-Delete gift
+Delete Gift
 
 ### Example
 ```php
@@ -152,7 +152,7 @@ No authorization required
 
 
 
-Delete gifts in cart
+Delete Gifts in cart
 
 ### Example
 ```php
@@ -194,7 +194,7 @@ No authorization required
 
 
 
-Get gift
+Get Gift
 
 ### Example
 ```php
@@ -237,7 +237,7 @@ No authorization required
 
 
 
-Get gift in cart
+Get Gift in Cart
 
 ### Example
 ```php
@@ -280,7 +280,7 @@ No authorization required
 
 
 
-Get gift token
+Get Gift token
 
 ### Example
 ```php
@@ -319,11 +319,11 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGifts**
-> \Kinow\Client\Model\Gifts getGifts($unused_only)
+> \Kinow\Client\Model\Gifts1 getGifts($unused_only)
 
 
 
-Get gifts
+Get Gifts
 
 ### Example
 ```php
@@ -331,7 +331,7 @@ Get gifts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
-$unused_only = 56; // int | Only unused gifts
+$unused_only = 56; // int | Only unused Gifts
 
 try {
     $result = $api_instance->getGifts($unused_only);
@@ -346,11 +346,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unused_only** | **int**| Only unused gifts | [optional]
+ **unused_only** | **int**| Only unused Gifts | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Gifts**](#Gifts)
+[**\Kinow\Client\Model\Gifts1**](#Gifts1)
 
 ### Authorization
 
@@ -366,7 +366,7 @@ No authorization required
 
 
 
-Send gift
+Send Gift
 
 ### Example
 ```php
@@ -408,7 +408,7 @@ No authorization required
 
 
 
-Update gift
+Update Gift
 
 ### Example
 ```php
@@ -417,7 +417,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
-$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
+$body = new \Kinow\Client\Model\Gift3(); // \Kinow\Client\Model\Gift3 | Gift settings
 
 try {
     $result = $api_instance->updateGift($gift_id, $body);
@@ -433,7 +433,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
- **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift3**](#\Kinow\Client\Model\Gift3)| Gift settings |
 
 ### Return type
 

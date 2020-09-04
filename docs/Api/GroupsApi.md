@@ -5,6 +5,7 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attachCustomerToGroup**](#attachCustomerToGroup) | **POST** /groups/{group_id}/customers | 
+[**createGroup**](#createGroup) | **POST** /groups | 
 [**detachCustomerFromGroup**](#detachCustomerFromGroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
 [**getGroup**](#getGroup) | **GET** /groups/{group_id} | 
 [**getGroups**](#getGroups) | **GET** /groups | 
@@ -45,6 +46,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createGroup**
+> \Kinow\Client\Model\Group createGroup($body)
+
+
+
+Create new Group
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\GroupsApi();
+$body = new \Kinow\Client\Model\GroupCreateRequest(); // \Kinow\Client\Model\GroupCreateRequest | Group settings
+
+try {
+    $result = $api_instance->createGroup($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupsApi->createGroup: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\GroupCreateRequest**](#\Kinow\Client\Model\GroupCreateRequest)| Group settings |
+
+### Return type
+
+[**\Kinow\Client\Model\Group**](#Group)
 
 ### Authorization
 

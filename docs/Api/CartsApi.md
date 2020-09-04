@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**getCart**](#getCart) | **GET** /carts/{cart_id} | 
 [**getCustomerCarts**](#getCustomerCarts) | **GET** /customers/{customer_id}/carts | 
 [**getLastCart**](#getLastCart) | **GET** /customers/{customer_id}/last-cart | 
+[**getLostsCarts**](#getLostsCarts) | **GET** /carts/losts-carts | 
 [**getPaymentUrl**](#getPaymentUrl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 [**preparePayment**](#preparePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 [**updateCart**](#updateCart) | **PUT** /carts/{cart_id} | 
@@ -510,6 +511,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Cart**](#Cart)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getLostsCarts**
+> \Kinow\Client\Model\Carts getLostsCarts($page, $per_page, $filters, $sort_by, $sort_direction)
+
+
+
+Get losts Carts
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CartsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$filters = "filters_example"; // string | ```  date_add[value]=string&date_add[operator]=lt  _______________    {      \"date_add\": {          \"value\": \"string\",          \"operator\": \"lt\"      }  } ```  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getLostsCarts($page, $per_page, $filters, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->getLostsCarts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60;  date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt  _______________    {      \&quot;date_add\&quot;: {          \&quot;value\&quot;: \&quot;string\&quot;,          \&quot;operator\&quot;: \&quot;lt\&quot;      }  } &#x60;&#x60;&#x60;  Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Carts**](#Carts)
 
 ### Authorization
 

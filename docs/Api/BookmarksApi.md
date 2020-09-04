@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **attachBookmarkToCustomer**
-> attachBookmarkToCustomer($customer_id, $product_id)
+> attachBookmarkToCustomer($customer_id, $product_id, $playlist_id)
 
 
 
@@ -24,9 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
+$playlist_id = 789; // int | 
 
 try {
-    $api_instance->attachBookmarkToCustomer($customer_id, $product_id);
+    $api_instance->attachBookmarkToCustomer($customer_id, $product_id, $playlist_id);
 } catch (Exception $e) {
     echo 'Exception when calling BookmarksApi->attachBookmarkToCustomer: ', $e->getMessage(), PHP_EOL;
 }
@@ -39,6 +40,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
  **product_id** | **int**|  |
+ **playlist_id** | **int**|  | [optional]
 
 ### Return type
 
@@ -54,7 +56,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **detachBookmarkFromCustomer**
-> detachBookmarkFromCustomer($customer_id, $product_id)
+> detachBookmarkFromCustomer($customer_id, $product_id, $playlist_id)
 
 
 
@@ -68,9 +70,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | Customer ID to fetch
 $product_id = 789; // int | 
+$playlist_id = 789; // int | 
 
 try {
-    $api_instance->detachBookmarkFromCustomer($customer_id, $product_id);
+    $api_instance->detachBookmarkFromCustomer($customer_id, $product_id, $playlist_id);
 } catch (Exception $e) {
     echo 'Exception when calling BookmarksApi->detachBookmarkFromCustomer: ', $e->getMessage(), PHP_EOL;
 }
@@ -83,6 +86,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
  **product_id** | **int**|  |
+ **playlist_id** | **int**|  | [optional]
 
 ### Return type
 
@@ -98,7 +102,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getCustomerBookmarks**
-> \Kinow\Client\Model\Products getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Products getCustomerBookmarks($customer_id, $playlist_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -111,13 +115,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\BookmarksApi();
 $customer_id = 789; // int | 
+$playlist_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
 try {
-    $result = $api_instance->getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction);
+    $result = $api_instance->getCustomerBookmarks($customer_id, $playlist_id, $page, $per_page, $sort_by, $sort_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookmarksApi->getCustomerBookmarks: ', $e->getMessage(), PHP_EOL;
@@ -130,6 +135,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**|  |
+ **playlist_id** | **int**|  | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
