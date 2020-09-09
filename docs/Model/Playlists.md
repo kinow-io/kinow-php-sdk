@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pagination** | [**\Kinow\Client\Model\Pagination**](#Pagination) |  | [optional] 
-**data** | [**\Kinow\Client\Model\PlaylistBookmark[]**](#PlaylistBookmark) |  | [optional] 
+**data** | [**\Kinow\Client\Model\Playlist[]**](#Playlist) |  | [optional] 
 
 

@@ -321,11 +321,15 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
-*PlaylistsApi* | [**createPlaylistBookmark**](docs/Api/PlaylistsApi.md#createplaylistbookmark) | **POST** /playlists | 
-*PlaylistsApi* | [**deletePlaylistBookmark**](docs/Api/PlaylistsApi.md#deleteplaylistbookmark) | **DELETE** /playlists/{playlist_id} | 
+*PlaylistsApi* | [**attachBookmarkToPlaylist**](docs/Api/PlaylistsApi.md#attachbookmarktoplaylist) | **POST** /playlists/{playlist_id}/bookmarks | 
+*PlaylistsApi* | [**createPlaylist**](docs/Api/PlaylistsApi.md#createplaylist) | **POST** /playlists | 
+*PlaylistsApi* | [**deletePlaylist**](docs/Api/PlaylistsApi.md#deleteplaylist) | **DELETE** /playlists/{playlist_id} | 
+*PlaylistsApi* | [**detachBookmarkFromPlaylist**](docs/Api/PlaylistsApi.md#detachbookmarkfromplaylist) | **DELETE** /playlists/{playlist_id}/bookmarks/{product_id} | 
 *PlaylistsApi* | [**getCustomerPlaylists**](docs/Api/PlaylistsApi.md#getcustomerplaylists) | **GET** /customers/{customer_id}/playlists | 
 *PlaylistsApi* | [**getPlaylist**](docs/Api/PlaylistsApi.md#getplaylist) | **GET** /playlists/{playlist_id} | 
-*PlaylistsApi* | [**updatePlaylistBookmark**](docs/Api/PlaylistsApi.md#updateplaylistbookmark) | **PUT** /playlists/{playlist_id} | 
+*PlaylistsApi* | [**getPlaylistBookmarks**](docs/Api/PlaylistsApi.md#getplaylistbookmarks) | **GET** /playlists/{playlist_id}/bookmarks | 
+*PlaylistsApi* | [**getPlaylists**](docs/Api/PlaylistsApi.md#getplaylists) | **GET** /playlists | 
+*PlaylistsApi* | [**updatePlaylist**](docs/Api/PlaylistsApi.md#updateplaylist) | **PUT** /playlists/{playlist_id} | 
 *PrepaymentsApi* | [**getCustomerPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *PrepaymentsApi* | [**getCustomerPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 *PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
@@ -550,8 +554,8 @@ Class | Method | HTTP request | Description
  - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)
  - [Player1](docs/Model/Player1.md)
- - [PlaylistBookmark](docs/Model/PlaylistBookmark.md)
- - [PlaylistBookmarkUpdate](docs/Model/PlaylistBookmarkUpdate.md)
+ - [Playlist](docs/Model/Playlist.md)
+ - [PlaylistUpdate](docs/Model/PlaylistUpdate.md)
  - [Playlists](docs/Model/Playlists.md)
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)

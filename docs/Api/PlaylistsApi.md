@@ -4,19 +4,67 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPlaylistBookmark**](#createPlaylistBookmark) | **POST** /playlists | 
-[**deletePlaylistBookmark**](#deletePlaylistBookmark) | **DELETE** /playlists/{playlist_id} | 
+[**attachBookmarkToPlaylist**](#attachBookmarkToPlaylist) | **POST** /playlists/{playlist_id}/bookmarks | 
+[**createPlaylist**](#createPlaylist) | **POST** /playlists | 
+[**deletePlaylist**](#deletePlaylist) | **DELETE** /playlists/{playlist_id} | 
+[**detachBookmarkFromPlaylist**](#detachBookmarkFromPlaylist) | **DELETE** /playlists/{playlist_id}/bookmarks/{product_id} | 
 [**getCustomerPlaylists**](#getCustomerPlaylists) | **GET** /customers/{customer_id}/playlists | 
 [**getPlaylist**](#getPlaylist) | **GET** /playlists/{playlist_id} | 
-[**updatePlaylistBookmark**](#updatePlaylistBookmark) | **PUT** /playlists/{playlist_id} | 
+[**getPlaylistBookmarks**](#getPlaylistBookmarks) | **GET** /playlists/{playlist_id}/bookmarks | 
+[**getPlaylists**](#getPlaylists) | **GET** /playlists | 
+[**updatePlaylist**](#updatePlaylist) | **PUT** /playlists/{playlist_id} | 
 
 
-## **createPlaylistBookmark**
-> \Kinow\Client\Model\PlaylistBookmark createPlaylistBookmark($customer_id, $name)
+## **attachBookmarkToPlaylist**
+> attachBookmarkToPlaylist($playlist_id, $product_id)
 
 
 
-Create playlist bookmark
+Attach bookmark to playlist
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PlaylistsApi();
+$playlist_id = 789; // int | Playlist ID to fetch
+$product_id = 789; // int | 
+
+try {
+    $api_instance->attachBookmarkToPlaylist($playlist_id, $product_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PlaylistsApi->attachBookmarkToPlaylist: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playlist_id** | **int**| Playlist ID to fetch |
+ **product_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createPlaylist**
+> \Kinow\Client\Model\Playlist createPlaylist($customer_id, $name)
+
+
+
+Create playlist
 
 ### Example
 ```php
@@ -28,10 +76,10 @@ $customer_id = 789; // int |
 $name = "name_example"; // string | 
 
 try {
-    $result = $api_instance->createPlaylistBookmark($customer_id, $name);
+    $result = $api_instance->createPlaylist($customer_id, $name);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlaylistsApi->createPlaylistBookmark: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlaylistsApi->createPlaylist: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -45,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PlaylistBookmark**](#PlaylistBookmark)
+[**\Kinow\Client\Model\Playlist**](#Playlist)
 
 ### Authorization
 
@@ -56,12 +104,12 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **deletePlaylistBookmark**
-> deletePlaylistBookmark($playlist_id)
+## **deletePlaylist**
+> deletePlaylist($playlist_id)
 
 
 
-Delete playlist bookmark
+Delete playlist
 
 ### Example
 ```php
@@ -72,9 +120,9 @@ $api_instance = new Kinow\Client\Api\PlaylistsApi();
 $playlist_id = 56; // int | 
 
 try {
-    $api_instance->deletePlaylistBookmark($playlist_id);
+    $api_instance->deletePlaylist($playlist_id);
 } catch (Exception $e) {
-    echo 'Exception when calling PlaylistsApi->deletePlaylistBookmark: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlaylistsApi->deletePlaylist: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -84,6 +132,50 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **playlist_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachBookmarkFromPlaylist**
+> detachBookmarkFromPlaylist($playlist_id, $product_id)
+
+
+
+Detach bookmark from playlist
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PlaylistsApi();
+$playlist_id = 789; // int | Playlist ID to fetch
+$product_id = 789; // int | 
+
+try {
+    $api_instance->detachBookmarkFromPlaylist($playlist_id, $product_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PlaylistsApi->detachBookmarkFromPlaylist: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playlist_id** | **int**| Playlist ID to fetch |
+ **product_id** | **int**|  |
 
 ### Return type
 
@@ -150,7 +242,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getPlaylist**
-> \Kinow\Client\Model\PlaylistBookmark getPlaylist($playlist_id)
+> \Kinow\Client\Model\Playlist getPlaylist($playlist_id)
 
 
 
@@ -181,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PlaylistBookmark**](#PlaylistBookmark)
+[**\Kinow\Client\Model\Playlist**](#Playlist)
 
 ### Authorization
 
@@ -192,8 +284,108 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **updatePlaylistBookmark**
-> \Kinow\Client\Model\PlaylistBookmark updatePlaylistBookmark($playlist_id, $body)
+## **getPlaylistBookmarks**
+> \Kinow\Client\Model\Products getPlaylistBookmarks($playlist_id, $page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get playlist bookmarks
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PlaylistsApi();
+$playlist_id = 789; // int | 
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getPlaylistBookmarks($playlist_id, $page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlaylistsApi->getPlaylistBookmarks: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playlist_id** | **int**|  |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Products**](#Products)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPlaylists**
+> \Kinow\Client\Model\Playlists getPlaylists($page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get playlists
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PlaylistsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getPlaylists($page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlaylistsApi->getPlaylists: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Playlists**](#Playlists)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **updatePlaylist**
+> \Kinow\Client\Model\Playlist updatePlaylist($playlist_id, $body)
 
 
 
@@ -206,13 +398,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\PlaylistsApi();
 $playlist_id = 789; // int | Playlist ID to update
-$body = new \Kinow\Client\Model\PlaylistBookmarkUpdate(); // \Kinow\Client\Model\PlaylistBookmarkUpdate | Playlist settings
+$body = new \Kinow\Client\Model\PlaylistUpdate(); // \Kinow\Client\Model\PlaylistUpdate | Playlist settings
 
 try {
-    $result = $api_instance->updatePlaylistBookmark($playlist_id, $body);
+    $result = $api_instance->updatePlaylist($playlist_id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlaylistsApi->updatePlaylistBookmark: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlaylistsApi->updatePlaylist: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -222,11 +414,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **playlist_id** | **int**| Playlist ID to update |
- **body** | [**\Kinow\Client\Model\PlaylistBookmarkUpdate**](#\Kinow\Client\Model\PlaylistBookmarkUpdate)| Playlist settings |
+ **body** | [**\Kinow\Client\Model\PlaylistUpdate**](#\Kinow\Client\Model\PlaylistUpdate)| Playlist settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\PlaylistBookmark**](#PlaylistBookmark)
+[**\Kinow\Client\Model\Playlist**](#Playlist)
 
 ### Authorization
 
