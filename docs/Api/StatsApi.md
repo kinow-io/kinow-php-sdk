@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerGroupTotalWatched**
-> \Kinow\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page)
+> \Kinow\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -25,12 +25,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\StatsApi();
 $group_id = 789; // int | Customer group ID to fecth
-$video_id = 789; // int | Video ID to fetch
+$date_from = "date_from_example"; // string | Search entries from this date
+$date_to = "date_to_example"; // string | Search entries to this date
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getCustomerGroupTotalWatched($group_id, $video_id, $page, $per_page);
+    $result = $api_instance->getCustomerGroupTotalWatched($group_id, $date_from, $date_to, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StatsApi->getCustomerGroupTotalWatched: ', $e->getMessage(), PHP_EOL;
@@ -43,7 +44,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **int**| Customer group ID to fecth |
- **video_id** | **int**| Video ID to fetch |
+ **date_from** | **string**| Search entries from this date | [optional]
+ **date_to** | **string**| Search entries to this date | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
