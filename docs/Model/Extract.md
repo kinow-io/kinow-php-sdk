@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **active** | **bool** |  | [optional] 
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
+**can_watch** | **bool** |  | [optional] 
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **cover** | **string** |  | [optional] 

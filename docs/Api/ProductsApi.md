@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 [**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
+[**getPrice**](#getPrice) | **POST** /products/price | 
 [**getProduct**](#getProduct) | **GET** /products/{product_id} | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
 [**getProductActorsRole**](#getProductActorsRole) | **GET** /products/{product_id}/actors-role | 
@@ -638,7 +639,7 @@ $page = 789; // int |
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
-$ip = "ip_example"; // string | filter by customer ip
+$ip = "ip_example"; // string | Filter by user IP
 $features = "features_example"; // string | ```      features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict      _______________        {      \"*\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"1\": {      \"value\": \"string\",      \"operator\": \"contains\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).      To search on all features, you can pass * as featureId.
 $filters = "filters_example"; // string | ```      name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
@@ -660,7 +661,7 @@ Name | Type | Description  | Notes
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
- **ip** | **string**| filter by customer ip | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
  **features** | **string**| &#x60;&#x60;&#x60;      features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict      _______________        {      \&quot;*\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;strict\&quot;      },      \&quot;1\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).      To search on all features, you can pass * as featureId. | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;date_add\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;lt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
@@ -756,6 +757,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPrice**
+> \Kinow\Client\Model\ProductPrice[] getPrice($body)
+
+
+
+Get prices for multiple Products
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$body = new \Kinow\Client\Model\ProductIDList1(); // \Kinow\Client\Model\ProductIDList1 | List of Product IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getPrice($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getPrice: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\ProductIDList1**](#\Kinow\Client\Model\ProductIDList1)| List of Product IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\ProductPrice[]**](#ProductPrice)
 
 ### Authorization
 
@@ -1187,7 +1231,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $page, $per_page)
+> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $ip, $page, $per_page)
 
 
 
@@ -1200,11 +1244,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
+$ip = "ip_example"; // string | Filter by user IP
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getProductExtracts($product_id, $page, $per_page);
+    $result = $api_instance->getProductExtracts($product_id, $ip, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getProductExtracts: ', $e->getMessage(), PHP_EOL;
@@ -1217,6 +1262,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
+ **ip** | **string**| Filter by user IP | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
@@ -1576,7 +1622,7 @@ $features = "features_example"; // string | ```      featureId[value]=string&fea
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
-$ip = "ip_example"; // string | filter by customer ip
+$ip = "ip_example"; // string | Filter by user IP
 $customer_id = "customer_id_example"; // string | Check if customer can see this product, if it's group is not restricted
 
 try {
@@ -1598,7 +1644,7 @@ Name | Type | Description  | Notes
  **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;date_add\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;lt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
- **ip** | **string**| filter by customer ip | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
  **customer_id** | **string**| Check if customer can see this product, if it&#39;s group is not restricted | [optional]
 
 ### Return type
@@ -1634,7 +1680,7 @@ $features = "features_example"; // string | ```      featureId[value]=string&fea
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
-$ip = "ip_example"; // string | filter by customer ip
+$ip = "ip_example"; // string | Filter by user IP
 
 try {
     $result = $api_instance->getProductsFromProduct($product_id, $page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip);
@@ -1656,7 +1702,7 @@ Name | Type | Description  | Notes
  **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;date_add\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;lt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
- **ip** | **string**| filter by customer ip | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
@@ -1741,8 +1787,8 @@ $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $filters = "filters_example"; // string | ```      name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"strict\"      },      \"duration\": {      \"value\": \"string\",      \"operator\": \"gt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $per_page = 789; // int | 
-$ip = "ip_example"; // string | filter by customer ip
-$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$ip = "ip_example"; // string | Filter by user IP
+$sort_by = "sort_by_example"; // string | Sort by this attribute (default is ID)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
 try {
@@ -1762,8 +1808,8 @@ Name | Type | Description  | Notes
  **page** | **int**|  | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;strict\&quot;      },      \&quot;duration\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;gt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **per_page** | **int**|  | [optional]
- **ip** | **string**| filter by customer ip | [optional]
- **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+ **sort_by** | **string**| Sort by this attribute (default is ID) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type

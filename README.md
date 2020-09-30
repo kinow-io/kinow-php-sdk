@@ -135,10 +135,12 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**detachCartRuleFromCart**](docs/Api/CartsApi.md#detachcartrulefromcart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 *CartsApi* | [**emptyCart**](docs/Api/CartsApi.md#emptycart) | **POST** /carts/{cart_id}/empty | 
 *CartsApi* | [**getCart**](docs/Api/CartsApi.md#getcart) | **GET** /carts/{cart_id} | 
+*CartsApi* | [**getCarts**](docs/Api/CartsApi.md#getcarts) | **GET** /carts | 
 *CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
 *CartsApi* | [**getLostsCarts**](docs/Api/CartsApi.md#getlostscarts) | **GET** /carts/losts-carts | 
 *CartsApi* | [**getPaymentUrl**](docs/Api/CartsApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+*CartsApi* | [**getPrice**](docs/Api/CartsApi.md#getprice) | **POST** /carts/price | 
 *CartsApi* | [**preparePayment**](docs/Api/CartsApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
@@ -366,6 +368,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getCategoryProducts**](docs/Api/ProductsApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *ProductsApi* | [**getCustomerHasAccessToProduct**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 *ProductsApi* | [**getCustomerHasAccessToProducts**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproducts) | **POST** /customers/{customer_id}/products/has-access | 
+*ProductsApi* | [**getPrice**](docs/Api/ProductsApi.md#getprice) | **POST** /products/price | 
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{product_id} | 
 *ProductsApi* | [**getProductActors**](docs/Api/ProductsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
 *ProductsApi* | [**getProductActorsRole**](docs/Api/ProductsApi.md#getproductactorsrole) | **GET** /products/{product_id}/actors-role | 
@@ -465,6 +468,8 @@ Class | Method | HTTP request | Description
  - [Cart](docs/Model/Cart.md)
  - [Cart1](docs/Model/Cart1.md)
  - [Cart2](docs/Model/Cart2.md)
+ - [CartIDList](docs/Model/CartIDList.md)
+ - [CartPrice](docs/Model/CartPrice.md)
  - [CartRule](docs/Model/CartRule.md)
  - [CartRuleRestrictionGroup](docs/Model/CartRuleRestrictionGroup.md)
  - [CartRuleRestrictionGroupItem](docs/Model/CartRuleRestrictionGroupItem.md)
@@ -573,7 +578,10 @@ Class | Method | HTTP request | Description
  - [ProductAttributesResponse](docs/Model/ProductAttributesResponse.md)
  - [ProductCategories](docs/Model/ProductCategories.md)
  - [ProductIDList](docs/Model/ProductIDList.md)
+ - [ProductIDList1](docs/Model/ProductIDList1.md)
  - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
+ - [ProductPrice](docs/Model/ProductPrice.md)
+ - [ProductPricePrices](docs/Model/ProductPricePrices.md)
  - [Products](docs/Model/Products.md)
  - [Products1](docs/Model/Products1.md)
  - [RegistrationField](docs/Model/RegistrationField.md)

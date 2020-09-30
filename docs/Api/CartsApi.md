@@ -13,10 +13,12 @@ Method | HTTP request | Description
 [**detachCartRuleFromCart**](#detachCartRuleFromCart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 [**emptyCart**](#emptyCart) | **POST** /carts/{cart_id}/empty | 
 [**getCart**](#getCart) | **GET** /carts/{cart_id} | 
+[**getCarts**](#getCarts) | **GET** /carts | 
 [**getCustomerCarts**](#getCustomerCarts) | **GET** /customers/{customer_id}/carts | 
 [**getLastCart**](#getLastCart) | **GET** /customers/{customer_id}/last-cart | 
 [**getLostsCarts**](#getLostsCarts) | **GET** /carts/losts-carts | 
 [**getPaymentUrl**](#getPaymentUrl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
+[**getPrice**](#getPrice) | **POST** /carts/price | 
 [**preparePayment**](#preparePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 [**updateCart**](#updateCart) | **PUT** /carts/{cart_id} | 
 [**validateFreeOrder**](#validateFreeOrder) | **POST** /carts/{cart_id}/validate-free-order | 
@@ -425,6 +427,57 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCarts**
+> \Kinow\Client\Model\Carts getCarts($page, $per_page, $filters, $sort_by, $sort_direction)
+
+
+
+Get Carts
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CartsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$filters = "filters_example"; // string | ```      name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt      _______________        {      \"name\": {      \"value\": \"string\",      \"operator\": \"contains\"      },      \"date_add\": {      \"value\": \"string\",      \"operator\": \"lt\"      }      } ```      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getCarts($page, $per_page, $filters, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->getCarts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60;      name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt      _______________        {      \&quot;name\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;date_add\&quot;: {      \&quot;value\&quot;: \&quot;string\&quot;,      \&quot;operator\&quot;: \&quot;lt\&quot;      }      } &#x60;&#x60;&#x60;      Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Carts**](#Carts)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCustomerCarts**
 > \Kinow\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
@@ -607,6 +660,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\PaymentUrl**](#PaymentUrl)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPrice**
+> \Kinow\Client\Model\CartPrice[] getPrice($body)
+
+
+
+Get prices for multiple Carts
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CartsApi();
+$body = new \Kinow\Client\Model\CartIDList(); // \Kinow\Client\Model\CartIDList | List of Cart IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getPrice($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->getPrice: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\CartIDList**](#\Kinow\Client\Model\CartIDList)| List of Cart IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\CartPrice[]**](#CartPrice)
 
 ### Authorization
 
