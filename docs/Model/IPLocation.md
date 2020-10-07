@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **country** | **string** |  | [optional] 
 **time_zone** | **string** |  | [optional] 
 **coordinates** | [**\Kinow\Client\Model\IPCoordinates**](#IPCoordinates) |  | [optional] 
+**is_vpn_or_proxy** | **bool** |  | [optional] 
 
 
