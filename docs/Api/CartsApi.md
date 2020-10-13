@@ -714,7 +714,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name, $ip_address)
 
 
 
@@ -728,9 +728,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
+$ip_address = "ip_address_example"; // string | Filter by user IP
 
 try {
-    $result = $api_instance->preparePayment($cart_id, $payment_name);
+    $result = $api_instance->preparePayment($cart_id, $payment_name, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->preparePayment: ', $e->getMessage(), PHP_EOL;
@@ -744,6 +745,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
+ **ip_address** | **string**| Filter by user IP | [optional]
 
 ### Return type
 

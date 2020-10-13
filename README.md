@@ -198,7 +198,9 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
+*CustomersApi* | [**getPaymentMethodsWithIp**](docs/Api/CustomersApi.md#getpaymentmethodswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*CustomersApi* | [**getPendingPaymentsWithIp**](docs/Api/CustomersApi.md#getpendingpaymentswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 *CustomersApi* | [**getRegistrationFields**](docs/Api/CustomersApi.md#getregistrationfields) | **GET** /customer/registration-fields | 
 *CustomersApi* | [**loginWithFacebook**](docs/Api/CustomersApi.md#loginwithfacebook) | **POST** /customers/facebook-login | 
 *CustomersApi* | [**passwordToken**](docs/Api/CustomersApi.md#passwordtoken) | **POST** /customers/password-token | 
@@ -316,9 +318,11 @@ Class | Method | HTTP request | Description
 *PagesApi* | [**getPage**](docs/Api/PagesApi.md#getpage) | **GET** /pages/{page_id} | 
 *PagesApi* | [**getPages**](docs/Api/PagesApi.md#getpages) | **GET** /pages | 
 *PaymentModulesApi* | [**getPaymentMethods**](docs/Api/PaymentModulesApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
+*PaymentModulesApi* | [**getPaymentMethodsWithIp**](docs/Api/PaymentModulesApi.md#getpaymentmethodswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 *PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 
 *PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *PaymentModulesApi* | [**getPendingPayments**](docs/Api/PaymentModulesApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+*PaymentModulesApi* | [**getPendingPaymentsWithIp**](docs/Api/PaymentModulesApi.md#getpendingpaymentswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 *PaymentModulesApi* | [**preparePayment**](docs/Api/PaymentModulesApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 

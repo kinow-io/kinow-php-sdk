@@ -30,7 +30,9 @@ Method | HTTP request | Description
 [**getCustomers**](#getCustomers) | **GET** /customers | 
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
+[**getPaymentMethodsWithIp**](#getPaymentMethodsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
+[**getPendingPaymentsWithIp**](#getPendingPaymentsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 [**getRegistrationFields**](#getRegistrationFields) | **GET** /customer/registration-fields | 
 [**loginWithFacebook**](#loginWithFacebook) | **POST** /customers/facebook-login | 
 [**passwordToken**](#passwordToken) | **POST** /customers/password-token | 
@@ -1221,6 +1223,53 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getPaymentMethodsWithIp**
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
+
+
+
+Get payment methods saved for a Customer on a payment gateway
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | 
+$payment_name = "payment_name_example"; // string | 
+$ip_address = "ip_address_example"; // string | Filter by user IP
+
+try {
+    $result = $api_instance->getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getPaymentMethodsWithIp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**|  |
+ **payment_name** | **string**|  |
+ **ip_address** | **string**| Filter by user IP |
+
+### Return type
+
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getPendingPayments**
 > \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
 
@@ -1252,6 +1301,53 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_name** | **string**|  |
  **customer_id** | **int**|  |
+
+### Return type
+
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPendingPaymentsWithIp**
+> \Kinow\Client\Model\PaymentDetails[] getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
+
+
+
+Get pending payments for a Customer on a payment gateway
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$payment_name = "payment_name_example"; // string | 
+$customer_id = 789; // int | 
+$ip_address = "ip_address_example"; // string | Filter by user IP
+
+try {
+    $result = $api_instance->getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getPendingPaymentsWithIp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payment_name** | **string**|  |
+ **customer_id** | **int**|  |
+ **ip_address** | **string**| Filter by user IP |
 
 ### Return type
 
@@ -1537,7 +1633,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **updatePaymentMethod**
-> updatePaymentMethod($customer_id, $payment_name, $payment_arguments)
+> updatePaymentMethod($customer_id, $payment_name, $payment_arguments, $ip_address)
 
 
 
@@ -1552,9 +1648,10 @@ $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
 $payment_arguments = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment arguments
+$ip_address = "ip_address_example"; // string | Filter by user IP
 
 try {
-    $api_instance->updatePaymentMethod($customer_id, $payment_name, $payment_arguments);
+    $api_instance->updatePaymentMethod($customer_id, $payment_name, $payment_arguments, $ip_address);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->updatePaymentMethod: ', $e->getMessage(), PHP_EOL;
 }
@@ -1568,6 +1665,7 @@ Name | Type | Description  | Notes
  **customer_id** | **int**|  |
  **payment_name** | **string**|  |
  **payment_arguments** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment arguments |
+ **ip_address** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
