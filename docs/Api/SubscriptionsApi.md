@@ -4,6 +4,8 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachCategoriesToSubscription**](#attachCategoriesToSubscription) | **POST** /subscriptions/{subscription_id}/categories | 
+[**detachCategoryFromSubscription**](#detachCategoryFromSubscription) | **DELETE** /subscriptions/{subscription_id}/categories/{category_id} | 
 [**getDisabledSubscriptions**](#getDisabledSubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 [**getProductSubscription**](#getProductSubscription) | **GET** /products/{product_id}/subscription | 
 [**getSubscription**](#getSubscription) | **GET** /subscriptions/{subscription_id} | 
@@ -12,6 +14,94 @@ Method | HTTP request | Description
 [**getSubscriptions**](#getSubscriptions) | **GET** /subscriptions | 
 [**uploadSubscriptionCover**](#uploadSubscriptionCover) | **POST** /subscriptions/{subscription_id}/cover | 
 
+
+## **attachCategoriesToSubscription**
+> attachCategoriesToSubscription($subscription_id, $category_ids)
+
+
+
+Attach categories to subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
+$subscription_id = 789; // int | Subscription ID to fetch
+$category_ids = "category_ids_example"; // string | List of category IDs to attach, separated with comma
+
+try {
+    $api_instance->attachCategoriesToSubscription($subscription_id, $category_ids);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionsApi->attachCategoriesToSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **int**| Subscription ID to fetch |
+ **category_ids** | **string**| List of category IDs to attach, separated with comma |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachCategoryFromSubscription**
+> detachCategoryFromSubscription($subscription_id, $category_id)
+
+
+
+Detach category from subscription
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\SubscriptionsApi();
+$subscription_id = 789; // int | Subscription ID to fetch
+$category_id = 789; // int | Category ID to detach
+
+try {
+    $api_instance->detachCategoryFromSubscription($subscription_id, $category_id);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscriptionsApi->detachCategoryFromSubscription: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **int**| Subscription ID to fetch |
+ **category_id** | **int**| Category ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **getDisabledSubscriptions**
 > \Kinow\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)

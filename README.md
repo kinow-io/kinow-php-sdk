@@ -404,6 +404,8 @@ Class | Method | HTTP request | Description
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
 *StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
+*SubscriptionsApi* | [**attachCategoriesToSubscription**](docs/Api/SubscriptionsApi.md#attachcategoriestosubscription) | **POST** /subscriptions/{subscription_id}/categories | 
+*SubscriptionsApi* | [**detachCategoryFromSubscription**](docs/Api/SubscriptionsApi.md#detachcategoryfromsubscription) | **DELETE** /subscriptions/{subscription_id}/categories/{category_id} | 
 *SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
 *SubscriptionsApi* | [**getProductSubscription**](docs/Api/SubscriptionsApi.md#getproductsubscription) | **GET** /products/{product_id}/subscription | 
 *SubscriptionsApi* | [**getSubscription**](docs/Api/SubscriptionsApi.md#getsubscription) | **GET** /subscriptions/{subscription_id} | 

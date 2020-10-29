@@ -22,7 +22,8 @@ Name | Type | Description | Notes
 **minimum_amount_currency** | **int** | Currency ID | [optional] 
 **every_recurring_payments** | **bool** | If customer cart contains a subscription, select if cart rule will apply on recurring payments | [optional] 
 **reduction_percent** | **float** | Discount applied to cart when rule is added (in %). | [optional] 
-**reduction_amount** | **float** | Discount applied to cart when rule is added (in currency). | [optional] 
+**reduction_amount** | **float** | Discount applied to cart when rule is added (in currency) | [optional] 
+**reduction_currency** | **int** | Currency ID for reduction amount | [optional] 
 **reduction_tax** | **int** | Tax application for currency discount | [optional] 
 **restriction_groups** | [**\Kinow\Client\Model\CartRuleRestrictionGroup[]**](#CartRuleRestrictionGroup) |  | [optional] 
 
