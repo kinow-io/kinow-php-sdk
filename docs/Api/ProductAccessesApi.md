@@ -471,7 +471,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **unsubscribe**
-> unsubscribe($product_access_id)
+> unsubscribe($product_access_id, $message)
 
 
 
@@ -484,9 +484,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Access ID to fetch
+$message = 789; // int | Unsubscribe message
 
 try {
-    $api_instance->unsubscribe($product_access_id);
+    $api_instance->unsubscribe($product_access_id, $message);
 } catch (Exception $e) {
     echo 'Exception when calling ProductAccessesApi->unsubscribe: ', $e->getMessage(), PHP_EOL;
 }
@@ -498,6 +499,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_access_id** | **int**| Access ID to fetch |
+ **message** | **int**| Unsubscribe message | [optional]
 
 ### Return type
 

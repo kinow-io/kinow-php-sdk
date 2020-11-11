@@ -4,9 +4,53 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getMediaFile**](#getMediaFile) | **GET** /media-files/{media_file_id} | 
 [**getMediaSourceFiles**](#getMediaSourceFiles) | **GET** /media-sources/{source_id}/files | 
 [**postMediaSourceFiles**](#postMediaSourceFiles) | **POST** /media-sources/{source_id}/files | 
 
+
+## **getMediaFile**
+> \Kinow\Client\Model\MediaFile getMediaFile($media_file_id)
+
+
+
+Get Media file
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\MediaFilesApi();
+$media_file_id = 789; // int | MediaFile ID to fetch
+
+try {
+    $result = $api_instance->getMediaFile($media_file_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MediaFilesApi->getMediaFile: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **media_file_id** | **int**| MediaFile ID to fetch |
+
+### Return type
+
+[**\Kinow\Client\Model\MediaFile**](#MediaFile)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **getMediaSourceFiles**
 > \Kinow\Client\Model\MediaFiles getMediaSourceFiles($source_id, $page, $per_page, $filters, $sort_by, $sort_direction)

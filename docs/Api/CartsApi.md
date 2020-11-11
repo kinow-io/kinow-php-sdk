@@ -728,7 +728,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
-$ip_address = "ip_address_example"; // string | Filter by user IP
+$ip_address = "ip_address_example"; // string | Use IP address in payment process
 
 try {
     $result = $api_instance->preparePayment($cart_id, $payment_name, $ip_address);
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
- **ip_address** | **string**| Filter by user IP | [optional]
+ **ip_address** | **string**| Use IP address in payment process | [optional]
 
 ### Return type
 

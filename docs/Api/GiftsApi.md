@@ -319,7 +319,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGifts**
-> \Kinow\Client\Model\Gifts1 getGifts($unused_only)
+> \Kinow\Client\Model\Gifts1 getGifts($unused_only, $page, $per_page)
 
 
 
@@ -332,9 +332,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
 $unused_only = 56; // int | Only unused Gifts
+$page = 789; // int | 
+$per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getGifts($unused_only);
+    $result = $api_instance->getGifts($unused_only, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GiftsApi->getGifts: ', $e->getMessage(), PHP_EOL;
@@ -347,6 +349,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unused_only** | **int**| Only unused Gifts | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 

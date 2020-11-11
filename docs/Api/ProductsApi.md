@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 [**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
+[**getNewProducts**](#getNewProducts) | **GET** /products/new | 
 [**getPrice**](#getPrice) | **POST** /products/price | 
 [**getProduct**](#getProduct) | **GET** /products/{product_id} | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
@@ -757,6 +758,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getNewProducts**
+> \Kinow\Client\Model\Products getNewProducts($page, $per_page, $ip)
+
+
+
+Get new products list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
+
+try {
+    $result = $api_instance->getNewProducts($page, $per_page, $ip);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getNewProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -1771,7 +1819,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction)
+> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction)
 
 
 
@@ -1785,14 +1833,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $per_page = 789; // int | 
+$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $ip = "ip_example"; // string | Filter by user IP
 $sort_by = "sort_by_example"; // string | Sort by this attribute (default is ID)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
 try {
-    $result = $api_instance->getVideosFromProduct($product_id, $page, $filters, $per_page, $ip, $sort_by, $sort_direction);
+    $result = $api_instance->getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getVideosFromProduct: ', $e->getMessage(), PHP_EOL;
@@ -1806,8 +1854,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **per_page** | **int**|  | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **ip** | **string**| Filter by user IP | [optional]
  **sort_by** | **string**| Sort by this attribute (default is ID) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
