@@ -791,7 +791,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getVideoPlayer**
-> \Kinow\Client\Model\Player1 getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
+> \Kinow\Client\Model\PlayerConfiguration getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
 
 
 
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Player1**](#Player1)
+[**\Kinow\Client\Model\PlayerConfiguration**](#PlayerConfiguration)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * IPLocationTest
+ * PlayerConfigurationTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Kinow\Client;
 
 /**
- * IPLocationTest Class Doc Comment
+ * PlayerConfigurationTest Class Doc Comment
  *
  * @category    Class */
-// * @description IPLocation
+// * @description PlayerConfiguration
 /**
  * @package     Kinow\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IPLocationTest extends \PHPUnit_Framework_TestCase
+class PlayerConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -75,57 +75,33 @@ class IPLocationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "IPLocation"
+     * Test "PlayerConfiguration"
      */
-    public function testIPLocation()
+    public function testPlayerConfiguration()
     {
 
     }
 
     /**
-     * Test attribute "ip"
+     * Test attribute "url"
      */
-    public function testPropertyIp()
+    public function testPropertyUrl()
     {
 
     }
 
     /**
-     * Test attribute "continent"
+     * Test attribute "manifest"
      */
-    public function testPropertyContinent()
+    public function testPropertyManifest()
     {
 
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "session_id"
      */
-    public function testPropertyCountry()
-    {
-
-    }
-
-    /**
-     * Test attribute "time_zone"
-     */
-    public function testPropertyTimeZone()
-    {
-
-    }
-
-    /**
-     * Test attribute "coordinates"
-     */
-    public function testPropertyCoordinates()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_vpn_or_proxy"
-     */
-    public function testPropertyIsVpnOrProxy()
+    public function testPropertySessionId()
     {
 
     }

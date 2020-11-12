@@ -326,7 +326,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getExtractPlayer**
-> \Kinow\Client\Model\Player getExtractPlayer($extract_id)
+> \Kinow\Client\Model\PlayerConfiguration getExtractPlayer($extract_id)
 
 
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Player**](#Player)
+[**\Kinow\Client\Model\PlayerConfiguration**](#PlayerConfiguration)
 
 ### Authorization
 

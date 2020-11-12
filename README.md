@@ -566,7 +566,7 @@ Class | Method | HTTP request | Description
  - [PaymentUrl](docs/Model/PaymentUrl.md)
  - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)
- - [Player1](docs/Model/Player1.md)
+ - [PlayerConfiguration](docs/Model/PlayerConfiguration.md)
  - [Playlist](docs/Model/Playlist.md)
  - [PlaylistUpdate](docs/Model/PlaylistUpdate.md)
  - [Playlists](docs/Model/Playlists.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerId
+ * PlayerConfiguration
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ namespace Kinow\Client\Model;
 use \ArrayAccess;
 
 /**
- * CustomerId Class Doc Comment
+ * PlayerConfiguration Class Doc Comment
  *
  * @category    Class */
 /**
@@ -40,7 +40,7 @@ use \ArrayAccess;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerId implements ArrayAccess
+class PlayerConfiguration implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,14 +48,16 @@ class CustomerId implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerId';
+    protected static $swaggerModelName = 'PlayerConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_id' => 'int'
+        'url' => 'string',
+        'manifest' => 'object',
+        'session_id' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +70,9 @@ class CustomerId implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_id' => 'customerId'
+        'url' => 'url',
+        'manifest' => 'manifest',
+        'session_id' => 'session_id'
     ];
 
 
@@ -77,7 +81,9 @@ class CustomerId implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_id' => 'setCustomerId'
+        'url' => 'setUrl',
+        'manifest' => 'setManifest',
+        'session_id' => 'setSessionId'
     ];
 
 
@@ -86,7 +92,9 @@ class CustomerId implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_id' => 'getCustomerId'
+        'url' => 'getUrl',
+        'manifest' => 'getManifest',
+        'session_id' => 'getSessionId'
     ];
 
     public static function attributeMap()
@@ -120,7 +128,9 @@ class CustomerId implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['manifest'] = isset($data['manifest']) ? $data['manifest'] : null;
+        $this->container['session_id'] = isset($data['session_id']) ? $data['session_id'] : null;
     }
 
     /**
@@ -147,22 +157,64 @@ class CustomerId implements ArrayAccess
 
 
     /**
-     * Gets customer_id
-     * @return int
+     * Gets url
+     * @return string
      */
-    public function getCustomerId()
+    public function getUrl()
     {
-        return $this->container['customer_id'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets customer_id
-     * @param int $customer_id
+     * Sets url
+     * @param string $url
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setUrl($url)
     {
-        $this->container['customer_id'] = $customer_id;
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets manifest
+     * @return object
+     */
+    public function getManifest()
+    {
+        return $this->container['manifest'];
+    }
+
+    /**
+     * Sets manifest
+     * @param object $manifest
+     * @return $this
+     */
+    public function setManifest($manifest)
+    {
+        $this->container['manifest'] = $manifest;
+
+        return $this;
+    }
+
+    /**
+     * Gets session_id
+     * @return string
+     */
+    public function getSessionId()
+    {
+        return $this->container['session_id'];
+    }
+
+    /**
+     * Sets session_id
+     * @param string $session_id
+     * @return $this
+     */
+    public function setSessionId($session_id)
+    {
+        $this->container['session_id'] = $session_id;
 
         return $this;
     }
