@@ -589,7 +589,7 @@ Class | Method | HTTP request | Description
  - [ProductIDList1](docs/Model/ProductIDList1.md)
  - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
  - [ProductPrice](docs/Model/ProductPrice.md)
- - [ProductPricePrices](docs/Model/ProductPricePrices.md)
+ - [ProductPriceAttributes](docs/Model/ProductPriceAttributes.md)
  - [Products](docs/Model/Products.md)
  - [Products1](docs/Model/Products1.md)
  - [RegistrationField](docs/Model/RegistrationField.md)

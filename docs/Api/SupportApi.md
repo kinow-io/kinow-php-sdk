@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **createMessage**
-> \Kinow\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail)
+> \Kinow\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_support, $id_product, $id_order, $send_mail)
 
 
 
@@ -21,16 +21,17 @@ Create new message
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\SupportApi();
-$id_lang = 56; // int | 
-$email = "email_example"; // string | 
-$id_contact = 56; // int | 
-$message = "message_example"; // string | 
-$id_product = 56; // int | 
-$id_order = 56; // int | 
-$send_mail = true; // bool | 
+$id_lang = 56; // int | Language ID used by user to write his message
+$email = "email_example"; // string | User email in order to send him a response
+$id_contact = 56; // int | Contact ID to send the user message
+$message = "message_example"; // string | User message
+$id_support = 56; // int | Link the message to a previous message
+$id_product = 56; // int | Link the message to a product in catalog
+$id_order = 56; // int | Link the message to an existing order
+$send_mail = true; // bool | Send confirmation email to the providen email
 
 try {
-    $result = $api_instance->createMessage($id_lang, $email, $id_contact, $message, $id_product, $id_order, $send_mail);
+    $result = $api_instance->createMessage($id_lang, $email, $id_contact, $message, $id_support, $id_product, $id_order, $send_mail);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SupportApi->createMessage: ', $e->getMessage(), PHP_EOL;
@@ -42,13 +43,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_lang** | **int**|  |
- **email** | **string**|  |
- **id_contact** | **int**|  |
- **message** | **string**|  |
- **id_product** | **int**|  | [optional]
- **id_order** | **int**|  | [optional]
- **send_mail** | **bool**|  | [optional]
+ **id_lang** | **int**| Language ID used by user to write his message |
+ **email** | **string**| User email in order to send him a response |
+ **id_contact** | **int**| Contact ID to send the user message |
+ **message** | **string**| User message |
+ **id_support** | **int**| Link the message to a previous message | [optional]
+ **id_product** | **int**| Link the message to a product in catalog | [optional]
+ **id_order** | **int**| Link the message to an existing order | [optional]
+ **send_mail** | **bool**| Send confirmation email to the providen email | [optional]
 
 ### Return type
 

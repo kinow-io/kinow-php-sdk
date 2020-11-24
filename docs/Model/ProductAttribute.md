@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional] 
 **price** | **float** |  | [optional] 
 **price_mode** | **float** |  | [optional] 
-**price_noreduc** | **float** |  | [optional] 
+**price_without_reduction** | **float** |  | [optional] 
 **mode** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **quality** | **string** |  | [optional] 
