@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getGiftInCart**](#getGiftInCart) | **GET** /carts/{cart_id}/gift | 
 [**getGiftToken**](#getGiftToken) | **GET** /gifts/{gift_id}/token | 
 [**getGifts**](#getGifts) | **GET** /gifts | 
+[**getGiftsInCart**](#getGiftsInCart) | **GET** /carts/{cart_id}/gifts | 
 [**sendGift**](#sendGift) | **POST** /gifts/{gift_id}/send | 
 [**updateGift**](#updateGift) | **PUT** /gifts/{gift_id} | 
 
@@ -355,6 +356,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Gifts1**](#Gifts1)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getGiftsInCart**
+> \Kinow\Client\Model\Gift[] getGiftsInCart($cart_id)
+
+
+
+Get Gifts in cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\GiftsApi();
+$cart_id = 789; // int | Cart ID to fetch
+
+try {
+    $result = $api_instance->getGiftsInCart($cart_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GiftsApi->getGiftsInCart: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+
+### Return type
+
+[**\Kinow\Client\Model\Gift[]**](#Gift)
 
 ### Authorization
 

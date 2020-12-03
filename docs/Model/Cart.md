@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **total_trial** | **float** |  | [optional] 
 **available_checkout_processes** | **string[]** |  | [optional] 
 **cart_rules** | [**\Kinow\Client\Model\CartRule[]**](#CartRule) |  | [optional] 
-**products** | [**\Kinow\Client\Model\Product[]**](#Product) |  | [optional] 
+**products** | [**\Kinow\Client\Model\CartProduct[]**](#CartProduct) |  | [optional] 
 
 

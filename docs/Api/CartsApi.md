@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 
 ## **addProductToCart**
-> \Kinow\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address)
+> \Kinow\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $gift_id, $switch_subscription_id, $is_gift, $ip_address)
 
 
 
@@ -41,12 +41,13 @@ $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to add to cart
 $product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
+$gift_id = 789; // int | Gift ID linked to the item in cart
 $switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
 $is_gift = false; // bool | Allows bypass of access check (in case the current user already bought the product and it cannot be reordered)
 $ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $switch_subscription_id, $is_gift, $ip_address);
+    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $gift_id, $switch_subscription_id, $is_gift, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->addProductToCart: ', $e->getMessage(), PHP_EOL;
@@ -61,6 +62,7 @@ Name | Type | Description  | Notes
  **cart_id** | **int**| Cart ID to fetch |
  **product_id** | **int**| Product ID to add to cart |
  **product_attribute_id** | **int**| ProductAttribute ID, required to add product to cart if product is not a subscription | [optional]
+ **gift_id** | **int**| Gift ID linked to the item in cart | [optional]
  **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
  **is_gift** | **bool**| Allows bypass of access check (in case the current user already bought the product and it cannot be reordered) | [optional] [default to false]
  **ip_address** | **string**| IP address | [optional]
@@ -253,7 +255,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **deleteProductFromCart**
-> deleteProductFromCart($cart_id, $product_id, $product_attribute_id)
+> deleteProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id)
 
 
 
@@ -268,9 +270,10 @@ $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $product_id = 789; // int | Product ID to delete from cart
 $product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
+$gift_id = 789; // int | Gift ID linked to the item in cart
 
 try {
-    $api_instance->deleteProductFromCart($cart_id, $product_id, $product_attribute_id);
+    $api_instance->deleteProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->deleteProductFromCart: ', $e->getMessage(), PHP_EOL;
 }
@@ -284,6 +287,7 @@ Name | Type | Description  | Notes
  **cart_id** | **int**| Cart ID to fetch |
  **product_id** | **int**| Product ID to delete from cart |
  **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
+ **gift_id** | **int**| Gift ID linked to the item in cart | [optional]
 
 ### Return type
 

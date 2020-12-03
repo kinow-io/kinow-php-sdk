@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **message** | **string** | Message for the recipient | 
 **custom** | **string** | Custom data | [optional] 
 **date_send** | **string** | Date to send the Gift to the recipient | [optional] 
+**auto_link** | **bool** | Auto-link Gift to an existing Product in Cart with same IDs - true by default | [optional] 
 
 

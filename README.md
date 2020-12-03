@@ -277,6 +277,7 @@ Class | Method | HTTP request | Description
 *GiftsApi* | [**getGiftInCart**](docs/Api/GiftsApi.md#getgiftincart) | **GET** /carts/{cart_id}/gift | 
 *GiftsApi* | [**getGiftToken**](docs/Api/GiftsApi.md#getgifttoken) | **GET** /gifts/{gift_id}/token | 
 *GiftsApi* | [**getGifts**](docs/Api/GiftsApi.md#getgifts) | **GET** /gifts | 
+*GiftsApi* | [**getGiftsInCart**](docs/Api/GiftsApi.md#getgiftsincart) | **GET** /carts/{cart_id}/gifts | 
 *GiftsApi* | [**sendGift**](docs/Api/GiftsApi.md#sendgift) | **POST** /gifts/{gift_id}/send | 
 *GiftsApi* | [**updateGift**](docs/Api/GiftsApi.md#updategift) | **PUT** /gifts/{gift_id} | 
 *GroupsApi* | [**attachCustomerToGroup**](docs/Api/GroupsApi.md#attachcustomertogroup) | **POST** /groups/{group_id}/customers | 
@@ -478,6 +479,7 @@ Class | Method | HTTP request | Description
  - [Cart2](docs/Model/Cart2.md)
  - [CartIDList](docs/Model/CartIDList.md)
  - [CartPrice](docs/Model/CartPrice.md)
+ - [CartProduct](docs/Model/CartProduct.md)
  - [CartRule](docs/Model/CartRule.md)
  - [CartRuleRestrictionGroup](docs/Model/CartRuleRestrictionGroup.md)
  - [CartRuleRestrictionGroupItem](docs/Model/CartRuleRestrictionGroupItem.md)
