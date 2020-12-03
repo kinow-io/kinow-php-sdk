@@ -592,6 +592,7 @@ Class | Method | HTTP request | Description
  - [ProductPriceAttributes](docs/Model/ProductPriceAttributes.md)
  - [Products](docs/Model/Products.md)
  - [Products1](docs/Model/Products1.md)
+ - [Promotion](docs/Model/Promotion.md)
  - [RegistrationField](docs/Model/RegistrationField.md)
  - [RegistrationFields](docs/Model/RegistrationFields.md)
  - [Screenshot](docs/Model/Screenshot.md)
