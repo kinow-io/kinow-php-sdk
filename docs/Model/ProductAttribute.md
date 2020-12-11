@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **quality** | **string** |  | [optional] 
 **duration** | **int** |  | [optional] 
 **watching_duration** | **int** |  | [optional] 
+**maximum_views** | **int** |  | [optional] 
 **active** | **int** |  | [optional] 
 
 

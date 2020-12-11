@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **price_mode** | **float** | Pre-tax price or price with tax | [optional] 
 **duration** | **float** | Duration in days while user can access videos | [optional] 
 **watching_duration** | **float** | Duration in days while user can watch video after first play | [optional] 
+**maximum_views** | **float** | Maximum views a user can watch video | [optional] 
 
 
