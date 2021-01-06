@@ -320,7 +320,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **getGifts**
-> \Kinow\Client\Model\Gifts1 getGifts($unused_only, $page, $per_page)
+> \Kinow\Client\Model\Gifts1 getGifts($unused_only, $paid_only, $page, $per_page)
 
 
 
@@ -332,12 +332,13 @@ Get Gifts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
-$unused_only = 56; // int | Only unused Gifts
+$unused_only = true; // bool | Filter only unused gifts
+$paid_only = true; // bool | Filter only gifts linked to an order which is paid by the user
 $page = 789; // int | 
 $per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getGifts($unused_only, $page, $per_page);
+    $result = $api_instance->getGifts($unused_only, $paid_only, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GiftsApi->getGifts: ', $e->getMessage(), PHP_EOL;
@@ -349,7 +350,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unused_only** | **int**| Only unused Gifts | [optional]
+ **unused_only** | **bool**| Filter only unused gifts | [optional]
+ **paid_only** | **bool**| Filter only gifts linked to an order which is paid by the user | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 
