@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCustomerHasAccessToProduct**](#getCustomerHasAccessToProduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 [**getCustomerHasAccessToProducts**](#getCustomerHasAccessToProducts) | **POST** /customers/{customer_id}/products/has-access | 
+[**getMostWatched**](#getMostWatched) | **GET** /products/most-watched | 
 [**getNewProducts**](#getNewProducts) | **GET** /products/new | 
 [**getPrice**](#getPrice) | **POST** /products/price | 
 [**getProduct**](#getProduct) | **GET** /products/{product_id} | 
@@ -758,6 +759,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getMostWatched**
+> \Kinow\Client\Model\Products getMostWatched($page, $per_page, $ip)
+
+
+
+Get most watched products list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
+
+try {
+    $result = $api_instance->getMostWatched($page, $per_page, $ip);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getMostWatched: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 

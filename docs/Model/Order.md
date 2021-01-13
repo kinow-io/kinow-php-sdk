@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **reference** | **string** |  | [optional] 
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
+**histories** | [**\Kinow\Client\Model\OrderHistory[]**](#OrderHistory) |  | [optional] 
 
 

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 
-Get configuration by name.      Available :         - LANG_DEFAULT         - CURRENCY_DEFAULT         - COUNTRY_DEFAULT         - TIMEZONE         - FORCE_TAX_ID         - NB_DAYS_NEW_PRODUCT         - COPYRIGHT         - CUSTOMER_REGISTRATION         - CATALOG_RESTRICTED         - PLATFORM_NAME         - RECAPTCHA_KEY
+Get configuration by name.      Available :         - PLATFORM_NAME         - LANG_DEFAULT         - CURRENCY_DEFAULT         - COUNTRY_DEFAULT         - TIMEZONE         - COPYRIGHT         - COOKIE_WARNING         - RECAPTCHA_KEY         - CUSTOMER_REGISTRATION         - CATALOG_RESTRICTED         - PRODUCTS_ORDER_BY         - PRODUCTS_ORDER_WAY         - PRODUCTS_NB_RAIL         - PRODUCTS_NEW_DAYS         - FORCE_TAX_ID
 
 ### Example
 ```php

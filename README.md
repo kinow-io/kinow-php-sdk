@@ -374,6 +374,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getCategoryProducts**](docs/Api/ProductsApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *ProductsApi* | [**getCustomerHasAccessToProduct**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
 *ProductsApi* | [**getCustomerHasAccessToProducts**](docs/Api/ProductsApi.md#getcustomerhasaccesstoproducts) | **POST** /customers/{customer_id}/products/has-access | 
+*ProductsApi* | [**getMostWatched**](docs/Api/ProductsApi.md#getmostwatched) | **GET** /products/most-watched | 
 *ProductsApi* | [**getNewProducts**](docs/Api/ProductsApi.md#getnewproducts) | **GET** /products/new | 
 *ProductsApi* | [**getPrice**](docs/Api/ProductsApi.md#getprice) | **POST** /products/price | 
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{product_id} | 
@@ -451,6 +452,7 @@ Class | Method | HTTP request | Description
 *WidgetsApi* | [**getSliderImage**](docs/Api/WidgetsApi.md#getsliderimage) | **GET** /widgets/slider/images | 
 *WidgetsApi* | [**getWidgetAnalytics**](docs/Api/WidgetsApi.md#getwidgetanalytics) | **GET** /widgets/analytics | 
 *WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
+*WidgetsApi* | [**getWidgetHomeRail**](docs/Api/WidgetsApi.md#getwidgethomerail) | **GET** /widgets/home-rail | 
 *WidgetsApi* | [**getWidgetHookPhrase**](docs/Api/WidgetsApi.md#getwidgethookphrase) | **GET** /widgets/hook-phrase | 
 *WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
@@ -632,6 +634,8 @@ Class | Method | HTTP request | Description
  - [Videos2](docs/Model/Videos2.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenus](docs/Model/WidgetFooterMenus.md)
+ - [WidgetHomeRail](docs/Model/WidgetHomeRail.md)
+ - [WidgetHomeRails](docs/Model/WidgetHomeRails.md)
  - [WidgetHookPhrase](docs/Model/WidgetHookPhrase.md)
  - [WidgetHookPhrases](docs/Model/WidgetHookPhrases.md)
  - [WidgetSlider](docs/Model/WidgetSlider.md)

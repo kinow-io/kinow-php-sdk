@@ -27,7 +27,7 @@ Get geolocation settings for an item
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Kinow\Client\Api\GeolocationsApi();
-$type = "type_example"; // string | Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu
+$type = "type_example"; // string | Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu, homerail
 $type_id = 56; // int | Item ID
 
 try {
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **string**| Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu |
+ **type** | **string**| Item type, available values are: category, subscription, product, video, extract, blogpage, slider, topmenu, homerail |
  **type_id** | **int**| Item ID |
 
 ### Return type
