@@ -5,5 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cart_ids** | **string** |  | [optional] 
 **currency_id** | **int** |  | [optional] 
+**iso_code** | **string** |  | [optional] 
 
 

@@ -81,7 +81,7 @@ No authorization required
  - **Accept**: Not defined
 
 ## **attachCartRuleToCart**
-> attachCartRuleToCart($cart_id, $code)
+> attachCartRuleToCart($cart_id, $code, $ip)
 
 
 
@@ -95,9 +95,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $code = "code_example"; // string | Code of the cart rule to attach
+$ip = "ip_example"; // string | Filter by user IP
 
 try {
-    $api_instance->attachCartRuleToCart($cart_id, $code);
+    $api_instance->attachCartRuleToCart($cart_id, $code, $ip);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->attachCartRuleToCart: ', $e->getMessage(), PHP_EOL;
 }
@@ -110,6 +111,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **code** | **string**| Code of the cart rule to attach |
+ **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 

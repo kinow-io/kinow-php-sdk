@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **type_id** | **int** |  | [optional] 
 **blank** | **int** |  | [optional] 
 **unfold** | **int** |  | [optional] 
+**visibility** | **string** |  | [optional] 
 **position** | **int** |  | [optional] 
 
 
