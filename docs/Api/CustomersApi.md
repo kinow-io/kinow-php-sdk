@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**checkCustomerCredentials**](#checkCustomerCredentials) | **POST** /customers/check-credentials | 
 [**createCustomer**](#createCustomer) | **POST** /customers | 
 [**createFacebookId**](#createFacebookId) | **POST** /customers/facebook | 
+[**createGoogleId**](#createGoogleId) | **POST** /customers/google | 
 [**deleteCustomer**](#deleteCustomer) | **DELETE** /customers/{customer_id} | 
 [**generateAuthenticationToken**](#generateAuthenticationToken) | **GET** /customers/{customer_id}/authentication-token | 
 [**getCustomer**](#getCustomer) | **GET** /customers/{customer_id} | 
@@ -29,12 +30,14 @@ Method | HTTP request | Description
 [**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 [**getCustomers**](#getCustomers) | **GET** /customers | 
 [**getFacebookCustomer**](#getFacebookCustomer) | **GET** /customers/facebook/{facebook_id} | 
+[**getGoogleCustomer**](#getGoogleCustomer) | **GET** /customers/google/{google_id} | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPaymentMethodsWithIp**](#getPaymentMethodsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 [**getPendingPaymentsWithIp**](#getPendingPaymentsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 [**getRegistrationFields**](#getRegistrationFields) | **GET** /customer/registration-fields | 
 [**loginWithFacebook**](#loginWithFacebook) | **POST** /customers/facebook-login | 
+[**loginWithGoogle**](#loginWithGoogle) | **POST** /customers/google-login | 
 [**passwordToken**](#passwordToken) | **POST** /customers/password-token | 
 [**passwordTokenConsume**](#passwordTokenConsume) | **POST** /customers/password-token-consume | 
 [**stopSubscription**](#stopSubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
@@ -249,6 +252,50 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID |
  **facebook_id** | **string**| Facebook ID |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createGoogleId**
+> createGoogleId($customer_id, $google_id)
+
+
+
+Link a Google account ID to a Customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID
+$google_id = "google_id_example"; // string | Google ID
+
+try {
+    $api_instance->createGoogleId($customer_id, $google_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->createGoogleId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID |
+ **google_id** | **string**| Google ID |
 
 ### Return type
 
@@ -1178,6 +1225,49 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getGoogleCustomer**
+> \Kinow\Client\Model\CustomerId getGoogleCustomer($google_id)
+
+
+
+Get Customer ID linked to a Google ID
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$google_id = 789; // int | Google ID to fetch
+
+try {
+    $result = $api_instance->getGoogleCustomer($google_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getGoogleCustomer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **google_id** | **int**| Google ID to fetch |
+
+### Return type
+
+[**\Kinow\Client\Model\CustomerId**](#CustomerId)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getPaymentMethods**
 > \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
@@ -1440,6 +1530,49 @@ Name | Type | Description  | Notes
  **token_type** | **string**| Can be &#39;oauth2&#39; or &#39;authorization&#39; |
  **token** | **string**| oAuth2 token or authorization code given by Facebook |
  **redirect_uri** | **string**| Redirect URI is required if you&#39;re using authorization code method | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Customer**](#Customer)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **loginWithGoogle**
+> \Kinow\Client\Model\Customer loginWithGoogle($token)
+
+
+
+Create or retrieve existing Customer account using Google authorization token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$token = "token_example"; // string | token given by Google
+
+try {
+    $result = $api_instance->loginWithGoogle($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->loginWithGoogle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**| token given by Google |
 
 ### Return type
 

@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**checkCustomerCredentials**](docs/Api/CustomersApi.md#checkcustomercredentials) | **POST** /customers/check-credentials | 
 *CustomersApi* | [**createCustomer**](docs/Api/CustomersApi.md#createcustomer) | **POST** /customers | 
 *CustomersApi* | [**createFacebookId**](docs/Api/CustomersApi.md#createfacebookid) | **POST** /customers/facebook | 
+*CustomersApi* | [**createGoogleId**](docs/Api/CustomersApi.md#creategoogleid) | **POST** /customers/google | 
 *CustomersApi* | [**deleteCustomer**](docs/Api/CustomersApi.md#deletecustomer) | **DELETE** /customers/{customer_id} | 
 *CustomersApi* | [**generateAuthenticationToken**](docs/Api/CustomersApi.md#generateauthenticationtoken) | **GET** /customers/{customer_id}/authentication-token | 
 *CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | 
@@ -197,12 +198,14 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerPrepaymentOperations**](docs/Api/CustomersApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | 
 *CustomersApi* | [**getFacebookCustomer**](docs/Api/CustomersApi.md#getfacebookcustomer) | **GET** /customers/facebook/{facebook_id} | 
+*CustomersApi* | [**getGoogleCustomer**](docs/Api/CustomersApi.md#getgooglecustomer) | **GET** /customers/google/{google_id} | 
 *CustomersApi* | [**getPaymentMethods**](docs/Api/CustomersApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *CustomersApi* | [**getPaymentMethodsWithIp**](docs/Api/CustomersApi.md#getpaymentmethodswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 *CustomersApi* | [**getPendingPayments**](docs/Api/CustomersApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 *CustomersApi* | [**getPendingPaymentsWithIp**](docs/Api/CustomersApi.md#getpendingpaymentswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 *CustomersApi* | [**getRegistrationFields**](docs/Api/CustomersApi.md#getregistrationfields) | **GET** /customer/registration-fields | 
 *CustomersApi* | [**loginWithFacebook**](docs/Api/CustomersApi.md#loginwithfacebook) | **POST** /customers/facebook-login | 
+*CustomersApi* | [**loginWithGoogle**](docs/Api/CustomersApi.md#loginwithgoogle) | **POST** /customers/google-login | 
 *CustomersApi* | [**passwordToken**](docs/Api/CustomersApi.md#passwordtoken) | **POST** /customers/password-token | 
 *CustomersApi* | [**passwordTokenConsume**](docs/Api/CustomersApi.md#passwordtokenconsume) | **POST** /customers/password-token-consume | 
 *CustomersApi* | [**stopSubscription**](docs/Api/CustomersApi.md#stopsubscription) | **PUT** /customers/{customer_id}/unsubscribe | 
