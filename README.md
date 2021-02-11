@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**getPaymentUrl**](docs/Api/CartsApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *CartsApi* | [**getPrice**](docs/Api/CartsApi.md#getprice) | **POST** /carts/price | 
 *CartsApi* | [**preparePayment**](docs/Api/CartsApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
+*CartsApi* | [**recurringPayment**](docs/Api/CartsApi.md#recurringpayment) | **POST** /carts/{cart_id}/payments/{payment_name}/recurring | 
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CartsApi* | [**validatePayment**](docs/Api/CartsApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
@@ -325,10 +326,12 @@ Class | Method | HTTP request | Description
 *PaymentModulesApi* | [**getPaymentMethods**](docs/Api/PaymentModulesApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *PaymentModulesApi* | [**getPaymentMethodsWithIp**](docs/Api/PaymentModulesApi.md#getpaymentmethodswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 *PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 
+*PaymentModulesApi* | [**getPaymentToken**](docs/Api/PaymentModulesApi.md#getpaymenttoken) | **GET** /payment-modules/token/{token} | 
 *PaymentModulesApi* | [**getPaymentUrl**](docs/Api/PaymentModulesApi.md#getpaymenturl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 *PaymentModulesApi* | [**getPendingPayments**](docs/Api/PaymentModulesApi.md#getpendingpayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 *PaymentModulesApi* | [**getPendingPaymentsWithIp**](docs/Api/PaymentModulesApi.md#getpendingpaymentswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 *PaymentModulesApi* | [**preparePayment**](docs/Api/PaymentModulesApi.md#preparepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
+*PaymentModulesApi* | [**recurringPayment**](docs/Api/PaymentModulesApi.md#recurringpayment) | **POST** /carts/{cart_id}/payments/{payment_name}/recurring | 
 *PaymentModulesApi* | [**updatePaymentMethod**](docs/Api/PaymentModulesApi.md#updatepaymentmethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 *PaymentModulesApi* | [**validateFreeOrder**](docs/Api/PaymentModulesApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *PaymentModulesApi* | [**validatePayment**](docs/Api/PaymentModulesApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
@@ -570,6 +573,8 @@ Class | Method | HTTP request | Description
  - [PaymentMethods](docs/Model/PaymentMethods.md)
  - [PaymentModule](docs/Model/PaymentModule.md)
  - [PaymentModules](docs/Model/PaymentModules.md)
+ - [PaymentToken](docs/Model/PaymentToken.md)
+ - [PaymentToken1](docs/Model/PaymentToken1.md)
  - [PaymentUrl](docs/Model/PaymentUrl.md)
  - [PlatformAccessInfo](docs/Model/PlatformAccessInfo.md)
  - [Player](docs/Model/Player.md)

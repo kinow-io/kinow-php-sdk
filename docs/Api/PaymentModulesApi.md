@@ -7,10 +7,12 @@ Method | HTTP request | Description
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPaymentMethodsWithIp**](#getPaymentMethodsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 [**getPaymentModules**](#getPaymentModules) | **GET** /payment-modules | 
+[**getPaymentToken**](#getPaymentToken) | **GET** /payment-modules/token/{token} | 
 [**getPaymentUrl**](#getPaymentUrl) | **GET** /carts/{cart_id}/payments/{payment_name} | 
 [**getPendingPayments**](#getPendingPayments) | **GET** /customers/{customer_id}/payments/{payment_name}/pending | 
 [**getPendingPaymentsWithIp**](#getPendingPaymentsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/pending/{ip_address} | 
 [**preparePayment**](#preparePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
+[**recurringPayment**](#recurringPayment) | **POST** /carts/{cart_id}/payments/{payment_name}/recurring | 
 [**updatePaymentMethod**](#updatePaymentMethod) | **PUT** /customers/{customer_id}/payments/{payment_name}/payment-method | 
 [**validateFreeOrder**](#validateFreeOrder) | **POST** /carts/{cart_id}/validate-free-order | 
 [**validatePayment**](#validatePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
@@ -143,6 +145,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPaymentToken**
+> \Kinow\Client\Model\PaymentToken1 getPaymentToken($token)
+
+
+
+Get payment token details
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
+$token = 56; // int | Token to fetch
+
+try {
+    $result = $api_instance->getPaymentToken($token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentModulesApi->getPaymentToken: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **int**| Token to fetch |
+
+### Return type
+
+[**\Kinow\Client\Model\PaymentToken1**](#PaymentToken1)
 
 ### Authorization
 
@@ -327,6 +372,52 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\PaymentDetails1**](#PaymentDetails1)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **recurringPayment**
+> recurringPayment($cart_id, $payment_name, $payment_argument)
+
+
+
+Validate recurring payment on a payment gateway
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
+$cart_id = 789; // int | Cart ID to fetch
+$payment_name = "payment_name_example"; // string | Payment gateway name
+$payment_argument = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment argument
+
+try {
+    $api_instance->recurringPayment($cart_id, $payment_name, $payment_argument);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentModulesApi->recurringPayment: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **payment_name** | **string**| Payment gateway name |
+ **payment_argument** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment argument |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
