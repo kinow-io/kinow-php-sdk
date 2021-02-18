@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getConfigurationAnalytics**
-> \Kinow\Client\Model\Analytics getConfigurationAnalytics()
+> \Kinow\Client\Model\Analytics getConfigurationAnalytics($page, $per_page)
 
 
 
@@ -87,9 +87,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ConfigurationApi();
+$page = 789; // int | 
+$per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getConfigurationAnalytics();
+    $result = $api_instance->getConfigurationAnalytics($page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationApi->getConfigurationAnalytics: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +100,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 
