@@ -416,7 +416,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **generateAuthenticationToken**
-> generateAuthenticationToken($customer_id)
+> string generateAuthenticationToken($customer_id)
 
 
 
@@ -440,7 +440,8 @@ $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to authenticate
 
 try {
-    $api_instance->generateAuthenticationToken($customer_id);
+    $result = $api_instance->generateAuthenticationToken($customer_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->generateAuthenticationToken: ', $e->getMessage(), PHP_EOL;
 }
@@ -455,7 +456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**string**
 
 ### Authorization
 
