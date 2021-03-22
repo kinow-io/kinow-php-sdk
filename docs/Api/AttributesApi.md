@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createProductAttribute**](#createProductAttribute) | **POST** /attributes | 
 [**deleteAttribute**](#deleteAttribute) | **DELETE** /attributes/{attribute_id} | 
+[**getAttribute**](#getAttribute) | **GET** /attributes/{attribute_id} | 
 [**getProductAttributes**](#getProductAttributes) | **GET** /products/{product_id}/attributes | 
 
 
@@ -102,6 +103,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getAttribute**
+> \Kinow\Client\Model\ProductAttribute getAttribute($attribute_id)
+
+
+
+Get Attribute
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\AttributesApi();
+$attribute_id = 789; // int | Attribute ID to get
+
+try {
+    $result = $api_instance->getAttribute($attribute_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AttributesApi->getAttribute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attribute_id** | **int**| Attribute ID to get |
+
+### Return type
+
+[**\Kinow\Client\Model\ProductAttribute**](#ProductAttribute)
 
 ### Authorization
 
