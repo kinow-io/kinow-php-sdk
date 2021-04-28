@@ -253,7 +253,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\OrdersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains    ```  {      \"email\": {          \"value\": \"string\",          \"operator\": \"strict\"      },      \"firstname\": {          \"value\": \"string\",          \"operator\": \"contains\"      },      \"invoice_date\": {          \"value\": [\"Y-m-d\", \"Y-m-d\"],          \"operator\": \"between\"      }  }```  Operator can be strict, contains, between, gt or lt.
+$filters = "filters_example"; // string | email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains  ``` {     \"email\": {         \"value\": \"string\",         \"operator\": \"strict\"     },     \"firstname\": {         \"value\": \"string\",         \"operator\": \"contains\"     },     \"invoice_date\": {         \"value\": [\"Y-m-d\", \"Y-m-d\"],         \"operator\": \"between\"     } }``` Operator can be strict, contains, between, gt or lt.
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains    &#x60;&#x60;&#x60;  {      \&quot;email\&quot;: {          \&quot;value\&quot;: \&quot;string\&quot;,          \&quot;operator\&quot;: \&quot;strict\&quot;      },      \&quot;firstname\&quot;: {          \&quot;value\&quot;: \&quot;string\&quot;,          \&quot;operator\&quot;: \&quot;contains\&quot;      },      \&quot;invoice_date\&quot;: {          \&quot;value\&quot;: [\&quot;Y-m-d\&quot;, \&quot;Y-m-d\&quot;],          \&quot;operator\&quot;: \&quot;between\&quot;      }  }&#x60;&#x60;&#x60;  Operator can be strict, contains, between, gt or lt. | [optional]
+ **filters** | **string**| email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains  &#x60;&#x60;&#x60; {     \&quot;email\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;firstname\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;invoice_date\&quot;: {         \&quot;value\&quot;: [\&quot;Y-m-d\&quot;, \&quot;Y-m-d\&quot;],         \&quot;operator\&quot;: \&quot;between\&quot;     } }&#x60;&#x60;&#x60; Operator can be strict, contains, between, gt or lt. | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 

@@ -118,7 +118,10 @@ Class | Method | HTTP request | Description
 *AttributesApi* | [**getProductAttributes**](docs/Api/AttributesApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *BlogCategoriesApi* | [**getBlogCategories**](docs/Api/BlogCategoriesApi.md#getblogcategories) | **GET** /blog-categories | 
 *BlogCategoriesApi* | [**getBlogCategory**](docs/Api/BlogCategoriesApi.md#getblogcategory) | **GET** /blog-categories/{blog_category_id} | 
+*BlogPagesApi* | [**attachProductToBlogPage**](docs/Api/BlogPagesApi.md#attachproducttoblogpage) | **POST** /blog-pages/{blog_page_id}/products | 
+*BlogPagesApi* | [**detachProductFromBlogPage**](docs/Api/BlogPagesApi.md#detachproductfromblogpage) | **DELETE** /blog-pages/{blog_page_id}/products/{product_id} | 
 *BlogPagesApi* | [**getBlogPage**](docs/Api/BlogPagesApi.md#getblogpage) | **GET** /blog-pages/{blog_page_id} | 
+*BlogPagesApi* | [**getBlogPageProducts**](docs/Api/BlogPagesApi.md#getblogpageproducts) | **GET** /blog-pages/{blog_page_id}/products | 
 *BlogPagesApi* | [**getBlogPages**](docs/Api/BlogPagesApi.md#getblogpages) | **GET** /blog-pages | 
 *BookmarksApi* | [**attachBookmarkToCustomer**](docs/Api/BookmarksApi.md#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
 *BookmarksApi* | [**detachBookmarkFromCustomer**](docs/Api/BookmarksApi.md#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
