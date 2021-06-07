@@ -49,6 +49,7 @@ Method | HTTP request | Description
 [**updateProduct**](#updateProduct) | **PUT** /products/{product_id} | 
 [**updateProductGroupRestrictionBehavior**](#updateProductGroupRestrictionBehavior) | **PUT** /products/{product_id}/groups/behavior | 
 [**uploadProductCover**](#uploadProductCover) | **POST** /products/{product_id}/cover | 
+[**uploadProductImage**](#uploadProductImage) | **POST** /products/{product_id}/image | 
 
 
 ## **associateProducts**
@@ -1862,7 +1863,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductImages**
-> \Kinow\Client\Model\ProductImagesResponse getProductImages($product_id, $type, $page, $per_page)
+> \Kinow\Client\Model\CategoryImagesResponse getProductImages($product_id, $type, $page, $per_page)
 
 
 
@@ -1908,7 +1909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductImagesResponse**](#ProductImagesResponse)
+[**\Kinow\Client\Model\CategoryImagesResponse**](#CategoryImagesResponse)
 
 ### Authorization
 
@@ -1920,7 +1921,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductScreenshots**
-> \Kinow\Client\Model\Screenshot[] getProductScreenshots($product_id)
+> \Kinow\Client\Model\Image[] getProductScreenshots($product_id)
 
 
 
@@ -1960,7 +1961,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Screenshot[]**](#Screenshot)
+[**\Kinow\Client\Model\Image[]**](#Image)
 
 ### Authorization
 
@@ -2560,6 +2561,66 @@ Name | Type | Description  | Notes
  **product_id** | **float**| Product ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Image**](#Image)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: Not defined
+
+## **uploadProductImage**
+> \Kinow\Client\Model\Image uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm)
+
+
+
+Upload product image
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 3.4; // float | Product ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->uploadProductImage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **float**| Product ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **image_type_name** | **string**| Image types name to use to generate image assets |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type

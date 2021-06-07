@@ -167,6 +167,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategory**](docs/Api/CategoriesApi.md#getcategory) | **GET** /categories/{category_id} | 
 *CategoriesApi* | [**getCategoryBanner**](docs/Api/CategoriesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
 *CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
+*CategoriesApi* | [**getCategoryImages**](docs/Api/CategoriesApi.md#getcategoryimages) | **GET** /categories/{category_id}/images | 
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
 *CategoriesApi* | [**getCategoryVideoPlayer**](docs/Api/CategoriesApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
 *CategoriesApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoriesApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
@@ -176,6 +177,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getVideosFromCategory**](docs/Api/CategoriesApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{category_id} | 
 *CategoriesApi* | [**uploadCategoryCover**](docs/Api/CategoriesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
+*CategoriesApi* | [**uploadCategoryImage**](docs/Api/CategoriesApi.md#uploadcategoryimage) | **POST** /categories/{category_id}/image | 
 *CategoryVideosApi* | [**getCategoryVideoPlayer**](docs/Api/CategoryVideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
 *CategoryVideosApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoryVideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *CategoryVideosApi* | [**getVideosFromCategories**](docs/Api/CategoryVideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
@@ -306,8 +308,11 @@ Class | Method | HTTP request | Description
 *GroupsApi* | [**getProductGroups**](docs/Api/GroupsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
 *ImagesApi* | [**getActorCoverImage**](docs/Api/ImagesApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ImagesApi* | [**getCategoryBanner**](docs/Api/ImagesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
+*ImagesApi* | [**getCategoryImageTypes**](docs/Api/ImagesApi.md#getcategoryimagetypes) | **GET** /categories/image-types | 
+*ImagesApi* | [**getCategoryImages**](docs/Api/ImagesApi.md#getcategoryimages) | **GET** /categories/{category_id}/images | 
 *ImagesApi* | [**getDirectorCoverImage**](docs/Api/ImagesApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
 *ImagesApi* | [**getProductCoverImage**](docs/Api/ImagesApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
+*ImagesApi* | [**getProductImageTypes**](docs/Api/ImagesApi.md#getproductimagetypes) | **GET** /products/image-types | 
 *ImagesApi* | [**getProductImages**](docs/Api/ImagesApi.md#getproductimages) | **GET** /products/{product_id}/images | 
 *ImagesApi* | [**getProductScreenshots**](docs/Api/ImagesApi.md#getproductscreenshots) | **GET** /products/{product_id}/screenshots | 
 *ImagesApi* | [**getSliderImage**](docs/Api/ImagesApi.md#getsliderimage) | **GET** /widgets/slider/images | 
@@ -315,8 +320,10 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**getVideoCover**](docs/Api/ImagesApi.md#getvideocover) | **GET** /videos/{video_id}/cover | 
 *ImagesApi* | [**uploadActorCover**](docs/Api/ImagesApi.md#uploadactorcover) | **POST** /actors/{actor_id}/cover | 
 *ImagesApi* | [**uploadCategoryCover**](docs/Api/ImagesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
+*ImagesApi* | [**uploadCategoryImage**](docs/Api/ImagesApi.md#uploadcategoryimage) | **POST** /categories/{category_id}/image | 
 *ImagesApi* | [**uploadDirectorCover**](docs/Api/ImagesApi.md#uploaddirectorcover) | **POST** /directors/{director_id}/cover | 
 *ImagesApi* | [**uploadProductCover**](docs/Api/ImagesApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
+*ImagesApi* | [**uploadProductImage**](docs/Api/ImagesApi.md#uploadproductimage) | **POST** /products/{product_id}/image | 
 *ImagesApi* | [**uploadSubscriptionCover**](docs/Api/ImagesApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
 *LanguagesApi* | [**getLanguages**](docs/Api/LanguagesApi.md#getlanguages) | **GET** /languages | 
 *MediaFilesApi* | [**getMediaFile**](docs/Api/MediaFilesApi.md#getmediafile) | **GET** /media-files/{media_file_id} | 
@@ -423,6 +430,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**updateProduct**](docs/Api/ProductsApi.md#updateproduct) | **PUT** /products/{product_id} | 
 *ProductsApi* | [**updateProductGroupRestrictionBehavior**](docs/Api/ProductsApi.md#updateproductgrouprestrictionbehavior) | **PUT** /products/{product_id}/groups/behavior | 
 *ProductsApi* | [**uploadProductCover**](docs/Api/ProductsApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
+*ProductsApi* | [**uploadProductImage**](docs/Api/ProductsApi.md#uploadproductimage) | **POST** /products/{product_id}/image | 
 *StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
@@ -511,6 +519,7 @@ Class | Method | HTTP request | Description
  - [Carts](docs/Model/Carts.md)
  - [Categories](docs/Model/Categories.md)
  - [Category](docs/Model/Category.md)
+ - [CategoryImagesResponse](docs/Model/CategoryImagesResponse.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationList](docs/Model/ConfigurationList.md)
  - [Contact](docs/Model/Contact.md)
@@ -566,6 +575,7 @@ Class | Method | HTTP request | Description
  - [IPCoordinates](docs/Model/IPCoordinates.md)
  - [IPLocation](docs/Model/IPLocation.md)
  - [Image](docs/Model/Image.md)
+ - [ImageType](docs/Model/ImageType.md)
  - [Language](docs/Model/Language.md)
  - [Languages](docs/Model/Languages.md)
  - [LogoSettings](docs/Model/LogoSettings.md)
@@ -615,7 +625,6 @@ Class | Method | HTTP request | Description
  - [ProductCategories](docs/Model/ProductCategories.md)
  - [ProductIDList](docs/Model/ProductIDList.md)
  - [ProductIDList1](docs/Model/ProductIDList1.md)
- - [ProductImagesResponse](docs/Model/ProductImagesResponse.md)
  - [ProductPrice](docs/Model/ProductPrice.md)
  - [ProductPriceAttributes](docs/Model/ProductPriceAttributes.md)
  - [Products](docs/Model/Products.md)
@@ -623,7 +632,6 @@ Class | Method | HTTP request | Description
  - [Promotion](docs/Model/Promotion.md)
  - [RegistrationField](docs/Model/RegistrationField.md)
  - [RegistrationFields](docs/Model/RegistrationFields.md)
- - [Screenshot](docs/Model/Screenshot.md)
  - [SessionVideoStat](docs/Model/SessionVideoStat.md)
  - [SessionVideoStats](docs/Model/SessionVideoStats.md)
  - [SocialSettings](docs/Model/SocialSettings.md)

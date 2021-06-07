@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getCategory**](#getCategory) | **GET** /categories/{category_id} | 
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
+[**getCategoryImages**](#getCategoryImages) | **GET** /categories/{category_id}/images | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
 [**getCategoryVideoPlayer**](#getCategoryVideoPlayer) | **GET** /categories/videos/{video_id}/player | 
 [**getCategoryVideoSubtitles**](#getCategoryVideoSubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
@@ -21,6 +22,7 @@ Method | HTTP request | Description
 [**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
 [**updateCategory**](#updateCategory) | **PUT** /categories/{category_id} | 
 [**uploadCategoryCover**](#uploadCategoryCover) | **POST** /categories/{category_id}/cover | 
+[**uploadCategoryImage**](#uploadCategoryImage) | **POST** /categories/{category_id}/image | 
 
 
 ## **createCategory**
@@ -359,7 +361,7 @@ Name | Type | Description  | Notes
 
 
 
-Get Category banner
+Get Category cover
 
 ### Example
 ```php
@@ -452,6 +454,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Features**](#Features)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryImages**
+> \Kinow\Client\Model\CategoryImagesResponse getCategoryImages($category_id, $type, $page, $per_page)
+
+
+
+Get images attached to Category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$type = "type_example"; // string | Filter on specific Image type
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryImages($category_id, $type, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryImages: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **type** | **string**| Filter on specific Image type | [optional]
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\CategoryImagesResponse**](#CategoryImagesResponse)
 
 ### Authorization
 
@@ -977,6 +1037,66 @@ Name | Type | Description  | Notes
  **category_id** | **float**| Category ID to fetch |
  **file** | **\SplFileObject**|  |
  **hash** | **string**|  |
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Image**](#Image)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: Not defined
+
+## **uploadCategoryImage**
+> \Kinow\Client\Model\Image uploadCategoryImage($category_id, $file, $hash, $image_type_name, $hash_algorithm)
+
+
+
+Upload Category image
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 3.4; // float | Category ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+
+try {
+    $result = $api_instance->uploadCategoryImage($category_id, $file, $hash, $image_type_name, $hash_algorithm);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->uploadCategoryImage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **float**| Category ID to fetch |
+ **file** | **\SplFileObject**|  |
+ **hash** | **string**|  |
+ **image_type_name** | **string**| Image types name to use to generate image assets |
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
