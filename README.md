@@ -159,6 +159,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CartsApi* | [**validatePayment**](docs/Api/CartsApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*CategoriesApi* | [**attachFeaturesToCategory**](docs/Api/CategoriesApi.md#attachfeaturestocategory) | **POST** /categories/{category_id}/features | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
 *CategoriesApi* | [**deleteCategory**](docs/Api/CategoriesApi.md#deletecategory) | **DELETE** /categories/{category_id} | 
 *CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
@@ -257,11 +258,13 @@ Class | Method | HTTP request | Description
 *ExtractsApi* | [**getExtracts**](docs/Api/ExtractsApi.md#getextracts) | **GET** /extracts | 
 *ExtractsApi* | [**getProductExtracts**](docs/Api/ExtractsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
 *ExtractsApi* | [**updateExtract**](docs/Api/ExtractsApi.md#updateextract) | **PUT** /extracts/{extract_id} | 
+*FeatureValuesApi* | [**attachFeaturesToCategory**](docs/Api/FeatureValuesApi.md#attachfeaturestocategory) | **POST** /categories/{category_id}/features | 
 *FeatureValuesApi* | [**attachFeaturesToExtract**](docs/Api/FeatureValuesApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *FeatureValuesApi* | [**attachFeaturesToProduct**](docs/Api/FeatureValuesApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
 *FeatureValuesApi* | [**attachFeaturesToVideo**](docs/Api/FeatureValuesApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *FeatureValuesApi* | [**detachFeatureToProduct**](docs/Api/FeatureValuesApi.md#detachfeaturetoproduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 *FeatureValuesApi* | [**getFeatureValues**](docs/Api/FeatureValuesApi.md#getfeaturevalues) | **GET** /feature-values | 
+*FeaturesApi* | [**attachFeaturesToCategory**](docs/Api/FeaturesApi.md#attachfeaturestocategory) | **POST** /categories/{category_id}/features | 
 *FeaturesApi* | [**attachFeaturesToExtract**](docs/Api/FeaturesApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *FeaturesApi* | [**attachFeaturesToProduct**](docs/Api/FeaturesApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
 *FeaturesApi* | [**attachFeaturesToVideo**](docs/Api/FeaturesApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 

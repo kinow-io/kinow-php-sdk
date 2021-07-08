@@ -686,7 +686,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getBestSales**
-> \Kinow\Client\Model\Products getBestSales($page, $per_page, $ip)
+> \Kinow\Client\Model\Products getBestSales($page, $per_page, $ip, $iso_code)
 
 
 
@@ -709,10 +709,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$ip = "ip_example"; // string | filter by Customer IP
+$ip = "ip_example"; // string | Filter by Customer IP
+$iso_code = "iso_code_example"; // string | Filter by ISO Code
 
 try {
-    $result = $api_instance->getBestSales($page, $per_page, $ip);
+    $result = $api_instance->getBestSales($page, $per_page, $ip, $iso_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getBestSales: ', $e->getMessage(), PHP_EOL;
@@ -726,7 +727,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **ip** | **string**| filter by Customer IP | [optional]
+ **ip** | **string**| Filter by Customer IP | [optional]
+ **iso_code** | **string**| Filter by ISO Code | [optional]
 
 ### Return type
 
@@ -915,7 +917,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getMostWatched**
-> \Kinow\Client\Model\Products getMostWatched($page, $per_page, $ip)
+> \Kinow\Client\Model\Products getMostWatched($page, $per_page, $ip, $iso_code)
 
 
 
@@ -939,9 +941,10 @@ $api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
 $ip = "ip_example"; // string | Filter by user IP
+$iso_code = "iso_code_example"; // string | Filter by ISO Code
 
 try {
-    $result = $api_instance->getMostWatched($page, $per_page, $ip);
+    $result = $api_instance->getMostWatched($page, $per_page, $ip, $iso_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getMostWatched: ', $e->getMessage(), PHP_EOL;
@@ -956,6 +959,7 @@ Name | Type | Description  | Notes
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
  **ip** | **string**| Filter by user IP | [optional]
+ **iso_code** | **string**| Filter by ISO Code | [optional]
 
 ### Return type
 
