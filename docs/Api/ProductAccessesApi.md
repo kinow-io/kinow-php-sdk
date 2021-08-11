@@ -313,9 +313,9 @@ $page = 789; // int |
 $per_page = 789; // int | 
 $type = "type_example"; // string | Filter by access type, available values are: video, sub
 $date_add = "date_add_example"; // string | Filter by creation date
-$date_add_direction = "date_add_direction_example"; // string | Choose the direction for date_add parameter, default value is after ,available values are: before, equal, after
+$date_add_direction = "date_add_direction_example"; // string | Choose the direction for date_add parameter, default value is after, available values are: before, equal, after
 $date_exp = "date_exp_example"; // string | Filter by expiration date
-$date_exp_direction = "date_exp_direction_example"; // string | Choose the direction for date_exp parameter, default value is after ,available values are: before, equal, after
+$date_exp_direction = "date_exp_direction_example"; // string | Choose the direction for date_exp parameter, default value is after, available values are: before, equal, after
 $filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
@@ -335,9 +335,9 @@ Name | Type | Description  | Notes
  **per_page** | **int**|  | [optional]
  **type** | **string**| Filter by access type, available values are: video, sub | [optional]
  **date_add** | **string**| Filter by creation date | [optional]
- **date_add_direction** | **string**| Choose the direction for date_add parameter, default value is after ,available values are: before, equal, after | [optional]
+ **date_add_direction** | **string**| Choose the direction for date_add parameter, default value is after, available values are: before, equal, after | [optional]
  **date_exp** | **string**| Filter by expiration date | [optional]
- **date_exp_direction** | **string**| Choose the direction for date_exp parameter, default value is after ,available values are: before, equal, after | [optional]
+ **date_exp_direction** | **string**| Choose the direction for date_exp parameter, default value is after, available values are: before, equal, after | [optional]
  **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type

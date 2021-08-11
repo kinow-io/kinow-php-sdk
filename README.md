@@ -434,6 +434,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**updateProductGroupRestrictionBehavior**](docs/Api/ProductsApi.md#updateproductgrouprestrictionbehavior) | **PUT** /products/{product_id}/groups/behavior | 
 *ProductsApi* | [**uploadProductCover**](docs/Api/ProductsApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
 *ProductsApi* | [**uploadProductImage**](docs/Api/ProductsApi.md#uploadproductimage) | **POST** /products/{product_id}/image | 
+*RecommendationsApi* | [**getCustomerRecommendations**](docs/Api/RecommendationsApi.md#getcustomerrecommendations) | **GET** /customers/{customer_id}/recommendations | 
 *StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
