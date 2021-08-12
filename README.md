@@ -65,13 +65,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ActorsApi();
-$product_id = 789; // int | Product ID to fetch
+$category_id = 789; // int | Category ID to fetch
 $actor_id = 789; // int | Actor ID to attach
 
 try {
-    $api_instance->attachProductToActor($product_id, $actor_id);
+    $api_instance->attachActorToCategory($category_id, $actor_id);
 } catch (Exception $e) {
-    echo 'Exception when calling ActorsApi->attachProductToActor: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActorsApi->attachActorToCategory: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -98,14 +98,17 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActorsApi* | [**attachProductToActor**](docs/Api/ActorsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
+*ActorsApi* | [**attachActorToCategory**](docs/Api/ActorsApi.md#attachactortocategory) | **POST** /categories/{category_id}/actors | 
+*ActorsApi* | [**attachActorToProduct**](docs/Api/ActorsApi.md#attachactortoproduct) | **POST** /products/{product_id}/actors | 
 *ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
 *ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
+*ActorsApi* | [**detachActorFromCategory**](docs/Api/ActorsApi.md#detachactorfromcategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
 *ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
 *ActorsApi* | [**getActorCoverImage**](docs/Api/ActorsApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ActorsApi* | [**getActorProducts**](docs/Api/ActorsApi.md#getactorproducts) | **GET** /actors/{actor_id}/products | 
 *ActorsApi* | [**getActorProductsRole**](docs/Api/ActorsApi.md#getactorproductsrole) | **GET** /actors/{actor_id}/products-role | 
 *ActorsApi* | [**getActors**](docs/Api/ActorsApi.md#getactors) | **GET** /actors | 
+*ActorsApi* | [**getCategoryActors**](docs/Api/ActorsApi.md#getcategoryactors) | **GET** /categories/{category_id}/actors | 
 *ActorsApi* | [**getProductActors**](docs/Api/ActorsApi.md#getproductactors) | **GET** /products/{product_id}/actors | 
 *ActorsApi* | [**getProductActorsRole**](docs/Api/ActorsApi.md#getproductactorsrole) | **GET** /products/{product_id}/actors-role | 
 *ActorsApi* | [**updateActor**](docs/Api/ActorsApi.md#updateactor) | **PUT** /actors/{actor_id} | 
@@ -159,14 +162,20 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**updateCart**](docs/Api/CartsApi.md#updatecart) | **PUT** /carts/{cart_id} | 
 *CartsApi* | [**validateFreeOrder**](docs/Api/CartsApi.md#validatefreeorder) | **POST** /carts/{cart_id}/validate-free-order | 
 *CartsApi* | [**validatePayment**](docs/Api/CartsApi.md#validatepayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
+*CategoriesApi* | [**attachActorToCategory**](docs/Api/CategoriesApi.md#attachactortocategory) | **POST** /categories/{category_id}/actors | 
+*CategoriesApi* | [**attachDirectorToCategory**](docs/Api/CategoriesApi.md#attachdirectortocategory) | **POST** /categories/{category_id}/directors | 
 *CategoriesApi* | [**attachFeaturesToCategory**](docs/Api/CategoriesApi.md#attachfeaturestocategory) | **POST** /categories/{category_id}/features | 
 *CategoriesApi* | [**createCategory**](docs/Api/CategoriesApi.md#createcategory) | **POST** /categories | 
 *CategoriesApi* | [**deleteCategory**](docs/Api/CategoriesApi.md#deletecategory) | **DELETE** /categories/{category_id} | 
+*CategoriesApi* | [**detachActorFromCategory**](docs/Api/CategoriesApi.md#detachactorfromcategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
+*CategoriesApi* | [**detachDirectorFromCategory**](docs/Api/CategoriesApi.md#detachdirectorfromcategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
 *CategoriesApi* | [**getAvailableCategory**](docs/Api/CategoriesApi.md#getavailablecategory) | **GET** /categories-accesses/{category_id} | 
 *CategoriesApi* | [**getCategories**](docs/Api/CategoriesApi.md#getcategories) | **GET** /categories | 
 *CategoriesApi* | [**getCategoriesFromCategory**](docs/Api/CategoriesApi.md#getcategoriesfromcategory) | **GET** /categories/{category_id}/categories | 
 *CategoriesApi* | [**getCategory**](docs/Api/CategoriesApi.md#getcategory) | **GET** /categories/{category_id} | 
+*CategoriesApi* | [**getCategoryActors**](docs/Api/CategoriesApi.md#getcategoryactors) | **GET** /categories/{category_id}/actors | 
 *CategoriesApi* | [**getCategoryBanner**](docs/Api/CategoriesApi.md#getcategorybanner) | **GET** /categories/{category_id}/banner | 
+*CategoriesApi* | [**getCategoryDirectors**](docs/Api/CategoriesApi.md#getcategorydirectors) | **GET** /categories/{category_id}/directors | 
 *CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
 *CategoriesApi* | [**getCategoryImages**](docs/Api/CategoriesApi.md#getcategoryimages) | **GET** /categories/{category_id}/images | 
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
@@ -233,9 +242,12 @@ Class | Method | HTTP request | Description
 *DevicesApi* | [**createDevices**](docs/Api/DevicesApi.md#createdevices) | **POST** /devices | 
 *DevicesApi* | [**deleteDevice**](docs/Api/DevicesApi.md#deletedevice) | **DELETE** /devices/{device_id} | 
 *DevicesApi* | [**getCustomerDevices**](docs/Api/DevicesApi.md#getcustomerdevices) | **GET** /devices/{customer_id} | 
-*DirectorsApi* | [**attachProductToDirector**](docs/Api/DirectorsApi.md#attachproducttodirector) | **POST** /products/{product_id}/directors | 
+*DirectorsApi* | [**attachDirectorToCategory**](docs/Api/DirectorsApi.md#attachdirectortocategory) | **POST** /categories/{category_id}/directors | 
+*DirectorsApi* | [**attachDirectorToProduct**](docs/Api/DirectorsApi.md#attachdirectortoproduct) | **POST** /products/{product_id}/directors | 
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
+*DirectorsApi* | [**detachDirectorFromCategory**](docs/Api/DirectorsApi.md#detachdirectorfromcategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
+*DirectorsApi* | [**getCategoryDirectors**](docs/Api/DirectorsApi.md#getcategorydirectors) | **GET** /categories/{category_id}/directors | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
 *DirectorsApi* | [**getDirectorCoverImage**](docs/Api/DirectorsApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
 *DirectorsApi* | [**getDirectorProducts**](docs/Api/DirectorsApi.md#getdirectorproducts) | **GET** /directors/{director_id}/products | 
@@ -389,10 +401,10 @@ Class | Method | HTTP request | Description
 *ProductAccessesApi* | [**unsubscribe**](docs/Api/ProductAccessesApi.md#unsubscribe) | **PUT** /product-accesses/{product_access_id}/unsubscribe | 
 *ProductAccessesApi* | [**updateProductAccess**](docs/Api/ProductAccessesApi.md#updateproductaccess) | **PUT** /product-accesses/{product_access_id} | 
 *ProductsApi* | [**associateProducts**](docs/Api/ProductsApi.md#associateproducts) | **POST** /products/{product_id}/products | 
+*ProductsApi* | [**attachActorToProduct**](docs/Api/ProductsApi.md#attachactortoproduct) | **POST** /products/{product_id}/actors | 
+*ProductsApi* | [**attachDirectorToProduct**](docs/Api/ProductsApi.md#attachdirectortoproduct) | **POST** /products/{product_id}/directors | 
 *ProductsApi* | [**attachFeaturesToProduct**](docs/Api/ProductsApi.md#attachfeaturestoproduct) | **POST** /products/{product_id}/features | 
-*ProductsApi* | [**attachProductToActor**](docs/Api/ProductsApi.md#attachproducttoactor) | **POST** /products/{product_id}/actors | 
 *ProductsApi* | [**attachProductToCategory**](docs/Api/ProductsApi.md#attachproducttocategory) | **POST** /products/{product_id}/categories | 
-*ProductsApi* | [**attachProductToDirector**](docs/Api/ProductsApi.md#attachproducttodirector) | **POST** /products/{product_id}/directors | 
 *ProductsApi* | [**attachProductToGroup**](docs/Api/ProductsApi.md#attachproducttogroup) | **POST** /products/{product_id}/groups | 
 *ProductsApi* | [**attachVideoToProduct**](docs/Api/ProductsApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
 *ProductsApi* | [**createProduct**](docs/Api/ProductsApi.md#createproduct) | **POST** /products | 
@@ -523,6 +535,7 @@ Class | Method | HTTP request | Description
  - [Carts](docs/Model/Carts.md)
  - [Categories](docs/Model/Categories.md)
  - [Category](docs/Model/Category.md)
+ - [CategoryDirectorsResponse](docs/Model/CategoryDirectorsResponse.md)
  - [CategoryImagesResponse](docs/Model/CategoryImagesResponse.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationList](docs/Model/ConfigurationList.md)
@@ -549,7 +562,6 @@ Class | Method | HTTP request | Description
  - [Director](docs/Model/Director.md)
  - [Director1](docs/Model/Director1.md)
  - [Director2](docs/Model/Director2.md)
- - [Directors](docs/Model/Directors.md)
  - [DownloadInformations](docs/Model/DownloadInformations.md)
  - [Employee](docs/Model/Employee.md)
  - [Employees](docs/Model/Employees.md)

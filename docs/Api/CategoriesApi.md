@@ -4,14 +4,20 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachActorToCategory**](#attachActorToCategory) | **POST** /categories/{category_id}/actors | 
+[**attachDirectorToCategory**](#attachDirectorToCategory) | **POST** /categories/{category_id}/directors | 
 [**attachFeaturesToCategory**](#attachFeaturesToCategory) | **POST** /categories/{category_id}/features | 
 [**createCategory**](#createCategory) | **POST** /categories | 
 [**deleteCategory**](#deleteCategory) | **DELETE** /categories/{category_id} | 
+[**detachActorFromCategory**](#detachActorFromCategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
+[**detachDirectorFromCategory**](#detachDirectorFromCategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
 [**getAvailableCategory**](#getAvailableCategory) | **GET** /categories-accesses/{category_id} | 
 [**getCategories**](#getCategories) | **GET** /categories | 
 [**getCategoriesFromCategory**](#getCategoriesFromCategory) | **GET** /categories/{category_id}/categories | 
 [**getCategory**](#getCategory) | **GET** /categories/{category_id} | 
+[**getCategoryActors**](#getCategoryActors) | **GET** /categories/{category_id}/actors | 
 [**getCategoryBanner**](#getCategoryBanner) | **GET** /categories/{category_id}/banner | 
+[**getCategoryDirectors**](#getCategoryDirectors) | **GET** /categories/{category_id}/directors | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
 [**getCategoryImages**](#getCategoryImages) | **GET** /categories/{category_id}/images | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
@@ -25,6 +31,112 @@ Method | HTTP request | Description
 [**uploadCategoryCover**](#uploadCategoryCover) | **POST** /categories/{category_id}/cover | 
 [**uploadCategoryImage**](#uploadCategoryImage) | **POST** /categories/{category_id}/image | 
 
+
+## **attachActorToCategory**
+> attachActorToCategory($category_id, $actor_id)
+
+
+
+Attach actor to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$actor_id = 789; // int | Actor ID to attach
+
+try {
+    $api_instance->attachActorToCategory($category_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->attachActorToCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **actor_id** | **int**| Actor ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **attachDirectorToCategory**
+> attachDirectorToCategory($category_id, $director_id)
+
+
+
+Attach director to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$director_id = 789; // int | Director ID to attach
+
+try {
+    $api_instance->attachDirectorToCategory($category_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->attachDirectorToCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **director_id** | **int**| Director ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **attachFeaturesToCategory**
 > attachFeaturesToCategory($category_id, $features)
@@ -168,6 +280,112 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| Category ID to fetch |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachActorFromCategory**
+> detachActorFromCategory($category_id, $actor_id)
+
+
+
+Detach actor from category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$actor_id = 789; // int | Actor ID to detach
+
+try {
+    $api_instance->detachActorFromCategory($category_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->detachActorFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachDirectorFromCategory**
+> detachDirectorFromCategory($category_id, $director_id)
+
+
+
+Detach director from category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$director_id = 789; // int | Director ID to detach
+
+try {
+    $api_instance->detachDirectorFromCategory($category_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->detachDirectorFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **director_id** | **int**| Director ID to detach |
 
 ### Return type
 
@@ -410,6 +628,62 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCategoryActors**
+> \Kinow\Client\Model\Actors getCategoryActors($category_id, $page, $per_page)
+
+
+
+Get actors attached to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryActors($category_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryActors: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Actors**](#Actors)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCategoryBanner**
 > \Kinow\Client\Model\Image getCategoryBanner($category_id)
 
@@ -452,6 +726,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Image**](#Image)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryDirectors**
+> \Kinow\Client\Model\CategoryDirectorsResponse getCategoryDirectors($category_id, $page, $per_page)
+
+
+
+Get directors attached to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryDirectors($category_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryDirectors: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 

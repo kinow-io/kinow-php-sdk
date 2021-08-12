@@ -4,26 +4,82 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
+[**attachActorToCategory**](#attachActorToCategory) | **POST** /categories/{category_id}/actors | 
+[**attachActorToProduct**](#attachActorToProduct) | **POST** /products/{product_id}/actors | 
 [**createActor**](#createActor) | **POST** /actors | 
 [**deleteActor**](#deleteActor) | **DELETE** /actors/{actor_id} | 
+[**detachActorFromCategory**](#detachActorFromCategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
 [**getActor**](#getActor) | **GET** /actors/{actor_id} | 
 [**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getActorProducts**](#getActorProducts) | **GET** /actors/{actor_id}/products | 
 [**getActorProductsRole**](#getActorProductsRole) | **GET** /actors/{actor_id}/products-role | 
 [**getActors**](#getActors) | **GET** /actors | 
+[**getCategoryActors**](#getCategoryActors) | **GET** /categories/{category_id}/actors | 
 [**getProductActors**](#getProductActors) | **GET** /products/{product_id}/actors | 
 [**getProductActorsRole**](#getProductActorsRole) | **GET** /products/{product_id}/actors-role | 
 [**updateActor**](#updateActor) | **PUT** /actors/{actor_id} | 
 [**uploadActorCover**](#uploadActorCover) | **POST** /actors/{actor_id}/cover | 
 
 
-## **attachProductToActor**
-> attachProductToActor($product_id, $actor_id)
+## **attachActorToCategory**
+> attachActorToCategory($category_id, $actor_id)
 
 
 
-Attach product to actor
+Attach actor to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ActorsApi();
+$category_id = 789; // int | Category ID to fetch
+$actor_id = 789; // int | Actor ID to attach
+
+try {
+    $api_instance->attachActorToCategory($category_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->attachActorToCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **actor_id** | **int**| Actor ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **attachActorToProduct**
+> attachActorToProduct($product_id, $actor_id)
+
+
+
+Attach actor to product
 
 ### Example
 ```php
@@ -44,9 +100,9 @@ $product_id = 789; // int | Product ID to fetch
 $actor_id = 789; // int | Actor ID to attach
 
 try {
-    $api_instance->attachProductToActor($product_id, $actor_id);
+    $api_instance->attachActorToProduct($product_id, $actor_id);
 } catch (Exception $e) {
-    echo 'Exception when calling ActorsApi->attachProductToActor: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActorsApi->attachActorToProduct: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -160,6 +216,59 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachActorFromCategory**
+> detachActorFromCategory($category_id, $actor_id)
+
+
+
+Detach actor from category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ActorsApi();
+$category_id = 789; // int | Category ID to fetch
+$actor_id = 789; // int | Actor ID to detach
+
+try {
+    $api_instance->detachActorFromCategory($category_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->detachActorFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
 
 ### Return type
 
@@ -438,6 +547,62 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Actors**](#Actors)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryActors**
+> \Kinow\Client\Model\Actors getCategoryActors($category_id, $page, $per_page)
+
+
+
+Get actors attached to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ActorsApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryActors($category_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->getCategoryActors: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
 

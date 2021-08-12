@@ -4,9 +4,12 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachProductToDirector**](#attachProductToDirector) | **POST** /products/{product_id}/directors | 
+[**attachDirectorToCategory**](#attachDirectorToCategory) | **POST** /categories/{category_id}/directors | 
+[**attachDirectorToProduct**](#attachDirectorToProduct) | **POST** /products/{product_id}/directors | 
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
+[**detachDirectorFromCategory**](#detachDirectorFromCategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
+[**getCategoryDirectors**](#getCategoryDirectors) | **GET** /categories/{category_id}/directors | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
 [**getDirectorProducts**](#getDirectorProducts) | **GET** /directors/{director_id}/products | 
@@ -18,12 +21,65 @@ Method | HTTP request | Description
 [**uploadDirectorCover**](#uploadDirectorCover) | **POST** /directors/{director_id}/cover | 
 
 
-## **attachProductToDirector**
-> attachProductToDirector($product_id, $director_id)
+## **attachDirectorToCategory**
+> attachDirectorToCategory($category_id, $director_id)
 
 
 
-Attach product to director
+Attach director to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\DirectorsApi();
+$category_id = 789; // int | Category ID to fetch
+$director_id = 789; // int | Director ID to attach
+
+try {
+    $api_instance->attachDirectorToCategory($category_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->attachDirectorToCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **director_id** | **int**| Director ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **attachDirectorToProduct**
+> attachDirectorToProduct($product_id, $director_id)
+
+
+
+Attach director to product
 
 ### Example
 ```php
@@ -44,9 +100,9 @@ $product_id = 789; // int | Product ID to fetch
 $director_id = 789; // int | Director ID to attach
 
 try {
-    $api_instance->attachProductToDirector($product_id, $director_id);
+    $api_instance->attachDirectorToProduct($product_id, $director_id);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectorsApi->attachProductToDirector: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectorsApi->attachDirectorToProduct: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -164,6 +220,115 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachDirectorFromCategory**
+> detachDirectorFromCategory($category_id, $director_id)
+
+
+
+Detach director from category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\DirectorsApi();
+$category_id = 789; // int | Category ID to fetch
+$director_id = 789; // int | Director ID to detach
+
+try {
+    $api_instance->detachDirectorFromCategory($category_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->detachDirectorFromCategory: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **director_id** | **int**| Director ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCategoryDirectors**
+> \Kinow\Client\Model\CategoryDirectorsResponse getCategoryDirectors($category_id, $page, $per_page)
+
+
+
+Get directors attached to category
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\DirectorsApi();
+$category_id = 789; // int | Category ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCategoryDirectors($category_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->getCategoryDirectors: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_id** | **int**| Category ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 
@@ -401,7 +566,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirectors**
-> \Kinow\Client\Model\Directors getDirectors($page, $per_page)
+> \Kinow\Client\Model\CategoryDirectorsResponse getDirectors($page, $per_page)
 
 
 
@@ -443,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 
@@ -455,7 +620,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kinow\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -501,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 
@@ -513,7 +678,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kinow\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -557,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 

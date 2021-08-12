@@ -5,10 +5,10 @@ All URIs are relative to *https://api.kinow.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**associateProducts**](#associateProducts) | **POST** /products/{product_id}/products | 
+[**attachActorToProduct**](#attachActorToProduct) | **POST** /products/{product_id}/actors | 
+[**attachDirectorToProduct**](#attachDirectorToProduct) | **POST** /products/{product_id}/directors | 
 [**attachFeaturesToProduct**](#attachFeaturesToProduct) | **POST** /products/{product_id}/features | 
-[**attachProductToActor**](#attachProductToActor) | **POST** /products/{product_id}/actors | 
 [**attachProductToCategory**](#attachProductToCategory) | **POST** /products/{product_id}/categories | 
-[**attachProductToDirector**](#attachProductToDirector) | **POST** /products/{product_id}/directors | 
 [**attachProductToGroup**](#attachProductToGroup) | **POST** /products/{product_id}/groups | 
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
 [**createProduct**](#createProduct) | **POST** /products | 
@@ -105,6 +105,112 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **attachActorToProduct**
+> attachActorToProduct($product_id, $actor_id)
+
+
+
+Attach actor to product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to attach
+
+try {
+    $api_instance->attachActorToProduct($product_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->attachActorToProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **attachDirectorToProduct**
+> attachDirectorToProduct($product_id, $director_id)
+
+
+
+Attach director to product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to attach
+
+try {
+    $api_instance->attachDirectorToProduct($product_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->attachDirectorToProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to attach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **attachFeaturesToProduct**
 > attachFeaturesToProduct($product_id, $features)
 
@@ -158,59 +264,6 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **attachProductToActor**
-> attachProductToActor($product_id, $actor_id)
-
-
-
-Attach product to actor
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
-$actor_id = 789; // int | Actor ID to attach
-
-try {
-    $api_instance->attachProductToActor($product_id, $actor_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductsApi->attachProductToActor: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **actor_id** | **int**| Actor ID to attach |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **attachProductToCategory**
 > attachProductToCategory($product_id, $category_id)
 
@@ -250,59 +303,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
  **category_id** | **int**| Category ID to attach |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **attachProductToDirector**
-> attachProductToDirector($product_id, $director_id)
-
-
-
-Attach product to director
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
-$director_id = 789; // int | Director ID to attach
-
-try {
-    $api_instance->attachProductToDirector($product_id, $director_id);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductsApi->attachProductToDirector: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **director_id** | **int**| Director ID to attach |
 
 ### Return type
 
@@ -1470,7 +1470,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kinow\Client\Model\Directors getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -1516,7 +1516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 
@@ -1528,7 +1528,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kinow\Client\Model\Directors getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -1572,7 +1572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Directors**](#Directors)
+[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
 
 ### Authorization
 
