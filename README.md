@@ -269,6 +269,7 @@ Class | Method | HTTP request | Description
 *ExtractsApi* | [**getExtractPlayer**](docs/Api/ExtractsApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
 *ExtractsApi* | [**getExtracts**](docs/Api/ExtractsApi.md#getextracts) | **GET** /extracts | 
 *ExtractsApi* | [**getProductExtracts**](docs/Api/ExtractsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
+*ExtractsApi* | [**hasAccessToExtracts**](docs/Api/ExtractsApi.md#hasaccesstoextracts) | **POST** /extracts/has-access | 
 *ExtractsApi* | [**updateExtract**](docs/Api/ExtractsApi.md#updateextract) | **PUT** /extracts/{extract_id} | 
 *FeatureValuesApi* | [**attachFeaturesToCategory**](docs/Api/FeatureValuesApi.md#attachfeaturestocategory) | **POST** /categories/{category_id}/features | 
 *FeatureValuesApi* | [**attachFeaturesToExtract**](docs/Api/FeatureValuesApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
@@ -566,6 +567,8 @@ Class | Method | HTTP request | Description
  - [Employee](docs/Model/Employee.md)
  - [Employees](docs/Model/Employees.md)
  - [Extract](docs/Model/Extract.md)
+ - [ExtractAccessInfo](docs/Model/ExtractAccessInfo.md)
+ - [ExtractIDList](docs/Model/ExtractIDList.md)
  - [Feature](docs/Model/Feature.md)
  - [FeatureValue](docs/Model/FeatureValue.md)
  - [Features](docs/Model/Features.md)

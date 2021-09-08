@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**getExtractPlayer**](#getExtractPlayer) | **GET** /extracts/{extract_id}/player | 
 [**getExtracts**](#getExtracts) | **GET** /extracts | 
 [**getProductExtracts**](#getProductExtracts) | **GET** /products/{product_id}/extracts | 
+[**hasAccessToExtracts**](#hasAccessToExtracts) | **POST** /extracts/has-access | 
 [**updateExtract**](#updateExtract) | **PUT** /extracts/{extract_id} | 
 
 
@@ -389,7 +390,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getExtractPlayer**
-> \Kinow\Client\Model\PlayerConfiguration getExtractPlayer($extract_id)
+> \Kinow\Client\Model\PlayerConfiguration getExtractPlayer($extract_id, $ip_address)
 
 
 
@@ -411,9 +412,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
+$ip_address = "ip_address_example"; // string | IP address
 
 try {
-    $result = $api_instance->getExtractPlayer($extract_id);
+    $result = $api_instance->getExtractPlayer($extract_id, $ip_address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExtractsApi->getExtractPlayer: ', $e->getMessage(), PHP_EOL;
@@ -426,6 +428,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **extract_id** | **int**| Extract ID to fetch |
+ **ip_address** | **string**| IP address | [optional]
 
 ### Return type
 
@@ -548,6 +551,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Videos1**](#Videos1)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **hasAccessToExtracts**
+> \Kinow\Client\Model\ExtractAccessInfo[] hasAccessToExtracts($body)
+
+
+
+Check access to Extracts
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ExtractsApi();
+$body = new \Kinow\Client\Model\ExtractIDList(); // \Kinow\Client\Model\ExtractIDList | List of Extract IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->hasAccessToExtracts($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ExtractsApi->hasAccessToExtracts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\ExtractIDList**](#\Kinow\Client\Model\ExtractIDList)| List of Extract IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\ExtractAccessInfo[]**](#ExtractAccessInfo)
 
 ### Authorization
 
