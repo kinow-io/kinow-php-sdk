@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**getFreeGiftToken**](#getFreeGiftToken) | **GET** /free-gifts/{free_gift_id}/token | 
 [**getFreeGifts**](#getFreeGifts) | **GET** /free-gifts | 
 [**sendFreeGift**](#sendFreeGift) | **POST** /free-gifts/{free_gift_id}/send | 
-[**updateFreeGift**](#updateFreeGift) | **PUT** /free-gifts/{free_gift_id} | 
 
 
 ## **consumeFreeGift**
@@ -369,60 +368,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **updateFreeGift**
-> \Kinow\Client\Model\FreeGift updateFreeGift($free_gift_id, $body)
-
-
-
-Update free Gift
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\FreeGiftsApi();
-$free_gift_id = 789; // int | Free Gift ID to fetch
-$body = new \Kinow\Client\Model\Gift1(); // \Kinow\Client\Model\Gift1 | Free Gift settings
-
-try {
-    $result = $api_instance->updateFreeGift($free_gift_id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling FreeGiftsApi->updateFreeGift: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **free_gift_id** | **int**| Free Gift ID to fetch |
- **body** | [**\Kinow\Client\Model\Gift1**](#\Kinow\Client\Model\Gift1)| Free Gift settings |
-
-### Return type
-
-[**\Kinow\Client\Model\FreeGift**](#FreeGift)
 
 ### Authorization
 

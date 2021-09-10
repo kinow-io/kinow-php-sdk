@@ -295,7 +295,6 @@ Class | Method | HTTP request | Description
 *FreeGiftsApi* | [**getFreeGiftToken**](docs/Api/FreeGiftsApi.md#getfreegifttoken) | **GET** /free-gifts/{free_gift_id}/token | 
 *FreeGiftsApi* | [**getFreeGifts**](docs/Api/FreeGiftsApi.md#getfreegifts) | **GET** /free-gifts | 
 *FreeGiftsApi* | [**sendFreeGift**](docs/Api/FreeGiftsApi.md#sendfreegift) | **POST** /free-gifts/{free_gift_id}/send | 
-*FreeGiftsApi* | [**updateFreeGift**](docs/Api/FreeGiftsApi.md#updatefreegift) | **PUT** /free-gifts/{free_gift_id} | 
 *GendersApi* | [**getGenders**](docs/Api/GendersApi.md#getgenders) | **GET** /genders | 
 *GeolocationsApi* | [**getGeolocSettings**](docs/Api/GeolocationsApi.md#getgeolocsettings) | **GET** /geolocations/settings | 
 *GeolocationsApi* | [**getIPLocation**](docs/Api/GeolocationsApi.md#getiplocation) | **GET** /geolocations/ip | 
@@ -582,7 +581,6 @@ Class | Method | HTTP request | Description
  - [Gift](docs/Model/Gift.md)
  - [Gift1](docs/Model/Gift1.md)
  - [Gift2](docs/Model/Gift2.md)
- - [Gift3](docs/Model/Gift3.md)
  - [GiftToken](docs/Model/GiftToken.md)
  - [Gifts](docs/Model/Gifts.md)
  - [Gifts1](docs/Model/Gifts1.md)

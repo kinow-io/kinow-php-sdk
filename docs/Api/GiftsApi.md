@@ -94,7 +94,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
-$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
+$body = new \Kinow\Client\Model\Gift1(); // \Kinow\Client\Model\Gift1 | Gift settings
 
 try {
     $result = $api_instance->createGift($body);
@@ -109,7 +109,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift1**](#\Kinow\Client\Model\Gift1)| Gift settings |
 
 ### Return type
 
@@ -566,7 +566,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
-$body = new \Kinow\Client\Model\Gift3(); // \Kinow\Client\Model\Gift3 | Gift settings
+$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
 
 try {
     $result = $api_instance->updateGift($gift_id, $body);
@@ -582,7 +582,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
- **body** | [**\Kinow\Client\Model\Gift3**](#\Kinow\Client\Model\Gift3)| Gift settings |
+ **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
 
 ### Return type
 
