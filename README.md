@@ -129,6 +129,9 @@ Class | Method | HTTP request | Description
 *BookmarksApi* | [**attachBookmarkToCustomer**](docs/Api/BookmarksApi.md#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
 *BookmarksApi* | [**detachBookmarkFromCustomer**](docs/Api/BookmarksApi.md#detachbookmarkfromcustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
 *BookmarksApi* | [**getCustomerBookmarks**](docs/Api/BookmarksApi.md#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
+*BundlesApi* | [**addProductToBundle**](docs/Api/BundlesApi.md#addproducttobundle) | **PUT** /bundles/{bundle_id} | 
+*BundlesApi* | [**getBundleProducts**](docs/Api/BundlesApi.md#getbundleproducts) | **GET** /bundles/{bundle_id}/products | 
+*BundlesApi* | [**removeProductFromBundle**](docs/Api/BundlesApi.md#removeproductfrombundle) | **DELETE** /bundles/{bundle_id}/{product_id} | 
 *CMSCategoriesApi* | [**createCMSCategory**](docs/Api/CMSCategoriesApi.md#createcmscategory) | **POST** /cms-categories | 
 *CMSCategoriesApi* | [**getCMSCategories**](docs/Api/CMSCategoriesApi.md#getcmscategories) | **GET** /cms-categories | 
 *CMSCategoriesApi* | [**updateCMSCategory**](docs/Api/CMSCategoriesApi.md#updatecmscategory) | **PUT** /cms-categories/{cms_category_id} | 
