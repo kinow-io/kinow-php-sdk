@@ -265,11 +265,12 @@ Class | Method | HTTP request | Description
 *ExtractsApi* | [**attachCoverToExtract**](docs/Api/ExtractsApi.md#attachcovertoextract) | **POST** /extracts/{extract_id}/cover | 
 *ExtractsApi* | [**attachFeaturesToExtract**](docs/Api/ExtractsApi.md#attachfeaturestoextract) | **POST** /extracts/{extract_id}/features | 
 *ExtractsApi* | [**createExtract**](docs/Api/ExtractsApi.md#createextract) | **POST** /extracts | 
-*ExtractsApi* | [**createSubtitle**](docs/Api/ExtractsApi.md#createsubtitle) | **POST** /extracts/{extract_id}/subtitle | 
+*ExtractsApi* | [**createExtractSubtitle**](docs/Api/ExtractsApi.md#createextractsubtitle) | **POST** /extracts/{extract_id}/subtitle | 
 *ExtractsApi* | [**deleteExtract**](docs/Api/ExtractsApi.md#deleteextract) | **DELETE** /extracts/{extract_id} | 
 *ExtractsApi* | [**getExtract**](docs/Api/ExtractsApi.md#getextract) | **GET** /extracts/{extract_id} | 
 *ExtractsApi* | [**getExtractFeatures**](docs/Api/ExtractsApi.md#getextractfeatures) | **GET** /extracts/{extract_id}/features | 
 *ExtractsApi* | [**getExtractPlayer**](docs/Api/ExtractsApi.md#getextractplayer) | **GET** /extracts/{extract_id}/player | 
+*ExtractsApi* | [**getExtractSubtitles**](docs/Api/ExtractsApi.md#getextractsubtitles) | **GET** /extracts/{extract_id}/subtitles | 
 *ExtractsApi* | [**getExtracts**](docs/Api/ExtractsApi.md#getextracts) | **GET** /extracts | 
 *ExtractsApi* | [**getProductExtracts**](docs/Api/ExtractsApi.md#getproductextracts) | **GET** /products/{product_id}/extracts | 
 *ExtractsApi* | [**hasAccessToExtracts**](docs/Api/ExtractsApi.md#hasaccesstoextracts) | **POST** /extracts/has-access | 
@@ -464,7 +465,12 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**getSubscriptionCoverImage**](docs/Api/SubscriptionsApi.md#getsubscriptioncoverimage) | **GET** /subscriptions/{subscription_id}/cover | 
 *SubscriptionsApi* | [**getSubscriptions**](docs/Api/SubscriptionsApi.md#getsubscriptions) | **GET** /subscriptions | 
 *SubscriptionsApi* | [**uploadSubscriptionCover**](docs/Api/SubscriptionsApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
+*SubtitlesApi* | [**createExtractSubtitle**](docs/Api/SubtitlesApi.md#createextractsubtitle) | **POST** /extracts/{extract_id}/subtitle | 
+*SubtitlesApi* | [**createVideoSubtitle**](docs/Api/SubtitlesApi.md#createvideosubtitle) | **POST** /videos/{video_id}/subtitle | 
+*SubtitlesApi* | [**getCategoryVideoSubtitles**](docs/Api/SubtitlesApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
+*SubtitlesApi* | [**getExtractSubtitles**](docs/Api/SubtitlesApi.md#getextractsubtitles) | **GET** /extracts/{extract_id}/subtitles | 
 *SubtitlesApi* | [**getSubtitles**](docs/Api/SubtitlesApi.md#getsubtitles) | **GET** /subtitles | 
+*SubtitlesApi* | [**getVideoSubtitles**](docs/Api/SubtitlesApi.md#getvideosubtitles) | **GET** /videos/{video_id}/subtitles | 
 *SupportApi* | [**createMessage**](docs/Api/SupportApi.md#createmessage) | **POST** /support | 
 *SupportApi* | [**getContacts**](docs/Api/SupportApi.md#getcontacts) | **GET** /support/contacts | 
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /tasks | 
@@ -475,8 +481,8 @@ Class | Method | HTTP request | Description
 *VideosApi* | [**attachCoverToVideo**](docs/Api/VideosApi.md#attachcovertovideo) | **POST** /videos/{video_id}/cover | 
 *VideosApi* | [**attachFeaturesToVideo**](docs/Api/VideosApi.md#attachfeaturestovideo) | **POST** /videos/{video_id}/features | 
 *VideosApi* | [**attachVideoToProduct**](docs/Api/VideosApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
-*VideosApi* | [**createSubtitle**](docs/Api/VideosApi.md#createsubtitle) | **POST** /videos/{video_id}/subtitle | 
 *VideosApi* | [**createVideo**](docs/Api/VideosApi.md#createvideo) | **POST** /videos | 
+*VideosApi* | [**createVideoSubtitle**](docs/Api/VideosApi.md#createvideosubtitle) | **POST** /videos/{video_id}/subtitle | 
 *VideosApi* | [**deleteVideo**](docs/Api/VideosApi.md#deletevideo) | **DELETE** /videos/{video_id} | 
 *VideosApi* | [**getCustomerHasAccessToVideo**](docs/Api/VideosApi.md#getcustomerhasaccesstovideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 *VideosApi* | [**getCustomerHasAccessToVideos**](docs/Api/VideosApi.md#getcustomerhasaccesstovideos) | **POST** /customers/{customer_id}/videos/has-access | 

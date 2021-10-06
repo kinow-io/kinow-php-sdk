@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**attachCoverToVideo**](#attachCoverToVideo) | **POST** /videos/{video_id}/cover | 
 [**attachFeaturesToVideo**](#attachFeaturesToVideo) | **POST** /videos/{video_id}/features | 
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
-[**createSubtitle**](#createSubtitle) | **POST** /videos/{video_id}/subtitle | 
 [**createVideo**](#createVideo) | **POST** /videos | 
+[**createVideoSubtitle**](#createVideoSubtitle) | **POST** /videos/{video_id}/subtitle | 
 [**deleteVideo**](#deleteVideo) | **DELETE** /videos/{video_id} | 
 [**getCustomerHasAccessToVideo**](#getCustomerHasAccessToVideo) | **GET** /customers/{customer_id}/videos/{video_id}/has-access | 
 [**getCustomerHasAccessToVideos**](#getCustomerHasAccessToVideos) | **POST** /customers/{customer_id}/videos/has-access | 
@@ -189,60 +189,6 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-## **createSubtitle**
-> \Kinow\Client\Model\Subtitle createSubtitle($video_id, $body)
-
-
-
-Create new Video Subtitle
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\VideosApi();
-$video_id = 789; // int | Video ID to attach the created Subtitle
-$body = new \Kinow\Client\Model\CreateVideoSubtitleRequest(); // \Kinow\Client\Model\CreateVideoSubtitleRequest | Subtitle settings
-
-try {
-    $result = $api_instance->createSubtitle($video_id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling VideosApi->createSubtitle: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Video ID to attach the created Subtitle |
- **body** | [**\Kinow\Client\Model\CreateVideoSubtitleRequest**](#\Kinow\Client\Model\CreateVideoSubtitleRequest)| Subtitle settings |
-
-### Return type
-
-[**\Kinow\Client\Model\Subtitle**](#Subtitle)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
 ## **createVideo**
 > \Kinow\Client\Model\Video createVideo($body)
 
@@ -285,6 +231,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\Video**](#Video)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createVideoSubtitle**
+> \Kinow\Client\Model\Subtitle createVideoSubtitle($video_id, $body)
+
+
+
+Create new Video Subtitle
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\VideosApi();
+$video_id = 789; // int | Video ID to attach the created Subtitle
+$body = new \Kinow\Client\Model\CreateVideoSubtitleRequest(); // \Kinow\Client\Model\CreateVideoSubtitleRequest | Subtitle settings
+
+try {
+    $result = $api_instance->createVideoSubtitle($video_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VideosApi->createVideoSubtitle: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to attach the created Subtitle |
+ **body** | [**\Kinow\Client\Model\CreateVideoSubtitleRequest**](#\Kinow\Client\Model\CreateVideoSubtitleRequest)| Subtitle settings |
+
+### Return type
+
+[**\Kinow\Client\Model\Subtitle**](#Subtitle)
 
 ### Authorization
 
