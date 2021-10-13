@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **total_discount_formatted** | **string** |  | [optional] 
 **total_trial_formatted** | **string** |  | [optional] 
 **total_formatted** | **string** |  | [optional] 
+**taxes** | [**\Kinow\Client\Model\TaxPrice[]**](#TaxPrice) |  | [optional] 
 
 

@@ -672,6 +672,7 @@ Class | Method | HTTP request | Description
  - [Tag](docs/Model/Tag.md)
  - [Task](docs/Model/Task.md)
  - [TaskCreateRequest](docs/Model/TaskCreateRequest.md)
+ - [TaxPrice](docs/Model/TaxPrice.md)
  - [TaxRule](docs/Model/TaxRule.md)
  - [TaxRules](docs/Model/TaxRules.md)
  - [Token](docs/Model/Token.md)

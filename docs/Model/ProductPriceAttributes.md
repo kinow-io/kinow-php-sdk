@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **price_formatted** | **string** |  | [optional] 
 **price_without_reduction_formatted** | **string** |  | [optional] 
 **reduction_formatted** | **string** |  | [optional] 
+**price_without_taxes** | **float** |  | [optional] 
+**price_without_taxes_formatted** | **string** |  | [optional] 
 
 
