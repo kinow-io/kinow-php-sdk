@@ -1239,7 +1239,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -1261,9 +1261,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
+$currency_id = 56; // int | Currency ID to format amount
 
 try {
-    $result = $api_instance->getCustomerPrepaymentBalances($customer_id);
+    $result = $api_instance->getCustomerPrepaymentBalances($customer_id, $currency_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getCustomerPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
@@ -1276,6 +1277,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
+ **currency_id** | **int**| Currency ID to format amount | [optional]
 
 ### Return type
 

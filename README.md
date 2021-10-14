@@ -387,9 +387,11 @@ Class | Method | HTTP request | Description
 *PrepaymentsApi* | [**getCustomerPrepaymentBalances**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentbalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 *PrepaymentsApi* | [**getCustomerPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getcustomerprepaymentoperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 *PrepaymentsApi* | [**getPrepaymentBonus**](docs/Api/PrepaymentsApi.md#getprepaymentbonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+*PrepaymentsApi* | [**getPrepaymentBonusAmount**](docs/Api/PrepaymentsApi.md#getprepaymentbonusamount) | **POST** /prepayment/bonus/amount | 
 *PrepaymentsApi* | [**getPrepaymentBonusList**](docs/Api/PrepaymentsApi.md#getprepaymentbonuslist) | **GET** /prepayment/bonus | 
 *PrepaymentsApi* | [**getPrepaymentOperation**](docs/Api/PrepaymentsApi.md#getprepaymentoperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
 *PrepaymentsApi* | [**getPrepaymentOperations**](docs/Api/PrepaymentsApi.md#getprepaymentoperations) | **GET** /prepayment/operations | 
+*PrepaymentsApi* | [**getPrepaymentOperationsAmount**](docs/Api/PrepaymentsApi.md#getprepaymentoperationsamount) | **POST** /prepayment/operations/amount | 
 *PrepaymentsApi* | [**getPrepaymentRecharge**](docs/Api/PrepaymentsApi.md#getprepaymentrecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
 *PrepaymentsApi* | [**getPrepaymentRecharges**](docs/Api/PrepaymentsApi.md#getprepaymentrecharges) | **GET** /prepayment/recharges | 
 *ProductAccessesApi* | [**createProductAccess**](docs/Api/ProductAccessesApi.md#createproductaccess) | **POST** /product-accesses | 
@@ -637,7 +639,11 @@ Class | Method | HTTP request | Description
  - [PrepaymentBalance](docs/Model/PrepaymentBalance.md)
  - [PrepaymentBonus](docs/Model/PrepaymentBonus.md)
  - [PrepaymentBonus1](docs/Model/PrepaymentBonus1.md)
+ - [PrepaymentBonusAmount](docs/Model/PrepaymentBonusAmount.md)
+ - [PrepaymentBonusIDList](docs/Model/PrepaymentBonusIDList.md)
  - [PrepaymentOperation](docs/Model/PrepaymentOperation.md)
+ - [PrepaymentOperationAmount](docs/Model/PrepaymentOperationAmount.md)
+ - [PrepaymentOperationIDList](docs/Model/PrepaymentOperationIDList.md)
  - [PrepaymentOperations](docs/Model/PrepaymentOperations.md)
  - [PrepaymentRecharge](docs/Model/PrepaymentRecharge.md)
  - [PrepaymentRecharges](docs/Model/PrepaymentRecharges.md)

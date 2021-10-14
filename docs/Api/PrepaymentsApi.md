@@ -7,15 +7,17 @@ Method | HTTP request | Description
 [**getCustomerPrepaymentBalances**](#getCustomerPrepaymentBalances) | **GET** /customers/{customer_id}/prepayment-balance | 
 [**getCustomerPrepaymentOperations**](#getCustomerPrepaymentOperations) | **GET** /customers/{customer_id}/prepayment-operations | 
 [**getPrepaymentBonus**](#getPrepaymentBonus) | **GET** /prepayment/bonus/{prepayment_bonus_id} | 
+[**getPrepaymentBonusAmount**](#getPrepaymentBonusAmount) | **POST** /prepayment/bonus/amount | 
 [**getPrepaymentBonusList**](#getPrepaymentBonusList) | **GET** /prepayment/bonus | 
 [**getPrepaymentOperation**](#getPrepaymentOperation) | **GET** /prepayment/operations/{prepayment_operation_id} | 
 [**getPrepaymentOperations**](#getPrepaymentOperations) | **GET** /prepayment/operations | 
+[**getPrepaymentOperationsAmount**](#getPrepaymentOperationsAmount) | **POST** /prepayment/operations/amount | 
 [**getPrepaymentRecharge**](#getPrepaymentRecharge) | **GET** /prepayment/recharges/{prepayment_recharge_id} | 
 [**getPrepaymentRecharges**](#getPrepaymentRecharges) | **GET** /prepayment/recharges | 
 
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -37,9 +39,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\PrepaymentsApi();
 $customer_id = 789; // int | Customer ID to fetch
+$currency_id = 56; // int | Currency ID to format amount
 
 try {
-    $result = $api_instance->getCustomerPrepaymentBalances($customer_id);
+    $result = $api_instance->getCustomerPrepaymentBalances($customer_id, $currency_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PrepaymentsApi->getCustomerPrepaymentBalances: ', $e->getMessage(), PHP_EOL;
@@ -52,6 +55,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
+ **currency_id** | **int**| Currency ID to format amount | [optional]
 
 ### Return type
 
@@ -166,6 +170,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPrepaymentBonusAmount**
+> \Kinow\Client\Model\PrepaymentBonusAmount[] getPrepaymentBonusAmount($body)
+
+
+
+Get prices for multiple PrepaymentBonus
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
+$body = new \Kinow\Client\Model\PrepaymentBonusIDList(); // \Kinow\Client\Model\PrepaymentBonusIDList | List of PrepaymentBonus IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getPrepaymentBonusAmount($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PrepaymentsApi->getPrepaymentBonusAmount: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\PrepaymentBonusIDList**](#\Kinow\Client\Model\PrepaymentBonusIDList)| List of PrepaymentBonus IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\PrepaymentBonusAmount[]**](#PrepaymentBonusAmount)
 
 ### Authorization
 
@@ -328,6 +384,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getPrepaymentOperationsAmount**
+> \Kinow\Client\Model\PrepaymentOperationAmount[] getPrepaymentOperationsAmount($body)
+
+
+
+Get prices for multiple PrepaymentOperations
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\PrepaymentsApi();
+$body = new \Kinow\Client\Model\PrepaymentOperationIDList(); // \Kinow\Client\Model\PrepaymentOperationIDList | List of PrepaymentOperation IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getPrepaymentOperationsAmount($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PrepaymentsApi->getPrepaymentOperationsAmount: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\PrepaymentOperationIDList**](#\Kinow\Client\Model\PrepaymentOperationIDList)| List of PrepaymentOperation IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\PrepaymentOperationAmount[]**](#PrepaymentOperationAmount)
 
 ### Authorization
 
