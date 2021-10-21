@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Get configuration by name.      Available :         - PLATFORM_NAME         - ACTIVE         - LANG_DEFAULT         - CURRENCY_DEFAULT         - COUNTRY_DEFAULT         - TIMEZONE         - COPYRIGHT         - COOKIE_WARNING         - RECAPTCHA_KEY         - CUSTOMER_REGISTRATION         - CATALOG_RESTRICTED         - CATALOG_SUBSCRIPTION         - PRODUCTS_ORDER_BY         - PRODUCTS_ORDER_WAY         - PRODUCTS_RAIL_NB         - PRODUCTS_NEW_DAYS         - FORCE_TAX_ID         - CMS_CONDITIONS_ID         - GEOLOCATION_WHITELIST
+Get configuration by name.      Available :         - PLATFORM_NAME         - ACTIVE         - LANG_DEFAULT         - CURRENCY_DEFAULT         - COUNTRY_DEFAULT         - TIMEZONE         - COPYRIGHT         - COOKIE_WARNING         - RECAPTCHA_KEY         - CUSTOMER_REGISTRATION         - CATALOG_RESTRICTED         - CATALOG_SUBSCRIPTION         - PRODUCTS_ORDER_BY         - PRODUCTS_ORDER_WAY         - PRODUCTS_RAIL_NB         - PRODUCTS_NEW_DAYS         - FORCE_TAX_ID         - CMS_CONDITIONS_ID         - GEOLOCATION_WHITELIST         - PASSWORD_MIN_LENGTH         - PASSWORD_MIN_CAPITALIZE         - PASSWORD_MIN_NUMERIC         - PASSWORD_MIN_SPECIAL
 
 ### Example
 ```php

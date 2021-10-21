@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
 *CartsApi* | [**detachCartRuleFromCart**](docs/Api/CartsApi.md#detachcartrulefromcart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 *CartsApi* | [**emptyCart**](docs/Api/CartsApi.md#emptycart) | **POST** /carts/{cart_id}/empty | 
 *CartsApi* | [**getCart**](docs/Api/CartsApi.md#getcart) | **GET** /carts/{cart_id} | 
+*CartsApi* | [**getCartPaymentModules**](docs/Api/CartsApi.md#getcartpaymentmodules) | **GET** /carts/{cart_id}/payments | 
 *CartsApi* | [**getCarts**](docs/Api/CartsApi.md#getcarts) | **GET** /carts | 
 *CartsApi* | [**getCustomerCarts**](docs/Api/CartsApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
 *CartsApi* | [**getLastCart**](docs/Api/CartsApi.md#getlastcart) | **GET** /customers/{customer_id}/last-cart | 
@@ -363,6 +364,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /orders | 
 *PagesApi* | [**getPage**](docs/Api/PagesApi.md#getpage) | **GET** /pages/{page_id} | 
 *PagesApi* | [**getPages**](docs/Api/PagesApi.md#getpages) | **GET** /pages | 
+*PaymentModulesApi* | [**getCartPaymentModules**](docs/Api/PaymentModulesApi.md#getcartpaymentmodules) | **GET** /carts/{cart_id}/payments | 
 *PaymentModulesApi* | [**getPaymentMethods**](docs/Api/PaymentModulesApi.md#getpaymentmethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 *PaymentModulesApi* | [**getPaymentMethodsWithIp**](docs/Api/PaymentModulesApi.md#getpaymentmethodswithip) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 *PaymentModulesApi* | [**getPaymentModules**](docs/Api/PaymentModulesApi.md#getpaymentmodules) | **GET** /payment-modules | 

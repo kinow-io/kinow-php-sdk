@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getCartPaymentModules**](#getCartPaymentModules) | **GET** /carts/{cart_id}/payments | 
 [**getPaymentMethods**](#getPaymentMethods) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods | 
 [**getPaymentMethodsWithIp**](#getPaymentMethodsWithIp) | **GET** /customers/{customer_id}/payments/{payment_name}/payment-methods/{ip_address} | 
 [**getPaymentModules**](#getPaymentModules) | **GET** /payment-modules | 
@@ -17,6 +18,62 @@ Method | HTTP request | Description
 [**validateFreeOrder**](#validateFreeOrder) | **POST** /carts/{cart_id}/validate-free-order | 
 [**validatePayment**](#validatePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 
+
+## **getCartPaymentModules**
+> \Kinow\Client\Model\PaymentModules getCartPaymentModules($cart_id, $page, $per_page)
+
+
+
+Get payment gateways list available for given cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\PaymentModulesApi();
+$cart_id = 789; // int | Cart ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getCartPaymentModules($cart_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PaymentModulesApi->getCartPaymentModules: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **getPaymentMethods**
 > \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
