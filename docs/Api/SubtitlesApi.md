@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 ## **createExtractSubtitle**
-> \Kinow\Client\Model\Subtitle createExtractSubtitle($extract_id, $body)
+> \Kinow\Client\Model\SubtitleResponse createExtractSubtitle($extract_id, $body)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\SubtitleResponse**](#SubtitleResponse)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **createVideoSubtitle**
-> \Kinow\Client\Model\Subtitle createVideoSubtitle($video_id, $body)
+> \Kinow\Client\Model\SubtitleResponse createVideoSubtitle($video_id, $body)
 
 
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\SubtitleResponse**](#SubtitleResponse)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryVideoSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\SubtitleListResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\SubtitleListResponse**](#SubtitleListResponse)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getExtractSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getExtractSubtitles($extract_id, $page, $per_page)
+> \Kinow\Client\Model\ExtractSubtitlesResponse getExtractSubtitles($extract_id, $page, $per_page)
 
 
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\ExtractSubtitlesResponse**](#ExtractSubtitlesResponse)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubtitles**
-> \Kinow\Client\Model\SubtitleFiles getSubtitles($page, $per_page)
+> \Kinow\Client\Model\SubtitleFileListResponse getSubtitles($page, $per_page)
 
 
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SubtitleFiles**](#SubtitleFiles)
+[**\Kinow\Client\Model\SubtitleFileListResponse**](#SubtitleFileListResponse)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\ExtractSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\ExtractSubtitlesResponse**](#ExtractSubtitlesResponse)
 
 ### Authorization
 

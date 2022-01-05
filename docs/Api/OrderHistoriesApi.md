@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getOrderHistories**
-> \Kinow\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
+> \Kinow\Client\Model\OrderHistoryListResponse getOrderHistories($order_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -32,9 +32,11 @@ $api_instance = new Kinow\Client\Api\OrderHistoriesApi();
 $order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
 try {
-    $result = $api_instance->getOrderHistories($order_id, $page, $per_page);
+    $result = $api_instance->getOrderHistories($order_id, $page, $per_page, $sort_by, $sort_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderHistoriesApi->getOrderHistories: ', $e->getMessage(), PHP_EOL;
@@ -49,10 +51,12 @@ Name | Type | Description  | Notes
  **order_id** | **int**| Order ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\OrderHistories**](#OrderHistories)
+[**\Kinow\Client\Model\OrderHistoryListResponse**](#OrderHistoryListResponse)
 
 ### Authorization
 

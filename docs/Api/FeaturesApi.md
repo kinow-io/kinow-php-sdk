@@ -283,7 +283,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCategoryFeatures**
-> \Kinow\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
+> \Kinow\Client\Model\FeatureListResponse getCategoryFeatures($category_id, $page, $per_page)
 
 
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getFeatureValues**
-> \Kinow\Client\Model\Products1 getFeatureValues($page, $per_page)
+> \Kinow\Client\Model\Products getFeatureValues($page, $per_page)
 
 
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products1**](#Products1)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getFeatures**
-> \Kinow\Client\Model\Features getFeatures($page, $per_page)
+> \Kinow\Client\Model\FeatureListResponse getFeatures($page, $per_page)
 
 
 
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductFeatures**
-> \Kinow\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
+> \Kinow\Client\Model\FeatureListResponse getProductFeatures($product_id, $page, $per_page)
 
 
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 

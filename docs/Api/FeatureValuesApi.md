@@ -278,7 +278,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getFeatureValues**
-> \Kinow\Client\Model\Products1 getFeatureValues($page, $per_page)
+> \Kinow\Client\Model\Products getFeatureValues($page, $per_page)
 
 
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products1**](#Products1)
+[**\Kinow\Client\Model\Products**](#Products)
 
 ### Authorization
 

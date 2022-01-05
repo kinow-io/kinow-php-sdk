@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **getVideoGroup**
-> \Kinow\Client\Model\VideoGroup getVideoGroup($video_group_id)
+> \Kinow\Client\Model\VideoGroupResponse getVideoGroup($video_group_id)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoGroup**](#VideoGroup)
+[**\Kinow\Client\Model\VideoGroupResponse**](#VideoGroupResponse)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoGroups**
-> \Kinow\Client\Model\VideoGroup1 getVideoGroups($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroupListResponse getVideoGroups($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -85,7 +85,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\VideoGroupsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains     _______________      {     \"email\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"firstname\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be strict, contains, gt or lt.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -104,13 +104,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains     _______________      {     \&quot;email\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;firstname\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be strict, contains, gt or lt. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroupListResponse**](#VideoGroupListResponse)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoGroupsFromProduct**
-> \Kinow\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroupListResponse getVideoGroupsFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $filters)
 
 
 
@@ -145,13 +145,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\VideoGroupsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
-    $result = $api_instance->getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction);
+    $result = $api_instance->getVideoGroupsFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VideoGroupsApi->getVideoGroupsFromProduct: ', $e->getMessage(), PHP_EOL;
@@ -165,14 +165,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroupListResponse**](#VideoGroupListResponse)
 
 ### Authorization
 

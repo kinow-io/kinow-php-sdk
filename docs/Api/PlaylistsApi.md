@@ -69,7 +69,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createPlaylist**
-> \Kinow\Client\Model\Playlist createPlaylist($customer_id, $name)
+> \Kinow\Client\Model\PlaylistResponse createPlaylist($customer_id, $name)
 
 
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlist**](#Playlist)
+[**\Kinow\Client\Model\PlaylistResponse**](#PlaylistResponse)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerPlaylists**
-> \Kinow\Client\Model\Playlists getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\PlaylistListResponse getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlists**](#Playlists)
+[**\Kinow\Client\Model\PlaylistListResponse**](#PlaylistListResponse)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPlaylist**
-> \Kinow\Client\Model\Playlist getPlaylist($playlist_id)
+> \Kinow\Client\Model\PlaylistResponse getPlaylist($playlist_id)
 
 
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlist**](#Playlist)
+[**\Kinow\Client\Model\PlaylistResponse**](#PlaylistResponse)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPlaylistBookmarks**
-> \Kinow\Client\Model\Products getPlaylistBookmarks($playlist_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\ProductListResponse getPlaylistBookmarks($playlist_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPlaylists**
-> \Kinow\Client\Model\Playlists getPlaylists($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\PlaylistListResponse getPlaylists($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlists**](#Playlists)
+[**\Kinow\Client\Model\PlaylistListResponse**](#PlaylistListResponse)
 
 ### Authorization
 
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **updatePlaylist**
-> \Kinow\Client\Model\Playlist updatePlaylist($playlist_id, $body)
+> \Kinow\Client\Model\PlaylistResponse updatePlaylist($playlist_id, $body)
 
 
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlist**](#Playlist)
+[**\Kinow\Client\Model\PlaylistResponse**](#PlaylistResponse)
 
 ### Authorization
 

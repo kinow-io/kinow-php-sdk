@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryVideoSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\SubtitleListResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\SubtitleListResponse**](#SubtitleListResponse)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromCategories**
-> \Kinow\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoCategoryListResponse getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\VideoCategoryListResponse**](#VideoCategoryListResponse)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromCategory**
-> \Kinow\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoCategoryListResponse getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\VideoCategoryListResponse**](#VideoCategoryListResponse)
 
 ### Authorization
 

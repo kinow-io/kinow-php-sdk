@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerRecommendations**
-> \Kinow\Client\Model\Products getCustomerRecommendations($customer_id, $page, $per_page, $sort_by, $sort_direction, $ip, $iso_code)
+> \Kinow\Client\Model\BlogPageProductsResponse getCustomerRecommendations($customer_id, $page, $per_page, $sort_by, $sort_direction, $ip, $iso_code)
 
 
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\BlogPageProductsResponse**](#BlogPageProductsResponse)
 
 ### Authorization
 

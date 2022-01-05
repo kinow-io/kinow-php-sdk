@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 ## **createProductAccess**
-> \Kinow\Client\Model\ProductAccess createProductAccess($body)
+> \Kinow\Client\Model\ProductAccessResponse createProductAccess($body)
 
 
 
@@ -40,7 +40,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductAccessesApi();
-$body = new \Kinow\Client\Model\ProductAccess(); // \Kinow\Client\Model\ProductAccess | 
+$body = new \Kinow\Client\Model\CreateProductAccessRequest(); // \Kinow\Client\Model\CreateProductAccessRequest | 
 
 try {
     $result = $api_instance->createProductAccess($body);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\ProductAccess**](#\Kinow\Client\Model\ProductAccess)|  |
+ **body** | [**\Kinow\Client\Model\CreateProductAccessRequest**](#\Kinow\Client\Model\CreateProductAccessRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccessResponse**](#ProductAccessResponse)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerAccessesSubscriptions**
-> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\ProductAccessListResponse getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
 
 
 
@@ -146,7 +146,7 @@ $api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters);
@@ -164,11 +164,11 @@ Name | Type | Description  | Notes
  **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\ProductAccessListResponse**](#ProductAccessListResponse)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerAccessesVideos**
-> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAccessListResponse getCustomerAccessesVideos($customer_id, $page, $per_page)
 
 
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\ProductAccessListResponse**](#ProductAccessListResponse)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductAccess**
-> \Kinow\Client\Model\ProductAccess getProductAccess($product_access_id)
+> \Kinow\Client\Model\ProductAccessResponse getProductAccess($product_access_id)
 
 
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccessResponse**](#ProductAccessResponse)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductAccesses**
-> \Kinow\Client\Model\SubscriptionAccesses getProductAccesses($page, $per_page, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction, $filters)
+> \Kinow\Client\Model\ProductAccessListResponse getProductAccesses($page, $per_page, $filters, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction)
 
 
 
@@ -311,15 +311,15 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $type = "type_example"; // string | Filter by access type, available values are: video, sub
 $date_add = "date_add_example"; // string | Filter by creation date
 $date_add_direction = "date_add_direction_example"; // string | Choose the direction for date_add parameter, default value is after, available values are: before, equal, after
 $date_exp = "date_exp_example"; // string | Filter by expiration date
 $date_exp_direction = "date_exp_direction_example"; // string | Choose the direction for date_exp parameter, default value is after, available values are: before, equal, after
-$filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
-    $result = $api_instance->getProductAccesses($page, $per_page, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction, $filters);
+    $result = $api_instance->getProductAccesses($page, $per_page, $filters, $type, $date_add, $date_add_direction, $date_exp, $date_exp_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductAccessesApi->getProductAccesses: ', $e->getMessage(), PHP_EOL;
@@ -333,16 +333,16 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **type** | **string**| Filter by access type, available values are: video, sub | [optional]
  **date_add** | **string**| Filter by creation date | [optional]
  **date_add_direction** | **string**| Choose the direction for date_add parameter, default value is after, available values are: before, equal, after | [optional]
  **date_exp** | **string**| Filter by expiration date | [optional]
  **date_exp_direction** | **string**| Choose the direction for date_exp parameter, default value is after, available values are: before, equal, after | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\ProductAccessListResponse**](#ProductAccessListResponse)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **switchSubscriptionPending**
-> \Kinow\Client\Model\Subscription switchSubscriptionPending($product_access_id)
+> \Kinow\Client\Model\SubscriptionResponse switchSubscriptionPending($product_access_id)
 
 
 
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\SubscriptionResponse**](#SubscriptionResponse)
 
 ### Authorization
 
@@ -614,7 +614,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **updateProductAccess**
-> \Kinow\Client\Model\ProductAccess updateProductAccess($product_access_id, $body)
+> \Kinow\Client\Model\ProductAccessResponse updateProductAccess($product_access_id, $body)
 
 
 
@@ -636,7 +636,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ProductAccessesApi();
 $product_access_id = 789; // int | Product access ID to update
-$body = new \Kinow\Client\Model\ProductAccess(); // \Kinow\Client\Model\ProductAccess | 
+$body = new \Kinow\Client\Model\UpdateProductAccessRequest(); // \Kinow\Client\Model\UpdateProductAccessRequest | 
 
 try {
     $result = $api_instance->updateProductAccess($product_access_id, $body);
@@ -652,11 +652,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_access_id** | **int**| Product access ID to update |
- **body** | [**\Kinow\Client\Model\ProductAccess**](#\Kinow\Client\Model\ProductAccess)|  |
+ **body** | [**\Kinow\Client\Model\UpdateProductAccessRequest**](#\Kinow\Client\Model\UpdateProductAccessRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAccess**](#ProductAccess)
+[**\Kinow\Client\Model\ProductAccessResponse**](#ProductAccessResponse)
 
 ### Authorization
 

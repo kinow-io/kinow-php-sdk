@@ -12,11 +12,11 @@ Method | HTTP request | Description
 
 
 ## **getConfiguration**
-> \Kinow\Client\Model\ConfigurationList getConfiguration($page, $per_page)
+> \Kinow\Client\Model\ConfigurationListResponse getConfiguration($page, $per_page)
 
 
 
-Get configuration by name.      Available :         - PLATFORM_NAME         - ACTIVE         - LANG_DEFAULT         - CURRENCY_DEFAULT         - COUNTRY_DEFAULT         - TIMEZONE         - COPYRIGHT         - COOKIE_WARNING         - RECAPTCHA_KEY         - CUSTOMER_REGISTRATION         - CATALOG_RESTRICTED         - CATALOG_SUBSCRIPTION         - PRODUCTS_ORDER_BY         - PRODUCTS_ORDER_WAY         - PRODUCTS_RAIL_NB         - PRODUCTS_NEW_DAYS         - FORCE_TAX_ID         - CMS_CONDITIONS_ID         - GEOLOCATION_WHITELIST         - PASSWORD_MIN_LENGTH         - PASSWORD_MIN_CAPITALIZE         - PASSWORD_MIN_NUMERIC         - PASSWORD_MIN_SPECIAL
+Get all configurations
 
 ### Example
 ```php
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ConfigurationList**](#ConfigurationList)
+[**\Kinow\Client\Model\ConfigurationListResponse**](#ConfigurationListResponse)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getConfigurationAnalytics**
-> \Kinow\Client\Model\Analytics getConfigurationAnalytics($page, $per_page)
+> \Kinow\Client\Model\AnalyticListResponse getConfigurationAnalytics($page, $per_page)
 
 
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Analytics**](#Analytics)
+[**\Kinow\Client\Model\AnalyticListResponse**](#AnalyticListResponse)
 
 ### Authorization
 
@@ -120,11 +120,11 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getConfigurationByName**
-> \Kinow\Client\Model\Configuration getConfigurationByName($configuration_name)
+> \Kinow\Client\Model\ConfigurationResponse getConfigurationByName($configuration_name)
 
 
 
-Get configuration by name.     Available :     - LANG_DEFAULT     - CURRENCY_DEFAULT     - COUNTRY_DEFAULT     - TIMEZONE
+Get configuration by name
 
 ### Example
 ```php
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Configuration**](#Configuration)
+[**\Kinow\Client\Model\ConfigurationResponse**](#ConfigurationResponse)
 
 ### Authorization
 

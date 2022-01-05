@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
+> \Kinow\Client\Model\PrepaymentBalanceListResponse getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+[**\Kinow\Client\Model\PrepaymentBalanceListResponse**](#PrepaymentBalanceListResponse)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentOperations**
-> \Kinow\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperationListResponse getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
 
 
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperationListResponse**](#PrepaymentOperationListResponse)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentBonus**
-> \Kinow\Client\Model\PrepaymentBonus getPrepaymentBonus($prepayment_bonus_id)
+> \Kinow\Client\Model\PrepaymentBonusResponse getPrepaymentBonus($prepayment_bonus_id)
 
 
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBonus**](#PrepaymentBonus)
+[**\Kinow\Client\Model\PrepaymentBonusResponse**](#PrepaymentBonusResponse)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentBonusList**
-> \Kinow\Client\Model\PrepaymentBonus1 getPrepaymentBonusList($page, $per_page)
+> \Kinow\Client\Model\PrepaymentBonusListResponse getPrepaymentBonusList($page, $per_page)
 
 
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBonus1**](#PrepaymentBonus1)
+[**\Kinow\Client\Model\PrepaymentBonusListResponse**](#PrepaymentBonusListResponse)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentOperation**
-> \Kinow\Client\Model\PrepaymentOperation getPrepaymentOperation($prepayment_operation_id)
+> \Kinow\Client\Model\PrepaymentOperationResponse getPrepaymentOperation($prepayment_operation_id)
 
 
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentOperation**](#PrepaymentOperation)
+[**\Kinow\Client\Model\PrepaymentOperationResponse**](#PrepaymentOperationResponse)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentOperations**
-> \Kinow\Client\Model\PrepaymentOperations getPrepaymentOperations($type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperationListResponse getPrepaymentOperations($type, $page, $per_page)
 
 
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperationListResponse**](#PrepaymentOperationListResponse)
 
 ### Authorization
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentRecharge**
-> \Kinow\Client\Model\PrepaymentRecharge getPrepaymentRecharge($prepayment_recharge_id)
+> \Kinow\Client\Model\PrepaymentRechargeResponse getPrepaymentRecharge($prepayment_recharge_id)
 
 
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentRecharge**](#PrepaymentRecharge)
+[**\Kinow\Client\Model\PrepaymentRechargeResponse**](#PrepaymentRechargeResponse)
 
 ### Authorization
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrepaymentRecharges**
-> \Kinow\Client\Model\PrepaymentRecharges getPrepaymentRecharges($page, $per_page)
+> \Kinow\Client\Model\PrepaymentRechargeListResponse getPrepaymentRecharges($page, $per_page)
 
 
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentRecharges**](#PrepaymentRecharges)
+[**\Kinow\Client\Model\PrepaymentRechargeListResponse**](#PrepaymentRechargeListResponse)
 
 ### Authorization
 

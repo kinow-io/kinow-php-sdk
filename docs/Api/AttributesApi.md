@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductAttributes**
-> \Kinow\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAttributeListResponse getProductAttributes($product_id, $page, $per_page)
 
 
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
+[**\Kinow\Client\Model\ProductAttributeListResponse**](#ProductAttributeListResponse)
 
 ### Authorization
 

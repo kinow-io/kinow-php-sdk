@@ -192,7 +192,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createCategory**
-> \Kinow\Client\Model\Category createCategory($body)
+> \Kinow\Client\Model\CategoryResponse createCategory($body)
 
 
 
@@ -213,7 +213,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\CategoriesApi();
-$body = new \Kinow\Client\Model\Category(); // \Kinow\Client\Model\Category | 
+$body = new \Kinow\Client\Model\CreateCategoryRequest(); // \Kinow\Client\Model\CreateCategoryRequest | 
 
 try {
     $result = $api_instance->createCategory($body);
@@ -228,11 +228,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Category**](#\Kinow\Client\Model\Category)|  |
+ **body** | [**\Kinow\Client\Model\CreateCategoryRequest**](#\Kinow\Client\Model\CreateCategoryRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\CategoryResponse**](#CategoryResponse)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getAvailableCategory**
-> \Kinow\Client\Model\Category getAvailableCategory($category_id, $customer_id)
+> \Kinow\Client\Model\CategoryResponse getAvailableCategory($category_id, $customer_id)
 
 
 
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\CategoryResponse**](#CategoryResponse)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategories**
-> \Kinow\Client\Model\Categories getCategories($page, $per_page, $features, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getCategories($page, $per_page, $features, $filters, $sort_by, $sort_direction)
 
 
 
@@ -478,8 +478,8 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CategoriesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  {     \"*\": {         \"value\": \"string\",         \"operator\": \"strict\"     },     \"1\": {         \"value\": \"string\",         \"operator\": \"contains\"     } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ``` name[value]=string&name[operator]=strict&description[value]=string&description[operator]=contains _______________  {     \"name\": {         \"value\": \"string\",         \"operator\": \"strict\"     },     \"description\": {         \"value\": \"string\",         \"operator\": \"contains\"     } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -498,14 +498,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  {     \&quot;*\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;contains\&quot;     } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;description[value]&#x3D;string&amp;description[operator]&#x3D;contains _______________  {     \&quot;name\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;description\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;contains\&quot;     } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoriesFromCategory**
-> \Kinow\Client\Model\Categories getCategoriesFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getCategoriesFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -565,7 +565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategory**
-> \Kinow\Client\Model\Category getCategory($category_id)
+> \Kinow\Client\Model\CategoryResponse getCategory($category_id)
 
 
 
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\CategoryResponse**](#CategoryResponse)
 
 ### Authorization
 
@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryActors**
-> \Kinow\Client\Model\Actors getCategoryActors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryActorsResponse getCategoryActors($category_id, $page, $per_page)
 
 
 
@@ -673,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\CategoryActorsResponse**](#CategoryActorsResponse)
 
 ### Authorization
 
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryBanner**
-> \Kinow\Client\Model\Image getCategoryBanner($category_id)
+> \Kinow\Client\Model\ImageResponse getCategoryBanner($category_id)
 
 
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryFeatures**
-> \Kinow\Client\Model\Features getCategoryFeatures($category_id, $page, $per_page)
+> \Kinow\Client\Model\FeatureListResponse getCategoryFeatures($category_id, $page, $per_page)
 
 
 
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryProducts**
-> \Kinow\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\ProductListResponse getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -934,8 +934,8 @@ $per_page = 789; // int |
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters);
@@ -956,12 +956,12 @@ Name | Type | Description  | Notes
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -1029,7 +1029,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryVideoSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\SubtitleListResponse getCategoryVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\SubtitleListResponse**](#SubtitleListResponse)
 
 ### Authorization
 
@@ -1085,7 +1085,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductCategories**
-> \Kinow\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -1109,7 +1109,7 @@ $api_instance = new Kinow\Client\Api\CategoriesApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -1129,13 +1129,13 @@ Name | Type | Description  | Notes
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubscriptionCategories**
-> \Kinow\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -1195,7 +1195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -1207,7 +1207,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromCategories**
-> \Kinow\Client\Model\Videos getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoCategoryListResponse getVideosFromCategories($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\VideoCategoryListResponse**](#VideoCategoryListResponse)
 
 ### Authorization
 
@@ -1265,7 +1265,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromCategory**
-> \Kinow\Client\Model\Videos getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoCategoryListResponse getVideosFromCategory($category_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -1313,7 +1313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos**](#Videos)
+[**\Kinow\Client\Model\VideoCategoryListResponse**](#VideoCategoryListResponse)
 
 ### Authorization
 
@@ -1325,7 +1325,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **updateCategory**
-> \Kinow\Client\Model\Category updateCategory($category_id, $body)
+> \Kinow\Client\Model\CategoryResponse updateCategory($category_id, $body)
 
 
 
@@ -1347,7 +1347,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CategoriesApi();
 $category_id = 789; // int | Category ID to update
-$body = new \Kinow\Client\Model\Category(); // \Kinow\Client\Model\Category | 
+$body = new \Kinow\Client\Model\UpdateCategoryRequest(); // \Kinow\Client\Model\UpdateCategoryRequest | Update category request
 
 try {
     $result = $api_instance->updateCategory($category_id, $body);
@@ -1363,11 +1363,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| Category ID to update |
- **body** | [**\Kinow\Client\Model\Category**](#\Kinow\Client\Model\Category)|  |
+ **body** | [**\Kinow\Client\Model\UpdateCategoryRequest**](#\Kinow\Client\Model\UpdateCategoryRequest)| Update category request |
 
 ### Return type
 
-[**\Kinow\Client\Model\Category**](#Category)
+[**\Kinow\Client\Model\CategoryResponse**](#CategoryResponse)
 
 ### Authorization
 
@@ -1379,7 +1379,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadCategoryCover**
-> \Kinow\Client\Model\Image uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadCategoryCover($body)
 
 
 
@@ -1400,13 +1400,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\CategoriesApi();
-$category_id = 3.4; // float | Category ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+$body = new \Kinow\Client\Model\UploadCategoryCoverRequest(); // \Kinow\Client\Model\UploadCategoryCoverRequest | 
 
 try {
-    $result = $api_instance->uploadCategoryCover($category_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadCategoryCover($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->uploadCategoryCover: ', $e->getMessage(), PHP_EOL;
@@ -1418,14 +1415,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category_id** | **float**| Category ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+ **body** | [**\Kinow\Client\Model\UploadCategoryCoverRequest**](#\Kinow\Client\Model\UploadCategoryCoverRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

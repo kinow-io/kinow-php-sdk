@@ -73,7 +73,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createGift**
-> \Kinow\Client\Model\Gift createGift($body)
+> \Kinow\Client\Model\GiftResponse createGift($body)
 
 
 
@@ -94,7 +94,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
-$body = new \Kinow\Client\Model\Gift1(); // \Kinow\Client\Model\Gift1 | Gift settings
+$body = new \Kinow\Client\Model\CreateGiftRequest(); // \Kinow\Client\Model\CreateGiftRequest | Gift settings
 
 try {
     $result = $api_instance->createGift($body);
@@ -109,11 +109,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Gift1**](#\Kinow\Client\Model\Gift1)| Gift settings |
+ **body** | [**\Kinow\Client\Model\CreateGiftRequest**](#\Kinow\Client\Model\CreateGiftRequest)| Gift settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\GiftResponse**](#GiftResponse)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getGift**
-> \Kinow\Client\Model\Gift getGift($gift_id)
+> \Kinow\Client\Model\GiftResponse getGift($gift_id)
 
 
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\GiftResponse**](#GiftResponse)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getGiftInCart**
-> \Kinow\Client\Model\Gift getGiftInCart($cart_id)
+> \Kinow\Client\Model\GiftResponse getGiftInCart($cart_id)
 
 
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\GiftResponse**](#GiftResponse)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getGiftToken**
-> \Kinow\Client\Model\GiftToken getGiftToken($gift_id)
+> \Kinow\Client\Model\GiftTokenResponse getGiftToken($gift_id)
 
 
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\GiftToken**](#GiftToken)
+[**\Kinow\Client\Model\GiftTokenResponse**](#GiftTokenResponse)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getGifts**
-> \Kinow\Client\Model\Gifts1 getGifts($unused_only, $paid_only, $page, $per_page)
+> \Kinow\Client\Model\GiftListResponse getGifts($unused_only, $paid_only, $page, $per_page)
 
 
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Gifts1**](#Gifts1)
+[**\Kinow\Client\Model\GiftListResponse**](#GiftListResponse)
 
 ### Authorization
 
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getGiftsInCart**
-> \Kinow\Client\Model\Gift[] getGiftsInCart($cart_id)
+> \Kinow\Client\Model\GiftListResponse getGiftsInCart($cart_id)
 
 
 
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Gift[]**](#Gift)
+[**\Kinow\Client\Model\GiftListResponse**](#GiftListResponse)
 
 ### Authorization
 
@@ -544,7 +544,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **updateGift**
-> \Kinow\Client\Model\Gift updateGift($gift_id, $body)
+> \Kinow\Client\Model\GiftResponse updateGift($gift_id, $body)
 
 
 
@@ -566,7 +566,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\GiftsApi();
 $gift_id = 789; // int | Gift ID to fetch
-$body = new \Kinow\Client\Model\Gift2(); // \Kinow\Client\Model\Gift2 | Gift settings
+$body = new \Kinow\Client\Model\UpdateGiftRequest(); // \Kinow\Client\Model\UpdateGiftRequest | Gift settings
 
 try {
     $result = $api_instance->updateGift($gift_id, $body);
@@ -582,11 +582,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gift_id** | **int**| Gift ID to fetch |
- **body** | [**\Kinow\Client\Model\Gift2**](#\Kinow\Client\Model\Gift2)| Gift settings |
+ **body** | [**\Kinow\Client\Model\UpdateGiftRequest**](#\Kinow\Client\Model\UpdateGiftRequest)| Gift settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Gift**](#Gift)
+[**\Kinow\Client\Model\GiftResponse**](#GiftResponse)
 
 ### Authorization
 

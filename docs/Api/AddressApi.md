@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerAddress**
-> \Kinow\Client\Model\Address getCustomerAddress($customer_id)
+> \Kinow\Client\Model\AddressResponse getCustomerAddress($customer_id)
 
 
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\AddressResponse**](#AddressResponse)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **updateAddress**
-> \Kinow\Client\Model\Address updateAddress($address_id, $body)
+> \Kinow\Client\Model\AddressResponse updateAddress($address_id, $body)
 
 
 
@@ -83,7 +83,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\AddressApi();
 $address_id = 789; // int | Address ID to update
-$body = new \Kinow\Client\Model\Address1(); // \Kinow\Client\Model\Address1 | Address settings
+$body = new \Kinow\Client\Model\UpdateAddressRequest(); // \Kinow\Client\Model\UpdateAddressRequest | Address settings
 
 try {
     $result = $api_instance->updateAddress($address_id, $body);
@@ -99,11 +99,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| Address ID to update |
- **body** | [**\Kinow\Client\Model\Address1**](#\Kinow\Client\Model\Address1)| Address settings |
+ **body** | [**\Kinow\Client\Model\UpdateAddressRequest**](#\Kinow\Client\Model\UpdateAddressRequest)| Address settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\AddressResponse**](#AddressResponse)
 
 ### Authorization
 

@@ -424,7 +424,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createProduct**
-> \Kinow\Client\Model\Product createProduct($body)
+> \Kinow\Client\Model\ProductResponse createProduct($body)
 
 
 
@@ -445,7 +445,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
-$body = new \Kinow\Client\Model\Product(); // \Kinow\Client\Model\Product | 
+$body = new \Kinow\Client\Model\CreateProductRequest(); // \Kinow\Client\Model\CreateProductRequest | Product parameters
 
 try {
     $result = $api_instance->createProduct($body);
@@ -460,11 +460,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Product**](#\Kinow\Client\Model\Product)|  |
+ **body** | [**\Kinow\Client\Model\CreateProductRequest**](#\Kinow\Client\Model\CreateProductRequest)| Product parameters |
 
 ### Return type
 
-[**\Kinow\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\ProductResponse**](#ProductResponse)
 
 ### Authorization
 
@@ -497,7 +497,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
+$product_id = 789; // int | ID of the product to delete
 
 try {
     $api_instance->deleteProduct($product_id);
@@ -511,7 +511,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
+ **product_id** | **int**| ID of the product to delete |
 
 ### Return type
 
@@ -686,7 +686,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getBestSales**
-> \Kinow\Client\Model\Products getBestSales($page, $per_page, $ip, $iso_code)
+> \Kinow\Client\Model\ProductListResponse getBestSales($page, $per_page, $ip, $iso_code)
 
 
 
@@ -709,7 +709,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$ip = "ip_example"; // string | Filter by Customer IP
+$ip = "ip_example"; // string | Filter by user IP
 $iso_code = "iso_code_example"; // string | Filter by ISO Code
 
 try {
@@ -727,12 +727,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **ip** | **string**| Filter by Customer IP | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
  **iso_code** | **string**| Filter by ISO Code | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryProducts**
-> \Kinow\Client\Model\Products getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\ProductListResponse getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -771,8 +771,8 @@ $per_page = 789; // int |
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters);
@@ -793,12 +793,12 @@ Name | Type | Description  | Notes
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -863,7 +863,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kinow\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
+> \Kinow\Client\Model\ProductAccessInfoResponse[] getCustomerHasAccessToProducts($customer_id, $body)
 
 
 
@@ -905,7 +905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+[**\Kinow\Client\Model\ProductAccessInfoResponse[]**](#ProductAccessInfoResponse)
 
 ### Authorization
 
@@ -917,7 +917,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getMostWatched**
-> \Kinow\Client\Model\Products getMostWatched($page, $per_page, $ip, $iso_code)
+> \Kinow\Client\Model\BlogPageProductsResponse getMostWatched($page, $per_page, $ip, $iso_code)
 
 
 
@@ -963,7 +963,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\BlogPageProductsResponse**](#BlogPageProductsResponse)
 
 ### Authorization
 
@@ -975,7 +975,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getNewProducts**
-> \Kinow\Client\Model\Products getNewProducts($page, $per_page, $ip)
+> \Kinow\Client\Model\ProductListResponse getNewProducts($page, $per_page, $ip)
 
 
 
@@ -1019,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -1031,7 +1031,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrice**
-> \Kinow\Client\Model\ProductPrice[] getPrice($body)
+> \Kinow\Client\Model\CartPriceResponse[] getPrice($body)
 
 
 
@@ -1071,7 +1071,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductPrice[]**](#ProductPrice)
+[**\Kinow\Client\Model\CartPriceResponse[]**](#CartPriceResponse)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProduct**
-> \Kinow\Client\Model\Product getProduct($product_id)
+> \Kinow\Client\Model\ProductResponse getProduct($product_id)
 
 
 
@@ -1123,7 +1123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\ProductResponse**](#ProductResponse)
 
 ### Authorization
 
@@ -1135,7 +1135,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductActors**
-> \Kinow\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\ActorListResponse getProductActors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\ActorListResponse**](#ActorListResponse)
 
 ### Authorization
 
@@ -1193,7 +1193,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductActorsRole**
-> \Kinow\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\ActorRoleListResponse getProductActorsRole($product_id, $page, $per_page)
 
 
 
@@ -1237,7 +1237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\ActorRoleListResponse**](#ActorRoleListResponse)
 
 ### Authorization
 
@@ -1249,7 +1249,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductAttributes**
-> \Kinow\Client\Model\ProductAttributesResponse getProductAttributes($product_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAttributeListResponse getProductAttributes($product_id, $page, $per_page)
 
 
 
@@ -1293,7 +1293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAttributesResponse**](#ProductAttributesResponse)
+[**\Kinow\Client\Model\ProductAttributeListResponse**](#ProductAttributeListResponse)
 
 ### Authorization
 
@@ -1356,7 +1356,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getProductCategories**
-> \Kinow\Client\Model\Categories getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getProductCategories($product_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -1380,7 +1380,7 @@ $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -1400,13 +1400,13 @@ Name | Type | Description  | Notes
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductCoverImage**
-> \Kinow\Client\Model\Image getProductCoverImage($product_id)
+> \Kinow\Client\Model\ImageResponse getProductCoverImage($product_id)
 
 
 
@@ -1458,7 +1458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -1470,7 +1470,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\DirectorListResponse getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -1516,7 +1516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\DirectorListResponse**](#DirectorListResponse)
 
 ### Authorization
 
@@ -1528,7 +1528,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\DirectorRoleListResponse getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -1572,7 +1572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\DirectorRoleListResponse**](#DirectorRoleListResponse)
 
 ### Authorization
 
@@ -1584,7 +1584,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $ip, $page, $per_page)
+> \Kinow\Client\Model\ExtractListResponse getProductExtracts($product_id, $page, $per_page, $ip)
 
 
 
@@ -1606,12 +1606,12 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
-$ip = "ip_example"; // string | Filter by user IP
 $page = 789; // int | 
 $per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
 
 try {
-    $result = $api_instance->getProductExtracts($product_id, $ip, $page, $per_page);
+    $result = $api_instance->getProductExtracts($product_id, $page, $per_page, $ip);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getProductExtracts: ', $e->getMessage(), PHP_EOL;
@@ -1624,13 +1624,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
- **ip** | **string**| Filter by user IP | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\ExtractListResponse**](#ExtractListResponse)
 
 ### Authorization
 
@@ -1642,7 +1642,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductFeatures**
-> \Kinow\Client\Model\Features getProductFeatures($product_id, $page, $per_page)
+> \Kinow\Client\Model\FeatureListResponse getProductFeatures($product_id, $page, $per_page)
 
 
 
@@ -1686,7 +1686,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Features**](#Features)
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 
@@ -1698,7 +1698,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductGeolocations**
-> \Kinow\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
+> \Kinow\Client\Model\GeolocationListResponse getProductGeolocations($product_id, $page, $per_page)
 
 
 
@@ -1742,7 +1742,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\GeolocationListResponse**](#GeolocationListResponse)
 
 ### Authorization
 
@@ -1811,7 +1811,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getProductGroups**
-> \Kinow\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
+> \Kinow\Client\Model\GroupListResponse getProductGroups($product_id, $page, $per_page)
 
 
 
@@ -1855,7 +1855,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\GroupListResponse**](#GroupListResponse)
 
 ### Authorization
 
@@ -1867,7 +1867,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductImages**
-> \Kinow\Client\Model\CategoryImagesResponse getProductImages($product_id, $type, $page, $per_page)
+> \Kinow\Client\Model\ImageListResponse getProductImages($product_id, $type, $page, $per_page)
 
 
 
@@ -1913,7 +1913,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryImagesResponse**](#CategoryImagesResponse)
+[**\Kinow\Client\Model\ImageListResponse**](#ImageListResponse)
 
 ### Authorization
 
@@ -1977,7 +1977,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductSubscription**
-> \Kinow\Client\Model\Subscription getProductSubscription($product_id)
+> \Kinow\Client\Model\SubscriptionResponse getProductSubscription($product_id)
 
 
 
@@ -2017,7 +2017,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\SubscriptionResponse**](#SubscriptionResponse)
 
 ### Authorization
 
@@ -2029,7 +2029,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProducts**
-> \Kinow\Client\Model\Products getProducts($page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip, $customer_id)
+> \Kinow\Client\Model\ProductListResponse getProducts($page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters, $customer_id)
 
 
 
@@ -2052,15 +2052,15 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     featureId[value]=string&featureId[operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $customer_id = "customer_id_example"; // string | Check if customer can see this product, if it's group is not restricted
 
 try {
-    $result = $api_instance->getProducts($page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip, $customer_id);
+    $result = $api_instance->getProducts($page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters, $customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getProducts: ', $e->getMessage(), PHP_EOL;
@@ -2074,16 +2074,16 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     featureId[value]&#x3D;string&amp;featureId[operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **customer_id** | **string**| Check if customer can see this product, if it&#39;s group is not restricted | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -2095,7 +2095,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductsFromProduct**
-> \Kinow\Client\Model\Products getProductsFromProduct($product_id, $page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip)
+> \Kinow\Client\Model\ProductListResponse getProductsFromProduct($product_id, $page, $per_page, $features, $filters, $sort_by, $sort_direction, $ip)
 
 
 
@@ -2119,8 +2119,8 @@ $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | 
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     featureId[value]=string&featureId[operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
@@ -2141,15 +2141,15 @@ Name | Type | Description  | Notes
  **product_id** | **int**|  |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     featureId[value]&#x3D;string&amp;featureId[operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -2161,7 +2161,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoGroupsFromProduct**
-> \Kinow\Client\Model\VideoGroup1 getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\VideoGroupListResponse getVideoGroupsFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $filters)
 
 
 
@@ -2184,13 +2184,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be strict, contains, gt or lt.
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
-    $result = $api_instance->getVideoGroupsFromProduct($product_id, $page, $filters, $per_page, $sort_by, $sort_direction);
+    $result = $api_instance->getVideoGroupsFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getVideoGroupsFromProduct: ', $e->getMessage(), PHP_EOL;
@@ -2204,14 +2204,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be strict, contains, gt or lt. | [optional]
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoGroup1**](#VideoGroup1)
+[**\Kinow\Client\Model\VideoGroupListResponse**](#VideoGroupListResponse)
 
 ### Authorization
 
@@ -2223,7 +2223,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction)
+> \Kinow\Client\Model\ProductVideoListResponse getVideosFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $ip, $filters)
 
 
 
@@ -2247,13 +2247,13 @@ $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
-$ip = "ip_example"; // string | Filter by user IP
-$sort_by = "sort_by_example"; // string | Sort by this attribute (default is ID)
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+$ip = "ip_example"; // string | Filter by user IP
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
-    $result = $api_instance->getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction);
+    $result = $api_instance->getVideosFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $ip, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getVideosFromProduct: ', $e->getMessage(), PHP_EOL;
@@ -2268,14 +2268,14 @@ Name | Type | Description  | Notes
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
- **ip** | **string**| Filter by user IP | [optional]
- **sort_by** | **string**| Sort by this attribute (default is ID) | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\ProductVideoListResponse**](#ProductVideoListResponse)
 
 ### Authorization
 
@@ -2287,7 +2287,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **searchProducts**
-> \Kinow\Client\Model\Products searchProducts($search_query, $page, $per_page, $sort_by, $sort_direction, $in_categories, $in_features, $feature_values)
+> \Kinow\Client\Model\ProductListResponse searchProducts($search_query, $page, $per_page, $sort_by, $sort_direction, $in_categories, $in_features, $feature_values)
 
 
 
@@ -2311,8 +2311,8 @@ $api_instance = new Kinow\Client\Api\ProductsApi();
 $search_query = "search_query_example"; // string | Keyword used to search the products
 $page = 789; // int | 
 $per_page = 789; // int | 
-$sort_by = "sort_by_example"; // string | default: position
-$sort_direction = "sort_direction_example"; // string | default: desc
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $in_categories = "in_categories_example"; // string | Search in given categories. Values are separated with comma (,)
 $in_features = "in_features_example"; // string | Search in given features. Values are separated with comma (,)
 $feature_values = "feature_values_example"; // string | Search by feature values. Values are separated with comma (,)
@@ -2333,15 +2333,15 @@ Name | Type | Description  | Notes
  **search_query** | **string**| Keyword used to search the products |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **sort_by** | **string**| default: position | [optional]
- **sort_direction** | **string**| default: desc | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **in_categories** | **string**| Search in given categories. Values are separated with comma (,) | [optional]
  **in_features** | **string**| Search in given features. Values are separated with comma (,) | [optional]
  **feature_values** | **string**| Search by feature values. Values are separated with comma (,) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -2416,7 +2416,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **updateProduct**
-> \Kinow\Client\Model\Product updateProduct($product_id, $body)
+> \Kinow\Client\Model\ProductResponse updateProduct($product_id, $body)
 
 
 
@@ -2437,8 +2437,8 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
-$product_id = 789; // int | Product ID to fetch
-$body = new \Kinow\Client\Model\Product(); // \Kinow\Client\Model\Product | 
+$product_id = 789; // int | ID of the product to update
+$body = new \Kinow\Client\Model\UpdateProductRequest(); // \Kinow\Client\Model\UpdateProductRequest | Update product request
 
 try {
     $result = $api_instance->updateProduct($product_id, $body);
@@ -2453,12 +2453,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **int**| Product ID to fetch |
- **body** | [**\Kinow\Client\Model\Product**](#\Kinow\Client\Model\Product)|  |
+ **product_id** | **int**| ID of the product to update |
+ **body** | [**\Kinow\Client\Model\UpdateProductRequest**](#\Kinow\Client\Model\UpdateProductRequest)| Update product request |
 
 ### Return type
 
-[**\Kinow\Client\Model\Product**](#Product)
+[**\Kinow\Client\Model\ProductResponse**](#ProductResponse)
 
 ### Authorization
 
@@ -2523,7 +2523,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadProductCover**
-> \Kinow\Client\Model\Image uploadProductCover($product_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadProductCover($body)
 
 
 
@@ -2544,13 +2544,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
-$product_id = 3.4; // float | Product ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+$body = new \Kinow\Client\Model\UploadProductCoverRequest(); // \Kinow\Client\Model\UploadProductCoverRequest | 
 
 try {
-    $result = $api_instance->uploadProductCover($product_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadProductCover($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->uploadProductCover: ', $e->getMessage(), PHP_EOL;
@@ -2562,14 +2559,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_id** | **float**| Product ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+ **body** | [**\Kinow\Client\Model\UploadProductCoverRequest**](#\Kinow\Client\Model\UploadProductCoverRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

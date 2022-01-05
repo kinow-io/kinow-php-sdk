@@ -128,7 +128,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createActor**
-> \Kinow\Client\Model\Actor createActor($body)
+> \Kinow\Client\Model\ActorResponse createActor($body)
 
 
 
@@ -149,7 +149,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ActorsApi();
-$body = new \Kinow\Client\Model\Actor1(); // \Kinow\Client\Model\Actor1 | Actor settings
+$body = new \Kinow\Client\Model\CreateActorRequest(); // \Kinow\Client\Model\CreateActorRequest | Create an actor
 
 try {
     $result = $api_instance->createActor($body);
@@ -164,11 +164,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Actor1**](#\Kinow\Client\Model\Actor1)| Actor settings |
+ **body** | [**\Kinow\Client\Model\CreateActorRequest**](#\Kinow\Client\Model\CreateActorRequest)| Create an actor |
 
 ### Return type
 
-[**\Kinow\Client\Model\Actor**](#Actor)
+[**\Kinow\Client\Model\ActorResponse**](#ActorResponse)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getActor**
-> \Kinow\Client\Model\Actor getActor($actor_id)
+> \Kinow\Client\Model\ActorResponse getActor($actor_id)
 
 
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actor**](#Actor)
+[**\Kinow\Client\Model\ActorResponse**](#ActorResponse)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getActorCoverImage**
-> \Kinow\Client\Model\Image getActorCoverImage($actor_id)
+> \Kinow\Client\Model\ImageResponse getActorCoverImage($actor_id)
 
 
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getActorProducts**
-> \Kinow\Client\Model\Products getActorProducts($actor_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\ActorProductListResponse getActorProducts($actor_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -415,8 +415,8 @@ $per_page = 789; // int |
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getActorProducts($actor_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters);
@@ -437,12 +437,12 @@ Name | Type | Description  | Notes
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ActorProductListResponse**](#ActorProductListResponse)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getActorProductsRole**
-> \Kinow\Client\Model\Products getActorProductsRole($actor_id, $page, $per_page)
+> \Kinow\Client\Model\ActorProductRoleListResponse getActorProductsRole($actor_id, $page, $per_page)
 
 
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ActorProductRoleListResponse**](#ActorProductRoleListResponse)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getActors**
-> \Kinow\Client\Model\Actors getActors($page, $per_page)
+> \Kinow\Client\Model\ActorListResponse getActors($page, $per_page)
 
 
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\ActorListResponse**](#ActorListResponse)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryActors**
-> \Kinow\Client\Model\Actors getCategoryActors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryActorsResponse getCategoryActors($category_id, $page, $per_page)
 
 
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\CategoryActorsResponse**](#CategoryActorsResponse)
 
 ### Authorization
 
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductActors**
-> \Kinow\Client\Model\Actors getProductActors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\ActorListResponse getProductActors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\ActorListResponse**](#ActorListResponse)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductActorsRole**
-> \Kinow\Client\Model\Actors getProductActorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\ActorRoleListResponse getProductActorsRole($product_id, $page, $per_page)
 
 
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Actors**](#Actors)
+[**\Kinow\Client\Model\ActorRoleListResponse**](#ActorRoleListResponse)
 
 ### Authorization
 
@@ -756,7 +756,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ActorsApi();
 $actor_id = 56; // int | 
-$body = new \Kinow\Client\Model\Actor2(); // \Kinow\Client\Model\Actor2 | Actor settings
+$body = new \Kinow\Client\Model\UpdateActorRequest(); // \Kinow\Client\Model\UpdateActorRequest | Actor settings
 
 try {
     $api_instance->updateActor($actor_id, $body);
@@ -771,7 +771,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **actor_id** | **int**|  |
- **body** | [**\Kinow\Client\Model\Actor2**](#\Kinow\Client\Model\Actor2)| Actor settings |
+ **body** | [**\Kinow\Client\Model\UpdateActorRequest**](#\Kinow\Client\Model\UpdateActorRequest)| Actor settings |
 
 ### Return type
 
@@ -787,7 +787,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadActorCover**
-> \Kinow\Client\Model\Image uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadActorCover($body)
 
 
 
@@ -808,13 +808,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ActorsApi();
-$actor_id = 3.4; // float | Actor ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+$body = new \Kinow\Client\Model\UploadActorCoverRequest(); // \Kinow\Client\Model\UploadActorCoverRequest | 
 
 try {
-    $result = $api_instance->uploadActorCover($actor_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadActorCover($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActorsApi->uploadActorCover: ', $e->getMessage(), PHP_EOL;
@@ -826,14 +823,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **actor_id** | **float**| Actor ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+ **body** | [**\Kinow\Client\Model\UploadActorCoverRequest**](#\Kinow\Client\Model\UploadActorCoverRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

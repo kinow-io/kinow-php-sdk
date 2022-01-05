@@ -116,7 +116,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerBookmarks**
-> \Kinow\Client\Model\Products getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\ProductListResponse getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 

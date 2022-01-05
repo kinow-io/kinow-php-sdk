@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **createTask**
-> \Kinow\Client\Model\Task createTask($body)
+> \Kinow\Client\Model\TaskResponse createTask($body)
 
 
 
@@ -29,7 +29,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\TasksApi();
-$body = new \Kinow\Client\Model\TaskCreateRequest(); // \Kinow\Client\Model\TaskCreateRequest | Create task object
+$body = new \Kinow\Client\Model\CreateTaskRequest(); // \Kinow\Client\Model\CreateTaskRequest | Create task object
 
 try {
     $result = $api_instance->createTask($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\TaskCreateRequest**](#\Kinow\Client\Model\TaskCreateRequest)| Create task object |
+ **body** | [**\Kinow\Client\Model\CreateTaskRequest**](#\Kinow\Client\Model\CreateTaskRequest)| Create task object |
 
 ### Return type
 
-[**\Kinow\Client\Model\Task**](#Task)
+[**\Kinow\Client\Model\TaskResponse**](#TaskResponse)
 
 ### Authorization
 

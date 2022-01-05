@@ -190,7 +190,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createVideo**
-> \Kinow\Client\Model\Video createVideo($body)
+> \Kinow\Client\Model\VideoResponse createVideo($body)
 
 
 
@@ -211,7 +211,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\VideosApi();
-$body = new \Kinow\Client\Model\Video(); // \Kinow\Client\Model\Video | 
+$body = new \Kinow\Client\Model\CreateVideoRequest(); // \Kinow\Client\Model\CreateVideoRequest | Video parameters
 
 try {
     $result = $api_instance->createVideo($body);
@@ -226,11 +226,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Video**](#\Kinow\Client\Model\Video)|  |
+ **body** | [**\Kinow\Client\Model\CreateVideoRequest**](#\Kinow\Client\Model\CreateVideoRequest)| Video parameters |
 
 ### Return type
 
-[**\Kinow\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\VideoResponse**](#VideoResponse)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **createVideoSubtitle**
-> \Kinow\Client\Model\Subtitle createVideoSubtitle($video_id, $body)
+> \Kinow\Client\Model\SubtitleResponse createVideoSubtitle($video_id, $body)
 
 
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\SubtitleResponse**](#SubtitleResponse)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfoResponse[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
+[**\Kinow\Client\Model\VideoAccessInfoResponse[]**](#VideoAccessInfoResponse)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDisabledSubscriptions**
-> \Kinow\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
+> \Kinow\Client\Model\SubscriptionListResponse getDisabledSubscriptions($video_id, $page, $per_page)
 
 
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\SubscriptionListResponse**](#SubscriptionListResponse)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideo**
-> \Kinow\Client\Model\Video getVideo($video_id)
+> \Kinow\Client\Model\VideoResponse getVideo($video_id)
 
 
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\VideoResponse**](#VideoResponse)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoCover**
-> \Kinow\Client\Model\Image getVideoCover($video_id)
+> \Kinow\Client\Model\ImageResponse getVideoCover($video_id)
 
 
 
@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -831,7 +831,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoGeolocation**
-> \Kinow\Client\Model\Geolocs getVideoGeolocation($video_id, $page, $per_page)
+> \Kinow\Client\Model\GeolocationListResponse getVideoGeolocation($video_id, $page, $per_page)
 
 
 
@@ -875,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\GeolocationListResponse**](#GeolocationListResponse)
 
 ### Authorization
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
+> \Kinow\Client\Model\ExtractSubtitlesResponse getVideoSubtitles($video_id, $page, $per_page)
 
 
 
@@ -1046,7 +1046,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\ExtractSubtitlesResponse**](#ExtractSubtitlesResponse)
 
 ### Authorization
 
@@ -1110,7 +1110,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideos**
-> \Kinow\Client\Model\Videos2 getVideos($page, $per_page, $features, $filters, $ip)
+> \Kinow\Client\Model\VideoListResponse getVideos($page, $per_page, $features, $filters, $ip)
 
 
 
@@ -1133,8 +1133,8 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\VideosApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $ip = "ip_example"; // string | Filter by user IP
 
 try {
@@ -1152,13 +1152,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\VideoListResponse**](#VideoListResponse)
 
 ### Authorization
 
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideosFromProduct**
-> \Kinow\Client\Model\Videos2 getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction)
+> \Kinow\Client\Model\ProductVideoListResponse getVideosFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $ip, $filters)
 
 
 
@@ -1194,13 +1194,13 @@ $api_instance = new Kinow\Client\Api\VideosApi();
 $product_id = 789; // int | Product ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
-$ip = "ip_example"; // string | Filter by user IP
-$sort_by = "sort_by_example"; // string | Sort by this attribute (default is ID)
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+$ip = "ip_example"; // string | Filter by user IP
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
-    $result = $api_instance->getVideosFromProduct($product_id, $page, $per_page, $filters, $ip, $sort_by, $sort_direction);
+    $result = $api_instance->getVideosFromProduct($product_id, $page, $per_page, $sort_by, $sort_direction, $ip, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VideosApi->getVideosFromProduct: ', $e->getMessage(), PHP_EOL;
@@ -1215,14 +1215,14 @@ Name | Type | Description  | Notes
  **product_id** | **int**| Product ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
- **ip** | **string**| Filter by user IP | [optional]
- **sort_by** | **string**| Sort by this attribute (default is ID) | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos2**](#Videos2)
+[**\Kinow\Client\Model\ProductVideoListResponse**](#ProductVideoListResponse)
 
 ### Authorization
 
@@ -1293,7 +1293,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **updateVideo**
-> \Kinow\Client\Model\Video updateVideo($video_id, $body)
+> \Kinow\Client\Model\VideoResponse updateVideo($video_id, $body)
 
 
 
@@ -1315,7 +1315,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\VideosApi();
 $video_id = 789; // int | Video ID to update
-$body = new \Kinow\Client\Model\Video(); // \Kinow\Client\Model\Video | 
+$body = new \Kinow\Client\Model\UpdateVideoRequest(); // \Kinow\Client\Model\UpdateVideoRequest | 
 
 try {
     $result = $api_instance->updateVideo($video_id, $body);
@@ -1331,11 +1331,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| Video ID to update |
- **body** | [**\Kinow\Client\Model\Video**](#\Kinow\Client\Model\Video)|  |
+ **body** | [**\Kinow\Client\Model\UpdateVideoRequest**](#\Kinow\Client\Model\UpdateVideoRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Video**](#Video)
+[**\Kinow\Client\Model\VideoResponse**](#VideoResponse)
 
 ### Authorization
 

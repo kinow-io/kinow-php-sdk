@@ -90,7 +90,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\CartRulesApi();
-$body = new \Kinow\Client\Model\CartRule(); // \Kinow\Client\Model\CartRule | 
+$body = new \Kinow\Client\Model\CreateCartRuleRequest(); // \Kinow\Client\Model\CreateCartRuleRequest | 
 
 try {
     $api_instance->createCartRule($body);
@@ -104,7 +104,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\CartRule**](#\Kinow\Client\Model\CartRule)|  |
+ **body** | [**\Kinow\Client\Model\CreateCartRuleRequest**](#\Kinow\Client\Model\CreateCartRuleRequest)|  |
 
 ### Return type
 
@@ -224,7 +224,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCartRule**
-> \Kinow\Client\Model\CartRule getCartRule($cart_rule_id)
+> \Kinow\Client\Model\CartRuleResponse getCartRule($cart_rule_id)
 
 
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CartRule**](#CartRule)
+[**\Kinow\Client\Model\CartRuleResponse**](#CartRuleResponse)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCartRules**
-> \Kinow\Client\Model\CartRules getCartRules($page, $per_page, $filters)
+> \Kinow\Client\Model\CartRuleListResponse getCartRules($page, $per_page, $filters)
 
 
 
@@ -299,7 +299,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CartRulesApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getCartRules($page, $per_page, $filters);
@@ -316,11 +316,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\CartRules**](#CartRules)
+[**\Kinow\Client\Model\CartRuleListResponse**](#CartRuleListResponse)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CartRulesApi();
 $cart_rule_id = 56; // int | 
-$body = new \Kinow\Client\Model\CartRule(); // \Kinow\Client\Model\CartRule | 
+$body = new \Kinow\Client\Model\UpdateCartRuleRequest(); // \Kinow\Client\Model\UpdateCartRuleRequest | 
 
 try {
     $api_instance->updateCartRule($cart_rule_id, $body);
@@ -369,7 +369,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_rule_id** | **int**|  |
- **body** | [**\Kinow\Client\Model\CartRule**](#\Kinow\Client\Model\CartRule)|  |
+ **body** | [**\Kinow\Client\Model\UpdateCartRuleRequest**](#\Kinow\Client\Model\UpdateCartRuleRequest)|  |
 
 ### Return type
 

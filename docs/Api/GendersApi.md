@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getGenders**
-> \Kinow\Client\Model\Genders getGenders($page, $per_page)
+> \Kinow\Client\Model\GenderListResponse getGenders($page, $per_page)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Genders**](#Genders)
+[**\Kinow\Client\Model\GenderListResponse**](#GenderListResponse)
 
 ### Authorization
 

@@ -65,7 +65,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getBundleProducts**
-> \Kinow\Client\Model\Products getBundleProducts($bundle_id, $page, $per_page)
+> \Kinow\Client\Model\BlogPageProductsResponse getBundleProducts($bundle_id, $page, $per_page)
 
 
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\BlogPageProductsResponse**](#BlogPageProductsResponse)
 
 ### Authorization
 

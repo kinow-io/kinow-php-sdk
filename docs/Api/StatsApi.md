@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerGroupTotalWatched**
-> \Kinow\Client\Model\CustomerGroupVideoStats1 getCustomerGroupTotalWatched($group_id, $date_from, $date_to, $page, $per_page)
+> \Kinow\Client\Model\CustomerGroupVideoStatsListResponse getCustomerGroupTotalWatched($group_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CustomerGroupVideoStats1**](#CustomerGroupVideoStats1)
+[**\Kinow\Client\Model\CustomerGroupVideoStatsListResponse**](#CustomerGroupVideoStatsListResponse)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerSessions**
-> \Kinow\Client\Model\SessionVideoStats getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page)
+> \Kinow\Client\Model\SessionVideoStatListResponse getCustomerSessions($customer_id, $group_id, $video_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SessionVideoStats**](#SessionVideoStats)
+[**\Kinow\Client\Model\SessionVideoStatListResponse**](#SessionVideoStatListResponse)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerSessionsMultiple**
-> \Kinow\Client\Model\SessionVideoStat[] getCustomerSessionsMultiple($customer_id, $body)
+> \Kinow\Client\Model\SessionVideoStatResponse[] getCustomerSessionsMultiple($customer_id, $body)
 
 
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SessionVideoStat[]**](#SessionVideoStat)
+[**\Kinow\Client\Model\SessionVideoStatResponse[]**](#SessionVideoStatResponse)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerVideoStats**
-> \Kinow\Client\Model\CustomerVideoStats1 getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page)
+> \Kinow\Client\Model\CustomerVideoStatsListResponse getCustomerVideoStats($customer_id, $date_from, $date_to, $page, $per_page)
 
 
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CustomerVideoStats1**](#CustomerVideoStats1)
+[**\Kinow\Client\Model\CustomerVideoStatsListResponse**](#CustomerVideoStatsListResponse)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getVideoStats**
-> \Kinow\Client\Model\VideoStats getVideoStats($video_id, $date_from, $date_to, $page)
+> \Kinow\Client\Model\VideoStatListResponse getVideoStats($video_id, $date_from, $date_to, $page)
 
 
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoStats**](#VideoStats)
+[**\Kinow\Client\Model\VideoStatListResponse**](#VideoStatListResponse)
 
 ### Authorization
 

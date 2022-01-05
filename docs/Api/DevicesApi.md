@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 ## **createDevices**
-> \Kinow\Client\Model\Device createDevices($body)
+> \Kinow\Client\Model\DeviceResponse createDevices($body)
 
 
 
@@ -31,7 +31,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\DevicesApi();
-$body = new \Kinow\Client\Model\ProductAttributeCreateRequest1(); // \Kinow\Client\Model\ProductAttributeCreateRequest1 | 
+$body = new \Kinow\Client\Model\CreateDeviceRequest(); // \Kinow\Client\Model\CreateDeviceRequest | 
 
 try {
     $result = $api_instance->createDevices($body);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\ProductAttributeCreateRequest1**](#\Kinow\Client\Model\ProductAttributeCreateRequest1)|  |
+ **body** | [**\Kinow\Client\Model\CreateDeviceRequest**](#\Kinow\Client\Model\CreateDeviceRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Device**](#Device)
+[**\Kinow\Client\Model\DeviceResponse**](#DeviceResponse)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerDevices**
-> \Kinow\Client\Model\DeviceList getCustomerDevices($customer_id, $page, $per_page)
+> \Kinow\Client\Model\DeviceListResponse getCustomerDevices($customer_id, $page, $per_page)
 
 
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\DeviceList**](#DeviceList)
+[**\Kinow\Client\Model\DeviceListResponse**](#DeviceListResponse)
 
 ### Authorization
 

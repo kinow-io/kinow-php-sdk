@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getCountries**
-> \Kinow\Client\Model\Countries getCountries($page, $per_page, $bypass_pagination)
+> \Kinow\Client\Model\CountryListResponse getCountries($page, $per_page, $bypass_pagination)
 
 
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Countries**](#Countries)
+[**\Kinow\Client\Model\CountryListResponse**](#CountryListResponse)
 
 ### Authorization
 

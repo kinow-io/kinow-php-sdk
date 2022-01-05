@@ -122,7 +122,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getDisabledSubscriptions**
-> \Kinow\Client\Model\Subscriptions getDisabledSubscriptions($video_id, $page, $per_page)
+> \Kinow\Client\Model\SubscriptionListResponse getDisabledSubscriptions($video_id, $page, $per_page)
 
 
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\SubscriptionListResponse**](#SubscriptionListResponse)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductSubscription**
-> \Kinow\Client\Model\Subscription getProductSubscription($product_id)
+> \Kinow\Client\Model\SubscriptionResponse getProductSubscription($product_id)
 
 
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\SubscriptionResponse**](#SubscriptionResponse)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubscription**
-> \Kinow\Client\Model\Subscription getSubscription($subscription_id)
+> \Kinow\Client\Model\SubscriptionResponse getSubscription($subscription_id)
 
 
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscription**](#Subscription)
+[**\Kinow\Client\Model\SubscriptionResponse**](#SubscriptionResponse)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubscriptionCategories**
-> \Kinow\Client\Model\Categories getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CategoryListResponse getSubscriptionCategories($subscription_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Categories**](#Categories)
+[**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubscriptionCoverImage**
-> \Kinow\Client\Model\Image getSubscriptionCoverImage($subscription_id)
+> \Kinow\Client\Model\ImageResponse getSubscriptionCoverImage($subscription_id)
 
 
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubscriptions**
-> \Kinow\Client\Model\Subscriptions getSubscriptions($page, $per_page)
+> \Kinow\Client\Model\SubscriptionListResponse getSubscriptions($page, $per_page)
 
 
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subscriptions**](#Subscriptions)
+[**\Kinow\Client\Model\SubscriptionListResponse**](#SubscriptionListResponse)
 
 ### Authorization
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadSubscriptionCover**
-> \Kinow\Client\Model\Image uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadSubscriptionCover($body)
 
 
 
@@ -469,13 +469,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\SubscriptionsApi();
-$subscription_id = 3.4; // float | Subscription ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+$body = new \Kinow\Client\Model\UploadSubscriptionCoverRequest(); // \Kinow\Client\Model\UploadSubscriptionCoverRequest | 
 
 try {
-    $result = $api_instance->uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadSubscriptionCover($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->uploadSubscriptionCover: ', $e->getMessage(), PHP_EOL;
@@ -487,14 +484,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | **float**| Subscription ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+ **body** | [**\Kinow\Client\Model\UploadSubscriptionCoverRequest**](#\Kinow\Client\Model\UploadSubscriptionCoverRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

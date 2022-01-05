@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getLanguages**
-> \Kinow\Client\Model\Languages getLanguages($page, $per_page)
+> \Kinow\Client\Model\LanguageListResponse getLanguages($page, $per_page)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Languages**](#Languages)
+[**\Kinow\Client\Model\LanguageListResponse**](#LanguageListResponse)
 
 ### Authorization
 

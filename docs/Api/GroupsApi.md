@@ -66,7 +66,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createGroup**
-> \Kinow\Client\Model\Group createGroup($body)
+> \Kinow\Client\Model\GroupResponse createGroup($body)
 
 
 
@@ -87,7 +87,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\GroupsApi();
-$body = new \Kinow\Client\Model\GroupCreateRequest(); // \Kinow\Client\Model\GroupCreateRequest | Group settings
+$body = new \Kinow\Client\Model\CreateGroupRequest(); // \Kinow\Client\Model\CreateGroupRequest | Group settings
 
 try {
     $result = $api_instance->createGroup($body);
@@ -102,11 +102,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\GroupCreateRequest**](#\Kinow\Client\Model\GroupCreateRequest)| Group settings |
+ **body** | [**\Kinow\Client\Model\CreateGroupRequest**](#\Kinow\Client\Model\CreateGroupRequest)| Group settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Group**](#Group)
+[**\Kinow\Client\Model\GroupResponse**](#GroupResponse)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getGroup**
-> \Kinow\Client\Model\Group getGroup($group_id)
+> \Kinow\Client\Model\GroupResponse getGroup($group_id)
 
 
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Group**](#Group)
+[**\Kinow\Client\Model\GroupResponse**](#GroupResponse)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getGroups**
-> \Kinow\Client\Model\Groups getGroups($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\GroupListResponse getGroups($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -246,7 +246,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\GroupsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains     _______________      {     \"email\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"firstname\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -265,13 +265,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains     _______________      {     \&quot;email\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;firstname\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\GroupListResponse**](#GroupListResponse)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductGroups**
-> \Kinow\Client\Model\Groups getProductGroups($product_id, $page, $per_page)
+> \Kinow\Client\Model\GroupListResponse getProductGroups($product_id, $page, $per_page)
 
 
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\GroupListResponse**](#GroupListResponse)
 
 ### Authorization
 

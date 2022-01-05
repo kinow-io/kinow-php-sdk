@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachBookmarkToCustomer**](#attachBookmarkToCustomer) | **POST** /customers/{customer_id}/bookmarks | 
 [**attachCartToCustomer**](#attachCartToCustomer) | **POST** /customers/{customer_id}/carts | 
 [**checkAuthenticationToken**](#checkAuthenticationToken) | **POST** /customers/check-authentication-token | 
 [**checkCustomerCredentials**](#checkCustomerCredentials) | **POST** /customers/check-credentials | 
@@ -11,11 +12,13 @@ Method | HTTP request | Description
 [**createFacebookId**](#createFacebookId) | **POST** /customers/facebook | 
 [**createGoogleId**](#createGoogleId) | **POST** /customers/google | 
 [**deleteCustomer**](#deleteCustomer) | **DELETE** /customers/{customer_id} | 
+[**detachBookmarkFromCustomer**](#detachBookmarkFromCustomer) | **DELETE** /customers/{customer_id}/bookmarks/{product_id} | 
 [**generateAuthenticationToken**](#generateAuthenticationToken) | **GET** /customers/{customer_id}/authentication-token | 
 [**getCustomer**](#getCustomer) | **GET** /customers/{customer_id} | 
 [**getCustomerAccessesSubscriptions**](#getCustomerAccessesSubscriptions) | **GET** /customers/{customer_id}/accesses/subscriptions | 
 [**getCustomerAccessesVideos**](#getCustomerAccessesVideos) | **GET** /customers/{customer_id}/accesses/videos | 
 [**getCustomerAddress**](#getCustomerAddress) | **GET** /customers/{customer_id}/address | 
+[**getCustomerBookmarks**](#getCustomerBookmarks) | **GET** /customers/{customer_id}/bookmarks | 
 [**getCustomerCanSeeProduct**](#getCustomerCanSeeProduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
 [**getCustomerCarts**](#getCustomerCarts) | **GET** /customers/{customer_id}/carts | 
 [**getCustomerCurrentViews**](#getCustomerCurrentViews) | **GET** /customers/{customer_id}/current-views | 
@@ -46,8 +49,61 @@ Method | HTTP request | Description
 [**validateCustomerCredentials**](#validateCustomerCredentials) | **POST** /customers/validate-credentials | 
 
 
+## **attachBookmarkToCustomer**
+> attachBookmarkToCustomer($customer_id, $product_id)
+
+
+
+Attach bookmark to customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | 
+
+try {
+    $api_instance->attachBookmarkToCustomer($customer_id, $product_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->attachBookmarkToCustomer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **attachCartToCustomer**
-> \Kinow\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
+> \Kinow\Client\Model\CartResponse attachCartToCustomer($customer_id, $cart_id)
 
 
 
@@ -89,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -101,7 +157,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **checkAuthenticationToken**
-> \Kinow\Client\Model\Customer checkAuthenticationToken($token)
+> \Kinow\Client\Model\CustomerResponse checkAuthenticationToken($token)
 
 
 
@@ -141,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\CustomerResponse**](#CustomerResponse)
 
 ### Authorization
 
@@ -153,7 +209,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **checkCustomerCredentials**
-> \Kinow\Client\Model\Customer checkCustomerCredentials($email, $password)
+> \Kinow\Client\Model\CustomerResponse checkCustomerCredentials($email, $password)
 
 
 
@@ -195,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\CustomerResponse**](#CustomerResponse)
 
 ### Authorization
 
@@ -207,7 +263,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **createCustomer**
-> \Kinow\Client\Model\Customer createCustomer($body)
+> \Kinow\Client\Model\CustomerResponse createCustomer($body)
 
 
 
@@ -228,7 +284,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
-$body = new \Kinow\Client\Model\CustomerCreateRequest(); // \Kinow\Client\Model\CustomerCreateRequest | Customer settings
+$body = new \Kinow\Client\Model\CreateCustomerRequest(); // \Kinow\Client\Model\CreateCustomerRequest | Customer settings
 
 try {
     $result = $api_instance->createCustomer($body);
@@ -243,11 +299,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\CustomerCreateRequest**](#\Kinow\Client\Model\CustomerCreateRequest)| Customer settings |
+ **body** | [**\Kinow\Client\Model\CreateCustomerRequest**](#\Kinow\Client\Model\CreateCustomerRequest)| Customer settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\CustomerResponse**](#CustomerResponse)
 
 ### Authorization
 
@@ -415,6 +471,59 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **detachBookmarkFromCustomer**
+> detachBookmarkFromCustomer($customer_id, $product_id)
+
+
+
+Detach bookmark from customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | Customer ID to fetch
+$product_id = 789; // int | 
+
+try {
+    $api_instance->detachBookmarkFromCustomer($customer_id, $product_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->detachBookmarkFromCustomer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **product_id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **generateAuthenticationToken**
 > string generateAuthenticationToken($customer_id)
 
@@ -468,7 +577,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomer**
-> \Kinow\Client\Model\Customer getCustomer($customer_id)
+> \Kinow\Client\Model\CustomerResponse getCustomer($customer_id)
 
 
 
@@ -508,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\CustomerResponse**](#CustomerResponse)
 
 ### Authorization
 
@@ -520,7 +629,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerAccessesSubscriptions**
-> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
+> \Kinow\Client\Model\ProductAccessListResponse getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters)
 
 
 
@@ -544,7 +653,7 @@ $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     type[value]=string&type[operator]=strict&cancel[value]=string&cancel[operator]=contains     _______________      {     \"type\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"cancel\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getCustomerAccessesSubscriptions($customer_id, $page, $per_page, $filters);
@@ -562,11 +671,11 @@ Name | Type | Description  | Notes
  **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     type[value]&#x3D;string&amp;type[operator]&#x3D;strict&amp;cancel[value]&#x3D;string&amp;cancel[operator]&#x3D;contains     _______________      {     \&quot;type\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;cancel\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\ProductAccessListResponse**](#ProductAccessListResponse)
 
 ### Authorization
 
@@ -578,7 +687,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerAccessesVideos**
-> \Kinow\Client\Model\SubscriptionAccesses getCustomerAccessesVideos($customer_id, $page, $per_page)
+> \Kinow\Client\Model\ProductAccessListResponse getCustomerAccessesVideos($customer_id, $page, $per_page)
 
 
 
@@ -622,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SubscriptionAccesses**](#SubscriptionAccesses)
+[**\Kinow\Client\Model\ProductAccessListResponse**](#ProductAccessListResponse)
 
 ### Authorization
 
@@ -634,7 +743,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerAddress**
-> \Kinow\Client\Model\Address getCustomerAddress($customer_id)
+> \Kinow\Client\Model\AddressResponse getCustomerAddress($customer_id)
 
 
 
@@ -674,7 +783,67 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Address**](#Address)
+[**\Kinow\Client\Model\AddressResponse**](#AddressResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getCustomerBookmarks**
+> \Kinow\Client\Model\ProductListResponse getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction)
+
+
+
+Get customer bookmarks
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CustomersApi();
+$customer_id = 789; // int | 
+$page = 789; // int | 
+$per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
+
+try {
+    $result = $api_instance->getCustomerBookmarks($customer_id, $page, $per_page, $sort_by, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomerBookmarks: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**|  |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
 
 ### Authorization
 
@@ -739,7 +908,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerCarts**
-> \Kinow\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CartListResponse getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -763,7 +932,7 @@ $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     date_add[value]=string&date_add[operator]=lt     _______________      {     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -783,13 +952,13 @@ Name | Type | Description  | Notes
  **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\CartListResponse**](#CartListResponse)
 
 ### Authorization
 
@@ -801,7 +970,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerCurrentViews**
-> \Kinow\Client\Model\CustomerCurrentViews getCustomerCurrentViews($customer_id)
+> \Kinow\Client\Model\CustomerCurrentViewsResponse getCustomerCurrentViews($customer_id)
 
 
 
@@ -841,7 +1010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CustomerCurrentViews**](#CustomerCurrentViews)
+[**\Kinow\Client\Model\CustomerCurrentViewsResponse**](#CustomerCurrentViewsResponse)
 
 ### Authorization
 
@@ -853,7 +1022,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerGroups**
-> \Kinow\Client\Model\Groups getCustomerGroups($customer_id, $page, $per_page)
+> \Kinow\Client\Model\GroupListResponse getCustomerGroups($customer_id, $page, $per_page)
 
 
 
@@ -897,7 +1066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Groups**](#Groups)
+[**\Kinow\Client\Model\GroupListResponse**](#GroupListResponse)
 
 ### Authorization
 
@@ -962,7 +1131,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToProducts**
-> \Kinow\Client\Model\ProductAccessInfo[] getCustomerHasAccessToProducts($customer_id, $body)
+> \Kinow\Client\Model\ProductAccessInfoResponse[] getCustomerHasAccessToProducts($customer_id, $body)
 
 
 
@@ -1004,7 +1173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\ProductAccessInfo[]**](#ProductAccessInfo)
+[**\Kinow\Client\Model\ProductAccessInfoResponse[]**](#ProductAccessInfoResponse)
 
 ### Authorization
 
@@ -1069,7 +1238,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfoResponse[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -1111,7 +1280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
+[**\Kinow\Client\Model\VideoAccessInfoResponse[]**](#VideoAccessInfoResponse)
 
 ### Authorization
 
@@ -1123,7 +1292,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerOrders**
-> \Kinow\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
+> \Kinow\Client\Model\OrderListResponse getCustomerOrders($customer_id, $page, $per_page)
 
 
 
@@ -1167,7 +1336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\OrderListResponse**](#OrderListResponse)
 
 ### Authorization
 
@@ -1179,7 +1348,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPlaylists**
-> \Kinow\Client\Model\Playlists getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\PlaylistListResponse getCustomerPlaylists($customer_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -1227,7 +1396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Playlists**](#Playlists)
+[**\Kinow\Client\Model\PlaylistListResponse**](#PlaylistListResponse)
 
 ### Authorization
 
@@ -1239,7 +1408,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
+> \Kinow\Client\Model\PrepaymentBalanceListResponse getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -1281,7 +1450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
+[**\Kinow\Client\Model\PrepaymentBalanceListResponse**](#PrepaymentBalanceListResponse)
 
 ### Authorization
 
@@ -1293,7 +1462,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentOperations**
-> \Kinow\Client\Model\PrepaymentOperations getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
+> \Kinow\Client\Model\PrepaymentOperationListResponse getCustomerPrepaymentOperations($customer_id, $type, $page, $per_page)
 
 
 
@@ -1339,7 +1508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentOperations**](#PrepaymentOperations)
+[**\Kinow\Client\Model\PrepaymentOperationListResponse**](#PrepaymentOperationListResponse)
 
 ### Authorization
 
@@ -1351,7 +1520,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomers**
-> \Kinow\Client\Model\Customers getCustomers($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CustomerListResponse getCustomers($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -1374,7 +1543,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains     _______________      {     \"email\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"firstname\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -1393,13 +1562,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains     _______________      {     \&quot;email\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;firstname\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Customers**](#Customers)
+[**\Kinow\Client\Model\CustomerListResponse**](#CustomerListResponse)
 
 ### Authorization
 
@@ -1515,7 +1684,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethods**
-> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -1557,7 +1726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
 
 ### Authorization
 
@@ -1569,7 +1738,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethodsWithIp**
-> \Kinow\Client\Model\PaymentMethods[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
 
 
 
@@ -1613,7 +1782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
 
 ### Authorization
 
@@ -1625,7 +1794,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetailsResponse[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -1667,7 +1836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetailsResponse[]**](#PaymentDetailsResponse)
 
 ### Authorization
 
@@ -1679,7 +1848,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPaymentsWithIp**
-> \Kinow\Client\Model\PaymentDetails[] getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsListResponse getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
 
 
 
@@ -1723,7 +1892,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetailsListResponse**](#PaymentDetailsListResponse)
 
 ### Authorization
 
@@ -1735,7 +1904,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getRegistrationFields**
-> \Kinow\Client\Model\RegistrationFields getRegistrationFields($page, $per_page)
+> \Kinow\Client\Model\RegistrationFieldsResponse getRegistrationFields($page, $per_page)
 
 
 
@@ -1777,7 +1946,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\RegistrationFields**](#RegistrationFields)
+[**\Kinow\Client\Model\RegistrationFieldsResponse**](#RegistrationFieldsResponse)
 
 ### Authorization
 
@@ -1897,7 +2066,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **passwordToken**
-> \Kinow\Client\Model\Token passwordToken($email, $send_notification)
+> \Kinow\Client\Model\TokenResponse passwordToken($email, $send_notification)
 
 
 
@@ -1939,7 +2108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Token**](#Token)
+[**\Kinow\Client\Model\TokenResponse**](#TokenResponse)
 
 ### Authorization
 
@@ -2057,7 +2226,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **updateCustomer**
-> \Kinow\Client\Model\Customer updateCustomer($customer_id, $body)
+> \Kinow\Client\Model\CustomerResponse updateCustomer($customer_id, $body)
 
 
 
@@ -2079,7 +2248,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kinow\Client\Model\Customer(); // \Kinow\Client\Model\Customer | Body of the customer
+$body = new \Kinow\Client\Model\UpdateCustomerRequest(); // \Kinow\Client\Model\UpdateCustomerRequest | Body of the customer
 
 try {
     $result = $api_instance->updateCustomer($customer_id, $body);
@@ -2095,11 +2264,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kinow\Client\Model\Customer**](#\Kinow\Client\Model\Customer)| Body of the customer |
+ **body** | [**\Kinow\Client\Model\UpdateCustomerRequest**](#\Kinow\Client\Model\UpdateCustomerRequest)| Body of the customer |
 
 ### Return type
 
-[**\Kinow\Client\Model\Customer**](#Customer)
+[**\Kinow\Client\Model\CustomerResponse**](#CustomerResponse)
 
 ### Authorization
 
@@ -2134,7 +2303,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
-$payment_arguments = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment arguments
+$payment_arguments = new \Kinow\Client\Model\UpdatePaymentRequest(); // \Kinow\Client\Model\UpdatePaymentRequest | Payment arguments
 $ip_address = "ip_address_example"; // string | Filter by user IP
 
 try {
@@ -2151,7 +2320,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**|  |
  **payment_name** | **string**|  |
- **payment_arguments** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment arguments |
+ **payment_arguments** | [**\Kinow\Client\Model\UpdatePaymentRequest**](#\Kinow\Client\Model\UpdatePaymentRequest)| Payment arguments |
  **ip_address** | **string**| Filter by user IP | [optional]
 
 ### Return type
@@ -2168,7 +2337,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **validateCustomerCredentials**
-> \Kinow\Client\Model\CredentialsValidation validateCustomerCredentials($email, $password)
+> \Kinow\Client\Model\CredentialsValidationResponse validateCustomerCredentials($email, $password)
 
 
 
@@ -2210,7 +2379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CredentialsValidation**](#CredentialsValidation)
+[**\Kinow\Client\Model\CredentialsValidationResponse**](#CredentialsValidationResponse)
 
 ### Authorization
 

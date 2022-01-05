@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getTaxRules**
-> \Kinow\Client\Model\TaxRules getTaxRules($page, $per_page)
+> \Kinow\Client\Model\TaxRuleListResponse getTaxRules($page, $per_page)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\TaxRules**](#TaxRules)
+[**\Kinow\Client\Model\TaxRuleListResponse**](#TaxRuleListResponse)
 
 ### Authorization
 

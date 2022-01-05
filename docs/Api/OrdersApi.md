@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerOrders**
-> \Kinow\Client\Model\Orders getCustomerOrders($customer_id, $page, $per_page)
+> \Kinow\Client\Model\OrderListResponse getCustomerOrders($customer_id, $page, $per_page)
 
 
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\OrderListResponse**](#OrderListResponse)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getOrder**
-> \Kinow\Client\Model\Order getOrder($order_id)
+> \Kinow\Client\Model\OrderResponse getOrder($order_id)
 
 
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Order**](#Order)
+[**\Kinow\Client\Model\OrderResponse**](#OrderResponse)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getOrderHistories**
-> \Kinow\Client\Model\OrderHistories getOrderHistories($order_id, $page, $per_page)
+> \Kinow\Client\Model\OrderHistoryListResponse getOrderHistories($order_id, $page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -144,9 +144,11 @@ $api_instance = new Kinow\Client\Api\OrdersApi();
 $order_id = 789; // int | Order ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
+$sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
+$sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
 try {
-    $result = $api_instance->getOrderHistories($order_id, $page, $per_page);
+    $result = $api_instance->getOrderHistories($order_id, $page, $per_page, $sort_by, $sort_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrderHistories: ', $e->getMessage(), PHP_EOL;
@@ -161,10 +163,12 @@ Name | Type | Description  | Notes
  **order_id** | **int**| Order ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
+ **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\OrderHistories**](#OrderHistories)
+[**\Kinow\Client\Model\OrderHistoryListResponse**](#OrderHistoryListResponse)
 
 ### Authorization
 
@@ -230,7 +234,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getOrders**
-> \Kinow\Client\Model\Orders getOrders($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\OrderListResponse getOrders($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -253,7 +257,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\OrdersApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | email[value]=string&email[operator]=strict&firstname[value]=string&firstname[operator]=contains  ``` {     \"email\": {         \"value\": \"string\",         \"operator\": \"strict\"     },     \"firstname\": {         \"value\": \"string\",         \"operator\": \"contains\"     },     \"invoice_date\": {         \"value\": [\"Y-m-d\", \"Y-m-d\"],         \"operator\": \"between\"     } }``` Operator can be strict, contains, between, gt or lt.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -272,13 +276,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| email[value]&#x3D;string&amp;email[operator]&#x3D;strict&amp;firstname[value]&#x3D;string&amp;firstname[operator]&#x3D;contains  &#x60;&#x60;&#x60; {     \&quot;email\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;firstname\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;invoice_date\&quot;: {         \&quot;value\&quot;: [\&quot;Y-m-d\&quot;, \&quot;Y-m-d\&quot;],         \&quot;operator\&quot;: \&quot;between\&quot;     } }&#x60;&#x60;&#x60; Operator can be strict, contains, between, gt or lt. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Orders**](#Orders)
+[**\Kinow\Client\Model\OrderListResponse**](#OrderListResponse)
 
 ### Authorization
 

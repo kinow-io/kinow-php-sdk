@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **createMessage**
-> \Kinow\Client\Model\Support createMessage($id_lang, $email, $id_contact, $message, $id_support, $id_product, $id_order, $send_mail)
+> \Kinow\Client\Model\SupportResponse createMessage($body)
 
 
 
@@ -30,17 +30,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\SupportApi();
-$id_lang = 56; // int | Language ID used by user to write his message
-$email = "email_example"; // string | User email in order to send him a response
-$id_contact = 56; // int | Contact ID to send the user message
-$message = "message_example"; // string | User message
-$id_support = 56; // int | Link the message to a previous message
-$id_product = 56; // int | Link the message to a product in catalog
-$id_order = 56; // int | Link the message to an existing order
-$send_mail = true; // bool | Send confirmation email to the providen email
+$body = new \Kinow\Client\Model\CreateMessageRequest(); // \Kinow\Client\Model\CreateMessageRequest | Message parameters
 
 try {
-    $result = $api_instance->createMessage($id_lang, $email, $id_contact, $message, $id_support, $id_product, $id_order, $send_mail);
+    $result = $api_instance->createMessage($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SupportApi->createMessage: ', $e->getMessage(), PHP_EOL;
@@ -52,18 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_lang** | **int**| Language ID used by user to write his message |
- **email** | **string**| User email in order to send him a response |
- **id_contact** | **int**| Contact ID to send the user message |
- **message** | **string**| User message |
- **id_support** | **int**| Link the message to a previous message | [optional]
- **id_product** | **int**| Link the message to a product in catalog | [optional]
- **id_order** | **int**| Link the message to an existing order | [optional]
- **send_mail** | **bool**| Send confirmation email to the providen email | [optional]
+ **body** | [**\Kinow\Client\Model\CreateMessageRequest**](#\Kinow\Client\Model\CreateMessageRequest)| Message parameters |
 
 ### Return type
 
-[**\Kinow\Client\Model\Support**](#Support)
+[**\Kinow\Client\Model\SupportResponse**](#SupportResponse)
 
 ### Authorization
 
@@ -75,7 +61,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getContacts**
-> \Kinow\Client\Model\Contacts getContacts($page, $per_page, $sort_by, $sort_direction)
+> \Kinow\Client\Model\ContactListResponse getContacts($page, $per_page, $sort_by, $sort_direction)
 
 
 
@@ -121,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Contacts**](#Contacts)
+[**\Kinow\Client\Model\ContactListResponse**](#ContactListResponse)
 
 ### Authorization
 

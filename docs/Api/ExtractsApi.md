@@ -126,7 +126,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **createExtract**
-> \Kinow\Client\Model\Extract createExtract($body)
+> \Kinow\Client\Model\ExtractResponse createExtract($body)
 
 
 
@@ -147,7 +147,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
-$body = new \Kinow\Client\Model\Extract(); // \Kinow\Client\Model\Extract | 
+$body = new \Kinow\Client\Model\CreateExtractRequest(); // \Kinow\Client\Model\CreateExtractRequest | 
 
 try {
     $result = $api_instance->createExtract($body);
@@ -162,11 +162,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Extract**](#\Kinow\Client\Model\Extract)|  |
+ **body** | [**\Kinow\Client\Model\CreateExtractRequest**](#\Kinow\Client\Model\CreateExtractRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\ExtractResponse**](#ExtractResponse)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **createExtractSubtitle**
-> \Kinow\Client\Model\Subtitle createExtractSubtitle($extract_id, $body)
+> \Kinow\Client\Model\SubtitleResponse createExtractSubtitle($extract_id, $body)
 
 
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Subtitle**](#Subtitle)
+[**\Kinow\Client\Model\SubtitleResponse**](#SubtitleResponse)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
-$extract_id = 789; // int | Extract ID to update
+$extract_id = 789; // int | Extract ID to delete
 
 try {
     $api_instance->deleteExtract($extract_id);
@@ -267,7 +267,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **extract_id** | **int**| Extract ID to update |
+ **extract_id** | **int**| Extract ID to delete |
 
 ### Return type
 
@@ -283,7 +283,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getExtract**
-> \Kinow\Client\Model\Extract getExtract($extract_id)
+> \Kinow\Client\Model\ExtractResponse getExtract($extract_id)
 
 
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\ExtractResponse**](#ExtractResponse)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getExtractSubtitles**
-> \Kinow\Client\Model\VideoSubtitlesResponse getExtractSubtitles($extract_id, $page, $per_page)
+> \Kinow\Client\Model\ExtractSubtitlesResponse getExtractSubtitles($extract_id, $page, $per_page)
 
 
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoSubtitlesResponse**](#VideoSubtitlesResponse)
+[**\Kinow\Client\Model\ExtractSubtitlesResponse**](#ExtractSubtitlesResponse)
 
 ### Authorization
 
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getExtracts**
-> \Kinow\Client\Model\Videos1 getExtracts($page, $per_page, $features, $filters, $ip)
+> \Kinow\Client\Model\ExtractListResponse getExtracts($page, $per_page, $features, $filters, $ip)
 
 
 
@@ -524,8 +524,8 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\ExtractsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=strict&duration[value]=string&duration[operator]=gt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"duration\": {     \"value\": \"string\",     \"operator\": \"gt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $ip = "ip_example"; // string | Filter by user IP
 
 try {
@@ -543,13 +543,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;strict&amp;duration[value]&#x3D;string&amp;duration[operator]&#x3D;gt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;duration\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;gt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\ExtractListResponse**](#ExtractListResponse)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductExtracts**
-> \Kinow\Client\Model\Videos1 getProductExtracts($product_id, $ip, $page, $per_page)
+> \Kinow\Client\Model\ExtractListResponse getProductExtracts($product_id, $page, $per_page, $ip)
 
 
 
@@ -583,12 +583,12 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
 $product_id = 789; // int | Product ID to fetch
-$ip = "ip_example"; // string | Filter by user IP
 $page = 789; // int | 
 $per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
 
 try {
-    $result = $api_instance->getProductExtracts($product_id, $ip, $page, $per_page);
+    $result = $api_instance->getProductExtracts($product_id, $page, $per_page, $ip);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExtractsApi->getProductExtracts: ', $e->getMessage(), PHP_EOL;
@@ -601,13 +601,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
- **ip** | **string**| Filter by user IP | [optional]
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Videos1**](#Videos1)
+[**\Kinow\Client\Model\ExtractListResponse**](#ExtractListResponse)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **updateExtract**
-> \Kinow\Client\Model\Extract updateExtract($extract_id, $body)
+> \Kinow\Client\Model\ExtractResponse updateExtract($extract_id, $body)
 
 
 
@@ -693,7 +693,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
-$body = new \Kinow\Client\Model\Extract(); // \Kinow\Client\Model\Extract | 
+$body = new \Kinow\Client\Model\UpdateExtractRequest(); // \Kinow\Client\Model\UpdateExtractRequest | 
 
 try {
     $result = $api_instance->updateExtract($extract_id, $body);
@@ -709,11 +709,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **extract_id** | **int**| Extract ID to fetch |
- **body** | [**\Kinow\Client\Model\Extract**](#\Kinow\Client\Model\Extract)|  |
+ **body** | [**\Kinow\Client\Model\UpdateExtractRequest**](#\Kinow\Client\Model\UpdateExtractRequest)|  |
 
 ### Return type
 
-[**\Kinow\Client\Model\Extract**](#Extract)
+[**\Kinow\Client\Model\ExtractResponse**](#ExtractResponse)
 
 ### Authorization
 

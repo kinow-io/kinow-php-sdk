@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 ## **getSliderImage**
-> \Kinow\Client\Model\Image[] getSliderImage()
+> \Kinow\Client\Model\ImageListResponse getSliderImage()
 
 
 
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kinow\Client\Model\Image[]**](#Image)
+[**\Kinow\Client\Model\ImageListResponse**](#ImageListResponse)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
  - **Accept**: Not defined
 
 ## **getWidgetAnalytics**
-> \Kinow\Client\Model\GoogleAnalytics getWidgetAnalytics()
+> \Kinow\Client\Model\GoogleAnalyticsResponse getWidgetAnalytics()
 
 
 
@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kinow\Client\Model\GoogleAnalytics**](#GoogleAnalytics)
+[**\Kinow\Client\Model\GoogleAnalyticsResponse**](#GoogleAnalyticsResponse)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ This endpoint does not need any parameter.
  - **Accept**: Not defined
 
 ## **getWidgetFooterMenu**
-> \Kinow\Client\Model\WidgetFooterMenus getWidgetFooterMenu($page, $per_page)
+> \Kinow\Client\Model\WidgetFooterMenuListResponse getWidgetFooterMenu($page, $per_page)
 
 
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetFooterMenus**](#WidgetFooterMenus)
+[**\Kinow\Client\Model\WidgetFooterMenuListResponse**](#WidgetFooterMenuListResponse)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getWidgetHomeRail**
-> \Kinow\Client\Model\WidgetHomeRails getWidgetHomeRail($page, $per_page)
+> \Kinow\Client\Model\WidgetHomeRailListResponse getWidgetHomeRail($page, $per_page)
 
 
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetHomeRails**](#WidgetHomeRails)
+[**\Kinow\Client\Model\WidgetHomeRailListResponse**](#WidgetHomeRailListResponse)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getWidgetHookPhrase**
-> \Kinow\Client\Model\WidgetHookPhrases getWidgetHookPhrase($page, $per_page)
+> \Kinow\Client\Model\WidgetHookPhraseListResponse getWidgetHookPhrase($page, $per_page)
 
 
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetHookPhrases**](#WidgetHookPhrases)
+[**\Kinow\Client\Model\WidgetHookPhraseListResponse**](#WidgetHookPhraseListResponse)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getWidgetSlider**
-> \Kinow\Client\Model\WidgetSliders getWidgetSlider($page, $per_page)
+> \Kinow\Client\Model\WidgetSliderListResponse getWidgetSlider($page, $per_page)
 
 
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetSliders**](#WidgetSliders)
+[**\Kinow\Client\Model\WidgetSliderListResponse**](#WidgetSliderListResponse)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getWidgetSliderItem**
-> \Kinow\Client\Model\WidgetSlider getWidgetSliderItem($slider_id)
+> \Kinow\Client\Model\WidgetSliderResponse getWidgetSliderItem($slider_id)
 
 
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetSlider**](#WidgetSlider)
+[**\Kinow\Client\Model\WidgetSliderResponse**](#WidgetSliderResponse)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getWidgetTopMenu**
-> \Kinow\Client\Model\WidgetTopMenus getWidgetTopMenu($page, $per_page)
+> \Kinow\Client\Model\WidgetTopMenuListResponse getWidgetTopMenu($page, $per_page)
 
 
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\WidgetTopMenus**](#WidgetTopMenus)
+[**\Kinow\Client\Model\WidgetTopMenuListResponse**](#WidgetTopMenuListResponse)
 
 ### Authorization
 

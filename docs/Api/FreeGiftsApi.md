@@ -90,7 +90,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\FreeGiftsApi();
-$body = new \Kinow\Client\Model\FreeGift1(); // \Kinow\Client\Model\FreeGift1 | Free Gift settings
+$body = new \Kinow\Client\Model\CreateFreeGiftRequest(); // \Kinow\Client\Model\CreateFreeGiftRequest | Free Gift settings
 
 try {
     $result = $api_instance->createFreeGift($body);
@@ -105,7 +105,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\FreeGift1**](#\Kinow\Client\Model\FreeGift1)| Free Gift settings |
+ **body** | [**\Kinow\Client\Model\CreateFreeGiftRequest**](#\Kinow\Client\Model\CreateFreeGiftRequest)| Free Gift settings |
 
 ### Return type
 
@@ -172,7 +172,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getFreeGift**
-> \Kinow\Client\Model\FreeGift getFreeGift($free_gift_id)
+> \Kinow\Client\Model\FreeGiftResponse getFreeGift($free_gift_id)
 
 
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\FreeGift**](#FreeGift)
+[**\Kinow\Client\Model\FreeGiftResponse**](#FreeGiftResponse)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getFreeGifts**
-> \Kinow\Client\Model\Gifts getFreeGifts($unused_only)
+> \Kinow\Client\Model\FreeGiftListResponse getFreeGifts($unused_only)
 
 
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Gifts**](#Gifts)
+[**\Kinow\Client\Model\FreeGiftListResponse**](#FreeGiftListResponse)
 
 ### Authorization
 

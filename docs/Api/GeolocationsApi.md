@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 ## **getGeolocSettings**
-> \Kinow\Client\Model\GeolocSettings getGeolocSettings($type, $type_id)
+> \Kinow\Client\Model\GeolocSettingsResponse getGeolocSettings($type, $type_id)
 
 
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\GeolocSettings**](#GeolocSettings)
+[**\Kinow\Client\Model\GeolocSettingsResponse**](#GeolocSettingsResponse)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getIPLocation**
-> \Kinow\Client\Model\IPLocation getIPLocation($ip_address)
+> \Kinow\Client\Model\IPLocationResponse getIPLocation($ip_address)
 
 
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\IPLocation**](#IPLocation)
+[**\Kinow\Client\Model\IPLocationResponse**](#IPLocationResponse)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPlatformAccessInfo**
-> \Kinow\Client\Model\PlatformAccessInfo getPlatformAccessInfo($ip_address)
+> \Kinow\Client\Model\PlatformAccessResponse getPlatformAccessInfo($ip_address)
 
 
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PlatformAccessInfo**](#PlatformAccessInfo)
+[**\Kinow\Client\Model\PlatformAccessResponse**](#PlatformAccessResponse)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductGeolocations**
-> \Kinow\Client\Model\Geolocs getProductGeolocations($product_id, $page, $per_page)
+> \Kinow\Client\Model\GeolocationListResponse getProductGeolocations($product_id, $page, $per_page)
 
 
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Geolocs**](#Geolocs)
+[**\Kinow\Client\Model\GeolocationListResponse**](#GeolocationListResponse)
 
 ### Authorization
 

@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**attachCartToCustomer**](#attachCartToCustomer) | **POST** /customers/{customer_id}/carts | 
 [**createCart**](#createCart) | **POST** /carts | 
 [**deleteCart**](#deleteCart) | **DELETE** /carts/{cart_id} | 
-[**deleteProductFromCart**](#deleteProductFromCart) | **DELETE** /carts/{cart_id}/products | 
 [**detachCartRuleFromCart**](#detachCartRuleFromCart) | **DELETE** /carts/{cart_id}/cart-rules/{cart_rule_id} | 
 [**emptyCart**](#emptyCart) | **POST** /carts/{cart_id}/empty | 
 [**getCart**](#getCart) | **GET** /carts/{cart_id} | 
@@ -22,13 +21,14 @@ Method | HTTP request | Description
 [**getPrice**](#getPrice) | **POST** /carts/price | 
 [**preparePayment**](#preparePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/prepare | 
 [**recurringPayment**](#recurringPayment) | **POST** /carts/{cart_id}/payments/{payment_name}/recurring | 
+[**removeProductFromCart**](#removeProductFromCart) | **DELETE** /carts/{cart_id}/products | 
 [**updateCart**](#updateCart) | **PUT** /carts/{cart_id} | 
 [**validateFreeOrder**](#validateFreeOrder) | **POST** /carts/{cart_id}/validate-free-order | 
 [**validatePayment**](#validatePayment) | **POST** /carts/{cart_id}/payments/{payment_name}/validate | 
 
 
 ## **addProductToCart**
-> \Kinow\Client\Model\Cart addProductToCart($cart_id, $product_id, $product_attribute_id, $gift_id, $switch_subscription_id, $is_gift, $ip_address)
+> \Kinow\Client\Model\CartResponse addProductToCart($cart_id, $body)
 
 
 
@@ -50,15 +50,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
-$product_id = 789; // int | Product ID to add to cart
-$product_attribute_id = 789; // int | ProductAttribute ID, required to add product to cart if product is not a subscription
-$gift_id = 789; // int | Gift ID linked to the item in cart
-$switch_subscription_id = 789; // int | When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel
-$is_gift = false; // bool | Allows bypass of access check (in case the current user already bought the product and it cannot be reordered)
-$ip_address = "ip_address_example"; // string | IP address
+$body = new \Kinow\Client\Model\AddProductToCartRequest(); // \Kinow\Client\Model\AddProductToCartRequest | Add product to cart request
 
 try {
-    $result = $api_instance->addProductToCart($cart_id, $product_id, $product_attribute_id, $gift_id, $switch_subscription_id, $is_gift, $ip_address);
+    $result = $api_instance->addProductToCart($cart_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CartsApi->addProductToCart: ', $e->getMessage(), PHP_EOL;
@@ -71,16 +66,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
- **product_id** | **int**| Product ID to add to cart |
- **product_attribute_id** | **int**| ProductAttribute ID, required to add product to cart if product is not a subscription | [optional]
- **gift_id** | **int**| Gift ID linked to the item in cart | [optional]
- **switch_subscription_id** | **int**| When customer want to switch subscription, switch_subscription_id is the product access ID that match with the subscription to cancel | [optional]
- **is_gift** | **bool**| Allows bypass of access check (in case the current user already bought the product and it cannot be reordered) | [optional] [default to false]
- **ip_address** | **string**| IP address | [optional]
+ **body** | [**\Kinow\Client\Model\AddProductToCartRequest**](#\Kinow\Client\Model\AddProductToCartRequest)| Add product to cart request |
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -147,7 +137,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **attachCartToCustomer**
-> \Kinow\Client\Model\Cart attachCartToCustomer($customer_id, $cart_id)
+> \Kinow\Client\Model\CartResponse attachCartToCustomer($customer_id, $cart_id)
 
 
 
@@ -189,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -201,7 +191,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **createCart**
-> \Kinow\Client\Model\Cart createCart($body)
+> \Kinow\Client\Model\CartResponse createCart($body)
 
 
 
@@ -222,7 +212,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\CartsApi();
-$body = new \Kinow\Client\Model\Cart1(); // \Kinow\Client\Model\Cart1 | Cart settings
+$body = new \Kinow\Client\Model\CreateCartRequest(); // \Kinow\Client\Model\CreateCartRequest | Cart settings
 
 try {
     $result = $api_instance->createCart($body);
@@ -237,11 +227,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Cart1**](#\Kinow\Client\Model\Cart1)| Cart settings |
+ **body** | [**\Kinow\Client\Model\CreateCartRequest**](#\Kinow\Client\Model\CreateCartRequest)| Cart settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -289,63 +279,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **deleteProductFromCart**
-> deleteProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id)
-
-
-
-Remove product from cart
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\CartsApi();
-$cart_id = 789; // int | Cart ID to fetch
-$product_id = 789; // int | Product ID to delete from cart
-$product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
-$gift_id = 789; // int | Gift ID linked to the item in cart
-
-try {
-    $api_instance->deleteProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id);
-} catch (Exception $e) {
-    echo 'Exception when calling CartsApi->deleteProductFromCart: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cart_id** | **int**| Cart ID to fetch |
- **product_id** | **int**| Product ID to delete from cart |
- **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
- **gift_id** | **int**| Gift ID linked to the item in cart | [optional]
 
 ### Return type
 
@@ -465,7 +398,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCart**
-> \Kinow\Client\Model\Cart getCart($cart_id)
+> \Kinow\Client\Model\CartResponse getCart($cart_id)
 
 
 
@@ -505,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -596,7 +529,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CartsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     name[value]=string&name[operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -615,7 +548,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name[operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
@@ -633,7 +566,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerCarts**
-> \Kinow\Client\Model\Carts getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CartListResponse getCustomerCarts($customer_id, $page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -657,7 +590,7 @@ $api_instance = new Kinow\Client\Api\CartsApi();
 $customer_id = 789; // int | Customer ID to fetch
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ```     date_add[value]=string&date_add[operator]=lt     _______________      {     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -677,13 +610,13 @@ Name | Type | Description  | Notes
  **customer_id** | **int**| Customer ID to fetch |
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\CartListResponse**](#CartListResponse)
 
 ### Authorization
 
@@ -695,7 +628,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getLastCart**
-> \Kinow\Client\Model\Cart getLastCart($customer_id)
+> \Kinow\Client\Model\CartResponse getLastCart($customer_id)
 
 
 
@@ -735,7 +668,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -747,7 +680,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getLostsCarts**
-> \Kinow\Client\Model\Carts getLostsCarts($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CartListResponse getLostsCarts($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -770,7 +703,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CartsApi();
 $page = 789; // int | 
 $per_page = 789; // int | 
-$filters = "filters_example"; // string | ``` date_add[value]=string&date_add[operator]=lt _______________  {     \"date_add\": {         \"value\": \"string\",         \"operator\": \"lt\"     } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 
@@ -789,13 +722,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional]
  **per_page** | **int**|  | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60; date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  {     \&quot;date_add\&quot;: {         \&quot;value\&quot;: \&quot;string\&quot;,         \&quot;operator\&quot;: \&quot;lt\&quot;     } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\CartListResponse**](#CartListResponse)
 
 ### Authorization
 
@@ -807,7 +740,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentUrl**
-> \Kinow\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentUrlResponse getPaymentUrl($cart_id, $payment_name)
 
 
 
@@ -849,7 +782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentUrl**](#PaymentUrl)
+[**\Kinow\Client\Model\PaymentUrlResponse**](#PaymentUrlResponse)
 
 ### Authorization
 
@@ -861,7 +794,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrice**
-> \Kinow\Client\Model\CartPrice[] getPrice($body)
+> \Kinow\Client\Model\CartPriceResponse[] getPrice($body)
 
 
 
@@ -901,7 +834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CartPrice[]**](#CartPrice)
+[**\Kinow\Client\Model\CartPriceResponse[]**](#CartPriceResponse)
 
 ### Authorization
 
@@ -913,7 +846,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsResponse1 preparePayment($cart_id, $payment_name, $ip_address)
 
 
 
@@ -957,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails1**](#PaymentDetails1)
+[**\Kinow\Client\Model\PaymentDetailsResponse1**](#PaymentDetailsResponse1)
 
 ### Authorization
 
@@ -1023,8 +956,65 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **removeProductFromCart**
+> removeProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id)
+
+
+
+Remove product from cart
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CartsApi();
+$cart_id = 789; // int | Cart ID to fetch
+$product_id = 789; // int | Product ID to delete from cart
+$product_attribute_id = 789; // int | Product attribute ID, required to add product to cart if product is not a subscription
+$gift_id = 789; // int | Gift ID linked to the item in cart
+
+try {
+    $api_instance->removeProductFromCart($cart_id, $product_id, $product_attribute_id, $gift_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CartsApi->removeProductFromCart: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cart_id** | **int**| Cart ID to fetch |
+ **product_id** | **int**| Product ID to delete from cart |
+ **product_attribute_id** | **int**| Product attribute ID, required to add product to cart if product is not a subscription | [optional]
+ **gift_id** | **int**| Gift ID linked to the item in cart | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **updateCart**
-> \Kinow\Client\Model\Cart updateCart($cart_id, $body)
+> \Kinow\Client\Model\CartResponse updateCart($cart_id, $body)
 
 
 
@@ -1046,7 +1036,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart id
-$body = new \Kinow\Client\Model\Cart2(); // \Kinow\Client\Model\Cart2 | Cart settings
+$body = new \Kinow\Client\Model\UpdateCartRequest(); // \Kinow\Client\Model\UpdateCartRequest | Cart settings
 
 try {
     $result = $api_instance->updateCart($cart_id, $body);
@@ -1062,11 +1052,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart id |
- **body** | [**\Kinow\Client\Model\Cart2**](#\Kinow\Client\Model\Cart2)| Cart settings |
+ **body** | [**\Kinow\Client\Model\UpdateCartRequest**](#\Kinow\Client\Model\UpdateCartRequest)| Cart settings |
 
 ### Return type
 
-[**\Kinow\Client\Model\Cart**](#Cart)
+[**\Kinow\Client\Model\CartResponse**](#CartResponse)
 
 ### Authorization
 
@@ -1152,7 +1142,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\CartsApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
-$payment_argument = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment argument
+$payment_argument = new \Kinow\Client\Model\PaymentArgumentsResponse(); // \Kinow\Client\Model\PaymentArgumentsResponse | Payment argument
 
 try {
     $api_instance->validatePayment($cart_id, $payment_name, $payment_argument);
@@ -1168,7 +1158,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
- **payment_argument** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment argument |
+ **payment_argument** | [**\Kinow\Client\Model\PaymentArgumentsResponse**](#\Kinow\Client\Model\PaymentArgumentsResponse)| Payment argument |
 
 ### Return type
 

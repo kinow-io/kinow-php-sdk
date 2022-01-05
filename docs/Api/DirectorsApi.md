@@ -149,7 +149,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\DirectorsApi();
-$body = new \Kinow\Client\Model\Director1(); // \Kinow\Client\Model\Director1 | Directory settings
+$body = new \Kinow\Client\Model\CreateDirectorRequest(); // \Kinow\Client\Model\CreateDirectorRequest | Directory settings
 
 try {
     $result = $api_instance->createDirector($body);
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\Director1**](#\Kinow\Client\Model\Director1)| Directory settings |
+ **body** | [**\Kinow\Client\Model\CreateDirectorRequest**](#\Kinow\Client\Model\CreateDirectorRequest)| Directory settings |
 
 ### Return type
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirector**
-> \Kinow\Client\Model\Director getDirector($director_id)
+> \Kinow\Client\Model\DirectorResponse getDirector($director_id)
 
 
 
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Director**](#Director)
+[**\Kinow\Client\Model\DirectorResponse**](#DirectorResponse)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirectorCoverImage**
-> \Kinow\Client\Model\Image getDirectorCoverImage($director_id)
+> \Kinow\Client\Model\ImageResponse getDirectorCoverImage($director_id)
 
 
 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirectorProducts**
-> \Kinow\Client\Model\Products getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
+> \Kinow\Client\Model\DirectorProductListResponse getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
 
 
@@ -471,8 +471,8 @@ $per_page = 789; // int |
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
 $ip = "ip_example"; // string | Filter by user IP
-$features = "features_example"; // string | ```     features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict     _______________      {     \"*\": {     \"value\": \"string\",     \"operator\": \"strict\"     },     \"1\": {     \"value\": \"string\",     \"operator\": \"contains\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId.
-$filters = "filters_example"; // string | ```     name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt     _______________      {     \"name\": {     \"value\": \"string\",     \"operator\": \"contains\"     },     \"date_add\": {     \"value\": \"string\",     \"operator\": \"lt\"     }     } ```     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
+$features = "features_example"; // string | ``` features[*][value]=string&features[*][operator]=strict&features[1][value]=string&features[1][operator]=strict _______________  { \"*\": { \"value\": \"string\", \"operator\": \"strict\" }, \"1\": { \"value\": \"string\", \"operator\": \"contains\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId.
+$filters = "filters_example"; // string | ``` name[value]=string&name][operator]=contains&date_add[value]=string&date_add[operator]=lt _______________  { \"name\": { \"value\": \"string\", \"operator\": \"contains\" }, \"date_add\": { \"value\": \"string\", \"operator\": \"lt\" } } ``` Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).
 
 try {
     $result = $api_instance->getDirectorProducts($director_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters);
@@ -493,12 +493,12 @@ Name | Type | Description  | Notes
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
  **ip** | **string**| Filter by user IP | [optional]
- **features** | **string**| &#x60;&#x60;&#x60;     features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict     _______________      {     \&quot;*\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;strict\&quot;     },     \&quot;1\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than).     To search on all features, you can pass * as featureId. | [optional]
- **filters** | **string**| &#x60;&#x60;&#x60;     name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt     _______________      {     \&quot;name\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;contains\&quot;     },     \&quot;date_add\&quot;: {     \&quot;value\&quot;: \&quot;string\&quot;,     \&quot;operator\&quot;: \&quot;lt\&quot;     }     } &#x60;&#x60;&#x60;     Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
+ **features** | **string**| &#x60;&#x60;&#x60; features[*][value]&#x3D;string&amp;features[*][operator]&#x3D;strict&amp;features[1][value]&#x3D;string&amp;features[1][operator]&#x3D;strict _______________  { \&quot;*\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;strict\&quot; }, \&quot;1\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). To search on all features, you can pass * as featureId. | [optional]
+ **filters** | **string**| &#x60;&#x60;&#x60; name[value]&#x3D;string&amp;name][operator]&#x3D;contains&amp;date_add[value]&#x3D;string&amp;date_add[operator]&#x3D;lt _______________  { \&quot;name\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;contains\&quot; }, \&quot;date_add\&quot;: { \&quot;value\&quot;: \&quot;string\&quot;, \&quot;operator\&quot;: \&quot;lt\&quot; } } &#x60;&#x60;&#x60; Operator can be: strict, contains, between, in, gt (greater than), lt (lower than). | [optional]
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\DirectorProductListResponse**](#DirectorProductListResponse)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirectorProductsRole**
-> \Kinow\Client\Model\Products getDirectorProductsRole($director_id, $page, $per_page)
+> \Kinow\Client\Model\DirectorProductRoleListResponse getDirectorProductsRole($director_id, $page, $per_page)
 
 
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Products**](#Products)
+[**\Kinow\Client\Model\DirectorProductRoleListResponse**](#DirectorProductRoleListResponse)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getDirectors**
-> \Kinow\Client\Model\CategoryDirectorsResponse getDirectors($page, $per_page)
+> \Kinow\Client\Model\DirectorListResponse getDirectors($page, $per_page)
 
 
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\DirectorListResponse**](#DirectorListResponse)
 
 ### Authorization
 
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectors**
-> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectors($product_id, $page, $per_page, $image_type)
+> \Kinow\Client\Model\DirectorListResponse getProductDirectors($product_id, $page, $per_page, $image_type)
 
 
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\DirectorListResponse**](#DirectorListResponse)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductDirectorsRole**
-> \Kinow\Client\Model\CategoryDirectorsResponse getProductDirectorsRole($product_id, $page, $per_page)
+> \Kinow\Client\Model\DirectorRoleListResponse getProductDirectorsRole($product_id, $page, $per_page)
 
 
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\DirectorRoleListResponse**](#DirectorRoleListResponse)
 
 ### Authorization
 
@@ -756,7 +756,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\DirectorsApi();
 $director_id = 56; // int | 
-$body = new \Kinow\Client\Model\Director2(); // \Kinow\Client\Model\Director2 | Directory settings
+$body = new \Kinow\Client\Model\UpdateDirectorRequest(); // \Kinow\Client\Model\UpdateDirectorRequest | Directory settings
 
 try {
     $api_instance->updateDirector($director_id, $body);
@@ -771,7 +771,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **director_id** | **int**|  |
- **body** | [**\Kinow\Client\Model\Director2**](#\Kinow\Client\Model\Director2)| Directory settings |
+ **body** | [**\Kinow\Client\Model\UpdateDirectorRequest**](#\Kinow\Client\Model\UpdateDirectorRequest)| Directory settings |
 
 ### Return type
 
@@ -787,7 +787,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadDirectorCover($body)
 
 
 
@@ -808,13 +808,10 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\DirectorsApi();
-$director_id = 3.4; // float | Director ID to fetch
-$file = "/path/to/file.txt"; // \SplFileObject | 
-$hash = "hash_example"; // string | 
-$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
+$body = new \Kinow\Client\Model\UploadDirectorCoverRequest(); // \Kinow\Client\Model\UploadDirectorCoverRequest | 
 
 try {
-    $result = $api_instance->uploadDirectorCover($director_id, $file, $hash, $hash_algorithm);
+    $result = $api_instance->uploadDirectorCover($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectorsApi->uploadDirectorCover: ', $e->getMessage(), PHP_EOL;
@@ -826,10 +823,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **director_id** | **float**| Director ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
- **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
+ **body** | [**\Kinow\Client\Model\UploadDirectorCoverRequest**](#\Kinow\Client\Model\UploadDirectorCoverRequest)|  |
 
 ### Return type
 

@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethods**
-> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethodsWithIp**
-> \Kinow\Client\Model\PaymentMethods[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
+[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentModules**
-> \Kinow\Client\Model\PaymentModules getPaymentModules($page, $per_page)
+> \Kinow\Client\Model\PaymentModuleListResponse getPaymentModules($page, $per_page)
 
 
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
+[**\Kinow\Client\Model\PaymentModuleListResponse**](#PaymentModuleListResponse)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentUrl**
-> \Kinow\Client\Model\PaymentUrl getPaymentUrl($cart_id, $payment_name)
+> \Kinow\Client\Model\PaymentUrlResponse getPaymentUrl($cart_id, $payment_name)
 
 
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentUrl**](#PaymentUrl)
+[**\Kinow\Client\Model\PaymentUrlResponse**](#PaymentUrlResponse)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetailsResponse[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetailsResponse[]**](#PaymentDetailsResponse)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPaymentsWithIp**
-> \Kinow\Client\Model\PaymentDetails[] getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsListResponse getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
 
 
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
+[**\Kinow\Client\Model\PaymentDetailsListResponse**](#PaymentDetailsListResponse)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kinow\Client\Model\PaymentDetails1 preparePayment($cart_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsResponse1 preparePayment($cart_id, $payment_name, $ip_address)
 
 
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetails1**](#PaymentDetails1)
+[**\Kinow\Client\Model\PaymentDetailsResponse1**](#PaymentDetailsResponse1)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $customer_id = 789; // int | 
 $payment_name = "payment_name_example"; // string | 
-$payment_arguments = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment arguments
+$payment_arguments = new \Kinow\Client\Model\UpdatePaymentRequest(); // \Kinow\Client\Model\UpdatePaymentRequest | Payment arguments
 $ip_address = "ip_address_example"; // string | Filter by user IP
 
 try {
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**|  |
  **payment_name** | **string**|  |
- **payment_arguments** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment arguments |
+ **payment_arguments** | [**\Kinow\Client\Model\UpdatePaymentRequest**](#\Kinow\Client\Model\UpdatePaymentRequest)| Payment arguments |
  **ip_address** | **string**| Filter by user IP | [optional]
 
 ### Return type
@@ -698,7 +698,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 $api_instance = new Kinow\Client\Api\PaymentModulesApi();
 $cart_id = 789; // int | Cart ID to fetch
 $payment_name = "payment_name_example"; // string | Payment gateway name
-$payment_argument = new \Kinow\Client\Model\PaymentArguments(); // \Kinow\Client\Model\PaymentArguments | Payment argument
+$payment_argument = new \Kinow\Client\Model\PaymentArgumentsResponse(); // \Kinow\Client\Model\PaymentArgumentsResponse | Payment argument
 
 try {
     $api_instance->validatePayment($cart_id, $payment_name, $payment_argument);
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cart_id** | **int**| Cart ID to fetch |
  **payment_name** | **string**| Payment gateway name |
- **payment_argument** | [**\Kinow\Client\Model\PaymentArguments**](#\Kinow\Client\Model\PaymentArguments)| Payment argument |
+ **payment_argument** | [**\Kinow\Client\Model\PaymentArgumentsResponse**](#\Kinow\Client\Model\PaymentArgumentsResponse)| Payment argument |
 
 ### Return type
 

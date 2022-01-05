@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 ## **getOrderState**
-> \Kinow\Client\Model\OrderState getOrderState($order_state_id)
+> \Kinow\Client\Model\OrderStateResponse getOrderState($order_state_id)
 
 
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\OrderState**](#OrderState)
+[**\Kinow\Client\Model\OrderStateResponse**](#OrderStateResponse)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getOrderStates**
-> \Kinow\Client\Model\OrderStates getOrderStates($page, $per_page)
+> \Kinow\Client\Model\OrderStateListResponse getOrderStates($page, $per_page)
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\OrderStates**](#OrderStates)
+[**\Kinow\Client\Model\OrderStateListResponse**](#OrderStateListResponse)
 
 ### Authorization
 
