@@ -2523,7 +2523,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadProductCover**
-> \Kinow\Client\Model\ImageResponse uploadProductCover($body)
+> \Kinow\Client\Model\ImageResponse uploadProductCover($product_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -2544,10 +2544,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
-$body = new \Kinow\Client\Model\UploadProductCoverRequest(); // \Kinow\Client\Model\UploadProductCoverRequest | 
+$product_id = 3.4; // float | Product ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadProductCover($body);
+    $result = $api_instance->uploadProductCover($product_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->uploadProductCover: ', $e->getMessage(), PHP_EOL;
@@ -2559,7 +2562,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadProductCoverRequest**](#\Kinow\Client\Model\UploadProductCoverRequest)|  |
+ **product_id** | **float**| Product ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -2575,7 +2581,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadProductImage**
-> \Kinow\Client\Model\Image uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -2597,13 +2603,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ProductsApi();
 $product_id = 3.4; // float | Product ID to fetch
+$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
-$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm);
+    $result = $api_instance->uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->uploadProductImage: ', $e->getMessage(), PHP_EOL;
@@ -2616,9 +2622,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **float**| Product ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
  **image_type_name** | **string**| Image types name to use to generate image assets |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type

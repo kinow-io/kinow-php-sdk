@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadSubscriptionCover**
-> \Kinow\Client\Model\ImageResponse uploadSubscriptionCover($body)
+> \Kinow\Client\Model\ImageResponse uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -469,10 +469,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\SubscriptionsApi();
-$body = new \Kinow\Client\Model\UploadSubscriptionCoverRequest(); // \Kinow\Client\Model\UploadSubscriptionCoverRequest | 
+$subscription_id = 3.4; // float | Subscription ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadSubscriptionCover($body);
+    $result = $api_instance->uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->uploadSubscriptionCover: ', $e->getMessage(), PHP_EOL;
@@ -484,7 +487,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadSubscriptionCoverRequest**](#\Kinow\Client\Model\UploadSubscriptionCoverRequest)|  |
+ **subscription_id** | **float**| Subscription ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 

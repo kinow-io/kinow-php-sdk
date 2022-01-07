@@ -787,7 +787,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kinow\Client\Model\Image uploadDirectorCover($body)
+> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -808,10 +808,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\DirectorsApi();
-$body = new \Kinow\Client\Model\UploadDirectorCoverRequest(); // \Kinow\Client\Model\UploadDirectorCoverRequest | 
+$director_id = 3.4; // float | Director ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadDirectorCover($body);
+    $result = $api_instance->uploadDirectorCover($director_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectorsApi->uploadDirectorCover: ', $e->getMessage(), PHP_EOL;
@@ -823,7 +826,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadDirectorCoverRequest**](#\Kinow\Client\Model\UploadDirectorCoverRequest)|  |
+ **director_id** | **float**| Director ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -835,6 +841,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 

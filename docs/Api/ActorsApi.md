@@ -787,7 +787,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **uploadActorCover**
-> \Kinow\Client\Model\ImageResponse uploadActorCover($body)
+> \Kinow\Client\Model\ImageResponse uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -808,10 +808,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ActorsApi();
-$body = new \Kinow\Client\Model\UploadActorCoverRequest(); // \Kinow\Client\Model\UploadActorCoverRequest | 
+$actor_id = 3.4; // float | Actor ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadActorCover($body);
+    $result = $api_instance->uploadActorCover($actor_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActorsApi->uploadActorCover: ', $e->getMessage(), PHP_EOL;
@@ -823,7 +826,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadActorCoverRequest**](#\Kinow\Client\Model\UploadActorCoverRequest)|  |
+ **actor_id** | **float**| Actor ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 

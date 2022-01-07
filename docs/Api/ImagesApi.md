@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadActorCover**
-> \Kinow\Client\Model\ImageResponse uploadActorCover($body)
+> \Kinow\Client\Model\ImageResponse uploadActorCover($actor_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -671,10 +671,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
-$body = new \Kinow\Client\Model\UploadActorCoverRequest(); // \Kinow\Client\Model\UploadActorCoverRequest | 
+$actor_id = 3.4; // float | Actor ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadActorCover($body);
+    $result = $api_instance->uploadActorCover($actor_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadActorCover: ', $e->getMessage(), PHP_EOL;
@@ -686,7 +689,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadActorCoverRequest**](#\Kinow\Client\Model\UploadActorCoverRequest)|  |
+ **actor_id** | **float**| Actor ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -702,7 +708,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadCategoryCover**
-> \Kinow\Client\Model\ImageResponse uploadCategoryCover($body)
+> \Kinow\Client\Model\ImageResponse uploadCategoryCover($category_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -723,10 +729,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
-$body = new \Kinow\Client\Model\UploadCategoryCoverRequest(); // \Kinow\Client\Model\UploadCategoryCoverRequest | 
+$category_id = 3.4; // float | Category ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadCategoryCover($body);
+    $result = $api_instance->uploadCategoryCover($category_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadCategoryCover: ', $e->getMessage(), PHP_EOL;
@@ -738,7 +747,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadCategoryCoverRequest**](#\Kinow\Client\Model\UploadCategoryCoverRequest)|  |
+ **category_id** | **float**| Category ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -754,7 +766,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadCategoryImage**
-> \Kinow\Client\Model\Image uploadCategoryImage($category_id, $file, $hash, $image_type_name, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -776,13 +788,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
 $category_id = 3.4; // float | Category ID to fetch
+$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
-$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadCategoryImage($category_id, $file, $hash, $image_type_name, $hash_algorithm);
+    $result = $api_instance->uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadCategoryImage: ', $e->getMessage(), PHP_EOL;
@@ -795,9 +807,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **float**| Category ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
  **image_type_name** | **string**| Image types name to use to generate image assets |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
@@ -814,7 +826,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kinow\Client\Model\Image uploadDirectorCover($body)
+> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -835,10 +847,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
-$body = new \Kinow\Client\Model\UploadDirectorCoverRequest(); // \Kinow\Client\Model\UploadDirectorCoverRequest | 
+$director_id = 3.4; // float | Director ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadDirectorCover($body);
+    $result = $api_instance->uploadDirectorCover($director_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadDirectorCover: ', $e->getMessage(), PHP_EOL;
@@ -850,7 +865,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadDirectorCoverRequest**](#\Kinow\Client\Model\UploadDirectorCoverRequest)|  |
+ **director_id** | **float**| Director ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -862,11 +880,11 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 ## **uploadProductCover**
-> \Kinow\Client\Model\ImageResponse uploadProductCover($body)
+> \Kinow\Client\Model\ImageResponse uploadProductCover($product_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -887,10 +905,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
-$body = new \Kinow\Client\Model\UploadProductCoverRequest(); // \Kinow\Client\Model\UploadProductCoverRequest | 
+$product_id = 3.4; // float | Product ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadProductCover($body);
+    $result = $api_instance->uploadProductCover($product_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadProductCover: ', $e->getMessage(), PHP_EOL;
@@ -902,7 +923,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadProductCoverRequest**](#\Kinow\Client\Model\UploadProductCoverRequest)|  |
+ **product_id** | **float**| Product ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
@@ -918,7 +942,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadProductImage**
-> \Kinow\Client\Model\Image uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm)
+> \Kinow\Client\Model\Image uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -940,13 +964,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
 $product_id = 3.4; // float | Product ID to fetch
+$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $file = "/path/to/file.txt"; // \SplFileObject | 
 $hash = "hash_example"; // string | 
-$image_type_name = "image_type_name_example"; // string | Image types name to use to generate image assets
 $hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadProductImage($product_id, $file, $hash, $image_type_name, $hash_algorithm);
+    $result = $api_instance->uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadProductImage: ', $e->getMessage(), PHP_EOL;
@@ -959,9 +983,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **float**| Product ID to fetch |
- **file** | **\SplFileObject**|  |
- **hash** | **string**|  |
  **image_type_name** | **string**| Image types name to use to generate image assets |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
  **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
@@ -978,7 +1002,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadSubscriptionCover**
-> \Kinow\Client\Model\ImageResponse uploadSubscriptionCover($body)
+> \Kinow\Client\Model\ImageResponse uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -999,10 +1023,13 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\ImagesApi();
-$body = new \Kinow\Client\Model\UploadSubscriptionCoverRequest(); // \Kinow\Client\Model\UploadSubscriptionCoverRequest | 
+$subscription_id = 3.4; // float | Subscription ID to fetch
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$hash = "hash_example"; // string | 
+$hash_algorithm = "hash_algorithm_example"; // string | Hash algorithm to check the hash file (default value is: sha256)
 
 try {
-    $result = $api_instance->uploadSubscriptionCover($body);
+    $result = $api_instance->uploadSubscriptionCover($subscription_id, $file, $hash, $hash_algorithm);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImagesApi->uploadSubscriptionCover: ', $e->getMessage(), PHP_EOL;
@@ -1014,7 +1041,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\UploadSubscriptionCoverRequest**](#\Kinow\Client\Model\UploadSubscriptionCoverRequest)|  |
+ **subscription_id** | **float**| Subscription ID to fetch |
+ **file** | **\SplFileObject**|  | [optional]
+ **hash** | **string**|  | [optional]
+ **hash_algorithm** | **string**| Hash algorithm to check the hash file (default value is: sha256) | [optional]
 
 ### Return type
 
