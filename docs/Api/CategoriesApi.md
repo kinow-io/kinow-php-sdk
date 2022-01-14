@@ -1437,7 +1437,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadCategoryImage**
-> \Kinow\Client\Model\Image uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -1485,7 +1485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

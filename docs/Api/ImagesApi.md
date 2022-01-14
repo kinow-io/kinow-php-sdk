@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadCategoryImage**
-> \Kinow\Client\Model\Image uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadCategoryImage($category_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -826,7 +826,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadDirectorCover**
-> \Kinow\Client\Model\Image uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadDirectorCover($director_id, $file, $hash, $hash_algorithm)
 
 
 
@@ -872,7 +872,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 
@@ -880,7 +880,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
 ## **uploadProductCover**
@@ -942,7 +942,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **uploadProductImage**
-> \Kinow\Client\Model\Image uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm)
+> \Kinow\Client\Model\ImageResponse uploadProductImage($product_id, $image_type_name, $file, $hash, $hash_algorithm)
 
 
 
@@ -990,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Image**](#Image)
+[**\Kinow\Client\Model\ImageResponse**](#ImageResponse)
 
 ### Authorization
 

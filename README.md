@@ -742,6 +742,7 @@ Class | Method | HTTP request | Description
  - [ProductResponse](docs/Model/ProductResponse.md)
  - [ProductVideoListResponse](docs/Model/ProductVideoListResponse.md)
  - [Products](docs/Model/Products.md)
+ - [Promotion](docs/Model/Promotion.md)
  - [RegistrationField](docs/Model/RegistrationField.md)
  - [RegistrationFieldsResponse](docs/Model/RegistrationFieldsResponse.md)
  - [RemoveProductFromCartRequest](docs/Model/RemoveProductFromCartRequest.md)
