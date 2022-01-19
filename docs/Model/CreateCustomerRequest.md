@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **active** | **bool** |  | [optional] 
 **id_lang** | **int** |  | [optional] 
 **id_country** | **int** |  | 
+**id_state** | **int** |  | [optional] 
 **city** | **string** |  | [optional] 
 **postcode** | **string** |  | [optional] 
 **address1** | **string** |  | [optional] 

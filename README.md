@@ -202,6 +202,7 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**getConfigurationLogo**](docs/Api/ConfigurationApi.md#getconfigurationlogo) | **GET** /configuration/logo | 
 *ConfigurationApi* | [**getConfigurationSocial**](docs/Api/ConfigurationApi.md#getconfigurationsocial) | **GET** /configuration/social | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /countries | 
+*CountriesApi* | [**getStates**](docs/Api/CountriesApi.md#getstates) | **GET** /countries/states | 
 *CurrenciesApi* | [**getCurrencies**](docs/Api/CurrenciesApi.md#getcurrencies) | **GET** /currencies | 
 *CustomersApi* | [**attachBookmarkToCustomer**](docs/Api/CustomersApi.md#attachbookmarktocustomer) | **POST** /customers/{customer_id}/bookmarks | 
 *CustomersApi* | [**attachCartToCustomer**](docs/Api/CustomersApi.md#attachcarttocustomer) | **POST** /customers/{customer_id}/carts | 
@@ -750,6 +751,8 @@ Class | Method | HTTP request | Description
  - [SessionVideoStatListResponse](docs/Model/SessionVideoStatListResponse.md)
  - [SessionVideoStatResponse](docs/Model/SessionVideoStatResponse.md)
  - [SocialSettings](docs/Model/SocialSettings.md)
+ - [State](docs/Model/State.md)
+ - [StateListResponse](docs/Model/StateListResponse.md)
  - [Subscription](docs/Model/Subscription.md)
  - [SubscriptionListResponse](docs/Model/SubscriptionListResponse.md)
  - [SubscriptionResponse](docs/Model/SubscriptionResponse.md)

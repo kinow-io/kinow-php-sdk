@@ -20,6 +20,5 @@ Name | Type | Description | Notes
 **custom** | **string** |  | [optional] 
 **password** | **string** | Only available in body | [optional] 
 **last_passwd_gen** | **string** |  | [optional] 
-**id_country** | **int** | Only available in body | [optional] 
 
 
