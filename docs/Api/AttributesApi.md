@@ -32,7 +32,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 // Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
 
 $api_instance = new Kinow\Client\Api\AttributesApi();
-$body = new \Kinow\Client\Model\ProductAttributeCreateRequest(); // \Kinow\Client\Model\ProductAttributeCreateRequest | 
+$body = new \Kinow\Client\Model\CreateAttributeRequest(); // \Kinow\Client\Model\CreateAttributeRequest | Attribute settings
 
 try {
     $result = $api_instance->createProductAttribute($body);
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Kinow\Client\Model\ProductAttributeCreateRequest**](#\Kinow\Client\Model\ProductAttributeCreateRequest)|  |
+ **body** | [**\Kinow\Client\Model\CreateAttributeRequest**](#\Kinow\Client\Model\CreateAttributeRequest)| Attribute settings |
 
 ### Return type
 
