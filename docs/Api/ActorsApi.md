@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryActors**
-> \Kinow\Client\Model\CategoryActorsResponse getCategoryActors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryActorsListResponse getCategoryActors($category_id, $page, $per_page)
 
 
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryActorsResponse**](#CategoryActorsResponse)
+[**\Kinow\Client\Model\CategoryActorsListResponse**](#CategoryActorsListResponse)
 
 ### Authorization
 

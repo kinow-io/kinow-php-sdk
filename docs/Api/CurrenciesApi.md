@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 ## **getCurrencies**
-> \Kinow\Client\Model\Currencies getCurrencies($page, $per_page)
+> \Kinow\Client\Model\CurrencyListResponse1 getCurrencies($page, $per_page)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Currencies**](#Currencies)
+[**\Kinow\Client\Model\CurrencyListResponse1**](#CurrencyListResponse1)
 
 ### Authorization
 

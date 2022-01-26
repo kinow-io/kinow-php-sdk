@@ -1031,7 +1031,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrice**
-> \Kinow\Client\Model\CartPriceResponse[] getPrice($body)
+> \Kinow\Client\Model\ProductPrice[] getPrice($body)
 
 
 
@@ -1071,7 +1071,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CartPriceResponse[]**](#CartPriceResponse)
+[**\Kinow\Client\Model\ProductPrice[]**](#ProductPrice)
 
 ### Authorization
 

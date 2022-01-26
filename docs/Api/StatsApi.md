@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerSessionsMultiple**
-> \Kinow\Client\Model\SessionVideoStatResponse[] getCustomerSessionsMultiple($customer_id, $body)
+> \Kinow\Client\Model\SessionVideoStat[] getCustomerSessionsMultiple($customer_id, $body)
 
 
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\SessionVideoStatResponse[]**](#SessionVideoStatResponse)
+[**\Kinow\Client\Model\SessionVideoStat[]**](#SessionVideoStat)
 
 ### Authorization
 

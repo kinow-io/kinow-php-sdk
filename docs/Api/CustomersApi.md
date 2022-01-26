@@ -1238,7 +1238,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kinow\Client\Model\VideoAccessInfoResponse[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -1280,7 +1280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoAccessInfoResponse[]**](#VideoAccessInfoResponse)
+[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 
@@ -1408,7 +1408,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalanceListResponse getCustomerPrepaymentBalances($customer_id, $currency_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -1450,7 +1450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBalanceListResponse**](#PrepaymentBalanceListResponse)
+[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 
@@ -1684,7 +1684,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethods**
-> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -1726,7 +1726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -1738,7 +1738,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethodsWithIp**
-> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
 
 
 
@@ -1782,7 +1782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -1794,7 +1794,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kinow\Client\Model\PaymentDetailsResponse[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -1836,7 +1836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetailsResponse[]**](#PaymentDetailsResponse)
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 

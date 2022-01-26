@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 ## **getCustomerPrepaymentBalances**
-> \Kinow\Client\Model\PrepaymentBalanceListResponse getCustomerPrepaymentBalances($customer_id, $currency_id)
+> \Kinow\Client\Model\PrepaymentBalance[] getCustomerPrepaymentBalances($customer_id, $currency_id)
 
 
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PrepaymentBalanceListResponse**](#PrepaymentBalanceListResponse)
+[**\Kinow\Client\Model\PrepaymentBalance[]**](#PrepaymentBalance)
 
 ### Authorization
 

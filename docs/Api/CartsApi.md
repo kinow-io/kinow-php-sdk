@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCartPaymentModules**
-> \Kinow\Client\Model\PaymentModules getCartPaymentModules($cart_id, $page, $per_page)
+> \Kinow\Client\Model\PaymentModuleListResponse1 getCartPaymentModules($cart_id, $page, $per_page)
 
 
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
+[**\Kinow\Client\Model\PaymentModuleListResponse1**](#PaymentModuleListResponse1)
 
 ### Authorization
 
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCarts**
-> \Kinow\Client\Model\Carts getCarts($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CartListResponse1 getCarts($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\Carts**](#Carts)
+[**\Kinow\Client\Model\CartListResponse1**](#CartListResponse1)
 
 ### Authorization
 
@@ -794,7 +794,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPrice**
-> \Kinow\Client\Model\CartPriceResponse[] getPrice($body)
+> \Kinow\Client\Model\CartPrice[] getPrice($body)
 
 
 
@@ -834,7 +834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CartPriceResponse[]**](#CartPriceResponse)
+[**\Kinow\Client\Model\CartPrice[]**](#CartPrice)
 
 ### Authorization
 
@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kinow\Client\Model\PaymentDetailsResponse1 preparePayment($cart_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsResponse preparePayment($cart_id, $payment_name, $ip_address)
 
 
 
@@ -890,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetailsResponse1**](#PaymentDetailsResponse1)
+[**\Kinow\Client\Model\PaymentDetailsResponse**](#PaymentDetailsResponse)
 
 ### Authorization
 

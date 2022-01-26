@@ -178,7 +178,7 @@ This endpoint does not need any parameter.
  - **Accept**: Not defined
 
 ## **getCategoryImages**
-> \Kinow\Client\Model\CategoryImagesResponse getCategoryImages($category_id, $type, $page, $per_page)
+> \Kinow\Client\Model\CategoryImagesListResponse getCategoryImages($category_id, $type, $page, $per_page)
 
 
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryImagesResponse**](#CategoryImagesResponse)
+[**\Kinow\Client\Model\CategoryImagesListResponse**](#CategoryImagesListResponse)
 
 ### Authorization
 

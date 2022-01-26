@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 ## **getCartPaymentModules**
-> \Kinow\Client\Model\PaymentModules getCartPaymentModules($cart_id, $page, $per_page)
+> \Kinow\Client\Model\PaymentModuleListResponse1 getCartPaymentModules($cart_id, $page, $per_page)
 
 
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentModules**](#PaymentModules)
+[**\Kinow\Client\Model\PaymentModuleListResponse1**](#PaymentModuleListResponse1)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethods**
-> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethods($customer_id, $payment_name)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethods($customer_id, $payment_name)
 
 
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPaymentMethodsWithIp**
-> \Kinow\Client\Model\PaymentMethodsResponse[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentMethods[] getPaymentMethodsWithIp($customer_id, $payment_name, $ip_address)
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentMethodsResponse[]**](#PaymentMethodsResponse)
+[**\Kinow\Client\Model\PaymentMethods[]**](#PaymentMethods)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPayments**
-> \Kinow\Client\Model\PaymentDetailsResponse[] getPendingPayments($payment_name, $customer_id)
+> \Kinow\Client\Model\PaymentDetails[] getPendingPayments($payment_name, $customer_id)
 
 
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetailsResponse[]**](#PaymentDetailsResponse)
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **preparePayment**
-> \Kinow\Client\Model\PaymentDetailsResponse1 preparePayment($cart_id, $payment_name, $ip_address)
+> \Kinow\Client\Model\PaymentDetailsResponse preparePayment($cart_id, $payment_name, $ip_address)
 
 
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetailsResponse1**](#PaymentDetailsResponse1)
+[**\Kinow\Client\Model\PaymentDetailsResponse**](#PaymentDetailsResponse)
 
 ### Authorization
 

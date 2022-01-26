@@ -284,7 +284,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCategoryDirectors**
-> \Kinow\Client\Model\CategoryDirectorsResponse getCategoryDirectors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryDirectorsListResponse getCategoryDirectors($category_id, $page, $per_page)
 
 
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\CategoryDirectorsListResponse**](#CategoryDirectorsListResponse)
 
 ### Authorization
 

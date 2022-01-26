@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryActors**
-> \Kinow\Client\Model\CategoryActorsResponse getCategoryActors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryActorsListResponse getCategoryActors($category_id, $page, $per_page)
 
 
 
@@ -673,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryActorsResponse**](#CategoryActorsResponse)
+[**\Kinow\Client\Model\CategoryActorsListResponse**](#CategoryActorsListResponse)
 
 ### Authorization
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryDirectors**
-> \Kinow\Client\Model\CategoryDirectorsResponse getCategoryDirectors($category_id, $page, $per_page)
+> \Kinow\Client\Model\CategoryDirectorsListResponse getCategoryDirectors($category_id, $page, $per_page)
 
 
 
@@ -781,7 +781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryDirectorsResponse**](#CategoryDirectorsResponse)
+[**\Kinow\Client\Model\CategoryDirectorsListResponse**](#CategoryDirectorsListResponse)
 
 ### Authorization
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCategoryImages**
-> \Kinow\Client\Model\CategoryImagesResponse getCategoryImages($category_id, $type, $page, $per_page)
+> \Kinow\Client\Model\CategoryImagesListResponse getCategoryImages($category_id, $type, $page, $per_page)
 
 
 
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CategoryImagesResponse**](#CategoryImagesResponse)
+[**\Kinow\Client\Model\CategoryImagesListResponse**](#CategoryImagesListResponse)
 
 ### Authorization
 

@@ -400,7 +400,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getCustomerHasAccessToVideos**
-> \Kinow\Client\Model\VideoAccessInfoResponse[] getCustomerHasAccessToVideos($customer_id, $body)
+> \Kinow\Client\Model\VideoAccessInfo[] getCustomerHasAccessToVideos($customer_id, $body)
 
 
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\VideoAccessInfoResponse[]**](#VideoAccessInfoResponse)
+[**\Kinow\Client\Model\VideoAccessInfo[]**](#VideoAccessInfo)
 
 ### Authorization
 

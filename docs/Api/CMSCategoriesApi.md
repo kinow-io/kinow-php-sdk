@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCMSCategories**
-> \Kinow\Client\Model\CMSCategoriesLists getCMSCategories($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CMSCategoriesListResponse getCMSCategories($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CMSCategoriesLists**](#CMSCategoriesLists)
+[**\Kinow\Client\Model\CMSCategoriesListResponse**](#CMSCategoriesListResponse)
 
 ### Authorization
 
