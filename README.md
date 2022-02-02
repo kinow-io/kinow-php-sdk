@@ -691,7 +691,6 @@ Class | Method | HTTP request | Description
  - [PaymentArguments](docs/Model/PaymentArguments.md)
  - [PaymentArgumentsResponse](docs/Model/PaymentArgumentsResponse.md)
  - [PaymentDetails](docs/Model/PaymentDetails.md)
- - [PaymentDetailsListResponse](docs/Model/PaymentDetailsListResponse.md)
  - [PaymentDetailsResponse](docs/Model/PaymentDetailsResponse.md)
  - [PaymentMethods](docs/Model/PaymentMethods.md)
  - [PaymentModule](docs/Model/PaymentModule.md)

@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getPendingPaymentsWithIp**
-> \Kinow\Client\Model\PaymentDetailsListResponse getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
+> \Kinow\Client\Model\PaymentDetails[] getPendingPaymentsWithIp($payment_name, $customer_id, $ip_address)
 
 
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\PaymentDetailsListResponse**](#PaymentDetailsListResponse)
+[**\Kinow\Client\Model\PaymentDetails[]**](#PaymentDetails)
 
 ### Authorization
 
