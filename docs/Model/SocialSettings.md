@@ -9,6 +9,12 @@ Name | Type | Description | Notes
 **pinterest** | **string** |  | [optional] 
 **dailymotion** | **string** |  | [optional] 
 **tumblr** | **string** |  | [optional] 
-**myspace** | **string** |  | [optional] 
+**instagram** | **string** |  | [optional] 
+**tiktok** | **string** |  | [optional] 
+**twitch** | **string** |  | [optional] 
+**linked_in** | **string** |  | [optional] 
+**soundcloud** | **string** |  | [optional] 
+**flickr** | **string** |  | [optional] 
+**discord** | **string** |  | [optional] 
 
 
