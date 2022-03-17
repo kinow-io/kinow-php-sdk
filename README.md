@@ -463,7 +463,9 @@ Class | Method | HTTP request | Description
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
+*StatsApi* | [**getCustomerVideosViewInformations**](docs/Api/StatsApi.md#getcustomervideosviewinformations) | **POST** /video-stats/views/{customer_id} | 
 *StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
+*StatsApi* | [**setCustomerVideoViewInformations**](docs/Api/StatsApi.md#setcustomervideoviewinformations) | **PUT** /video-stats/views/{customer_id}/{video_id} | 
 *SubscriptionsApi* | [**attachCategoriesToSubscription**](docs/Api/SubscriptionsApi.md#attachcategoriestosubscription) | **POST** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**detachCategoryFromSubscription**](docs/Api/SubscriptionsApi.md#detachcategoryfromsubscription) | **DELETE** /subscriptions/{subscription_id}/categories/{category_id} | 
 *SubscriptionsApi* | [**getDisabledSubscriptions**](docs/Api/SubscriptionsApi.md#getdisabledsubscriptions) | **GET** /videos/{video_id}/disabled-subscriptions | 
@@ -562,6 +564,7 @@ Class | Method | HTTP request | Description
  - [CartResponse](docs/Model/CartResponse.md)
  - [CartRule](docs/Model/CartRule.md)
  - [CartRuleListResponse](docs/Model/CartRuleListResponse.md)
+ - [CartRulePrice](docs/Model/CartRulePrice.md)
  - [CartRuleResponse](docs/Model/CartRuleResponse.md)
  - [CartRuleRestrictionGroup](docs/Model/CartRuleRestrictionGroup.md)
  - [CartRuleRestrictionGroupItem](docs/Model/CartRuleRestrictionGroupItem.md)
@@ -793,11 +796,14 @@ Class | Method | HTTP request | Description
  - [VideoGroupResponse](docs/Model/VideoGroupResponse.md)
  - [VideoIDList](docs/Model/VideoIDList.md)
  - [VideoIDList1](docs/Model/VideoIDList1.md)
+ - [VideoIDList2](docs/Model/VideoIDList2.md)
  - [VideoListResponse](docs/Model/VideoListResponse.md)
  - [VideoResponse](docs/Model/VideoResponse.md)
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStatListResponse](docs/Model/VideoStatListResponse.md)
+ - [VideoViewInformations](docs/Model/VideoViewInformations.md)
  - [VideoViews](docs/Model/VideoViews.md)
+ - [View](docs/Model/View.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenuListResponse](docs/Model/WidgetFooterMenuListResponse.md)
  - [WidgetHomeRail](docs/Model/WidgetHomeRail.md)

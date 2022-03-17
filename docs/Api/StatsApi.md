@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**getCustomerSessions**](#getCustomerSessions) | **GET** /video-stats/sessions | 
 [**getCustomerSessionsMultiple**](#getCustomerSessionsMultiple) | **POST** /video-stats/{customer_id}/sessions | 
 [**getCustomerVideoStats**](#getCustomerVideoStats) | **GET** /video-stats/customers | 
+[**getCustomerVideosViewInformations**](#getCustomerVideosViewInformations) | **POST** /video-stats/views/{customer_id} | 
 [**getVideoStats**](#getVideoStats) | **GET** /video-stats/videos | 
+[**setCustomerVideoViewInformations**](#setCustomerVideoViewInformations) | **PUT** /video-stats/views/{customer_id}/{video_id} | 
 
 
 ## **getCustomerGroupTotalWatched**
@@ -158,7 +160,7 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\StatsApi();
 $customer_id = 789; // int | Customer ID to fetch
-$body = new \Kinow\Client\Model\VideoIDList1(); // \Kinow\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
+$body = new \Kinow\Client\Model\VideoIDList2(); // \Kinow\Client\Model\VideoIDList2 | List of Video IDs separated by comma, eg. '42,21,84'
 
 try {
     $result = $api_instance->getCustomerSessionsMultiple($customer_id, $body);
@@ -174,7 +176,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
- **body** | [**\Kinow\Client\Model\VideoIDList1**](#\Kinow\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+ **body** | [**\Kinow\Client\Model\VideoIDList2**](#\Kinow\Client\Model\VideoIDList2)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
 
 ### Return type
 
@@ -249,6 +251,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCustomerVideosViewInformations**
+> \Kinow\Client\Model\VideoViewInformations[] getCustomerVideosViewInformations($customer_id, $body)
+
+
+
+Get a list of videos view informations for a customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$body = new \Kinow\Client\Model\VideoIDList1(); // \Kinow\Client\Model\VideoIDList1 | List of Video IDs separated by comma, eg. '42,21,84'
+
+try {
+    $result = $api_instance->getCustomerVideosViewInformations($customer_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getCustomerVideosViewInformations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **body** | [**\Kinow\Client\Model\VideoIDList1**](#\Kinow\Client\Model\VideoIDList1)| List of Video IDs separated by comma, eg. &#39;42,21,84&#39; |
+
+### Return type
+
+[**\Kinow\Client\Model\VideoViewInformations[]**](#VideoViewInformations)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getVideoStats**
 > \Kinow\Client\Model\VideoStatListResponse getVideoStats($video_id, $date_from, $date_to, $page)
 
@@ -297,6 +353,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\VideoStatListResponse**](#VideoStatListResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **setCustomerVideoViewInformations**
+> setCustomerVideoViewInformations($customer_id, $video_id, $body)
+
+
+
+Set a video view informations for a customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$video_id = 789; // int | Video ID to fetch
+$body = new \Kinow\Client\Model\View(); // \Kinow\Client\Model\View | Boolean view
+
+try {
+    $api_instance->setCustomerVideoViewInformations($customer_id, $video_id, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->setCustomerVideoViewInformations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **video_id** | **int**| Video ID to fetch |
+ **body** | [**\Kinow\Client\Model\View**](#\Kinow\Client\Model\View)| Boolean view |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

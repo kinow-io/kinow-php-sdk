@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **total_trial_formatted** | **string** |  | [optional] 
 **total_formatted** | **string** |  | [optional] 
 **taxes** | [**\Kinow\Client\Model\TaxPrice[]**](#TaxPrice) |  | [optional] 
+**cart_rules** | [**\Kinow\Client\Model\CartRulePrice[]**](#CartRulePrice) |  | [optional] 
 
 
