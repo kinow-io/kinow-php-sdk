@@ -34,7 +34,7 @@ $page = 789; // int |
 $per_page = 789; // int | 
 $sort_by = "sort_by_example"; // string | Sort by this attribute (id by default)
 $sort_direction = "sort_direction_example"; // string | Sorting direction (asc by default)
-$ip = "ip_example"; // string | Filter by Customer IP
+$ip = "ip_example"; // string | Filter by user IP
 $iso_code = "iso_code_example"; // string | Filter by ISO Code
 
 try {
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
  **per_page** | **int**|  | [optional]
  **sort_by** | **string**| Sort by this attribute (id by default) | [optional]
  **sort_direction** | **string**| Sorting direction (asc by default) | [optional]
- **ip** | **string**| Filter by Customer IP | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
  **iso_code** | **string**| Filter by ISO Code | [optional]
 
 ### Return type

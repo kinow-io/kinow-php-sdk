@@ -464,7 +464,9 @@ Class | Method | HTTP request | Description
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
 *StatsApi* | [**getCustomerVideoStats**](docs/Api/StatsApi.md#getcustomervideostats) | **GET** /video-stats/customers | 
 *StatsApi* | [**getCustomerVideosViewInformations**](docs/Api/StatsApi.md#getcustomervideosviewinformations) | **POST** /video-stats/views/{customer_id} | 
+*StatsApi* | [**getProductsWatched**](docs/Api/StatsApi.md#getproductswatched) | **GET** /video-stats/products-watched | 
 *StatsApi* | [**getVideoStats**](docs/Api/StatsApi.md#getvideostats) | **GET** /video-stats/videos | 
+*StatsApi* | [**getVideosWatching**](docs/Api/StatsApi.md#getvideoswatching) | **GET** /video-stats/videos-watching | 
 *StatsApi* | [**setCustomerVideoViewInformations**](docs/Api/StatsApi.md#setcustomervideoviewinformations) | **PUT** /video-stats/views/{customer_id}/{video_id} | 
 *SubscriptionsApi* | [**attachCategoriesToSubscription**](docs/Api/SubscriptionsApi.md#attachcategoriestosubscription) | **POST** /subscriptions/{subscription_id}/categories | 
 *SubscriptionsApi* | [**detachCategoryFromSubscription**](docs/Api/SubscriptionsApi.md#detachcategoryfromsubscription) | **DELETE** /subscriptions/{subscription_id}/categories/{category_id} | 
@@ -801,6 +803,7 @@ Class | Method | HTTP request | Description
  - [VideoResponse](docs/Model/VideoResponse.md)
  - [VideoStat](docs/Model/VideoStat.md)
  - [VideoStatListResponse](docs/Model/VideoStatListResponse.md)
+ - [VideoStatsVideosWatchingResponse](docs/Model/VideoStatsVideosWatchingResponse.md)
  - [VideoViewInformations](docs/Model/VideoViewInformations.md)
  - [VideoViews](docs/Model/VideoViews.md)
  - [View](docs/Model/View.md)

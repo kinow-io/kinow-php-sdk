@@ -9,7 +9,9 @@ Method | HTTP request | Description
 [**getCustomerSessionsMultiple**](#getCustomerSessionsMultiple) | **POST** /video-stats/{customer_id}/sessions | 
 [**getCustomerVideoStats**](#getCustomerVideoStats) | **GET** /video-stats/customers | 
 [**getCustomerVideosViewInformations**](#getCustomerVideosViewInformations) | **POST** /video-stats/views/{customer_id} | 
+[**getProductsWatched**](#getProductsWatched) | **GET** /video-stats/products-watched | 
 [**getVideoStats**](#getVideoStats) | **GET** /video-stats/videos | 
+[**getVideosWatching**](#getVideosWatching) | **GET** /video-stats/videos-watching | 
 [**setCustomerVideoViewInformations**](#setCustomerVideoViewInformations) | **PUT** /video-stats/views/{customer_id}/{video_id} | 
 
 
@@ -305,6 +307,66 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getProductsWatched**
+> \Kinow\Client\Model\BlogPageProductsResponse getProductsWatched($customer_id, $page, $per_page, $ip, $iso_code)
+
+
+
+Get products watched
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
+$iso_code = "iso_code_example"; // string | Filter by ISO Code
+
+try {
+    $result = $api_instance->getProductsWatched($customer_id, $page, $per_page, $ip, $iso_code);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getProductsWatched: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+ **iso_code** | **string**| Filter by ISO Code | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\BlogPageProductsResponse**](#BlogPageProductsResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getVideoStats**
 > \Kinow\Client\Model\VideoStatListResponse getVideoStats($video_id, $date_from, $date_to, $page)
 
@@ -353,6 +415,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\VideoStatListResponse**](#VideoStatListResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getVideosWatching**
+> \Kinow\Client\Model\VideoStatsVideosWatchingResponse getVideosWatching($customer_id, $page, $per_page, $ip, $iso_code)
+
+
+
+Get videos watching
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\StatsApi();
+$customer_id = 789; // int | Customer ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+$ip = "ip_example"; // string | Filter by user IP
+$iso_code = "iso_code_example"; // string | Filter by ISO Code
+
+try {
+    $result = $api_instance->getVideosWatching($customer_id, $page, $per_page, $ip, $iso_code);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->getVideosWatching: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **int**| Customer ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+ **ip** | **string**| Filter by user IP | [optional]
+ **iso_code** | **string**| Filter by ISO Code | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\VideoStatsVideosWatchingResponse**](#VideoStatsVideosWatchingResponse)
 
 ### Authorization
 
