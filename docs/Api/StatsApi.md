@@ -4,6 +4,7 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createVideoStatSession**](#createVideoStatSession) | **POST** /video-stats/sessions | 
 [**getCustomerGroupTotalWatched**](#getCustomerGroupTotalWatched) | **GET** /video-stats/customer-group | 
 [**getCustomerSessions**](#getCustomerSessions) | **GET** /video-stats/sessions | 
 [**getCustomerSessionsMultiple**](#getCustomerSessionsMultiple) | **POST** /video-stats/{customer_id}/sessions | 
@@ -14,6 +15,58 @@ Method | HTTP request | Description
 [**getVideosWatching**](#getVideosWatching) | **GET** /video-stats/videos-watching | 
 [**setCustomerVideoViewInformations**](#setCustomerVideoViewInformations) | **PUT** /video-stats/views/{customer_id}/{video_id} | 
 
+
+## **createVideoStatSession**
+> \Kinow\Client\Model\CreateVideoStatSessionResponse createVideoStatSession($body)
+
+
+
+Create a video stat session for a customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\StatsApi();
+$body = new \Kinow\Client\Model\CreateVideoStatSessionRequest(); // \Kinow\Client\Model\CreateVideoStatSessionRequest | Video stat session parameters
+
+try {
+    $result = $api_instance->createVideoStatSession($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StatsApi->createVideoStatSession: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Kinow\Client\Model\CreateVideoStatSessionRequest**](#\Kinow\Client\Model\CreateVideoStatSessionRequest)| Video stat session parameters |
+
+### Return type
+
+[**\Kinow\Client\Model\CreateVideoStatSessionResponse**](#CreateVideoStatSessionResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **getCustomerGroupTotalWatched**
 > \Kinow\Client\Model\CustomerGroupVideoStatsListResponse getCustomerGroupTotalWatched($group_id, $date_from, $date_to, $page, $per_page)

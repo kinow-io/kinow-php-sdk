@@ -459,6 +459,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**uploadProductCover**](docs/Api/ProductsApi.md#uploadproductcover) | **POST** /products/{product_id}/cover | 
 *ProductsApi* | [**uploadProductImage**](docs/Api/ProductsApi.md#uploadproductimage) | **POST** /products/{product_id}/image | 
 *RecommendationsApi* | [**getCustomerRecommendations**](docs/Api/RecommendationsApi.md#getcustomerrecommendations) | **GET** /customers/{customer_id}/recommendations | 
+*StatsApi* | [**createVideoStatSession**](docs/Api/StatsApi.md#createvideostatsession) | **POST** /video-stats/sessions | 
 *StatsApi* | [**getCustomerGroupTotalWatched**](docs/Api/StatsApi.md#getcustomergrouptotalwatched) | **GET** /video-stats/customer-group | 
 *StatsApi* | [**getCustomerSessions**](docs/Api/StatsApi.md#getcustomersessions) | **GET** /video-stats/sessions | 
 *StatsApi* | [**getCustomerSessionsMultiple**](docs/Api/StatsApi.md#getcustomersessionsmultiple) | **POST** /video-stats/{customer_id}/sessions | 
@@ -521,6 +522,7 @@ Class | Method | HTTP request | Description
 *WidgetsApi* | [**getWidgetHookPhrase**](docs/Api/WidgetsApi.md#getwidgethookphrase) | **GET** /widgets/hook-phrase | 
 *WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
+*WidgetsApi* | [**getWidgetSliderVideoPlayer**](docs/Api/WidgetsApi.md#getwidgetslidervideoplayer) | **GET** /widgets/slider/{slider_id}/player | 
 *WidgetsApi* | [**getWidgetTopMenu**](docs/Api/WidgetsApi.md#getwidgettopmenu) | **GET** /widgets/top-menu | 
 
 
@@ -604,6 +606,8 @@ Class | Method | HTTP request | Description
  - [CreateProductRequest](docs/Model/CreateProductRequest.md)
  - [CreateTaskRequest](docs/Model/CreateTaskRequest.md)
  - [CreateVideoRequest](docs/Model/CreateVideoRequest.md)
+ - [CreateVideoStatSessionRequest](docs/Model/CreateVideoStatSessionRequest.md)
+ - [CreateVideoStatSessionResponse](docs/Model/CreateVideoStatSessionResponse.md)
  - [CreateVideoSubtitleRequest](docs/Model/CreateVideoSubtitleRequest.md)
  - [CredentialsValidationResponse](docs/Model/CredentialsValidationResponse.md)
  - [Currency](docs/Model/Currency.md)
@@ -816,6 +820,7 @@ Class | Method | HTTP request | Description
  - [WidgetSlider](docs/Model/WidgetSlider.md)
  - [WidgetSliderListResponse](docs/Model/WidgetSliderListResponse.md)
  - [WidgetSliderResponse](docs/Model/WidgetSliderResponse.md)
+ - [WidgetSliderVideo](docs/Model/WidgetSliderVideo.md)
  - [WidgetTopMenu](docs/Model/WidgetTopMenu.md)
  - [WidgetTopMenuListResponse](docs/Model/WidgetTopMenuListResponse.md)
 

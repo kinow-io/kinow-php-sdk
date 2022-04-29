@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **opacity** | **float** |  | [optional] 
 **image** | **string** |  | [optional] 
 **position** | **int** |  | [optional] 
+**video** | [**\Kinow\Client\Model\WidgetSliderVideo**](#WidgetSliderVideo) |  | [optional] 
 
 

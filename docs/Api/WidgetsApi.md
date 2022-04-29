@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getWidgetHookPhrase**](#getWidgetHookPhrase) | **GET** /widgets/hook-phrase | 
 [**getWidgetSlider**](#getWidgetSlider) | **GET** /widgets/slider | 
 [**getWidgetSliderItem**](#getWidgetSliderItem) | **GET** /widgets/slider/{slider_id} | 
+[**getWidgetSliderVideoPlayer**](#getWidgetSliderVideoPlayer) | **GET** /widgets/slider/{slider_id}/player | 
 [**getWidgetTopMenu**](#getWidgetTopMenu) | **GET** /widgets/top-menu | 
 
 
@@ -368,6 +369,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\WidgetSliderResponse**](#WidgetSliderResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getWidgetSliderVideoPlayer**
+> \Kinow\Client\Model\Player getWidgetSliderVideoPlayer($slider_id, $customer_id, $country_id)
+
+
+
+Get video player
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\WidgetsApi();
+$slider_id = 789; // int | Slider ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$country_id = 789; // int | Country ID to use in video analytics
+
+try {
+    $result = $api_instance->getWidgetSliderVideoPlayer($slider_id, $customer_id, $country_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WidgetsApi->getWidgetSliderVideoPlayer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slider_id** | **int**| Slider ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
+ **country_id** | **int**| Country ID to use in video analytics | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Player**](#Player)
 
 ### Authorization
 

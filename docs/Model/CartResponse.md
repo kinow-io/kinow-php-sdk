@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id_customer** | **int** |  | [optional] 
 **id_currency** | **int** |  | [optional] 
 **id_lang** | **int** |  | [optional] 
+**affiliate** | **string** |  | [optional] 
 **total** | **float** |  | [optional] 
 **total_without_tax** | **float** |  | [optional] 
 **total_trial** | **float** |  | [optional] 
