@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
 *ActorsApi* | [**createActor**](docs/Api/ActorsApi.md#createactor) | **POST** /actors | 
 *ActorsApi* | [**deleteActor**](docs/Api/ActorsApi.md#deleteactor) | **DELETE** /actors/{actor_id} | 
 *ActorsApi* | [**detachActorFromCategory**](docs/Api/ActorsApi.md#detachactorfromcategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
+*ActorsApi* | [**detachActorFromProduct**](docs/Api/ActorsApi.md#detachactorfromproduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 *ActorsApi* | [**getActor**](docs/Api/ActorsApi.md#getactor) | **GET** /actors/{actor_id} | 
 *ActorsApi* | [**getActorCoverImage**](docs/Api/ActorsApi.md#getactorcoverimage) | **GET** /actors/{actor_id}/cover | 
 *ActorsApi* | [**getActorProducts**](docs/Api/ActorsApi.md#getactorproducts) | **GET** /actors/{actor_id}/products | 
@@ -255,6 +256,7 @@ Class | Method | HTTP request | Description
 *DirectorsApi* | [**createDirector**](docs/Api/DirectorsApi.md#createdirector) | **POST** /directors | 
 *DirectorsApi* | [**deleteDirector**](docs/Api/DirectorsApi.md#deletedirector) | **DELETE** /directors/{director_id} | 
 *DirectorsApi* | [**detachDirectorFromCategory**](docs/Api/DirectorsApi.md#detachdirectorfromcategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
+*DirectorsApi* | [**detachDirectorFromProduct**](docs/Api/DirectorsApi.md#detachdirectorfromproduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
 *DirectorsApi* | [**getCategoryDirectors**](docs/Api/DirectorsApi.md#getcategorydirectors) | **GET** /categories/{category_id}/directors | 
 *DirectorsApi* | [**getDirector**](docs/Api/DirectorsApi.md#getdirector) | **GET** /directors/{director_id} | 
 *DirectorsApi* | [**getDirectorCoverImage**](docs/Api/DirectorsApi.md#getdirectorcoverimage) | **GET** /directors/{director_id}/cover | 
@@ -421,6 +423,8 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**attachVideoToProduct**](docs/Api/ProductsApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
 *ProductsApi* | [**createProduct**](docs/Api/ProductsApi.md#createproduct) | **POST** /products | 
 *ProductsApi* | [**deleteProduct**](docs/Api/ProductsApi.md#deleteproduct) | **DELETE** /products/{product_id} | 
+*ProductsApi* | [**detachActorFromProduct**](docs/Api/ProductsApi.md#detachactorfromproduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
+*ProductsApi* | [**detachDirectorFromProduct**](docs/Api/ProductsApi.md#detachdirectorfromproduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
 *ProductsApi* | [**detachFeatureToProduct**](docs/Api/ProductsApi.md#detachfeaturetoproduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 *ProductsApi* | [**detachProductFromCategory**](docs/Api/ProductsApi.md#detachproductfromcategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
 *ProductsApi* | [**detachProductFromGroup**](docs/Api/ProductsApi.md#detachproductfromgroup) | **DELETE** /products/{product_id}/groups/{group_id} | 

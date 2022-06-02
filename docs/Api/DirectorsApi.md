@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**createDirector**](#createDirector) | **POST** /directors | 
 [**deleteDirector**](#deleteDirector) | **DELETE** /directors/{director_id} | 
 [**detachDirectorFromCategory**](#detachDirectorFromCategory) | **DELETE** /categories/{category_id}/directors/{director_id} | 
+[**detachDirectorFromProduct**](#detachDirectorFromProduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
 [**getCategoryDirectors**](#getCategoryDirectors) | **GET** /categories/{category_id}/directors | 
 [**getDirector**](#getDirector) | **GET** /directors/{director_id} | 
 [**getDirectorCoverImage**](#getDirectorCoverImage) | **GET** /directors/{director_id}/cover | 
@@ -268,6 +269,59 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| Category ID to fetch |
+ **director_id** | **int**| Director ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachDirectorFromProduct**
+> detachDirectorFromProduct($product_id, $director_id)
+
+
+
+Detach director from product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\DirectorsApi();
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to detach
+
+try {
+    $api_instance->detachDirectorFromProduct($product_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling DirectorsApi->detachDirectorFromProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
  **director_id** | **int**| Director ID to detach |
 
 ### Return type

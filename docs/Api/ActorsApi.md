@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**createActor**](#createActor) | **POST** /actors | 
 [**deleteActor**](#deleteActor) | **DELETE** /actors/{actor_id} | 
 [**detachActorFromCategory**](#detachActorFromCategory) | **DELETE** /categories/{category_id}/actors/{actor_id} | 
+[**detachActorFromProduct**](#detachActorFromProduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**getActor**](#getActor) | **GET** /actors/{actor_id} | 
 [**getActorCoverImage**](#getActorCoverImage) | **GET** /actors/{actor_id}/cover | 
 [**getActorProducts**](#getActorProducts) | **GET** /actors/{actor_id}/products | 
@@ -268,6 +269,59 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| Category ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachActorFromProduct**
+> detachActorFromProduct($product_id, $actor_id)
+
+
+
+Detach actor from product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ActorsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to detach
+
+try {
+    $api_instance->detachActorFromProduct($product_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ActorsApi->detachActorFromProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
  **actor_id** | **int**| Actor ID to detach |
 
 ### Return type

@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
 [**createProduct**](#createProduct) | **POST** /products | 
 [**deleteProduct**](#deleteProduct) | **DELETE** /products/{product_id} | 
+[**detachActorFromProduct**](#detachActorFromProduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
+[**detachDirectorFromProduct**](#detachDirectorFromProduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
 [**detachFeatureToProduct**](#detachFeatureToProduct) | **DELETE** /products/{product_id}/features/{feature_id} | 
 [**detachProductFromCategory**](#detachProductFromCategory) | **DELETE** /products/{product_id}/categories/{category_id} | 
 [**detachProductFromGroup**](#detachProductFromGroup) | **DELETE** /products/{product_id}/groups/{group_id} | 
@@ -512,6 +514,112 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| ID of the product to delete |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachActorFromProduct**
+> detachActorFromProduct($product_id, $actor_id)
+
+
+
+Detach actor from product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$actor_id = 789; // int | Actor ID to detach
+
+try {
+    $api_instance->detachActorFromProduct($product_id, $actor_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->detachActorFromProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **actor_id** | **int**| Actor ID to detach |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **detachDirectorFromProduct**
+> detachDirectorFromProduct($product_id, $director_id)
+
+
+
+Detach director from product
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$director_id = 789; // int | Director ID to detach
+
+try {
+    $api_instance->detachDirectorFromProduct($product_id, $director_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->detachDirectorFromProduct: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **director_id** | **int**| Director ID to detach |
 
 ### Return type
 

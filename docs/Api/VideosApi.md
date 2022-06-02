@@ -944,7 +944,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **getVideoPlayer**
-> \Kinow\Client\Model\PlayerConfiguration getVideoPlayer($video_id, $customer_id, $country_id, $ip_address)
+> \Kinow\Client\Model\PlayerConfiguration getVideoPlayer($video_id, $customer_id, $country_id, $ip_address, $force_reload)
 
 
 
@@ -969,9 +969,10 @@ $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $country_id = 789; // int | Country ID to use in video analytics
 $ip_address = "ip_address_example"; // string | IP address
+$force_reload = "force_reload_example"; // string | Force seekbar to the begining and ignore viewing resume
 
 try {
-    $result = $api_instance->getVideoPlayer($video_id, $customer_id, $country_id, $ip_address);
+    $result = $api_instance->getVideoPlayer($video_id, $customer_id, $country_id, $ip_address, $force_reload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VideosApi->getVideoPlayer: ', $e->getMessage(), PHP_EOL;
@@ -987,6 +988,7 @@ Name | Type | Description  | Notes
  **customer_id** | **int**| Customer ID to fetch | [optional]
  **country_id** | **int**| Country ID to use in video analytics | [optional]
  **ip_address** | **string**| IP address | [optional]
+ **force_reload** | **string**| Force seekbar to the begining and ignore viewing resume | [optional]
 
 ### Return type
 
