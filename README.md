@@ -330,6 +330,7 @@ Class | Method | HTTP request | Description
 *GroupsApi* | [**createGroup**](docs/Api/GroupsApi.md#creategroup) | **POST** /groups | 
 *GroupsApi* | [**detachCustomerFromGroup**](docs/Api/GroupsApi.md#detachcustomerfromgroup) | **DELETE** /groups/{group_id}/customers/{customer_id} | 
 *GroupsApi* | [**getGroup**](docs/Api/GroupsApi.md#getgroup) | **GET** /groups/{group_id} | 
+*GroupsApi* | [**getGroupCustomers**](docs/Api/GroupsApi.md#getgroupcustomers) | **GET** /groups/{group_id}/customers | 
 *GroupsApi* | [**getGroups**](docs/Api/GroupsApi.md#getgroups) | **GET** /groups | 
 *GroupsApi* | [**getProductGroups**](docs/Api/GroupsApi.md#getproductgroups) | **GET** /products/{product_id}/groups | 
 *ImagesApi* | [**deleteImage**](docs/Api/ImagesApi.md#deleteimage) | **DELETE** /images/{image_id} | 
@@ -814,6 +815,7 @@ Class | Method | HTTP request | Description
  - [VideoStatsVideosWatchingResponse](docs/Model/VideoStatsVideosWatchingResponse.md)
  - [VideoViewInformations](docs/Model/VideoViewInformations.md)
  - [VideoViews](docs/Model/VideoViews.md)
+ - [VideoWatching](docs/Model/VideoWatching.md)
  - [View](docs/Model/View.md)
  - [WidgetFooterMenu](docs/Model/WidgetFooterMenu.md)
  - [WidgetFooterMenuListResponse](docs/Model/WidgetFooterMenuListResponse.md)
