@@ -20,8 +20,8 @@ Method | HTTP request | Description
 [**getCategoryDirectors**](#getCategoryDirectors) | **GET** /categories/{category_id}/directors | 
 [**getCategoryFeatures**](#getCategoryFeatures) | **GET** /categories/{category_id}/features | 
 [**getCategoryImages**](#getCategoryImages) | **GET** /categories/{category_id}/images | 
+[**getCategoryPlayer**](#getCategoryPlayer) | **GET** /categories/videos/{video_id}/player | 
 [**getCategoryProducts**](#getCategoryProducts) | **GET** /categories/{category_id}/products | 
-[**getCategoryVideoPlayer**](#getCategoryVideoPlayer) | **GET** /categories/videos/{video_id}/player | 
 [**getCategoryVideoSubtitles**](#getCategoryVideoSubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
 [**getSubscriptionCategories**](#getSubscriptionCategories) | **GET** /subscriptions/{subscription_id}/categories | 
@@ -906,6 +906,64 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+## **getCategoryPlayer**
+> \Kinow\Client\Model\Player getCategoryPlayer($video_id, $customer_id, $country_id, $iso_code)
+
+
+
+Get category player
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\CategoriesApi();
+$video_id = 789; // int | Video ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
+$country_id = 789; // int | Country ID to use in video analytics
+$iso_code = "iso_code_example"; // string | Define the player UI language. If not providen, fallback on platform default language.
+
+try {
+    $result = $api_instance->getCategoryPlayer($video_id, $customer_id, $country_id, $iso_code);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CategoriesApi->getCategoryPlayer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **video_id** | **int**| Video ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
+ **country_id** | **int**| Country ID to use in video analytics | [optional]
+ **iso_code** | **string**| Define the player UI language. If not providen, fallback on platform default language. | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\Player**](#Player)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 ## **getCategoryProducts**
 > \Kinow\Client\Model\ProductListResponse getCategoryProducts($category_id, $page, $per_page, $sort_by, $sort_direction, $ip, $features, $filters)
 
@@ -962,62 +1020,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\ProductListResponse**](#ProductListResponse)
-
-### Authorization
-
-[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-## **getCategoryVideoPlayer**
-> \Kinow\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
-
-
-
-Get video player
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: ApiClientId
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
-// Configure API key authorization: ApiClientSecret
-Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
-
-$api_instance = new Kinow\Client\Api\CategoriesApi();
-$video_id = 789; // int | Video ID to fetch
-$customer_id = 789; // int | Customer ID to fetch
-$country_id = 789; // int | Country ID to use in video analytics
-
-try {
-    $result = $api_instance->getCategoryVideoPlayer($video_id, $customer_id, $country_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CategoriesApi->getCategoryVideoPlayer: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **video_id** | **int**| Video ID to fetch |
- **customer_id** | **int**| Customer ID to fetch | [optional]
- **country_id** | **int**| Country ID to use in video analytics | [optional]
-
-### Return type
-
-[**\Kinow\Client\Model\Player**](#Player)
 
 ### Authorization
 

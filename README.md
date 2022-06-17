@@ -183,8 +183,8 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**getCategoryDirectors**](docs/Api/CategoriesApi.md#getcategorydirectors) | **GET** /categories/{category_id}/directors | 
 *CategoriesApi* | [**getCategoryFeatures**](docs/Api/CategoriesApi.md#getcategoryfeatures) | **GET** /categories/{category_id}/features | 
 *CategoriesApi* | [**getCategoryImages**](docs/Api/CategoriesApi.md#getcategoryimages) | **GET** /categories/{category_id}/images | 
+*CategoriesApi* | [**getCategoryPlayer**](docs/Api/CategoriesApi.md#getcategoryplayer) | **GET** /categories/videos/{video_id}/player | 
 *CategoriesApi* | [**getCategoryProducts**](docs/Api/CategoriesApi.md#getcategoryproducts) | **GET** /categories/{category_id}/products | 
-*CategoriesApi* | [**getCategoryVideoPlayer**](docs/Api/CategoriesApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
 *CategoriesApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoriesApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *CategoriesApi* | [**getProductCategories**](docs/Api/CategoriesApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
 *CategoriesApi* | [**getSubscriptionCategories**](docs/Api/CategoriesApi.md#getsubscriptioncategories) | **GET** /subscriptions/{subscription_id}/categories | 
@@ -193,7 +193,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{category_id} | 
 *CategoriesApi* | [**uploadCategoryCover**](docs/Api/CategoriesApi.md#uploadcategorycover) | **POST** /categories/{category_id}/cover | 
 *CategoriesApi* | [**uploadCategoryImage**](docs/Api/CategoriesApi.md#uploadcategoryimage) | **POST** /categories/{category_id}/image | 
-*CategoryVideosApi* | [**getCategoryVideoPlayer**](docs/Api/CategoryVideosApi.md#getcategoryvideoplayer) | **GET** /categories/videos/{video_id}/player | 
+*CategoryVideosApi* | [**getCategoryPlayer**](docs/Api/CategoryVideosApi.md#getcategoryplayer) | **GET** /categories/videos/{video_id}/player | 
 *CategoryVideosApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoryVideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *CategoryVideosApi* | [**getVideosFromCategories**](docs/Api/CategoryVideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
 *CategoryVideosApi* | [**getVideosFromCategory**](docs/Api/CategoryVideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 

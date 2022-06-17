@@ -4,18 +4,18 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCategoryVideoPlayer**](#getCategoryVideoPlayer) | **GET** /categories/videos/{video_id}/player | 
+[**getCategoryPlayer**](#getCategoryPlayer) | **GET** /categories/videos/{video_id}/player | 
 [**getCategoryVideoSubtitles**](#getCategoryVideoSubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 [**getVideosFromCategories**](#getVideosFromCategories) | **GET** /categories/videos | 
 [**getVideosFromCategory**](#getVideosFromCategory) | **GET** /categories/{category_id}/videos | 
 
 
-## **getCategoryVideoPlayer**
-> \Kinow\Client\Model\Player getCategoryVideoPlayer($video_id, $customer_id, $country_id)
+## **getCategoryPlayer**
+> \Kinow\Client\Model\Player getCategoryPlayer($video_id, $customer_id, $country_id, $iso_code)
 
 
 
-Get video player
+Get category player
 
 ### Example
 ```php
@@ -35,12 +35,13 @@ $api_instance = new Kinow\Client\Api\CategoryVideosApi();
 $video_id = 789; // int | Video ID to fetch
 $customer_id = 789; // int | Customer ID to fetch
 $country_id = 789; // int | Country ID to use in video analytics
+$iso_code = "iso_code_example"; // string | Define the player UI language. If not providen, fallback on platform default language.
 
 try {
-    $result = $api_instance->getCategoryVideoPlayer($video_id, $customer_id, $country_id);
+    $result = $api_instance->getCategoryPlayer($video_id, $customer_id, $country_id, $iso_code);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoryVideosApi->getCategoryVideoPlayer: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoryVideosApi->getCategoryPlayer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -52,6 +53,7 @@ Name | Type | Description  | Notes
  **video_id** | **int**| Video ID to fetch |
  **customer_id** | **int**| Customer ID to fetch | [optional]
  **country_id** | **int**| Country ID to use in video analytics | [optional]
+ **iso_code** | **string**| Define the player UI language. If not providen, fallback on platform default language. | [optional]
 
 ### Return type
 
