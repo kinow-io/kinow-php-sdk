@@ -766,8 +766,6 @@ Class | Method | HTTP request | Description
  - [SubscriptionListResponse](docs/Model/SubscriptionListResponse.md)
  - [SubscriptionResponse](docs/Model/SubscriptionResponse.md)
  - [Subtitle](docs/Model/Subtitle.md)
- - [SubtitleFile](docs/Model/SubtitleFile.md)
- - [SubtitleFileListResponse](docs/Model/SubtitleFileListResponse.md)
  - [SubtitleListResponse](docs/Model/SubtitleListResponse.md)
  - [SubtitleResponse](docs/Model/SubtitleResponse.md)
  - [Support](docs/Model/Support.md)
