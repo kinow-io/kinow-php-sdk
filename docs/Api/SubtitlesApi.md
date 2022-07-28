@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getSubtitles**
-> \Kinow\Client\Model\ getSubtitles($page, $per_page)
+> \Kinow\Client\Model\SubtitleListResponse getSubtitles($page, $per_page)
 
 
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\**](#)
+[**\Kinow\Client\Model\SubtitleListResponse**](#SubtitleListResponse)
 
 ### Authorization
 
