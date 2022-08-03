@@ -354,9 +354,14 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**uploadProductImage**](docs/Api/ImagesApi.md#uploadproductimage) | **POST** /products/{product_id}/image | 
 *ImagesApi* | [**uploadSubscriptionCover**](docs/Api/ImagesApi.md#uploadsubscriptioncover) | **POST** /subscriptions/{subscription_id}/cover | 
 *LanguagesApi* | [**getLanguages**](docs/Api/LanguagesApi.md#getlanguages) | **GET** /languages | 
+*MediaFilesApi* | [**convertLiveToVod**](docs/Api/MediaFilesApi.md#convertlivetovod) | **POST** /media-sources/{source_id}/live2vod | 
+*MediaFilesApi* | [**createLive**](docs/Api/MediaFilesApi.md#createlive) | **POST** /media-sources/{source_id}/live | 
+*MediaFilesApi* | [**getLiveStreams**](docs/Api/MediaFilesApi.md#getlivestreams) | **GET** /media-files/{media_file_id}/streams | 
 *MediaFilesApi* | [**getMediaFile**](docs/Api/MediaFilesApi.md#getmediafile) | **GET** /media-files/{media_file_id} | 
 *MediaFilesApi* | [**getMediaSourceFiles**](docs/Api/MediaFilesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
 *MediaFilesApi* | [**postMediaSourceFiles**](docs/Api/MediaFilesApi.md#postmediasourcefiles) | **POST** /media-sources/{source_id}/files | 
+*MediaSourcesApi* | [**convertLiveToVod**](docs/Api/MediaSourcesApi.md#convertlivetovod) | **POST** /media-sources/{source_id}/live2vod | 
+*MediaSourcesApi* | [**createLive**](docs/Api/MediaSourcesApi.md#createlive) | **POST** /media-sources/{source_id}/live | 
 *MediaSourcesApi* | [**getMediaSource**](docs/Api/MediaSourcesApi.md#getmediasource) | **GET** /media-sources/{source_id} | 
 *MediaSourcesApi* | [**getMediaSourceFiles**](docs/Api/MediaSourcesApi.md#getmediasourcefiles) | **GET** /media-sources/{source_id}/files | 
 *MediaSourcesApi* | [**getMediaSources**](docs/Api/MediaSourcesApi.md#getmediasources) | **GET** /media-sources | 
@@ -588,6 +593,7 @@ Class | Method | HTTP request | Description
  - [ConfigurationResponse](docs/Model/ConfigurationResponse.md)
  - [Contact](docs/Model/Contact.md)
  - [ContactListResponse](docs/Model/ContactListResponse.md)
+ - [ConvertMediaLiveRequest](docs/Model/ConvertMediaLiveRequest.md)
  - [Country](docs/Model/Country.md)
  - [CountryListResponse](docs/Model/CountryListResponse.md)
  - [CreateActorRequest](docs/Model/CreateActorRequest.md)
@@ -606,6 +612,7 @@ Class | Method | HTTP request | Description
  - [CreateGiftRequest](docs/Model/CreateGiftRequest.md)
  - [CreateGroupRequest](docs/Model/CreateGroupRequest.md)
  - [CreateMediaFileRequest](docs/Model/CreateMediaFileRequest.md)
+ - [CreateMediaLiveRequest](docs/Model/CreateMediaLiveRequest.md)
  - [CreateMessageRequest](docs/Model/CreateMessageRequest.md)
  - [CreateProductAccessRequest](docs/Model/CreateProductAccessRequest.md)
  - [CreateProductRequest](docs/Model/CreateProductRequest.md)
@@ -688,6 +695,8 @@ Class | Method | HTTP request | Description
  - [MediaFile](docs/Model/MediaFile.md)
  - [MediaFileListResponse](docs/Model/MediaFileListResponse.md)
  - [MediaFileResponse](docs/Model/MediaFileResponse.md)
+ - [MediaFileStream](docs/Model/MediaFileStream.md)
+ - [MediaFileStreamListResponse](docs/Model/MediaFileStreamListResponse.md)
  - [MediaSource](docs/Model/MediaSource.md)
  - [MediaSourceListResponse](docs/Model/MediaSourceListResponse.md)
  - [MediaSourceResponse](docs/Model/MediaSourceResponse.md)

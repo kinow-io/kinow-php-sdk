@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **duration** | **int** |  | [optional] 
+**date_from** | **string** |  | [optional] 
+**date_to** | **string** |  | [optional] 
 **filename** | **string** |  | [optional] 
 **position** | **int** |  | [optional] 
 **subscription** | **int** |  | [optional] 
