@@ -525,7 +525,7 @@ void (empty response body)
  - **Accept**: Not defined
 
 ## **generateAuthenticationToken**
-> string generateAuthenticationToken($customer_id)
+> string generateAuthenticationToken($customer_id, $force_client_api_refresh, $force_client_api_access)
 
 
 
@@ -547,9 +547,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to authenticate
+$force_client_api_refresh = true; // bool | Return Client API refresh token
+$force_client_api_access = true; // bool | Return Client API access token
 
 try {
-    $result = $api_instance->generateAuthenticationToken($customer_id);
+    $result = $api_instance->generateAuthenticationToken($customer_id, $force_client_api_refresh, $force_client_api_access);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->generateAuthenticationToken: ', $e->getMessage(), PHP_EOL;
@@ -562,6 +564,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to authenticate |
+ **force_client_api_refresh** | **bool**| Return Client API refresh token | [optional]
+ **force_client_api_access** | **bool**| Return Client API access token | [optional]
 
 ### Return type
 

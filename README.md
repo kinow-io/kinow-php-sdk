@@ -197,6 +197,9 @@ Class | Method | HTTP request | Description
 *CategoryVideosApi* | [**getCategoryVideoSubtitles**](docs/Api/CategoryVideosApi.md#getcategoryvideosubtitles) | **GET** /categories/videos/{video_id}/subtitles | 
 *CategoryVideosApi* | [**getVideosFromCategories**](docs/Api/CategoryVideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
 *CategoryVideosApi* | [**getVideosFromCategory**](docs/Api/CategoryVideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
+*CommentsApi* | [**createProductComment**](docs/Api/CommentsApi.md#createproductcomment) | **POST** /products/{product_id}/comments | 
+*CommentsApi* | [**getCustomerComments**](docs/Api/CommentsApi.md#getcustomercomments) | **GET** /customers/{customer_id}/comments | 
+*CommentsApi* | [**getProductComments**](docs/Api/CommentsApi.md#getproductcomments) | **GET** /products/{product_id}/comments | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
 *ConfigurationApi* | [**getConfigurationAnalytics**](docs/Api/ConfigurationApi.md#getconfigurationanalytics) | **GET** /configuration/analytics | 
 *ConfigurationApi* | [**getConfigurationByName**](docs/Api/ConfigurationApi.md#getconfigurationbyname) | **GET** /configuration/{configuration_name} | 
@@ -588,6 +591,7 @@ Class | Method | HTTP request | Description
  - [CategoryImagesListResponse](docs/Model/CategoryImagesListResponse.md)
  - [CategoryListResponse](docs/Model/CategoryListResponse.md)
  - [CategoryResponse](docs/Model/CategoryResponse.md)
+ - [Comment](docs/Model/Comment.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationListResponse](docs/Model/ConfigurationListResponse.md)
  - [ConfigurationResponse](docs/Model/ConfigurationResponse.md)
@@ -603,6 +607,7 @@ Class | Method | HTTP request | Description
  - [CreateCartRequest](docs/Model/CreateCartRequest.md)
  - [CreateCartRuleRequest](docs/Model/CreateCartRuleRequest.md)
  - [CreateCategoryRequest](docs/Model/CreateCategoryRequest.md)
+ - [CreateCommentRequest](docs/Model/CreateCommentRequest.md)
  - [CreateCustomerRequest](docs/Model/CreateCustomerRequest.md)
  - [CreateDeviceRequest](docs/Model/CreateDeviceRequest.md)
  - [CreateDirectorRequest](docs/Model/CreateDirectorRequest.md)
@@ -626,6 +631,8 @@ Class | Method | HTTP request | Description
  - [CurrencyListResponse](docs/Model/CurrencyListResponse.md)
  - [CurrencyListResponse1](docs/Model/CurrencyListResponse1.md)
  - [Customer](docs/Model/Customer.md)
+ - [CustomerCommentListResponse](docs/Model/CustomerCommentListResponse.md)
+ - [CustomerCommentResponse](docs/Model/CustomerCommentResponse.md)
  - [CustomerCurrentViewsResponse](docs/Model/CustomerCurrentViewsResponse.md)
  - [CustomerGroupVideoStats](docs/Model/CustomerGroupVideoStats.md)
  - [CustomerGroupVideoStatsListResponse](docs/Model/CustomerGroupVideoStatsListResponse.md)
@@ -754,6 +761,8 @@ Class | Method | HTTP request | Description
  - [ProductAttribute](docs/Model/ProductAttribute.md)
  - [ProductAttributeListResponse](docs/Model/ProductAttributeListResponse.md)
  - [ProductCategories](docs/Model/ProductCategories.md)
+ - [ProductCommentListResponse](docs/Model/ProductCommentListResponse.md)
+ - [ProductCommentResponse](docs/Model/ProductCommentResponse.md)
  - [ProductIDList](docs/Model/ProductIDList.md)
  - [ProductIDList1](docs/Model/ProductIDList1.md)
  - [ProductImageListResponse](docs/Model/ProductImageListResponse.md)

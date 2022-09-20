@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 **id_product** | **int** |  | 
 **id_video_group** | **int** |  | [optional] 
 **id_product_image** | **int** |  | [optional] 
-**id_language** | **int** |  | [optional] 
+**id_language** | **int** |  | 
 **language_filter** | **int** |  | [optional] 
-**id_media_source** | **int** |  | [optional] 
+**id_media_source** | **int** |  | 
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | 
 **description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **duration** | **int** |  | [optional] 
-**filename** | **string** |  | [optional] 
+**filename** | **string** |  | 
 **position** | **int** |  | [optional] 
 **subscription** | **int** |  | [optional] 
 **free** | **int** |  | [optional] 
