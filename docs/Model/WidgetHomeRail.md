@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **type_id** | **int** |  | [optional] 
 **visibility** | **string** |  | [optional] 
 **position** | **int** |  | [optional] 
+**video_focus** | **int** |  | [optional] 
 
 

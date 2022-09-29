@@ -532,6 +532,7 @@ Class | Method | HTTP request | Description
 *WidgetsApi* | [**getWidgetAnalytics**](docs/Api/WidgetsApi.md#getwidgetanalytics) | **GET** /widgets/analytics | 
 *WidgetsApi* | [**getWidgetFooterMenu**](docs/Api/WidgetsApi.md#getwidgetfootermenu) | **GET** /widgets/footer-menu | 
 *WidgetsApi* | [**getWidgetHomeRail**](docs/Api/WidgetsApi.md#getwidgethomerail) | **GET** /widgets/home-rail | 
+*WidgetsApi* | [**getWidgetHomeRailVideo**](docs/Api/WidgetsApi.md#getwidgethomerailvideo) | **GET** /widgets/home-rail/{homerail_id}/videos | 
 *WidgetsApi* | [**getWidgetHookPhrase**](docs/Api/WidgetsApi.md#getwidgethookphrase) | **GET** /widgets/hook-phrase | 
 *WidgetsApi* | [**getWidgetSlider**](docs/Api/WidgetsApi.md#getwidgetslider) | **GET** /widgets/slider | 
 *WidgetsApi* | [**getWidgetSliderItem**](docs/Api/WidgetsApi.md#getwidgetslideritem) | **GET** /widgets/slider/{slider_id} | 
@@ -837,6 +838,7 @@ Class | Method | HTTP request | Description
  - [WidgetFooterMenuListResponse](docs/Model/WidgetFooterMenuListResponse.md)
  - [WidgetHomeRail](docs/Model/WidgetHomeRail.md)
  - [WidgetHomeRailListResponse](docs/Model/WidgetHomeRailListResponse.md)
+ - [WidgetHomeRailVideoListResponse](docs/Model/WidgetHomeRailVideoListResponse.md)
  - [WidgetHookPhrase](docs/Model/WidgetHookPhrase.md)
  - [WidgetHookPhraseListResponse](docs/Model/WidgetHookPhraseListResponse.md)
  - [WidgetSlider](docs/Model/WidgetSlider.md)
