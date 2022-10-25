@@ -198,6 +198,8 @@ Class | Method | HTTP request | Description
 *CategoryVideosApi* | [**getVideosFromCategories**](docs/Api/CategoryVideosApi.md#getvideosfromcategories) | **GET** /categories/videos | 
 *CategoryVideosApi* | [**getVideosFromCategory**](docs/Api/CategoryVideosApi.md#getvideosfromcategory) | **GET** /categories/{category_id}/videos | 
 *CommentsApi* | [**createProductComment**](docs/Api/CommentsApi.md#createproductcomment) | **POST** /products/{product_id}/comments | 
+*CommentsApi* | [**getComment**](docs/Api/CommentsApi.md#getcomment) | **GET** /comments/{comment_id} | 
+*CommentsApi* | [**getComments**](docs/Api/CommentsApi.md#getcomments) | **GET** /comments | 
 *CommentsApi* | [**getCustomerComments**](docs/Api/CommentsApi.md#getcustomercomments) | **GET** /customers/{customer_id}/comments | 
 *CommentsApi* | [**getProductComments**](docs/Api/CommentsApi.md#getproductcomments) | **GET** /products/{product_id}/comments | 
 *ConfigurationApi* | [**getConfiguration**](docs/Api/ConfigurationApi.md#getconfiguration) | **GET** /configuration | 
@@ -225,6 +227,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomerBookmarks**](docs/Api/CustomersApi.md#getcustomerbookmarks) | **GET** /customers/{customer_id}/bookmarks | 
 *CustomersApi* | [**getCustomerCanSeeProduct**](docs/Api/CustomersApi.md#getcustomercanseeproduct) | **GET** /customers/{customer_id}/products/{product_id}/can-see | 
 *CustomersApi* | [**getCustomerCarts**](docs/Api/CustomersApi.md#getcustomercarts) | **GET** /customers/{customer_id}/carts | 
+*CustomersApi* | [**getCustomerComments**](docs/Api/CustomersApi.md#getcustomercomments) | **GET** /customers/{customer_id}/comments | 
 *CustomersApi* | [**getCustomerCurrentViews**](docs/Api/CustomersApi.md#getcustomercurrentviews) | **GET** /customers/{customer_id}/current-views | 
 *CustomersApi* | [**getCustomerGroups**](docs/Api/CustomersApi.md#getcustomergroups) | **GET** /customers/{customer_id}/groups | 
 *CustomersApi* | [**getCustomerHasAccessToProduct**](docs/Api/CustomersApi.md#getcustomerhasaccesstoproduct) | **GET** /customers/{customer_id}/products/{product_id}/has-access | 
@@ -431,6 +434,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**attachProductToGroup**](docs/Api/ProductsApi.md#attachproducttogroup) | **POST** /products/{product_id}/groups | 
 *ProductsApi* | [**attachVideoToProduct**](docs/Api/ProductsApi.md#attachvideotoproduct) | **POST** /products/{product_id}/videos | 
 *ProductsApi* | [**createProduct**](docs/Api/ProductsApi.md#createproduct) | **POST** /products | 
+*ProductsApi* | [**createProductComment**](docs/Api/ProductsApi.md#createproductcomment) | **POST** /products/{product_id}/comments | 
 *ProductsApi* | [**deleteProduct**](docs/Api/ProductsApi.md#deleteproduct) | **DELETE** /products/{product_id} | 
 *ProductsApi* | [**detachActorFromProduct**](docs/Api/ProductsApi.md#detachactorfromproduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 *ProductsApi* | [**detachDirectorFromProduct**](docs/Api/ProductsApi.md#detachdirectorfromproduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
@@ -450,6 +454,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**getProductAttributes**](docs/Api/ProductsApi.md#getproductattributes) | **GET** /products/{product_id}/attributes | 
 *ProductsApi* | [**getProductAvailability**](docs/Api/ProductsApi.md#getproductavailability) | **GET** /products/{product_id}/access | 
 *ProductsApi* | [**getProductCategories**](docs/Api/ProductsApi.md#getproductcategories) | **GET** /products/{product_id}/categories | 
+*ProductsApi* | [**getProductComments**](docs/Api/ProductsApi.md#getproductcomments) | **GET** /products/{product_id}/comments | 
 *ProductsApi* | [**getProductCoverImage**](docs/Api/ProductsApi.md#getproductcoverimage) | **GET** /products/{product_id}/cover | 
 *ProductsApi* | [**getProductDirectors**](docs/Api/ProductsApi.md#getproductdirectors) | **GET** /products/{product_id}/directors | 
 *ProductsApi* | [**getProductDirectorsRole**](docs/Api/ProductsApi.md#getproductdirectorsrole) | **GET** /products/{product_id}/directors-role | 
@@ -593,6 +598,8 @@ Class | Method | HTTP request | Description
  - [CategoryListResponse](docs/Model/CategoryListResponse.md)
  - [CategoryResponse](docs/Model/CategoryResponse.md)
  - [Comment](docs/Model/Comment.md)
+ - [CommentListResponse](docs/Model/CommentListResponse.md)
+ - [CommentResponse](docs/Model/CommentResponse.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationListResponse](docs/Model/ConfigurationListResponse.md)
  - [ConfigurationResponse](docs/Model/ConfigurationResponse.md)
@@ -633,6 +640,7 @@ Class | Method | HTTP request | Description
  - [CurrencyListResponse1](docs/Model/CurrencyListResponse1.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerCommentListResponse](docs/Model/CustomerCommentListResponse.md)
+ - [CustomerCommentListResponse1](docs/Model/CustomerCommentListResponse1.md)
  - [CustomerCommentResponse](docs/Model/CustomerCommentResponse.md)
  - [CustomerCurrentViewsResponse](docs/Model/CustomerCurrentViewsResponse.md)
  - [CustomerGroupVideoStats](docs/Model/CustomerGroupVideoStats.md)
@@ -763,6 +771,7 @@ Class | Method | HTTP request | Description
  - [ProductAttributeListResponse](docs/Model/ProductAttributeListResponse.md)
  - [ProductCategories](docs/Model/ProductCategories.md)
  - [ProductCommentListResponse](docs/Model/ProductCommentListResponse.md)
+ - [ProductCommentListResponse1](docs/Model/ProductCommentListResponse1.md)
  - [ProductCommentResponse](docs/Model/ProductCommentResponse.md)
  - [ProductIDList](docs/Model/ProductIDList.md)
  - [ProductIDList1](docs/Model/ProductIDList1.md)

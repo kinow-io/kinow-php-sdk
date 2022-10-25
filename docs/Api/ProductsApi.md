@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**attachProductToGroup**](#attachProductToGroup) | **POST** /products/{product_id}/groups | 
 [**attachVideoToProduct**](#attachVideoToProduct) | **POST** /products/{product_id}/videos | 
 [**createProduct**](#createProduct) | **POST** /products | 
+[**createProductComment**](#createProductComment) | **POST** /products/{product_id}/comments | 
 [**deleteProduct**](#deleteProduct) | **DELETE** /products/{product_id} | 
 [**detachActorFromProduct**](#detachActorFromProduct) | **DELETE** /products/{product_id}/actors/{actor_id} | 
 [**detachDirectorFromProduct**](#detachDirectorFromProduct) | **DELETE** /products/{product_id}/directors/{director_id} | 
@@ -31,6 +32,7 @@ Method | HTTP request | Description
 [**getProductAttributes**](#getProductAttributes) | **GET** /products/{product_id}/attributes | 
 [**getProductAvailability**](#getProductAvailability) | **GET** /products/{product_id}/access | 
 [**getProductCategories**](#getProductCategories) | **GET** /products/{product_id}/categories | 
+[**getProductComments**](#getProductComments) | **GET** /products/{product_id}/comments | 
 [**getProductCoverImage**](#getProductCoverImage) | **GET** /products/{product_id}/cover | 
 [**getProductDirectors**](#getProductDirectors) | **GET** /products/{product_id}/directors | 
 [**getProductDirectorsRole**](#getProductDirectorsRole) | **GET** /products/{product_id}/directors-role | 
@@ -467,6 +469,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\ProductResponse**](#ProductResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **createProductComment**
+> \Kinow\Client\Model\ProductCommentResponse createProductComment($product_id, $body)
+
+
+
+Create product comment
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+$body = new \Kinow\Client\Model\CreateCommentRequest(); // \Kinow\Client\Model\CreateCommentRequest | Create a comment
+
+try {
+    $result = $api_instance->createProductComment($product_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->createProductComment: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+ **body** | [**\Kinow\Client\Model\CreateCommentRequest**](#\Kinow\Client\Model\CreateCommentRequest)| Create a comment |
+
+### Return type
+
+[**\Kinow\Client\Model\ProductCommentResponse**](#ProductCommentResponse)
 
 ### Authorization
 
@@ -1515,6 +1571,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\CategoryListResponse**](#CategoryListResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getProductComments**
+> \Kinow\Client\Model\ProductCommentListResponse1 getProductComments($product_id)
+
+
+
+Get product comments
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\ProductsApi();
+$product_id = 789; // int | Product ID to fetch
+
+try {
+    $result = $api_instance->getProductComments($product_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->getProductComments: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **int**| Product ID to fetch |
+
+### Return type
+
+[**\Kinow\Client\Model\ProductCommentListResponse1**](#ProductCommentListResponse1)
 
 ### Authorization
 
