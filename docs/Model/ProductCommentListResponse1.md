@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pagination** | [**\Kinow\Client\Model\Pagination**](#Pagination) |  | [optional] 
-**data** | [**\Kinow\Client\Model\ProductCommentListResponse[]**](#ProductCommentListResponse) |  | [optional] 
+**data** | [**\Kinow\Client\Model\ProductCommentResponse[]**](#ProductCommentResponse) |  | [optional] 
 
 
