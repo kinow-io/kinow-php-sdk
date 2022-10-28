@@ -975,7 +975,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerComments**
-> \Kinow\Client\Model\CustomerCommentListResponse1 getCustomerComments($customer_id)
+> \Kinow\Client\Model\CustomerCommentListResponse1 getCustomerComments($customer_id, $page, $per_page)
 
 
 
@@ -997,9 +997,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CustomersApi();
 $customer_id = 789; // int | Customer ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getCustomerComments($customer_id);
+    $result = $api_instance->getCustomerComments($customer_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getCustomerComments: ', $e->getMessage(), PHP_EOL;
@@ -1012,6 +1014,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 

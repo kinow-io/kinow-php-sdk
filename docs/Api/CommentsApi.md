@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getCustomerComments**
-> \Kinow\Client\Model\CustomerCommentListResponse1 getCustomerComments($customer_id)
+> \Kinow\Client\Model\CustomerCommentListResponse1 getCustomerComments($customer_id, $page, $per_page)
 
 
 
@@ -200,9 +200,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CommentsApi();
 $customer_id = 789; // int | Customer ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getCustomerComments($customer_id);
+    $result = $api_instance->getCustomerComments($customer_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommentsApi->getCustomerComments: ', $e->getMessage(), PHP_EOL;
@@ -215,6 +217,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **int**| Customer ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 
@@ -230,7 +234,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getProductComments**
-> \Kinow\Client\Model\ProductCommentListResponse1 getProductComments($product_id)
+> \Kinow\Client\Model\ProductCommentListResponse1 getProductComments($product_id, $page, $per_page)
 
 
 
@@ -252,9 +256,11 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\CommentsApi();
 $product_id = 789; // int | Product ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
 
 try {
-    $result = $api_instance->getProductComments($product_id);
+    $result = $api_instance->getProductComments($product_id, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommentsApi->getProductComments: ', $e->getMessage(), PHP_EOL;
@@ -267,6 +273,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **int**| Product ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
 
 ### Return type
 
