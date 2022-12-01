@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **id_media_source** | **int** |  | 
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | 
 **description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**description_short** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **duration** | **int** |  | [optional] 
 **filename** | **string** |  | 
 **position** | **int** |  | [optional] 

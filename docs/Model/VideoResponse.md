@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **id_media_source** | **int** |  | [optional] 
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **description** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
+**description_short** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
 **duration** | **int** |  | [optional] 
 **date_from** | **string** |  | [optional] 
 **date_to** | **string** |  | [optional] 
