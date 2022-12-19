@@ -599,6 +599,7 @@ Class | Method | HTTP request | Description
  - [CategoryResponse](docs/Model/CategoryResponse.md)
  - [Comment](docs/Model/Comment.md)
  - [CommentListResponse](docs/Model/CommentListResponse.md)
+ - [CommentListResponse1](docs/Model/CommentListResponse1.md)
  - [CommentResponse](docs/Model/CommentResponse.md)
  - [Configuration](docs/Model/Configuration.md)
  - [ConfigurationListResponse](docs/Model/ConfigurationListResponse.md)

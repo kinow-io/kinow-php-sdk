@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **id_item** | **int** |  | [optional] 
 **id_customer** | **int** |  | [optional] 
+**author** | **string** |  | [optional] 
 **content** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **date_add** | **string** |  | [optional] 

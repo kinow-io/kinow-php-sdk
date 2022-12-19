@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getComments**
-> \Kinow\Client\Model\CommentListResponse getComments($page, $per_page, $filters, $sort_by, $sort_direction)
+> \Kinow\Client\Model\CommentListResponse1 getComments($page, $per_page, $filters, $sort_by, $sort_direction)
 
 
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kinow\Client\Model\CommentListResponse**](#CommentListResponse)
+[**\Kinow\Client\Model\CommentListResponse1**](#CommentListResponse1)
 
 ### Authorization
 

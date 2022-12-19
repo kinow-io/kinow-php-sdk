@@ -3,10 +3,11 @@
 ### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id_comment** | **int** |  | [optional] 
 **type** | **string** |  | [optional] 
 **id_item** | **int** |  | [optional] 
 **id_customer** | **int** |  | [optional] 
+**author** | **string** |  | [optional] 
 **content** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **date_add** | **string** |  | [optional] 
