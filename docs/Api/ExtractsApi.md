@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
  - **Accept**: Not defined
 
 ## **getExtractPlayer**
-> \Kinow\Client\Model\PlayerConfiguration getExtractPlayer($extract_id, $ip_address, $iso_code)
+> \Kinow\Client\Model\PlayerConfiguration getExtractPlayer($extract_id, $customer_id, $ip_address, $iso_code)
 
 
 
@@ -413,11 +413,12 @@ Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secre
 
 $api_instance = new Kinow\Client\Api\ExtractsApi();
 $extract_id = 789; // int | Extract ID to fetch
+$customer_id = 789; // int | Customer ID to fetch
 $ip_address = "ip_address_example"; // string | IP address
 $iso_code = "iso_code_example"; // string | Define the player UI language. If not providen, fallback on platform default language.
 
 try {
-    $result = $api_instance->getExtractPlayer($extract_id, $ip_address, $iso_code);
+    $result = $api_instance->getExtractPlayer($extract_id, $customer_id, $ip_address, $iso_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExtractsApi->getExtractPlayer: ', $e->getMessage(), PHP_EOL;
@@ -430,6 +431,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **extract_id** | **int**| Extract ID to fetch |
+ **customer_id** | **int**| Customer ID to fetch | [optional]
  **ip_address** | **string**| IP address | [optional]
  **iso_code** | **string**| Define the player UI language. If not providen, fallback on platform default language. | [optional]
 
