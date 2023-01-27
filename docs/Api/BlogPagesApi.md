@@ -4,12 +4,67 @@ All URIs are relative to *https://api.kinow.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**attachFeaturesToBlogPage**](#attachFeaturesToBlogPage) | **POST** /blog-pages/{blog_page_id}/features | 
 [**attachProductToBlogPage**](#attachProductToBlogPage) | **POST** /blog-pages/{blog_page_id}/products | 
 [**detachProductFromBlogPage**](#detachProductFromBlogPage) | **DELETE** /blog-pages/{blog_page_id}/products/{product_id} | 
 [**getBlogPage**](#getBlogPage) | **GET** /blog-pages/{blog_page_id} | 
+[**getBlogPageFeatures**](#getBlogPageFeatures) | **GET** /blog-pages/{blog_page_id}/features | 
 [**getBlogPageProducts**](#getBlogPageProducts) | **GET** /blog-pages/{blog_page_id}/products | 
 [**getBlogPages**](#getBlogPages) | **GET** /blog-pages | 
 
+
+## **attachFeaturesToBlogPage**
+> attachFeaturesToBlogPage($blog_page_id, $features)
+
+
+
+Attach feature to blog page
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\BlogPagesApi();
+$blog_page_id = 789; // int | 
+$features = "features_example"; // string | To attach existing FeatureValue to blog page:     ```     [{     \"id_feature\":3,     \"id_feature_value\":5     }]     ```      To create a custom FeatureValue:     ```     [{     \"id_feature\":3,     \"custom_value\":[{     \"lang\": 1,     \"value\": \"string\"     }]     }]     ```
+
+try {
+    $api_instance->attachFeaturesToBlogPage($blog_page_id, $features);
+} catch (Exception $e) {
+    echo 'Exception when calling BlogPagesApi->attachFeaturesToBlogPage: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blog_page_id** | **int**|  |
+ **features** | **string**| To attach existing FeatureValue to blog page:     &#x60;&#x60;&#x60;     [{     \&quot;id_feature\&quot;:3,     \&quot;id_feature_value\&quot;:5     }]     &#x60;&#x60;&#x60;      To create a custom FeatureValue:     &#x60;&#x60;&#x60;     [{     \&quot;id_feature\&quot;:3,     \&quot;custom_value\&quot;:[{     \&quot;lang\&quot;: 1,     \&quot;value\&quot;: \&quot;string\&quot;     }]     }]     &#x60;&#x60;&#x60; |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ## **attachProductToBlogPage**
 > attachProductToBlogPage($blog_page_id, $product_id)
@@ -159,6 +214,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Kinow\Client\Model\BlogPageResponse**](#BlogPageResponse)
+
+### Authorization
+
+[ApiClientId](#ApiClientId), [ApiClientSecret](#ApiClientSecret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+## **getBlogPageFeatures**
+> \Kinow\Client\Model\FeatureListResponse getBlogPageFeatures($blog_page_id, $page, $per_page)
+
+
+
+Get blog page features
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: ApiClientId
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Id', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Id', 'Bearer');
+// Configure API key authorization: ApiClientSecret
+Kinow\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Client-Secret', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Kinow\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Client-Secret', 'Bearer');
+
+$api_instance = new Kinow\Client\Api\BlogPagesApi();
+$blog_page_id = 789; // int | Blog page ID to fetch
+$page = 789; // int | 
+$per_page = 789; // int | 
+
+try {
+    $result = $api_instance->getBlogPageFeatures($blog_page_id, $page, $per_page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BlogPagesApi->getBlogPageFeatures: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blog_page_id** | **int**| Blog page ID to fetch |
+ **page** | **int**|  | [optional]
+ **per_page** | **int**|  | [optional]
+
+### Return type
+
+[**\Kinow\Client\Model\FeatureListResponse**](#FeatureListResponse)
 
 ### Authorization
 

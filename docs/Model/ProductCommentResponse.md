@@ -3,7 +3,7 @@
 ### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_comment** | **int** |  | [optional] 
+**id** | **int** |  | [optional] 
 **id_customer** | **int** |  | [optional] 
 **content** | **string** |  | [optional] 
 **author** | **string** |  | [optional] 
