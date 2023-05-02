@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **position** | **int** |  | [optional] 
-**active** | **int** |  | [optional] 
+**active** | **bool** |  | [optional] 
 **date_add** | **string** |  | [optional] 
 **date_upd** | **string** |  | [optional] 
 **name** | [**\Kinow\Client\Model\I18nField[]**](#I18nField) |  | [optional] 
